@@ -1,0 +1,7 @@
+git fetch= cerca informazioni dal server github
+Git status= ti dice com'e' github rispetto alla cartella locale
+Git push= sistema il github con il contenuto della tua cartella
+Git pull= sistema la tua cartella con il contenuto di github
+git add nome= adda su githubs un determinato file "nome"
+git commit -m "aggiunta cartella"= e' una specie di commento
+
