@@ -1,0 +1,56 @@
+*{
+	margin: 0em;
+	padding: 0em;
+	font-size: 1.0em;
+}
+body{
+	max-width: 1024px;
+	margin:auto;
+	border:1px solid #808080
+	background: #fqf5f9 url("img/bg.jpg") 1% no-repeat fixed;
+}
+
+#header{
+	color:white;
+	background: url("img/back_header_small.jpg");
+	text-align: center;
+	padding: 0.5em 1.5em 1.0em 1.5em;
+}
+
+#imgLogo{
+	width: 13%;
+}
+
+#menu{
+	background-COLOR: RGB(21,28,56);
+
+}
+
+#menu li{ 
+	display:inline-block;  /* serve per rendere i blocchi (lista) in orrizzontale */
+	padding:0.8em 2% 0.8em 2%;
+	border-right: 1px solid white;
+}
+
+#menu li:first-of-type{
+	border-left: 1px solid white;
+}
+
+#menu li > a{
+	color:white;
+}
+
+#menu li > a:link{
+	color:white;
+}
+
+#menu li > a:visited{
+	color: #A9A9A9;
+}
+
+#currentlink{
+
+}
+
+
+
