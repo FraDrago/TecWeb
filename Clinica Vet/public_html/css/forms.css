@@ -1,0 +1,33 @@
+#search-form {
+	display:inline-block;
+	position:relative;
+	background:url(../img/header-search.png) no-repeat 0 0;
+	width:271px;
+	height:31px;
+	margin:0 0 0 0;
+}
+#search-form input {
+	outline:none;
+	margin:0 0 0 15px;
+	color:black;
+	border:none;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	background:none;
+	text-transform:uppercase;
+	height:18px;
+	padding:7px 0 5px;
+	width:225px;
+}
+.search-form-submit {
+	position:absolute;
+	display:block;
+	width:20px;
+	height:23px;
+	background:url(../img/header-search-submit2.png) no-repeat 0 0;
+	right:6px;
+	top:4px;
+}
+.search-form-submit:hover {
+	background:url(../img/header-search-submit2.png) no-repeat 0 bottom;
+}

@@ -1,0 +1,317 @@
+/******
+general
+******/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d8dddd;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 100%;			/* 1em = 10px */ 
+    text-align: center; 
+}
+
+/*****
+banner
+*****/
+#Banner {
+	max-width: 100%; height: auto;
+}
+
+/******
+header
+******/
+#header {
+  padding: 80px; 
+  text-align: center; 
+  background: #0C73D4; 
+  color: white;
+}
+
+#header h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+#header h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+/******
+search-bar
+
+.search-container {
+	width: 100%;
+	overflow: hidden;
+	background-color:#0C73D4 ;
+	float: right;
+	color: black;
+	padding: 14px;
+	text-decoration: none;
+	font-size: 17px;}
+
+.search-container input[type=text] {
+  float: right;
+  border: none;
+  margin-top: 8px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.search-container:hover {
+  background-color: #0C73D4;
+  color: black;
+}
+
+.search-container .active {
+  background-color: black;
+  color: white;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+  background: #ddd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+*****/
+.search {
+  width: 100%;
+  position: right;
+
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid black;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: solid black;
+  background: black;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 27%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+/**Log**/
+#Login {
+	font-size: 1em;
+	text-align: right;
+	float:right;
+	width: 50%;
+}
+.link-style3 {
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+	padding: 7px 20px;
+	background: white;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:black;
+}
+
+/**ChiamaEmergenze**/
+
+#ChiamaEmergenze {
+	font-size: 1em;
+	text-align: left;
+	float:left;
+	width: 50%;
+}
+.link-style2 {
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 7px 20px;
+	background: white;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:black;
+}
+
+/******
+menu
+******/
+
+#menu {
+	background-color:#0C73D4;
+	width: 0px auto;
+	height: 0px auto;
+	margin: 0px auto;
+	padding: 0px 20px 0px 20px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+	text-align: center;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	height: 56px;
+	margin: 0px;
+	padding: 10px 30px 10px 30px;
+	line-height: 56px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: normal;
+	color: white;
+	border: none;
+}
+
+#menu .current_page_item a {
+	background:#b3daff;
+	color:black;
+}
+
+#menu a:hover {
+	background: #b3daff;
+	text-decoration: none;
+	color:black;
+}
+
+/******
+breadcrumb
+******/
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+#page {
+	background: white;
+}
+
+/******
+section
+******/
+.section {
+    margin-top: 4em;
+    text-align: center;			/* per centrare orizzontalmente i contenuti */
+}
+
+.section h3 {
+    color: #4caf50;
+    font-size: 2em;
+    line-height: 1.1em;
+    text-align: center;
+}
+
+.section p {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+.section h1, p { text-align: center; }
+
+/** SIDEBAR**/
+
+#sidebar1 {
+	float: right;
+	width: 250px;
+	margin-right: 50px;
+}
+
+#sidebar1 #box1 {
+	margin-bottom: 30px;
+}
+
+.link-style {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 7px 20px;
+	background: #0C73D4;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/*****
+footer
+*****/
+#footer { 
+	background-color: #d8dddd; 
+	margin: 2em auto;
+}
+
+#footer p {
+	display: block;
+	font-size: 1.5em;
+    text-align: center;
+}

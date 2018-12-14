@@ -1,0 +1,293 @@
+@import url(forms.css);
+
+body {
+	/*background:url(../img/body-bg.gif) 50% 0;*/
+	font:18px Arial, Helvetica, sans-serif;
+	color:#a7a7a7;
+	position:relative;
+}
+/*.ic {
+	border:0;
+	float:right;
+	background:#fff;
+	color:#f00;
+	width:50%;
+	line-height:10px;
+	font-size:10px;
+	margin:-220% 0 0 0;
+	overflow:hidden;
+	padding:0 */
+}
+html, body {
+	height:100%;
+}
+
+/* Global Structure----------------------------------------*/
+.main {
+	margin:0 auto;
+	position:relative;
+	
+}
+.main-bg {
+	background:no-repeat center 0;
+	min-height:100%;
+}
+/*----- alignment & clearing -----*/
+.fleft {
+	float:left
+}
+.fright {
+	float:right
+}
+.alignright {
+	text-align:right
+}
+.aligncenter {
+	text-align:center
+}
+.alignmiddle * {
+	vertical-align:middle
+}
+.clear {
+	clear:both;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+	height:0;
+	width:100%;
+}
+
+a {
+	color:#ec8f23;
+	text-decoration: underline;
+	cursor:pointer;
+}
+a:hover {
+	text-decoration: none;
+}
+.button {
+	display:inline-block;
+	font-size:14px;
+	line-height:20px;
+	padding:5px 14px 6px 14px;
+	font-family: 'Open Sans', sans-serif;
+	color:#fff;
+	text-decoration:none;
+	background:url(../images/button-tail.gif) repeat-x 0 0 #ec6b23;
+	text-shadow:1px 1px #e36f15;
+	border-radius:6px;
+}
+.button:hover {
+	background:url(../images/button-tail.gif) repeat-x 0 bottom #e5b81d;
+}
+.link {
+	text-decoration: underline;
+	color:#ec8f23;
+	text-transform:uppercase;
+	font-size:11px;
+}
+.link:hover {
+	text-decoration: none;
+}
+/*********************************header*************************************/
+header {
+	position:relative;
+	z-index:2;
+}
+#page1 header {
+	background color:#4169e1;
+}
+.Titolo {
+  text-align: left;
+  margin-top: 50px;
+}
+#h1{
+	font-size: 40px;
+}
+
+.header-meta {
+	text-align:right;
+	padding:31px 0 20px;
+}
+.header-meta * {
+	text-align:left;
+}
+.header-meta  {
+	display:inline-block;
+	width:235px;
+	text-align:right;
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	line-height:21px;
+	color: black;
+	text-transform:uppercase;
+	text-shadow:1px 1px #fbfbfb;
+}
+.header-meta .phone {
+	display:inline-block;
+	font-size:18px;
+	line-height:22px;
+	color:#ec8f23;
+	margin:-3px 0 0 0;
+}
+/********************** Slider ************************/
+
+.banner-container {
+	position:relative;
+	z-index:1;
+	height:433px;
+	margin:0 auto;
+	padding:0 0 52px 0;
+}
+.banner-container .pic, .banner {
+	border-radius:9px;
+	box-shadow:0 0 5px #d4d4d4;
+}
+.banner-container .mask {
+	border-radius:9px;
+}
+
+/********************** Navigation ************************/
+
+.menu {
+	
+	width: 0px auto;
+	height: 0px auto;
+	margin: 0px auto;
+	padding: 0px 20px 0px 20px;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+	text-align: center;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu a {
+	height: 56px;
+	margin: 0px;
+	padding: 10px 30px 10px 30px;
+	line-height: 56px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: normal;
+	color: black;
+	border: none;
+}
+
+.menu .current_page_item a {
+	background:#b3daff;
+	color:black;
+}
+
+.menu a:hover {
+	background: #b3daff;
+	text-decoration: none;
+	color:black;
+}
+/******
+breadcrumb
+******/
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+#page {
+	background: white;
+}
+
+/******
+section
+******/
+.section {
+    margin-top: 4em;
+    text-align: center;			/* per centrare orizzontalmente i contenuti */
+}
+
+.section h3 {
+    color: #4caf50;
+    font-size: 2em;
+    line-height: 1.1em;
+    text-align: center;
+}
+
+.section p {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+.section h1, p { text-align: center; }
+
+/** SIDEBAR**/
+
+#sidebar1 {
+	float: right;
+	width: 250px;
+	margin-right: 50px;
+}
+
+#sidebar1 #box1 {
+	margin-bottom: 30px;
+}
+
+.link-style {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 7px 20px;
+	background: #0C73D4;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/*****
+footer
+*****/
+#footer { 
+	background-color: #d8dddd; 
+	margin: 2em auto;
+}
+
+#footer p {
+	display: block;
+	font-size: 1.5em;
+    text-align: center;
+}
