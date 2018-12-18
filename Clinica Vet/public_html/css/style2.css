@@ -15,7 +15,7 @@ html, body {
 
 /*header*/
 #header {
-	background-color: #1167cb;
+	background: url(../img/texture.jpg)repeat;
 	position:relative;
 	overflow: auto;
 }
@@ -34,7 +34,7 @@ html, body {
 
 /*titolo*/
 #title h1 {
-	color: white;
+	color: black;
 	float:left;
 	position: relative;
 	top: 0px;
@@ -56,21 +56,23 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	font-size:20px;
 	line-height:21px;
-	color: white;
+	color: black;
+	font-weight: bold;
 	text-transform:uppercase;
 }
 .header-meta .phone {
 	display:inline-block;
 	font-size:22px;
 	line-height:22px;
-	color:white;
+	color:black;
+	font-weight: bold;
 	margin:-3px 0 0 5px;
 }
 
 /*Navbar*/
 
 .nav{
-	background-color: #1167cb;
+	background-color: #6585a2;
 	border:0.01em solid white;
 	border-width: 0.01em 0;
 	list-style: none;
@@ -140,7 +142,7 @@ ul.breadcrumb {
   padding: 20px 16px;
   list-style: none;
   text-align: center;
-  background-color: #1167cb;
+  background-color: #6585a2;
   color:white;
   margin:-9px;
 }
@@ -151,7 +153,7 @@ ul.breadcrumb li {
 }
 
 .bc_here {
-  color: #9aa1ad;
+  color: #2b2b2b;
   text-decoration: none;
 }
 
@@ -169,7 +171,7 @@ ul.breadcrumb li a {
 }
 
 ul.breadcrumb li a:hover {
-  color:#2f233a;
+  color:#1c3a6b;
   text-decoration: underline;
 }
 
@@ -220,20 +222,6 @@ section
 	color: #FFFFFF;
 }
 
-/*****
-footer
-*****/
-#footer { 
-	background-color: #d8dddd; 
-	margin: 2em auto;
-}
-
-#footer p {
-	display: block;
-	font-size: 1.5em;
-    text-align: center;
-}
-
 /*contenuto*/
 .azioni {
 	margin: auto;
@@ -259,4 +247,24 @@ footer
 #logout {
 	
 	border: 3px solid #73AD21;
+}
+
+
+/*inserite qui i contenuti delle pagine*/
+
+
+
+
+/*****
+footer
+*****/
+#footer { 
+	background-color: #d8dddd; 
+	margin: 2em auto;
+}
+
+#footer p {
+	display: block;
+	font-size: 1.5em;
+    text-align: center;
 }
