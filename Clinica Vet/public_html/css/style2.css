@@ -132,7 +132,7 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-}
+}	
 
 /*breadcrumb*/
 
@@ -150,6 +150,11 @@ ul.breadcrumb li {
   font-size: 20px;
 }
 
+.bc_here {
+  color: #9aa1ad;
+  text-decoration: none;
+}
+
 /*simbolo slash*/
 ul.breadcrumb li+li:before {
   padding: 8px;
@@ -159,7 +164,7 @@ ul.breadcrumb li+li:before {
 
 /*colore*/
 ul.breadcrumb li a {
-  color: #9aa1ad;
+  color: white;
   text-decoration: none;
 }
 
@@ -229,3 +234,29 @@ footer
     text-align: center;
 }
 
+/*contenuto*/
+.azioni {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+#profilo {
+	
+	border: 3px solid #73AD21;
+}
+
+#libretto {
+	
+	border: 3px solid #73AD21;
+}
+
+#prenotazioni {
+	
+	border: 3px solid #73AD21;
+}
+
+#logout {
+	
+	border: 3px solid #73AD21;
+}
