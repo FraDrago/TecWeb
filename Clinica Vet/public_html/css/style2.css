@@ -3,8 +3,6 @@ body {
 	font:18px Arial, Helvetica, sans-serif;
 	color:black;
 	margin: 0;
-	}
-html, body {
 	height:100%;
 }
 
@@ -18,6 +16,14 @@ html, body {
 	background: url(../img/texture.jpg)repeat;
 	position:relative;
 	overflow: auto;
+}
+
+/*img set*/
+#img{
+	font-size: 0;
+	display: block;
+	vertical-align:top;
+
 }
 
 /*logo*/
@@ -35,7 +41,7 @@ html, body {
 	color: black;
 	float:left;
 	position: relative;
-	top: 0px;
+	top: 0em;
 	left: 15px;
 }
 
@@ -132,7 +138,9 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-}	
+}
+
+
 
 /*breadcrumb*/
 
@@ -142,7 +150,7 @@ ul.breadcrumb {
   text-align: center;
   background-color: #6585a2;
   color:white;
-  margin:-9px;
+  margin:0;
 }
 
 ul.breadcrumb li {
