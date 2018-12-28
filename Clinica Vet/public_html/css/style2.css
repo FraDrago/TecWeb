@@ -159,7 +159,7 @@ ul.breadcrumb li {
 }
 
 .bc_here {
-  color: #2b2b2b;
+  color:#162e55;
   text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ ul.breadcrumb li a {
 }
 
 ul.breadcrumb li a:hover {
-  color:#1c3a6b;
+  color:#162e55;
   text-decoration: underline;
 }
 
@@ -228,7 +228,7 @@ section
 	color: #FFFFFF;
 }
 
-/*contenuto*/
+/*area personale*/
 .azioni {
 	margin: auto;
 	width: 50%;
@@ -257,8 +257,78 @@ section
 
 
 /*inserite qui i contenuti delle pagine*/
+#content{
+	text-align: center;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+/*EMERGENZE*/
+#title h3{
+	font-size: 1.2em;
+}
+ul.sezioni{
+	list-style:decimal;
+	list-style-position: inside;
+	text-align: left;
+}
+
+ul.sezioni li {
+  font-size: 1.3em;
+}
+
+.sezioni a{
+	color:#4A6CA8; 
+}
+.sezioni a:visited {
+  color:#775b97;
+}
 
 
+.box2 {
+	border: 1px solid black;
+	border-radius: 0.3em;
+    display: inline-table;
+  	font-size: 1em;
+	margin: 1em;
+    overflow: hidden;
+	width: auto;
+	height: auto;
+}
+
+.box {
+	border: 1px solid black;
+	border-radius: 0.3em;
+    display: inline-table;
+  	font-size: 1em;
+	margin: 1em;
+    overflow: hidden;
+	width: 25em;
+	height: 360px;
+}
+
+.name {
+	background-color: #1c3a6b;
+    border-bottom: 1px solid black;
+    color: #ffffff;
+	padding: 0.7em;
+	text-align: center;
+}
+
+.boxImage { 
+    height: auto;
+    text-align: center; 
+  	width: auto;}
+
+.descrizione{
+	text-align: center;
+}
+
+#image {
+    height: auto; 
+    width: auto; 
+    width: 290px; 
+    height: 200px;
+}
 
 
 /*****
