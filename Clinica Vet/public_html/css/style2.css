@@ -229,13 +229,21 @@ section
 }
 
 /*area personale*/
+
+.benvenuto {
+	
+	margin-bottom: 2rem;
+}
+
 .azioni {
+	position: relative;
 	margin: auto;
 	width: 50%;
-	padding: 10px;
 }
 
 #profilo {
+	position: relative;
+	margin-right: 5rem;
 	
 	border: 3px solid #73AD21;
 }
@@ -247,11 +255,13 @@ section
 
 #prenotazioni {
 	
+	margin-top: 2rem;
+	margin-right: 5rem;
 	border: 3px solid #73AD21;
 }
 
 #logout {
-	
+	margin-top: 2rem;
 	border: 3px solid #73AD21;
 }
 
