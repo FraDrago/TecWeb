@@ -8,7 +8,7 @@ body {
 
 /*struttura*/
 .fright {
-	float:right
+	float:right;
 }
 
 /*header*/
@@ -23,7 +23,10 @@ body {
 	font-size: 0;
 	display: block;
 	vertical-align:top;
+}
 
+.presentation_img{
+	box-shadow:3px 3px 6px 1px #333333;
 }
 
 /*logo*/
@@ -42,7 +45,7 @@ body {
 	float:left;
 	position: relative;
 	top: 0em;
-	left: 15px;
+	left: 0.42em;
 }
 
 /*chiama ora*/
@@ -55,14 +58,14 @@ body {
 }
 .header-meta .col-elem {
 	display:inline-block;
-	width:235px;
-	text-align:right;
+	/*width:235px;*/
+	text-align:center;
 	font-family: 'Open Sans', sans-serif;
 	font-size:20px;
-	line-height:21px;
+	/*line-height:21px;*/
 	color: black;
 	font-weight: bold;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 .header-meta .phone {
 	display:inline-block;
@@ -77,12 +80,18 @@ body {
 
 .nav{
 	background-color: #6585a2;
-	border:0.01em solid white;
-	border-width: 0.01em 0;
-	list-style: none;
 	margin: 0;
-	padding: 0.8em;
+	/*padding: 0.8em;*/
 	text-align: center;
+}
+
+.nav ul{
+	width: 70%;
+	padding-left: 0;
+	margin: 0;
+	padding-top: 0.9em;
+	list-style: none;
+	display: inline-block;
 }
 
 .nav li {
@@ -90,8 +99,10 @@ body {
 }
 
 .nav a{
-	display: inline-block;;
-	padding: 10px;
+	height: 100%;
+	display: inline-block;
+	padding: 0.8em;
+	padding-bottom: 1em;
 	color:white;
 	font-size: 20px;
 	text-decoration: none;
@@ -103,17 +114,23 @@ body {
 	text-decoration: none;
 }
 
+.current a{
+	background-color: #ececec;
+	color: #6585a2; 
+}
+
 /*searchbar*/
 .search {
-	display: inline-block;
-	width:271px;
-	height:31px;
-	position: relative;
+	/*width:271px;
+	height:31px;*/
+	width: 25%;
+	margin-top: 1.2em;
+	float: right;
 }
 
 .searchTerm {
   float: left;
-  width: 100%;
+  width: 80%;
   border: 3px solid white;
   padding: 5px;
   height: 20px;
@@ -127,9 +144,9 @@ body {
 }
 
 .searchButton {
-  position: absolute;  
-  right: -50px;
-  width: 40px;
+  /*position: absolute;*/  
+  /*right: -50px;
+  width: 40px;*/
   height: 36px;
   border: 1px solid white;
   background: white;
@@ -138,6 +155,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
+  margin-left: -10%;
 }
 
 
@@ -208,9 +226,13 @@ section
 /** SIDEBAR**/
 
 #sidebar1 {
+	margin-top: 1.15em;
 	float: right;
 	width: 250px;
 	margin-right: 50px;
+	background: linear-gradient(135deg, rgba(217,209,239,1) 0%, rgba(237,235,250,0.95) 37%, rgba(192,190,234,0.9) 74%, rgba(205,198,235,0.87) 100%);
+	padding:2%;
+	text-align: center;
 }
 
 #sidebar1 #box1 {
@@ -312,7 +334,7 @@ ul.sezioni li {
   	font-size: 1em;
 	margin: 1em;
     overflow: hidden;
-	width: 15em;
+	width: 25%;
 	height: 360px;
 }
 
@@ -334,10 +356,8 @@ ul.sezioni li {
 }
 
 #image {
-    height: auto; 
-    width: auto; 
-    width: 290px; 
-    height: 200px;
+    width: 100%; 
+    height: 10em;
 }
 
 
@@ -346,11 +366,20 @@ footer
 *****/
 #footer { 
 	background-color: #d8dddd; 
-	margin: 2em auto;
+	position: static;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	bottom: 0;
+	text-align: center;
 }
 
 #footer p {
 	display: block;
-	font-size: 1.5em;
-    text-align: center;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+#footer_logo{
+	width: 5%;
+	height: 5%;
 }
