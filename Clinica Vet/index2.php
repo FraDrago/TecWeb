@@ -5,7 +5,7 @@
 
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="description" content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione, quali cani e gatti" />
+        <meta name="description" content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione (cani e gatti). L'ambulatorio si trova aPadova, via delle Mele 420" />
   		<meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
   		<meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,18 +36,25 @@
 
 <!-- contenuto -->
 
-    <div id="sidebar1">
+    <div id="content">
+    	<h2>Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
+    	<img src="img/dog-hug.jpg" alt="" />
+    	<p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere animale (... bla bla)</p>
+
+    	<div id="Orari">
+    		<h2>Orari ambulatorio</h2>
+    	<!--funzione php che riempie tabella orari-->
+
+
         <div id="box1">
             <h2>Prenota ora una visita</h2>
-            <p><a href="#" class="link-style">Contattaci</a></p>
+            <p><a href="Contattaci.php" class="link-style">Contattaci</a></p>
         </div>
         </div>
 
-    <div id="content">
-        <h3>Ambulatorio veterinario Archimedeo Torre</h3> <br>
-        <p><img class="presentation_img" src="img/dog-hug.jpg" width="600" height="250" alt="" /></p> </br>
-        <p>L'ambulatorio veterinario nasce dalla <strong>passione </strong> e dall'<strong>amore </strong> per i nostri amici a quattro zampe.</p>
-    </div>
+        <!---richiamo php a Galleria, Emergenze e pagina personale--->
+
+    
 </div>
 
 <?php include_once"footer.php"?>

@@ -1,0 +1,289 @@
+/*generale*/
+body {
+	font:18px Arial, Helvetica, sans-serif;
+	color:black;
+	margin: 0;
+	height:100%;
+}
+
+/*struttura*/
+.fright {
+	float:right
+}
+
+/*header*/
+#header {
+	background: url(../img/texture.jpg)repeat;
+	position:relative;
+	overflow: auto;
+}
+
+/*img set*/
+#img{
+	font-size: 0;
+	display: block;
+	vertical-align:top;
+
+}
+
+/*logo*/
+#logo {
+	margin-top: 0.3em;
+	margin-left: 0.5em;
+	float: left;
+    display: inline-block;
+    height: auto;
+    width: 7em;
+}
+
+/*titolo*/
+#title h1 {
+	color: black;
+	float:left;
+	position: relative;
+	top: 0em;
+	left: 15px;
+}
+
+/*chiama ora*/
+.header-meta {
+	text-align:right;
+	padding:31px 20px 20px;
+}
+.header-meta * {
+	text-align:left;
+}
+.header-meta .col-elem {
+	display:inline-block;
+	width:235px;
+	text-align:right;
+	font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	line-height:21px;
+	color: black;
+	font-weight: bold;
+	text-transform:uppercase;
+}
+.header-meta .phone {
+	display:inline-block;
+	font-size:22px;
+	line-height:22px;
+	color:black;
+	font-weight: bold;
+	margin:-3px 0 0 5px;
+}
+
+/*Navbar*/
+
+.nav{
+	background-color: #6585a2;
+	border:0.01em solid white;
+	border-width: 0.01em 0;
+	list-style: none;
+	margin: 0;
+	padding: 0.8em;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+}
+
+.nav a{
+	display: inline-block;;
+	padding: 10px;
+	color:white;
+	font-size: 20px;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.nav a:hover {
+	color: #2f233a;
+	text-decoration: none;
+}
+
+/*searchbar*/
+.search {
+	display: inline-block;
+	width:271px;
+	height:31px;
+	position: relative;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid white;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid white;
+  background: white;
+  text-align: center;
+  color: #1167cb;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+/*breadcrumb*/
+
+ul.breadcrumb {
+  padding: 20px 16px;
+  list-style: none;
+  text-align: center;
+  background-color: #6585a2;
+  color:white;
+  margin:0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 20px;
+}
+
+.bc_here {
+  color:#162e55;
+  text-decoration: none;
+}
+
+/*simbolo slash*/
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: white;
+  content: "/\00a0";
+}
+
+/*colore*/
+ul.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color:#162e55;
+  text-decoration: underline;
+}
+
+/******
+section
+******/
+.section {
+    margin-top: 4em;
+    text-align: center;			/* per centrare orizzontalmente i contenuti */
+}
+
+.section h3 {
+    color: #4caf50;
+    font-size: 2em;
+    line-height: 1.1em;
+    text-align: center;
+}
+
+.section p {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+.section h1, p { text-align: center; }
+
+/** SIDEBAR**/
+
+#sidebar1 {
+	float: right;
+	width: 250px;
+	margin-right: 50px;
+}
+
+#sidebar1 #box1 {
+	margin-bottom: 30px;
+}
+
+.link-style {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 7px 20px;
+	background: #0C73D4;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/*area personale*/
+
+.benvenuto {
+	
+	margin-bottom: 2rem;
+}
+
+.azioni {
+	position: relative;
+	margin: auto;
+	width: 50%;
+}
+
+#profilo {
+	position: relative;
+	margin-right: 5rem;
+	
+	border: 3px solid #73AD21;
+}
+
+#libretto {
+	
+	border: 3px solid #73AD21;
+}
+
+#prenotazioni {
+	
+	margin-top: 2rem;
+	margin-right: 5rem;
+	border: 3px solid #73AD21;
+}
+
+#logout {
+	margin-top: 2rem;
+	border: 3px solid #73AD21;
+}
+
+
+/*inserite qui i contenuti delle pagine*/
+#content{
+	text-align: center;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+
+/*****
+footer
+*****/
+#footer { 
+	background-color: #d8dddd; 
+	margin: 2em auto;
+}
+
+#footer p {
+	display: block;
+	font-size: 1.5em;
+    text-align: center;
+}
