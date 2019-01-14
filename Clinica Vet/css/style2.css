@@ -411,7 +411,7 @@ footer
   position: relative;
   top: 25px;
   left: 50px;
-  
+  width: 50px;
   z-index: 1;
   
   -webkit-user-select: none;
