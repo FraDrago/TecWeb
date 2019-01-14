@@ -1,0 +1,498 @@
+/******
+general
+******/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: white;
+ 	font-size: 6pt;
+}
+
+a[href]:after{content: "(" attr(href) ")"} /* stampa dopo i link il loro indirizzo tra parentesi  */
+
+/******
+wrapper
+******/
+#wrapper {
+	color: black;
+    width: auto;
+    font-family: "Times New Roman", Times, serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*****
+header
+*****/
+/* logo */
+#logo {
+    border: 2px solid black;
+    border-radius: 1em;
+    display: inline-block;
+    height: auto;
+    width: 9em;
+}
+
+/* titolo */
+#titolo {
+    display: inline-block;
+    line-height: 5em;
+}
+
+#titolo h1 {
+    color: #4caf50;
+    font-size: 7em;
+}
+
+#titolo h2 { font-size: 4em; }
+
+/* login */
+#login { float: right; }
+
+#login h3 { margin-bottom: 0.5em; }
+
+#login a {
+    border: 2px solid #4caf50;
+    border-radius: 0.3em;
+    color: black;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0.1em 0.5em;
+    text-decoration: none;
+}
+
+#login a:hover { background-color: #5cd660; }
+
+#login p {
+	font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#login button {
+	background-color: white;
+	border: 2px solid #4caf50;
+    border-radius: 0.3em;
+    color: black;
+    cursor: pointer;
+    padding: 0.1em 0.5em;
+    width: 100%;
+}
+
+#login button:hover { background-color: #5cd660; }
+
+/*****
+navbar
+*****/
+#navbar {
+    display: none;
+}
+
+/* dropdown button */
+.dropbutton {
+    display: none;
+}
+
+/* dropdown menu */
+.dropdown {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+}
+/* menu entries */
+#menu-entries { display: none; }
+
+/******
+section
+******/
+.section {
+    margin-top: 4em;
+    text-align: center;			/* per centrare orizzontalmente i contenuti */
+}
+
+.section h1 {
+    color: #4caf50;
+    font-size: 4em;
+    line-height: 1.1em;
+}
+
+.section p {
+    display: block;
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+.section h1, p { text-align: left; }
+
+/*******************
+eventi/panini/drinks
+*******************/
+.box {
+	border: 2px solid black;
+	border-radius: 0.3em;
+    display: inline-table;
+  	font-size: 1.7em;
+	margin: 1em;
+    overflow: hidden;
+	width: 15em;
+}
+
+.name {
+	background-color: #ffffff;
+    border-bottom: 2px solid black;
+    color: #ffffff;
+	padding: 0.7em;
+	text-align: center;
+}
+
+.boxImage {
+	border-bottom: 2px solid black;
+    height: auto;
+    max-height: 12em;
+	max-width: 14em;
+	padding: 0.6em;
+    text-align: center;
+  	width: auto;
+}
+
+#drinks .boxImage { height: 12em; }
+
+.image {
+	max-height: 11em;
+    max-width: 13em;
+}
+
+.descrizione {
+	border-bottom: 2px solid black;
+	font-size: 1em;
+	padding: 0.6em;
+	height: 7em;
+}
+
+.prezzo{
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #4caf50;
+  padding: 0.3em;
+}
+
+.altri {
+	font-size: 200%;
+    margin-top: 0.5em;
+}
+
+.altri a {
+	border: 2px solid #4caf50;
+    border-radius: 0.2em;
+	color: black;
+    display: block;
+    margin: 0 auto;
+	text-decoration: none;
+}
+
+.altri a:hover {
+    background-color: #5cd660;
+}
+
+/*********
+contattaci
+*********/
+#contattaci { text-align: left; }
+
+#contattaci .contenitore {
+	align-items: center;
+	display: flex;
+	margin: 2em 0;
+}
+
+#contattaci .image {
+    border: 2px solid black;
+    border-radius: 1em;
+    display: inline-block;
+    max-height: 10em;
+    height: auto;
+    width: 10em;
+}
+
+#contattaci .cont_text {
+	display: inline-block;
+	font-size: 180%;
+	line-height: 1.5em;
+    margin-left: 1em;
+}
+
+#contattaci .cont_nome {
+  	font-size: 120%;
+  	font-weight: bold;
+}
+
+#EliminaContatto a {
+	display: block;
+    font-size: 2em;
+    margin-left: 2em;
+}
+
+/*****
+footer
+*****/
+#footer {
+	background-color: #d8dddd;
+	margin: 2em auto;
+}
+
+#footer p {
+	display: block;
+	font-size: 1.5em;
+    text-align: center;
+}
+
+/************
+media-queries
+************/
+@media screen and (max-width: 700px) {
+	#navbar ul li { display: none; }
+
+    .dropdown { visibility: visible; }
+}
+
+@media screen and (max-width: 600px) {
+    #logo { display: none; }
+}
+
+@media screen and (max-width: 550px) {
+    #login { display: none; }
+
+    #contattaci .image { display: none; }
+}
+
+@media print {
+	#login { display: none; }
+    
+    #navbar { display: none; }
+    
+    .Inserimento { display: none; }
+    
+    .formInserimento { display: none; }
+    
+    #footer { display: none; }    
+}
+
+/*****************************
+inserimento/modifica/rimozione
+*****************************/
+.formInserimento {
+  	font-size: 1.4em;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.formInserimento fieldset { border:none; }
+
+.formInserimento input {
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    margin: 0.3em 0;
+    padding: 0.3em;
+}
+.formInserimento textarea {
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    margin: 0.3em 0;
+    padding: 0.3em;
+}
+
+#fileToUpload { border: none; }
+
+#errori {
+  	padding: 1em 0 0.3em 1.5em;
+  	font-size: 1.6em;
+  	font-weight: bold;
+}
+
+.messaggio {
+  	line-height: 1.6em;
+  	margin-left: 1em;
+  	padding: 0.5em;
+  	font-size: 1.4em;
+}
+
+.AreaRiservata {
+	font-size: 300%;
+    line-height: 2em;
+    text-align: center;
+}
+
+.AreaRiservata p {
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+#inserisci{
+  	margin: 0.1em 0;
+  	padding: 0.3em;
+}
+
+.Inserimento{
+  	padding: 0.5em;
+  	font-size: 2em;
+  	font-weight: bold;
+}
+
+#Modifica {
+  	float: left;
+  	padding: 0.4em;
+}
+#Elimina {
+  	float: right;
+  	padding: 0.4em;
+}
+
+#errorMsg {
+	margin: 1em 0;
+    font-size: 5em;
+}
+
+/*Eventi*/
+div.frame {
+    margin: 1em;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    display:inline-table;
+
+
+}
+
+.eventi img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+    font-size:1.5em;
+}
+
+/* COMMENTI */
+
+#commentForm{
+	margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+#commentForm p{
+	font-size: 2em;
+    line-height: 1.2em;
+    margin: 0.5em;
+}
+
+#commentForm textarea{
+	margin: 0 0 1em 2em;
+    width: 25em;
+    height: 5em;
+    resize: none;
+    border-radius: 0.3em;
+}
+
+#commentForm button{
+	background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 0.3em;
+    color: white;
+    cursor: pointer;
+    margin-left: 3em;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+}
+
+.commento{
+	margin: 2em;
+    border: 2px solid #4caf50;
+    padding: 1.4em;
+    border-radius: 0.5em;
+    max-width: 50em;
+}
+
+.commento h2{
+	font-size: 2em;
+    margin-left: 1em;
+    color: #4caf50;
+}
+
+.commento p{
+	font-size: 1.7em;
+    margin-top: 0.7em;
+}
+
+.commento #Elimina{
+	margin-top: 0.8em;
+    font-size: 1.4em;
+    margin-left: 0.5em;
+}
+
+/*REGISTRAZIONE E LOGIN */
+.message{
+	font-size: 2em;
+    line-height: 1.2em;
+    color: red;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#riddlerRegistration{
+  display:none;
+}
+
+.loginAndRegistrationForm{
+	margin-top: 6em;
+	margin-left: 60%;
+    margin-bottom: 40%;
+}
+
+.loginAndRegistrationForm fieldset{
+	border: none;
+}
+
+.loginAndRegistrationForm p{
+	font-size: 2.3em;
+    line-height: 1.2em;
+    margin-top: 0.5em;
+}
+
+.loginAndRegistrationForm input{
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    margin: 0.4em;
+    padding: 0.4em;
+}
+
+.loginAndRegistrationForm button{
+	background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 0.3em;
+    color: white;
+    cursor: pointer;
+    margin-left: 1em;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+}
+
+#registrazioneAvvenuta {
+	margin: 2em;
+	font-size: 3em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+#registrazioneAvvenuta p {
+	font-size: 200%;
+    text-align: center;
+}
+
