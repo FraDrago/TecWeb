@@ -38,7 +38,7 @@
 
     <div id="content">
     	<h2>Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
-    	<img src="img/dog-hug.jpg" alt="" />
+    	<img id="imghome" src="img/dog-hug.jpg" alt="immagine di un uomo che abbraccia un cane" />
     	<p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere animale (... bla bla)</p>
 
     	<div id="Orari">
