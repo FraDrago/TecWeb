@@ -47,7 +47,6 @@
 	<li><a href="#vaccinazioni">Vaccinazioni</a></li>
 	<li><a href="#visite">Visite ambulatoriali</a></li>
 	<li><a href="#microchip">Applicazione microchip </a></li>
-	<!--<li><a href="#"></a></li> -->
 </ul>
 </div>
 
@@ -57,8 +56,8 @@
         <div class="box3Image">
             <img class="image3" alt="immagine di una veterinaria che si rende cura di cane disteso su un lettino" src="img/ricovero.jpg">
         </div>
-        <div class="descrizione3">All'interno della Clinica assicuriamo ai nostri pazienti dei ricoveri per permettere un corretto monitoraggio degli stessi durante il post operatorio e per garantire tutte le cure del caso.
-            Il personale medico, presente 24 ore su 24, permette una assistenza continua agli animali che necessitano di cure costanti quali fluidoterapia, somministrazione di farmaci per via endovenosa, supporto nutrizionale, riabilitazione motoria etc.
+        <div class="descrizione3">I pazienti destinati al ricovero sono quelli affetti da patologie di una certa gravità che necessitano di terapie intensive non somministrabili a casa dal proprietario. All'interno della nostra Clinica assicuriamo ai nostri pazienti dei ricoveri per permettere un corretto monitoraggio durante il post operatorio e garantendo tutte le cure del caso.
+            Il personale medico, presente 24 ore su 24, permette una assistenza continua agli animali che necessitano di cure costanti, come per esempio fluidoterapia, somministrazione di farmaci per via endovenosa, supporto nutrizionale e riabilitazione motoria.
         </div>
     </div>
     
