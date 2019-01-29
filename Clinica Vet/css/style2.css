@@ -294,6 +294,53 @@ section
 	margin-right: 2em;
 }
 
+#spazio-nome {
+  padding-bottom: 1em;
+}
+
+.messaggio form {
+  padding-bottom: 2em;
+}
+
+
+
+.submit-form {
+  margin-top: 1em;
+}
+
+.messaggio {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.messaggio form ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.messaggio form li {
+  margin-bottom: 0.5em;
+}
+
+.messaggio form label {
+  float: left;
+  width: 100%;
+}
+
+#message-text {
+  width: 30em;
+  height: 10em;
+}
+
+#name,
+#email {
+  width: 20em;
+}
+
+#contact-error-print {
+  display: none;
+}
+
 /************************************************************Link Utili*************************************/
 
 #link1 p{
