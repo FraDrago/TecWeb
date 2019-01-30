@@ -54,7 +54,7 @@
 	
 	<div class="box2">
 	<div id="calore"></div>
-	<div class="name">Colpo di calore</div>
+	<div class="name2">Colpo di calore</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di un cane" src="img/calore.jpg"></div>
 	<div class="descrizione">Il colpo di calore è un’emergenza per cani e gatti da conoscere e non sottovalutare. Questa problematica si riscontra soprattutto nei <b>soggetti anziani</b> e nei <b>soggetti obesi</b>.
 	La temperatura normale dei cani e dei gatti si aggira attorno ai 38-38,5 °C, mentre l’ipertemia grave si verifica quando la temperatura rettale supera i 41,5°C.
@@ -64,7 +64,7 @@
 
 	<div class="box2">
 	<div id="vomito"></div>
-	<div class="name">Vomito e diarrea</div>
+	<div class="name2">Vomito e diarrea</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di un cane" src="img/vomito.jpg"></div>
 	<div class="descrizione">Il <u><b>vomito</b></u> può essere un fatto episodico indotto dall’<b>ingestione di peli, agenti irritanti, troppo cibo o bocconi troppo grossi</b>, ma anche <b>effetto di una patologia</b>, in particolar modo se accompagnato da comportamenti anomali, disorientamento, disturbi dell’equilibrio. In caso di vomito è importante <b>mantenere l’animale a digiuno e controllato per 12 o 24 ore, inducendolo però a bere poco e spesso</b>.
 	La <u><b>diarrea</b></u> invece può essere causata da <b>parassiti intestinali</b> (alcune volte riconoscibili nelle feci espulse).
@@ -72,21 +72,21 @@
 
 	<div class="box2">
 	<div id="unghie"></div>
-	<div class="name">Unghia spezzata</div>
+	<div class="name2">Unghia spezzata</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di una zampa di cane" src="img/unghia.jpg"></div>
 	<div class="descrizione">La rottura di un’unghia può avvenire per strappamento accidentale; normalmente il proprietario si accorge immediatamente in caso di perdita di sangue, oppure perché il cane/gatto non appoggia più l’arto.
 	Quando accade si deve <b>tagliare l’unghia nel punto di rottura</b> e successivamente <b>lavare la parte con soluzione fisiologica, applicare poi un bendaggio</b>. In alcuni casi potrebbe essere indispensabile somministrare un <u><b>antibiotico</b></u> che verrà prescritto dal medico veterinario.</div></div>
 
 	<div class="box2">
 	<div id="morso"></div>
-	<div class="name">Morso di cane o di gatto</div>
+	<div class="name2">Morso di cane o di gatto</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di un gatto che morde una mano" src="img/morso.jpg"></div>
 	<div class="descrizione">E’ importante sapere che la cavità orale dei cani e dei gatti ha una concentrazione batterica elevatissima, quindi <b>il morso è particolarmente infetto</b>.
 	Normalmente ciò che appare a livello cutaneo è solo la punta di un iceberg, le <b>lesioni sottostanti</b> da strappamento sono molto frequenti. In questo caso è utile <b>depilare la parte interessata con ampio margine, disinfettare utilizzando soluzioni diluite a base di iodio vinil pirrolidone (betadine) e lavare abbondantemente con soluzione fisiologica</b>. L’utilizzo di <u><b>terapie antibiotiche</b></u> risulta quasi sempre opportuno ed è quindi consigliabile, appena possibile, rivolgersi ad un veterinario.</div></div>
 
 	<div class="box2">
 	<div id="puntura"></div>
-	<div class="name">Puntura d'insetto</div>
+	<div class="name2">Puntura d'insetto</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di un cane e un'ape" src="img/puntura.jpg"></div>
 	<div class="descrizione">Le punture d’insetto spesso provocano reazioni allergiche che determinano un <b>rigonfiamento dell’area</b> che è stata colpita. Nella maggior parte dei casi la zona più interessata è quella del muso dove si verifica un ispessimento delle labbra. 
 	Il sintomo più comune è lo strofinamento del muso per terra o il grattamento con le zampe.
@@ -95,9 +95,9 @@
 
 	<div class="box2">
 	<div id="spighe"></div>
-	<div class="name">Spighe nelle orecchie o nelle zampe</div>
+	<div class="name2">Spighe nelle orecchie o nelle zampe</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di una spiga" src="img/forasacchi.jpg"></div>
-	<div class="descrizione">I <em>forasacchi</em> sono diffusissimi in campagna e nel periodo estivo. Questi corpi vegetali aderiscono molto facilmente al pelo del cane o del gatto, penetrando con facilità nella cute.
+	<div class="descrizione">I <em>forasacchi</em> sono diffusi in campagna e nel periodo estivo. Questi corpi aderiscono molto facilmente al pelo del cane o del gatto, penetrando con facilità nella cute.
 	Se la spiga si è infilata tra le zampe, il cane o il gatto può manifestare zoppia; se la spiga si è infilata nell’orecchio, l’animale scuote le orecchie e rotea la testa.
 	In entrambi i casi è possibile controllare <b>se la spiga è visibile e in questo caso estrarla</b>.
 	Quando invece la penetrazione avviene nella sottocute può generare delle fistole interdigitali che tendono a non rimarginare: in tal caso, è possibile tamponare la situazione con <b>bagni in soluzione salina satura utilizzando acqua tiepida</b>. Se la situazione perdura e non migliora è necessaria la visita medica.
@@ -105,7 +105,7 @@
 
 	<div class="box2">
 	<div id="ingestione"></div>
-	<div class="name">Ingestione di sostanze tossiche</div>
+	<div class="name2">Ingestione di sostanze tossiche</div>
 	<div class="boxImage2"><img id="image5" alt="Foto di un gatto davanti ad un bicchiere" src="img/tossiche.jpg"></div>
 	<div class="descrizione">Se si sospetta l’ingestione di una sostanza tossica sarà bene <b><u>informare tempestivamente il veterinario</u></b>.
 	I sintomi variano a seconda della sostanza ingerita, ma i più frequenti sono: <b>vomito, diarrea profusa a volte con sangue, abbattimento del sensorio, tremori muscolari, convulsioni, scialorrea (ipersalivazione)</b>.

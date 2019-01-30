@@ -50,10 +50,9 @@
 </ol>
 </div>
     
-<div id="ricovero" class="box3">
+<div id="ricovero" class="box2">
     <div class="name2">Ricovero e Terapia intensiva</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di una veterinaria che si rende cura di cane disteso su un lettino" src="img/ricovero.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine di una veterinaria che si rende cura di cane disteso su un lettino" src="img/ricovero.jpg">
         </div>
         <div class="descrizione3">I pazienti destinati al <b>ricovero</b> sono quelli affetti da patologie di una certa gravità che necessitano di terapie intensive non somministrabili a casa dal proprietario.</b> All'interno della nostra Clinica assicuriamo ai nostri pazienti dei ricoveri per permettere un corretto <b>monitoraggio </b>durante il post operatorio e garantendo tutte le cure del caso.
             Il personale medico, presente <b> 24 ore su 24</b>, permette una assistenza continua agli animali che necessitano di cure costanti, come per esempio <b>fluidoterapia</b>, <b>somministrazione di farmaci per via endovenosa</b>, <b>supporto nutrizionale</b> e <b>riabilitazione motoria.</b>
@@ -61,30 +60,27 @@
     
 </div>
 
-<div id="laboratorio" class="box3">
+<div id="laboratorio" class="box2">
     <div class="name2">Laboratorio analisi</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di un gattino in camice da chirurgo" src="img/laboratorio.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine di un gattino in camice da chirurgo" src="img/laboratorio.jpg">
         </div>
 	    <div class="descrizione3">Presso la nostra Clinica è possibile effettuare <b>analisi cliniche per animali</b>, necessarie per intervenire in modo <b>rapido</b> e <b>appropriato</b>, oppure per controlli diagnostici più <b>approfonditi</b>, nel dubbio che siano in corso patologie più particolari. In medicina veterinaria siamo di fronte ad un paziente non in grado di esprimere il proprio malessere, diventa quindi di fondamentale importanza l’utilizzo di mezzi diagnostici efficaci; per questo l'ambulatorio si avvale di un <b>laboratorio</b>dove è possibile fare molteplici analisi cliniche quali:
         <b>emocromo, analisi delle feci e delle urine, test diagnostici per filariosi, leishmania, parvovirus, leucemia felina, citologia, raschiati cutanei, analisi della cute per micosi, esami di radiologia digitale, ecografia ed ecocardio.</b>
         </div>
 </div>
 
-<div id="pronto" class="box3">
+<div id="pronto" class="box2">
     <div class="name2">Pronto Soccorso</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di un veterinario che studia l'occhio di un gatto" src="img/pronto2.jpg">
+        <div class="boxImage2"><img id="image5"alt="immagine di un veterinario che studia l'occhio di un gatto" src="img/pronto2.jpg">
         </div>
 	    <div class="descrizione3">Il servizio di Pronto Soccorso, <b>aperto 24 ore su 24</b>, per le situazioni d’emergenza nelle quali la rapidità d’azione è fondamentale, offre la possibilità di provvedere tempestivamente ai trattamenti salvavita. 
         Il reparto è provvisto di <b>apparecchiature di laboratorio</b> e di <b>diagnostica</b> in modo tale da permettere una corrretta ed ottimale gestione del paziente in condizioni critiche.
         </div>
 </div>
 
-<div id="chirurgia" class="box3">
+<div id="chirurgia" class="box2">
     <div class="name2">Chirurgia veterinaria</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di un chirurgo che opera" src="img/chirurgia.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine di un chirurgo che opera" src="img/chirurgia.jpg">
         </div>
 	    <div class="descrizione3">Il nostro personale medico altamente specializzato permette alla clinica di offrire prestazioni di <b>chirurgia dei tessuti molli</b>, <b>dei tessuti duri</b> ma anche servizi di <b>chirurgia oncologica</b> veterinaria.
         Il reparto operatorio è attrezzato per svolgere interventi complessi, mini-invasivi e di <b>laser chirurgia</b> nella efficienza e nella sicurezza più totali. Alcuni dei servizi offerti dal nostro staff di chirurghi sono:
@@ -92,38 +88,33 @@
         </div>
 </div>
 
-<div id="vaccinazioni" class="box3">
+<div id="vaccinazioni" class="box2">
     <div class="name2">Vaccinazioni</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di una veterinaria che vaccina un gatto" src="img/vaccinazioni2.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine di una veterinaria che vaccina un gatto" src="img/vaccinazioni2.jpg">
         </div>
 	    <div class="descrizione3">
         <ul>
         <li><strong>E’ necessario vaccinare il mio cane o il mio gatto?</strong></li>
         </ul>
-        <em>Assolutamente sì.</em> Secondo le linee guida del <acronym lang="en" title="Vaccination Guidelines Group">VGG</acronym> (<span lang="en"> Vaccination Guidelines Group</span>), le vaccinazioni non solo ci permettono di proteggere il nostro amato compagno
-        da gravi malattie infettive, ma permette anche di fornire l'immunità alla popolazione felina e canina di una certa area. 
-        L'Ambulatorio Archimedeo Torre offre servizi di somministrazione di <b>vaccini <span lang="en"><em>core</em></span></b>(vaccini raccomandati per fornire all'animale protezione per tutta la vita da malattie infettive di importanza globale) e <b>vaccini opzionali</b>, ovvero quelli da somministrare in base allo stile di vita dall'animale o ad una zona geografica particolare. Le vaccinazioni più importanti sono somministrate quando l'animale è cucciolo, ma <b>molti vaccini necessitano di richiami per mantenere l'immunità intatta</b>.
-        <br/>
-        <a href='AccediReg.php'>Accedi</a> al tuo account per controllare la situazione del tuo compagno a quattro zampe e, nel caso fosse necessario, <a href='Contattaci.php'>prenota una visita</a> per vaccinarlo!
+        <em>Assolutamente sì.</em> Secondo le linee guida del <acronym lang="en" title="Vaccination Guidelines Group">VGG</acronym> (<span lang="en"> Vaccination Guidelines Group</span>), le vaccinazioni non solo ci permettono di proteggere il nostro amato compagno da gravi malattie infettive, ma permette anche di fornire l'immunità alla popolazione di una certa area. 
+        L'Ambulatorio Archimedeo Torre offre servizi di somministrazione di <b>vaccini <span lang="en"><em>core</em></span></b>(vaccini raccomandati per fornire all'animale protezione per tutta la vita) e <b>vaccini opzionali</b>, da somministrare in base allo stile di vita o alla zona geografica dell'animale. Ricorda: <b>molti vaccini necessitano di richiami per mantenere l'immunità intatta</b>.</br>
+        <a href='AccediReg.php'>Accedi</a> al tuo account per controllare la situazione del tuo animale. Se necessario, <a href='Contattaci.php'>prenota subito una visita</a> per vaccinarlo!
         </div>
 </div>
 
-<div id="visite" class="box3">
+<div id="visite" class="box2">
     <div class="name2">Visite ambulatoriali</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine di una veterinaria che ascolta il cuore di un cane" src="img/visite1.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine di una veterinaria che ascolta il cuore di un cane" src="img/visite1.jpg">
         </div>
 	    <div class="descrizione3"> Oltre al servizio di pronto soccorso per le emergenze, il nostro Ambulatorio offre la possibilià di effettuare <b>visite di base</b> (di <span lang="en">routine</span>) per il proprio animale, così come <b>visite specialistiche</b>, nei settori della <b>dermatologia, dell'oculistica e dell' ecografia/ecocardiografia veterinaria </b>, in modo da avere un quadro più completo dello stato di salute del paziente. L'Ambularorio inoltre risulta dotato di un servizio di <b>radiologia digitale</b>, una moderna tecnica diagnostica che assicura un’alta qualità dell’immagine in tempi molto rapidi.
         <br/>
-        Per <a href='Contattaci.php'>prenotare una visita</a> o per richiedere maggiori informazioni in merito ai servizi disponibili, è possibile contattare la struttura al numero di telefono:<span class="phone"> 0434 56789 </span> .
+        Per <a href='Contattaci.php'>prenotare una visita</a> o per richiedere maggiori informazioni in merito ai servizi disponibili, è possibile contattare la struttura al numero di telefono:<span class="phone"> 0434 56789 </span>.
         </div>
 </div>
 
-<div id="microchip" class="box3">
+<div id="microchip" class="box2">
     <div class="name2">Applicazione microchip</div>
-        <div class="box3Image">
-            <img class="image3" alt="immagine con un lettore di microchip" src="img/microchip.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine con un lettore di microchip" src="img/microchip.jpg">
         </div>
 	    <div class="descrizione3">
         <ul>
