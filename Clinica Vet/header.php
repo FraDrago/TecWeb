@@ -1,6 +1,6 @@
 <div id="header">
         
-        <a href="index2.html#">
+        <a href="index2.php#">
         <img id="logo" src="img/vet2.png"  alt="logo"/>  
 		</a>  
         <div id="title">

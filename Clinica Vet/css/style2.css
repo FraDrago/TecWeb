@@ -294,6 +294,8 @@ section
 	margin-right: 2em;
 }
 
+/*******************/
+
 #spazio-nome {
   padding-bottom: 1em;
 }
@@ -375,15 +377,84 @@ section
 	font-size: 1.2em;
 	text-align: center;
 }
-ul.sezioni{
-	list-style:decimal;
-	list-style-position: inside;
-	text-align: justify;
+
+.list-type3 li img{
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	float: left;
+	position: relative;
+	margin-bottom: 12px;
+
+}
+ol{
+	list-style-type: none;
+	margin: 0 auto;
+	display: inline-block;
 }
 
-ul.sezioni li {
-  font-size: 1.3em;
+.list-type3{
+margin:0;
+width:auto;
+display: inline-block;
+text-align: center;
+
 }
+.list-type3 #piante-colore a{
+	background:black;
+}
+
+.list-type3 li, .list-type3 a{
+display: inline-block;
+line-height:35px;
+position:relative;
+transition: background-color 1.5s ease;
+margin-right: 1em;
+}
+
+.list-type3 a{ /*corpo freccia*/
+width: 300px;
+background:#6585a2;
+color:#fff;
+text-decoration:none;
+border-bottom-right-radius:4px;
+border-top-right-radius:4px;
+}
+
+.list-type3 a:before{ /*punta freccia*/
+content:"";
+float:left;
+position:absolute;
+top:0;
+left:-12px;
+width:0;
+height:0;
+border-color:transparent #6585a2 transparent transparent;
+border-style:solid;
+border-width: 18px 12px 18px 0;
+}
+
+.list-type3 a:after{ /*decorazione freccia*/
+content:"";
+position:absolute;
+top:15px;
+left:0;
+float:left;
+width:6px;
+height:6px;
+border-radius:2px;
+background:#fff;
+box-shadow:-1px -1px 2px #004977;
+}
+
+.list-type3 a:hover{
+background:#555;
+}
+
+.list-type3 a:hover:before{
+border-color:transparent #6585a2 transparent transparent;
+}
+
 .piante a{
 	color:#4A6CA8;
 }
@@ -391,10 +462,7 @@ ul.sezioni li {
 	color: #0B0080;
 }
 
-.sezioni a{
-	color:#4A6CA8; 
-}
-.sezioni a:visited {
+.sezioni2 a:visited {
   color:#0B0080;
 }
 
@@ -442,7 +510,7 @@ ul.sezioni li {
 
 
 .descrizione{
-	text-align: center;
+	text-align: left;
 	vertical-align:middle;
 	position: relative;
 	margin-top: 1em;
@@ -452,8 +520,8 @@ ul.sezioni li {
 }
 
 #image4 {
-    width: 15em; 
-    height: 11em;
+    width: 16em; 
+    height: 12em;
 }
 
 #image5 {
@@ -471,16 +539,21 @@ ul.sezioni li {
 
 
 /*********************************************SERVIZI*************************************************/
-
 .box3 {
-	border: 1px solid black;
-	border-radius: 0.3em;
     display: inline-table;
   	font-size: 1em;
 	margin: 1em;
     overflow: hidden;
 	width: auto;
 	height: auto;
+}
+
+.name2{
+	color: black;
+	text-align: left;
+	font-weight: bold;
+	font-size: 24px;
+
 }
 
 .box3Image { 
@@ -491,25 +564,24 @@ ul.sezioni li {
 }
 
 .image3 {
+	width: 11em; 
+    height: 11em;
 	border-radius: 10%;
-	margin-right: 1.5em; 
+	margin-right: 2em; 
 	margin-left: 1.5em; 
-	width: 80%; 
-	max-width: 10em; 
-	/*max-height: 10em; */
 	float: left;
-	padding-top: 0.7em;
-	padding-bottom: 0.7em;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
 }
 .descrizione3{
-	padding-top: 2em;
-	margin-left: 1em;
-	margin-right: 1.5em;
-	margin-bottom: 1em;
-	/*padding-left: 1.5em;*/
-	line-height: 1.3em;
+	font-size: 18px;
 	text-align: left;
-	vertical-align: middle;
+	vertical-align:middle;
+	position: relative;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
 }
 
 /*****
@@ -545,14 +617,13 @@ footer
   transition: color 0.3s ease;
 }
 
-#menu a:hover
-{
-  color: tomato;
+#menu a:hover{
+
+	color:#162e55;
 }
 
-.current2 a{
-	background-color: #515a5a;
-	border-radius: 0.5em 0.5em 0.5em 0.5em;
+li.active2{
+	background-color: #6585a2;
 }
 
 #menuToggle
@@ -645,8 +716,8 @@ footer
   margin: -52px 0 0 -50px;
   padding: 50px;
   padding-top: 60px;
-  
-  background: #426280;
+  border: 1px solid #555;
+  background: #74a0c3;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -661,6 +732,7 @@ footer
 {
   padding: 10px 0;
   font-size: 22px;
+  border-bottom: 1px solid #555;
 }
 
 #menuToggle input:checked ~ ul
@@ -673,10 +745,11 @@ footer
 
 @media screen and (max-width: 1090px) {
 	.nav ul li a{ display: none; }
-    #menuToggle { visibility: visible; }
-    
+    #menuToggle { visibility: visible; }  
 }
-
+@media screen and (max-width: 850px) {
+	.list-type3 li {margin-right: 0em;}
+}
 @media screen and (max-width: 700px) {
 	.search {display: none;}
 	
@@ -685,5 +758,16 @@ footer
 @media screen and (max-width: 550px) {
 	#img {display: none;}
 	#logo {display: none;}
+	.image3{float: none;}
+	.name2{text-align: center;}
+	.descrizione3 ul li{
+	text-align:left; list-style-type: none; padding-left: 0;}
+	#image5{float: none;}
+	.box3Image{padding-right: 0;}
+	.boxImage2{text-align: center;}
+	.list-type3 li img{display: none;}
+	.list-type3 li {margin-bottom: 1em;}
+	.list-type3 a{width: 250px;}
+
 	
 }
