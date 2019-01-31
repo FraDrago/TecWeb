@@ -64,7 +64,7 @@
     <div class="name2">Laboratorio analisi</div>
         <div class="boxImage2"><img id="image5" alt="immagine di un gattino in camice da chirurgo" src="img/laboratorio.jpg">
         </div>
-	    <div class="descrizione3">Presso la nostra Clinica è possibile effettuare <b>analisi cliniche per animali</b>, necessarie per intervenire in modo <b>rapido</b> e <b>appropriato</b>, oppure per controlli diagnostici più <b>approfonditi</b>, nel dubbio che siano in corso patologie più particolari. In medicina veterinaria siamo di fronte ad un paziente non in grado di esprimere il proprio malessere, diventa quindi di fondamentale importanza l’utilizzo di mezzi diagnostici efficaci; per questo l'ambulatorio si avvale di un <b>laboratorio</b>dove è possibile fare molteplici analisi cliniche quali:
+	    <div class="descrizione3">Presso la nostra clinica è possibile effettuare <b>analisi cliniche per animali</b>, necessarie per intervenire in modo <b>rapido</b> e <b>appropriato</b>, oppure per controlli diagnostici più <b>approfonditi</b>, nel dubbio che siano in corso patologie più particolari. In medicina veterinaria siamo di fronte ad un paziente non in grado di esprimere il proprio malessere, diventa quindi di fondamentale importanza l’utilizzo di mezzi diagnostici efficaci; per questo l'ambulatorio si avvale di un <b>laboratorio</b>dove è possibile fare molteplici analisi cliniche quali:
         <b>emocromo, analisi delle feci e delle urine, test diagnostici per filariosi, leishmania, parvovirus, leucemia felina, citologia, raschiati cutanei, analisi della cute per micosi, esami di radiologia digitale, ecografia ed ecocardio.</b>
         </div>
 </div>
@@ -106,7 +106,7 @@
     <div class="name2">Visite ambulatoriali</div>
         <div class="boxImage2"><img id="image5" alt="immagine di una veterinaria che ascolta il cuore di un cane" src="img/visite1.jpg">
         </div>
-	    <div class="descrizione3"> Oltre al servizio di pronto soccorso per le emergenze, il nostro Ambulatorio offre la possibilià di effettuare <b>visite di base</b> (di <span lang="en">routine</span>) per il proprio animale, così come <b>visite specialistiche</b>, nei settori della <b>dermatologia, dell'oculistica e dell' ecografia/ecocardiografia veterinaria </b>, in modo da avere un quadro più completo dello stato di salute del paziente. L'Ambularorio inoltre risulta dotato di un servizio di <b>radiologia digitale</b>, una moderna tecnica diagnostica che assicura un’alta qualità dell’immagine in tempi molto rapidi.
+	    <div class="descrizione3"> Oltre al servizio di pronto soccorso per le emergenze, il nostro Ambulatorio offre la possibilià di effettuare <b>visite di base</b> (di <span lang="en">routine</span>) per il proprio animale, così come <b>visite specialistiche</b>, nei settori della <b>dermatologia, dell'oculistica e dell' ecografia /ecocardiografia veterinaria </b>, in modo da avere un quadro più completo dello stato di salute del paziente. L'Ambularorio inoltre risulta dotato di un servizio di <b>radiologia digitale</b>, una moderna tecnica diagnostica che assicura un’alta qualità dell’immagine in tempi molto rapidi.
         <br/>
         Per <a href='Contattaci.php'>prenotare una visita</a> o per richiedere maggiori informazioni in merito ai servizi disponibili, è possibile contattare la struttura al numero di telefono:<span class="phone"> 0434 56789 </span>.
         </div>

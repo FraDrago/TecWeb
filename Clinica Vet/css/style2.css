@@ -11,10 +11,22 @@ body {
 
 /******struttura******/
 /********************/
+
+/***Page***/
+#page{
+	background-color: #cad0db;
+}
+
+/***Content***/
+
 #content{
 	text-align: center;
 	margin-left: 2em;
 	margin-right: 2em;
+	padding:2em 2em 2em 2em;
+	background-color: white;
+	margin-top: -1.5em;
+	margin-bottom: 1em;
 }
 
 /***Section***/
@@ -26,7 +38,7 @@ body {
 
 .section h3 {
     color: #4caf50;
-    font-size: 2em;
+    font-size: 3em;
     line-height: 1.1em;
     text-align: center;
 }
@@ -439,6 +451,13 @@ ul.breadcrumb li a:hover {
 
 /******Contattaci******/
 /*********************/
+.messaggio h1{
+	font-size: 1.8em;
+}
+
+.messaggio h2{
+	font-size: 1.4em;
+}
 
 #spazio-nome {
   padding-bottom: 1em;
@@ -454,7 +473,7 @@ ul.breadcrumb li a:hover {
 
 .messaggio {
   text-align: center;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .messaggio form ul {
@@ -516,7 +535,7 @@ ul.breadcrumb li a:hover {
 /********************/
 
 #title h3{
-	font-size: 1.2em;
+	font-size: 1.8em;
 	text-align: center;
 }
 
@@ -533,6 +552,7 @@ ol{
 	list-style-type: none;
 	margin: 0 auto;
 	display: inline-block;
+	padding-left:1em;
 }
 
 .list-type3{
@@ -738,17 +758,19 @@ border-color:transparent #6585a2 transparent transparent;
 	.nav ul li a{ display: none; }
     #menuToggle { visibility: visible; }  
 }
+
 @media screen and (max-width: 850px) {
 	.list-type3 li {margin-right: 0em;}
 }
+
 @media screen and (max-width: 700px) {
 	.search {display: none;}
-	
+	.box{margin:0.5em;}	
 }
 
 @media screen and (max-width: 550px) {
 	#img {display: none;}
-	#logo {display: none;}
+	#logo {width: 5em;}
 	.image3{float: none;}
 	.name2{text-align: center;}
 	.descrizione3 ul li{
@@ -763,3 +785,27 @@ border-color:transparent #6585a2 transparent transparent;
 	.descrizione{text-align: left;}
 	
 }
+
+@media screen and (max-width: 441px) {
+	#logo {width: 4.5em; margin-top: 0.5em;}
+	#title h1{font-size: 25px;}
+	#page {background-color: white;}
+	#content{padding: 0em 0em 0em 0em}
+	.descrizione3 ul {padding-left: 0em;}
+}
+@media screen and (max-width: 376px) {  /*iphoneX*/
+	.nav{margin-top: -46px;}
+	#logo {width: 3em; margin-top: 0.5em;}
+	#title h1{font-size: 20px;}
+	.header-meta .col-elem {font-size: 18px;}
+	.header-meta .phone {font-size: 20px;}
+	.box{margin-left: 0em; margin-top: 0.5em;}
+
+}
+
+@media screen and (max-width: 320px) {  /*iphone5/SE*/
+	ol {padding-left: 0em;}
+	.box{margin-left: -1em; margin-top: 0.5em;}
+
+
+

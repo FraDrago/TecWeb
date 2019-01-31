@@ -36,12 +36,12 @@
 
 <!-- contenuto -->
 
-<div class="content">
+<div id="content">
     <div id="anchor"></div>
 
     <div class="messaggio">
       <h1>Vuoi contattarci?</h1>
-      <h2 id="spazio-nome">Richiedi informazione compilando il modulo!<br/>Ti contatteremo il prima possibile!</h2>
+      <h2 id="spazio-nome">Richiedi informazioni compilando il modulo!<br/>Ti contatteremo il prima possibile!</h2>
       <form id="contattaci-form" action="" method="post">
         <ul>
           <li>

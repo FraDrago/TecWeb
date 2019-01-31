@@ -58,7 +58,7 @@
 
 <a href="https://www.wsava.org/" target="_blank"><img class="logolink" src="img/wsava.png"></a>
 
-<p><a href="https://www.wsava.org/" target="_blank">WSAVA</a>The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200 000 veterinari da tutto il mondo.</p>
+<p><a href="https://www.wsava.org/" target="_blank">WSAVA</a>The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200'000 veterinari da tutto il mondo.</p>
 
 </div>
 
