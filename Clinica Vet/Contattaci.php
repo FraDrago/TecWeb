@@ -41,7 +41,6 @@
 
     <div class="messaggio">
       <h1>Vuoi contattarci?</h1>
-      <h2 id="spazio-nome">Richiedi informazioni compilando il modulo!<br/>Ti contatteremo il prima possibile!</h2>
       <form id="contattaci-form" action="" method="post">
         <ul>
           <li>

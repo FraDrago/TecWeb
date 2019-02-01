@@ -36,6 +36,26 @@
 
 <!-- contenuto -->
 
+<div id="content">
+    <div id="anchor"></div>
+
+    <div class="messaggio">
+      <h1>PROVA Accedi/Registrati</h1>
+      <form id="contattaci-form" action="" method="post">
+        <ul>
+          <li>
+            <label for="name">username:</label>
+            <input type="text" name="first_name" id="name" />
+          </li>
+          <li >
+            <label for="email" xml:lang="en">password:</label>
+            <input type="text" name="email" id="email" size="35" />
+          </li>
+          <li class="submit-form">
+            <input type="submit" name="submit" value="LOGIN" >
+          </li>
+        </ul>
+      </form>
     
 </div>
 
