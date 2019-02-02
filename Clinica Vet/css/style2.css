@@ -726,6 +726,23 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 
+/*******Galleria*******/
+/*********************/
+.rowg{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.columng{
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px:
+}
+
+
+
+
 /******Servizi******/
 /******************/
 

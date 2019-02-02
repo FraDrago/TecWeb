@@ -1,4 +1,29 @@
-<?php $pagina_attuale='galleria.php'; ?>
+<?php 
+require_once('./config/config.php');
+require_once('./utils/database_utils.php');
+
+$connection = connectToDatabase($servername, $username, $password, $dbname);
+
+/**
+ * make queries!!!
+ */
+
+/*$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}*/
+
+$connection->close();
+$pagina_attuale='galleria.php'; 
+
+?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -37,6 +62,50 @@
 
 <div id="title"><h3>Galleria</h3></div>
     <p>Qui troviamo le foto pi&ugrave belle dei nostri pazienti a quattro zampe! </p>
+<div id="gallery">
+   <div class="rowg">
+        <div class="columng">
+        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
+        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
+        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
+        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
+        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
+        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
+        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        </div>
+        <div class="columng">
+        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
+        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
+        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
+        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
+        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
+        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
+        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        </div>
+        <div class="columng">
+        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
+        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
+        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
+        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
+        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
+        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
+        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        </div>
+        <div class="columng">
+        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
+        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
+        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
+        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
+        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
+        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
+        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        </div>
+   </div>
+
+
+</div>
+
+</div>
 <br>
 <br/>
 
