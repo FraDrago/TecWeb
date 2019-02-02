@@ -538,6 +538,15 @@ ul.breadcrumb li a:hover {
 	text-align: center;
 }
 
+.highlight{
+	font-weight: bold;
+}
+
+.highlight2{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .list-type3 li img{
 	width: 4em;
 	height: 4em;
