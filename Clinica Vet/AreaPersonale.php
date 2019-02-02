@@ -1,4 +1,4 @@
-<?php $pagina_attuale='Areapersonale.php'; ?>
+<?php $pagina_attuale='AreaPersonale.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -8,7 +8,7 @@
       <meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
       <meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/Areapersonale.css">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="print.css" media="print">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
@@ -18,14 +18,6 @@
 
 <?php include_once"header.php"?>
 
-<div class="fright"> <!--elemento di utility sulla destra-->
-      <div class="header-meta">
-        <div class="col-elem"> Hai un'emergenza?<br/>
-          Chiama ora: <span class="phone"> 0434 56789 </span> </div>
-      </div>    
-</div>
-
-</div>
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
 
@@ -38,27 +30,22 @@
   <li class="bc_here">Area Personale</li>
 </ul>
   
-<!--un po' di separazione-->
-
-
+<br/>
+<br/>
 <div id="content">
+  <div id="title"><h3>Benvenuto nell'area personale!</h3></div>
 
-<!--Contenuto qui-->
+  <p>Qui potrai controllare la situazione sanitaria del tuo animale o prenotare una visita presso il nostro ambulatorio</p>
 
-<div class="benvenuto">
- <p>Benvenuto Pippo </p>
-</div>
 
-<div	 class="azioni">
-
-<div >
-	<img id="profilo" src="img/profilo/profilo personale.png" alt="modifica profilo"/> 
-	<img id="libretto" src="img/profilo/libretto personale.png" alt="libretto personale"/> 
-</div>
-<div >
-	<img id="prenotazioni" src="img/profilo/prenotazione.png" alt="modifica profilo"/> 
-	<img id="logout" src="img/profilo/Log out.png" alt="log out"/> 
-</div>
+<div class="list-type4">
+<ol>
+<li><img src="img/libretto.jpg" ><a href="Animale.php">Libretto sanitario</a></li>
+<li><img src="img/prenota.jpg" ><a href="Prenota.php">Prenota una visita</a></li>
+<li><img src="img/profiloico.jpg" ><a href="ModificaProfilo.php">Modifica il profilo</a></li>
+<li><img src="img/logout.jpg" ><a href="AccediReg.php">Logout</a></li>
+</li>
+</ol>
 </div>
 
 

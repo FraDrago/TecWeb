@@ -1,4 +1,4 @@
-<?php $pagina_attuale='AccediReg.php'; ?>
+<?php $pagina_attuale='ModificaProfilo.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -27,38 +27,18 @@
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li class="bc_here">Accedi/Registrati</li>
+  <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+  <li class="bc_here">Modifica Profilo</li>
 </ul>
-
-<!--un po' di separazione-->
+  
 <br/>
 <br/>
-
-<!-- contenuto -->
-
 <div id="content">
-    <div id="anchor"></div>
+  <div id="title"><h3>Modifica profilo</h3></div>
+  <!-- cambio nome, cambio telefono, cambio mail, etc,-->
 
-    <div class="messaggio">
-      <h1>PROVA Accedi/Registrati</h1>
-      <form id="contattaci-form" action="" method="post">
-        <ul>
-          <li>
-            <label for="name">username:</label>
-            <input type="text" name="first_name" id="name" />
-          </li>
-          <li >
-            <label for="email" xml:lang="en">password:</label>
-            <input type="text" name="email" id="email" size="35" />
-          </li>
-          <li class="submit-form">
-            <input type="submit" name="submit" value="LOGIN" >
-          </li>
-        </ul>
-      </form>
-    
-</div>
-</div>
+
+</div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
 

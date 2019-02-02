@@ -118,70 +118,70 @@
 <div class="box">
 	<div class="name">Rododendro</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/rodo1.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> foglie e fiori.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> foglie e fiori.
 	<strong>Sintomatologia:</strong> vomito-sintomi nervosi</div>
 </div>
 
 <div class="box">
 	<div class="name">Colchico</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/colch.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> tutta la pianta.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> tutta la pianta.
 	<strong>Sintomatologia:</strong> irritazione gastroenterica</div>
 </div>
 
 <div class="box">
 	<div class="name">Euforbia</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/eufo.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> tutta la pianta.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> tutta la pianta.
 	<strong>Sintomatologia:</strong> irritazione gastroenterica</div>
 </div>
 
 <div class="box">
 	<div class="name">Stella di Natale</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/stell.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> foglie e fiori.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> foglie e fiori.
 	<strong>Sintomatologia:</strong> irritazione gastroenterica</div>
 </div>
 
 <div class="box">
 	<div class="name">Ortensia</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/ortens.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> foglie e fiori.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> foglie e fiori.
 	<strong>Sintomatologia:</strong> dolori gastrici, vomito e diarrea</div>
 </div>
 
 <div class="box">
 	<div class="name">Edera</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/edera.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> tutta la pianta.<br/>
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> tutta la pianta.<br/>
 	<strong>Sintomatologia:</strong> irritazione gastroenterica, a dosi elevate depressione nervosa e cardiaca</div>
 </div>
 
 <div class="box">
 	<div class="name">Oleandro</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/olea.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> tutta la pianta.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> tutta la pianta.
 	<strong>Sintomatologia:</strong> irritazione gastroenterica, depressione del sistema nervoso e del cuore</div>
 </div>
 
 <div class="box">
 	<div class="name">Filodendro</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/filo.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> foglie e fusto.
-	<strong>Sintomatologia:</strong> irritazione gastroenterica</div>
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> foglie e fusto.
+	<strong>Sintomatologia: </strong>irritazione gastroenterica</div>
 </div>
 
 <div class="box">
 	<div class="name">Dieffenbachia</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/dieffe2.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> fusto e apici.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> fusto e apici.
 	<strong>Sintomatologia:</strong> forte irritazione di bocca, esofago, stomaco, intestino (lattice irritante)</div>
 </div>
 
 <div class="box">
 	<div class="name">Tulipano</div>
 	<div class="boxImage"><img id="image4" alt="Foto di una pianta" src="img/tulip.jpg"></div>
-	<div class="descrizione"><strong>Parti tossiche:</strong> masticazione o ingestione di bulbi.
+	<div class="descrizione-p"><strong>Parti tossiche:</strong> masticazione o ingestione di bulbi.
 	<strong>Sintomatologia:</strong> vomito, salivazione, diarrea con coliche, dispnea, tachicardia, debolezza e atassia</div>
 </div>
 
