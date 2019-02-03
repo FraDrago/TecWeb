@@ -32,7 +32,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 			$_SESSION['loggedin'] = TRUE;
 			$_SESSION['name'] = $_POST['username'];
 			$_SESSION['id'] = $id;
-			echo 'Welcome ' . $_SESSION['name'] . '!';
+			echo 'Benvenuto ' . $_SESSION['name'] . '!' . '<br><a href="index2.php">Vai alla home</a>';
 		} else {
 			echo 'Username e/o Password sbagliati';
 		}

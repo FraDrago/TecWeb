@@ -49,7 +49,7 @@ if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE username =
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
 			$stmt->execute();
-			echo 'You have successfully registered, you can now login!<br><a href="AccediReg.php">Login</a>';
+			echo 'You have successfully registered, you can now login!<br><a href="AccediReg.php">Fai il Login</a>';
 		} else {
 			echo 'Could not prepare statement!';
 		}
