@@ -13,24 +13,24 @@ if ($mysqli->connect_errno) {
 // Now we check if the data was submitted, isset will check if the data exists.
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	// Could not get the data that should have been sent.
-	die ('Please complete the registration form!<br><a href="register.html">Back</a>');
+	die ('Please complete the registration form!<br><a href="AccediReg.php">Back</a>');
 }
 // Make sure the submitted registration values are not empty.
 if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
 	// One or more values are empty...
-	die ('Please complete the registration form!<br><a href="register.html">Back</a>');
+	die ('Please complete the registration form!<br><a href="AccediReg.php">Back</a>');
 }
 // Check to see if the email is valid.
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	die ('Email is not valid!<br><a href="register.html">Back</a>');
+	die ('Email is not valid!<br><a href="AccediReg.php">Back</a>');
 }
 // Username must contain only characters and numbers.
 if (preg_match('/[A-Za-z0-9]+/', $_POST['username']) == 0) {
-    die ('Username is not valid!<br><a href="register.html">Back</a>');
+    die ('Username is not valid!<br><a href="AccediReg.php">Back</a>');
 }
 // Password must be between 5 and 20 characters long.
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-	die ('Password must be between 5 and 20 characters long.<br><a href="register.html">Back</a>');
+	die ('Password must be between 5 and 20 characters long.<br><a href="AccediReg.php">Back</a>');
 }
 // We need to check if the account with that username exists
 if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
@@ -41,7 +41,7 @@ if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE username =
 	// Store the result so we can check if the account exists in the database.
 	if ($stmt->num_rows > 0) {
 		// Username already exists
-		echo 'Username exists, please choose another!<br><a href="register.html">Back</a>';
+		echo 'Username exists, please choose another!<br><a href="AccediReg.php">Back</a>';
 	} else {
 		// Username doesnt exists, insert new account
 		if ($stmt = $mysqli->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
