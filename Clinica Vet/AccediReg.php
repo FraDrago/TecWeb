@@ -36,30 +36,24 @@
 
 <!-- contenuto -->
 
-<div id="content">
-    <div id="anchor"></div>
-
-    <div class="messaggio">
-      <h1>PROVA Accedi/Registrati</h1>
-      <form id="contattaci-form" action="" method="post">
-        <ul>
-          <li>
-            <label for="name">username:</label>
-            <input type="text" name="first_name" id="name" />
-          </li>
-          <li >
-            <label for="email" xml:lang="en">password:</label>
-            <input type="text" name="email" id="email" size="35" />
-          </li>
-          <li class="submit-form">
-            <input type="submit" name="submit" value="LOGIN" >
-          </li>
-        </ul>
-      </form>
-    
-</div>
+<div class="login-form">
+		<h1>Login</h1>
+		<form action="authenticate.php" method="post">
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit">
+		</form>
 </div>
 
+<div class="register-form">
+		<h1>Register Form</h1>
+		<form action="register.php" method="post">
+			<input type="text" name="username" placeholder="Username" required>
+			<input type="password" name="password" placeholder="Password" required>
+			<input type="email" name="email" placeholder="Email" required>
+			<input type="submit">
+		</form>
+</div>
 <?php include_once"footer.php"?>
 
 </body>
