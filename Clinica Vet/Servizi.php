@@ -113,16 +113,16 @@
 </div>
 
 <div id="microchip" class="box2">
-    <div class="name2">Applicazione microchip</div>
+    <div class="name2">Applicazione <span lang="en">microchip</span></div>
         <div class="boxImage2"><img id="image5" alt="immagine con un lettore di microchip" src="img/microchip.jpg">
         </div>
 	    <div class="descrizione3">
         <ul>
-        <li><strong>Il microchip per i cani è obbligatorio?</strong></li>
+        <li><strong>Il <span lang="en">microchip</span> per i cani è obbligatorio?</strong></li>
         </ul>    
-        <em>Sì, è <strong><span class="highlight2">obbligatorio per legge</span></strong> dotare un cane di microchip.</em>Il microchip risulta <span class="highlight">indispensabile in molti casi, come quando l'animale deve essere identificato, vaccinato o ceduto.</span>
-        Esso consiste in una <span lang="en">trasponder</span>, che si presenta sotto forma di una capsula di vetro biocompatibile; tale dispositivo funziona come una radio antenna pronta a ricevere il segnale del lettore di microchip, con il quale si ottiene un <span class="highlight">codice di 15 cifre</span> con cui è possibile risalire al proprietario del cane.
-        <strong><span class="highlight2">La sua appliczione può essere effettuata solo da un veterinario abilitato in ambulatorio</span></strong>, con una iniezione sottocutanea assolutamente innocua per l'animale.
+        <em>Sì, è <strong><span class="highlight2">obbligatorio per legge</span></strong> dotare un cane di <span lang="en">microchip</span>.</em>Il <span lang="en">microchip</span> risulta <span class="highlight">indispensabile in molti casi, come quando l'animale deve essere identificato, vaccinato o ceduto.</span>
+        Esso consiste in una <span lang="en">trasponder</span>, che si presenta sotto forma di una capsula di vetro biocompatibile; tale dispositivo funziona come una radio antenna pronta a ricevere il segnale del lettore di <span lang="en">microchip</span>, con il quale si ottiene un <span class="highlight">codice di 15 cifre</span> con cui è possibile risalire al proprietario del cane.
+        <strong><span class="highlight2">La sua applicazione può essere effettuata solo da un veterinario abilitato in ambulatorio</span></strong>, con una iniezione sottocutanea assolutamente innocua per l'animale.
         </div>
 </div>
 <br>

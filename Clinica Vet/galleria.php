@@ -19,6 +19,18 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }*/
+$result = $connection->query("SELECT * FROM galleria");
+
+$images = [];
+if($result->num_rows > 0){
+	while($row = $result->fetch_assoc())
+	{
+		//$rows[] = $row;
+		array_push($images,$row);
+	}
+    //$images = $result->fetch_assoc();
+}
+
 
 $connection->close();
 $pagina_attuale='galleria.php'; 
@@ -65,77 +77,21 @@ $pagina_attuale='galleria.php';
 
 <div id="gallery">
     <div class="grid">
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/5.jpg">
-                <img class="imageg"src="img/galleria/5.jpg" alt="gatto">
-                </a>  
-            </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-      
-        
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/4.jpg">
-                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
-                </a>  
-            </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-      
        
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/4.jpg">
-                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
-                </a>  
+        <?php
+		//var_dump($images);
+        foreach($images as $key => $image){ /*var_dump($image); die();*/?>
+            <div class="contg">
+                <div class="contimg">
+                    <a href="<?php echo $image['Path']; ?>">
+                    <img class="imageg"src="<?php echo $image['Path']; ?>" alt="<?php echo image['alt'];?>">
+                    </a>  
+                </div>
+                <div class="desc"><?php echo $image['descrizione']; ?>
+                </div>
             </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/4.jpg">
-                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
-                </a>  
-            </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-        
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/2.jpg">
-                <img class="imageg"src="img/galleria/2.jpg" alt="gatto">
-                </a>  
-            </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-        
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/5.jpg">
-                <img class="imageg"src="img/galleria/5.jpg" alt="gatto">
-                </a>  
-            </div>
-            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-        </div>
-        
-      
-        <div class="contg">
-            <div class="contimg">
-                <a href="img/galleria/4.jpg">
-                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
-                </a>  
-                <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
-            </div>
-        </div> 
-    
+        <?php } ?>
+   
 </div>
 
 

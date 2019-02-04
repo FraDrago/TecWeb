@@ -728,9 +728,6 @@ border-color:transparent #6585a2 transparent transparent;
 
 /*******Galleria*******/
 /*********************/
-
-
-
 	
 #gallery{
 	margin: 0;
@@ -744,8 +741,6 @@ border-color:transparent #6585a2 transparent transparent;
 }
   
   .imageg{
-	/*max-width: 100%;
-	max-width: 300px;*/
 	cursor: pointer;
 	display: block;
 	max-height: 300px;
@@ -768,7 +763,6 @@ border-color:transparent #6585a2 transparent transparent;
 .contg .desc{
 	text-align: center;
 	padding: 9px;
-    background-color:#498cc94d;
     bottom: 0;
 }
 
@@ -777,6 +771,7 @@ border-color:transparent #6585a2 transparent transparent;
 	max-height: 400px;
 	box-shadow: 4px 4px 10px 7px rgba(0,0,0,0.3);
 	overflow: hidden;
+	background-color:#498cc94d;
 }
 
 @media screen and (max-width: 649.9px) {
@@ -830,10 +825,6 @@ border-color:transparent #6585a2 transparent transparent;
 	max-height: 400px;
 	object-fit: cover;
 	min-height: 300px;
-	/*min-width: 240px;
-	box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
-	overflow: hidden;*/
-	
 	width:30%;
 	
 	}

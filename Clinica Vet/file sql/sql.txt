@@ -8,6 +8,31 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+-- Struttura della tabella `galleria`
+--
+
+CREATE TABLE `galleria` (
+  `id` int(11) NOT NULL,
+  `Path` varchar(200) NOT NULL,
+  `descrizione` varchar(400) DEFAULT NULL,
+  `alt` varchar(400) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `galleria`
+--
+
+INSERT INTO `galleria` (`id`, `Path`, `descrizione`, `alt`) VALUES
+(1, 'img/galleria/4.jpg', 'Zuzzulo e Lilli da Padova', 'Foto di un cane ed un gatto vicini'),
+(2, 'img/galleria/1.jpg', 'Giggi osserva attentamente il cielo', 'gattino nero guarda il cielo'),
+(3, 'img/galleria/2.jpg', 'A Laica piace avere avventure', 'cane davanti ad un paesaggio naturale'),
+(4, 'img/galleria/3.jpg', 'Sandie e Lollo sul divano!', 'un gatto ed un cane su un divano'),
+(5, 'img/galleria/5.jpg', 'Mocio è stanco di lavorare', 'cane disteso su pavimento'),
+(6, 'img/galleria/7.jpg', 'Una bella giornata al sole', 'gatto in giardino al sole'),
+(7, 'img/galleria/6.jpg', 'Oggi non si esce di casa!', 'cane avvolto in una coperta'),
+(8, 'img/galleria/8.jpg', 'Un animale feroce!', 'piccolo cane con finta criniera di leone');
+
+
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES (1, 'test', '$1$zlnYwMy4$XJXe7it14YoWwr0lrK3M4.', 'test@test.com');
 
 ALTER TABLE `accounts` ADD PRIMARY KEY (`id`);
