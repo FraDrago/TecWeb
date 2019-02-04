@@ -61,49 +61,84 @@ $pagina_attuale='galleria.php';
 <div id="content">
 
 <div id="title"><h3>Galleria</h3></div>
-    <p>Qui troviamo le foto pi&ugrave belle dei nostri pazienti a quattro zampe! </p>
+    <p>Qui troviamo le foto pi&ugrave; belle dei nostri pazienti a quattro zampe! </p>
+
 <div id="gallery">
-   <div class="rowg">
-        <div class="columng">
-        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
-        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
-        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
-        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
-        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
-        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
-        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+    <div class="grid">
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/5.jpg">
+                <img class="imageg"src="img/galleria/5.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
         </div>
-        <div class="columng">
-        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
-        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
-        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
-        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
-        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
-        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
-        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        
+      
+        
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/4.jpg">
+                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
         </div>
-        <div class="columng">
-        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
-        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
-        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
-        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
-        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
-        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
-        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
+        
+      
+       
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/4.jpg">
+                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
         </div>
-        <div class="columng">
-        <img id="imageg" alt="gatto" src="img/galleria/1.jpg">
-        <img id="imageg" alt="cane" src="img/galleria/2.jpg">
-        <img id="imageg" alt="gatto e cane vicini" src="img/galleria/3.jpg">
-        <img id="imageg" alt="cani e gatto vicini" src="img/galleria/4.jpg">
-        <img id="imageg" alt="cane bianco piccolo" src="img/galleria/5.jpg">
-        <img id="imageg" alt="cane sottouna coperta" src="img/galleria/6.jpg">
-        <img id="imageg" alt="gatto nero in un campo" src="img/galleria/7.jpg">
-        </div>
-   </div>
+        
 
-
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/4.jpg">
+                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
+        </div>
+        
+        
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/2.jpg">
+                <img class="imageg"src="img/galleria/2.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
+        </div>
+        
+        
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/5.jpg">
+                <img class="imageg"src="img/galleria/5.jpg" alt="gatto">
+                </a>  
+            </div>
+            <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
+        </div>
+        
+      
+        <div class="contg">
+            <div class="contimg">
+                <a href="img/galleria/4.jpg">
+                <img class="imageg"src="img/galleria/4.jpg" alt="gatto">
+                </a>  
+                <div class="desc">Descr ucennvb y,mvncfhdgb jmdvmbh vimmagine da dbizione immagine da db</div>
+            </div>
+        </div> 
+    
 </div>
+
+
 
 </div>
 <br>

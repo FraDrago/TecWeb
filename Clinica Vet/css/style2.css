@@ -728,19 +728,116 @@ border-color:transparent #6585a2 transparent transparent;
 
 /*******Galleria*******/
 /*********************/
-.rowg{
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 4px;
+
+
+
+	
+#gallery{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+	margin:0 auto;
+	max-width: 1200px;
+	padding: 0 1em;
+	justify-content: center;
+}
+  
+  .imageg{
+	/*max-width: 100%;
+	max-width: 300px;*/
+	cursor: pointer;
+	display: block;
+	max-height: 300px;
+	min-height: 300px;
+	max-width: 100%;
+    min-width: 100%;
+	box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+	transition: .4s;
 }
 
-.columng{
-	flex: 25%;
-	max-width: 25%;
-	padding: 0 4px:
+.imageg:hover{
+	transform: scale(1.15,1.15);
+    
 }
 
+.contimg{
+	overflow:hidden;
+}
 
+.contg .desc{
+	text-align: center;
+	padding: 9px;
+    background-color:#498cc94d;
+    bottom: 0;
+}
+
+.contg{
+	min-height: 300px;
+	max-height: 400px;
+	box-shadow: 4px 4px 10px 7px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+
+@media screen and (max-width: 649.9px) {
+	.grid{
+		justify-content: center;
+		overflow: auto;
+	}
+	.contg{
+	  width: 90%;
+	  min-height: 300px;
+	  max-height: 400px;
+	  margin-right: 5%;
+	  margin-left: 5%;
+	  min-width: 260px;
+	  margin-top: 7px;
+	  margin-bottom: 7px;	
+	}
+	
+	.contg .desc{
+	display: none;
+	}
+}
+  
+  
+@media screen and (min-width: 650px){
+	.grid{
+	  display: flex;
+	  flex-wrap: wrap;
+	  flex-direction: row;
+	  justify-content: center;
+	}
+	.contg{
+	  width: 48%;
+	  min-height: 300px;
+	  max-height: 400px;
+	  margin: 1%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.contg{	
+	margin: 1%;
+	width: 400px;
+	max-height: 400px;
+	object-fit: cover;
+	min-height: 300px;
+	/*min-width: 240px;
+	box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+	overflow: hidden;*/
+	
+	width:30%;
+	
+	}
+}
 
 
 /******Servizi******/
@@ -1003,6 +1100,5 @@ border-color:transparent #6585a2 transparent transparent;
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
 	ol {padding-left: 0em;}
 	.box{margin-left: -1em; margin-top: 0.5em;}
-
 
 
