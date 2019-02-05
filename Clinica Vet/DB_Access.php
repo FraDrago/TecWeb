@@ -19,6 +19,14 @@ class DBAccess{
     }
   }
 
+  public function closeDBConnection(){
+
+    if($this->connessione){
+      $this->connessione->close();
+    }
+
+  }
+
 
   public function getOrari(){
       $querySelect = "SELECT * FROM orari ORDER BY ID ASC";
@@ -45,6 +53,24 @@ function validateTime($time, $format = 'H:i'){
     $d = DateTime::createFromFormat($format, $time);
     return $d && $d->format($format) == $time;
 }
+
+
+function getImmaginiGalleria(){
+
+  $result = array();
+  $queryResult = mysqli_query($this->connessione, "SELECT * FROM galleria" ) or die ("Error in getImmaginiGalleria query: " .mysqli_error($this->connessione));
+  if(mysqli_num_rows($queryResult) > 0){
+    while($row = mysqli_fetch_assoc($queryResult))
+    {
+        //$rows[] = $row;
+        array_push($result,$row);
+    }
+
+  }
+
+  return $result;
+}  
+
 
 }
 ?>

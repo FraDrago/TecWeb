@@ -1,38 +1,14 @@
 <?php 
-require_once('./config/config.php');
-require_once('./utils/database_utils.php');
-
-$connection = connectToDatabase($servername, $username, $password, $dbname);
-
-/**
- * make queries!!!
- */
-
-/*$sql = "SELECT id, firstname, lastname FROM MyGuests";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
-$result = $connection->query("SELECT * FROM galleria");
-
-$images = [];
-if($result->num_rows > 0){
-	while($row = $result->fetch_assoc())
-	{
-		//$rows[] = $row;
-		array_push($images,$row);
-	}
-    //$images = $result->fetch_assoc();
-}
+require_once('DB_Access.php');
 
 
-$connection->close();
+session_start();
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+$images=$access->getImmaginiGalleria();
+$access->closeDBConnection();
 $pagina_attuale='galleria.php'; 
 
 ?>
@@ -62,11 +38,11 @@ $pagina_attuale='galleria.php';
 <!--breadcrumb-->
 
 <ul class="breadcrumb">
-	<li>Ti trovi in: </li>
-	<li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-	<li class="bc_here">Galleria</li>
+    <li>Ti trovi in: </li>
+    <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+    <li class="bc_here">Galleria</li>
 </ul>
-	
+    
 
 <br/>
 <br/>
@@ -79,15 +55,15 @@ $pagina_attuale='galleria.php';
     <div class="grid">
        
         <?php
-		//var_dump($images);
+        //var_dump($images);
         foreach($images as $key => $image){ /*var_dump($image); die();*/?>
             <div class="contg">
                 <div class="contimg">
                     <a href="<?php echo $image['Path']; ?>">
-                    <img class="imageg"src="<?php echo $image['Path']; ?>" alt="<?php echo image['alt'];?>">
+                    <img class="imageg"src="<?php echo $image['Path']; ?>" alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1");?>">
                     </a>  
                 </div>
-                <div class="desc"><?php echo $image['descrizione']; ?>
+                <div class="desc"><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>
                 </div>
             </div>
         <?php } ?>
