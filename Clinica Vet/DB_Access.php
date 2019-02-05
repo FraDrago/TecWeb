@@ -1,10 +1,10 @@
 <?php
 //namespace DB;
 class DBAccess{
-  const HOST_DB = 'localhost:3307';
-  const USERNAME = 'root';
-  const PASSWORD = '';
-  const DATABASE_NAME = 'clinica';
+  const HOST_DB = "localhost";
+  const USERNAME = "root";
+  const PASSWORD = "";
+  const DATABASE_NAME = "clinica";
   
   public $connessione;
   

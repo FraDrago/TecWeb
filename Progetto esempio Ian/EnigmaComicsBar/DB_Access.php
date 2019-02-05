@@ -2,8 +2,8 @@
 //namespace DB;
 class DBAccess{
   const HOST_DB = "localhost";
-  const USERNAME = "nzorzo";
-  const PASSWORD = "io7lee8Ookahcias";
+  const USERNAME = "root";
+  const PASSWORD = "";
   const DATABASE_NAME = "nzorzo";
   
   public $connessione;
