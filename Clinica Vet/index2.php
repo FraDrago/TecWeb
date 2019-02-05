@@ -1,15 +1,4 @@
-<?php 
-require_once('DB_Access.php');
-session_start();
-$access = new DBAccess();
-$connection = $access->openDBConnection();
-if(!$connection) die("Errore nella connessione.");
 
-$images=$access->getImmaginiGalleria();
-
-$access->closeDBConnection(); 
-
-?>
 
 <?php $pagina_attuale='index2.php'; ?>
 
@@ -30,10 +19,25 @@ $access->closeDBConnection();
 
 <body>
 
+
+
 <?php include_once"header.php"?>
 
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
+
+<?php 
+
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+$images=$access->getImmaginiGalleria();
+
+$access->closeDBConnection(); 
+
+?>
 
 <div id="page" class="container">
 <!--breadcrumb-->

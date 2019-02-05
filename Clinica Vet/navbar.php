@@ -1,9 +1,10 @@
+<?php require_once('DB_Access.php'); ?>
+<?php session_start(); ?>
 <nav role="navigation">
   <div id="menuToggle">
-    <!--finto checkbox per il panino-->
+
     <input type="checkbox" />
-    
-    <!--Span per hamburger-->
+
     <span></span>
     <span></span>
     <span></span>
@@ -16,11 +17,25 @@
           <li <?php if($pagina_attuale=='Link.php') echo "class='active2'"; ?>><a href='Link.php#'>Link Utili</a></li>
           <li <?php if($pagina_attuale=='Contattaci.php') echo "class='active2'"; ?>><a href='Contattaci.php#'>Contattaci</a></li>
           <li><a></br></a></li>
-          <li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+		  <?php
+                	
+                    $access = new DBAccess();
+            		$connection = $access->openDBConnection();
+
+                    if(!$connection) die("Errore nella connessione.");
+                    if(isset($_SESSION['username'])){	?>
+						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
+					<?php
+                	}
+                    else { ?>
+                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+                	<?php
+                	}
+                ?>
+          
     </ul>
   </div>
 </nav>
-
 
 <div class='nav'>
  <ul>
@@ -30,7 +45,22 @@
           <li <?php if($pagina_attuale=='galleria.php') echo "class='current'"; ?>><a href='galleria.php#'>Galleria</a></li>
           <li <?php if($pagina_attuale=='Link.php') echo "class='current'"; ?>><a href='Link.php#'>Link Utili</a></li>
           <li <?php if($pagina_attuale=='Contattaci.php') echo "class='current'"; ?>><a href='Contattaci.php#'>Contattaci</a></li>
-          <li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+		  <?php
+                	
+                    $access = new DBAccess();
+            		$connection = $access->openDBConnection();
+
+                    if(!$connection) die("Errore nella connessione.");
+                    if(isset($_SESSION['username'])){	?>
+						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
+					<?php
+                	}
+                    else { ?>
+                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+                	<?php
+                	}
+                ?>
+          
 </ul>
        <div class='search'>
             <input type='text' class='searchTerm' placeholder='Cerca...'>

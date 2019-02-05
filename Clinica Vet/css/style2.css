@@ -9,6 +9,8 @@ body {
 	width: 100%;
 }
 
+
+
 /******struttura******/
 /********************/
 
@@ -1030,36 +1032,136 @@ border-color:transparent #6585a2 transparent transparent;
 		
 		/************************************/
 		
-		.register-form {
-			width: 300px;
-			margin: 0 auto;
-			font-family: Tahoma, Geneva, sans-serif;
-		}
-		.register-form h1 {
-			text-align: center;
-			color: #4d4d4d;
-			font-size: 24px;
-			padding: 20px 0 20px 0;
-		}
-		.register-form input[type="email"],
-		.register-form input[type="password"],
-		.register-form input[type="text"] {
-			width: 100%;
-			padding: 15px;
-			border: 1px solid #dddddd;
-			margin-bottom: 15px;
-			box-sizing:border-box;
-		}
-		.register-form input[type="submit"] {
-			width: 100%;
-			padding: 15px;
-			background-color: #535b63;
-			border: 0;
-			box-sizing: border-box;
-			cursor: pointer;
-			font-weight: bold;
-			color: #ffffff;
-		}
+		.message {
+	font-size: 2em;
+    line-height: 1.2em;
+    color: red;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.loginAndRegistrationForm {
+    margin-top: 6em;
+}
+
+.loginAndRegistrationForm fieldset {
+	border: none;
+}
+
+.loginAndRegistrationForm p {
+	font-size: 2.3em;
+    line-height: 1.2em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.loginAndRegistrationForm input {
+    border: 1px solid gray;
+    border-radius: 0.3em;
+    margin: 0.4em;
+    padding: 0.4em;
+}
+
+.loginAndRegistrationForm button {
+	background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 0.3em;
+    color: white;
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+}
+
+#registrazioneAvvenuta {
+	margin: 1em;
+	font-size: 3em;
+    line-height: 2em;
+    text-align: center;
+}
+
+#registrazioneAvvenuta p {
+	font-size: 150%;
+    text-align: center;
+}
+
+/******Libretto******/
+/*******************/
+
+.open-book {
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+    color: #000;
+    padding: 2em;
+    height: 300px;
+    position: relative;
+}
+.open-book > * {
+        column-count: 2;
+        column-gap: 6em;
+        position: relative;
+        z-index: 1;
+    }
+
+/* Header*/
+.open-book header {
+    padding-bottom: 1em;
+}
+
+.open-book header *{
+    letter-spacing: 0.125em;
+    margin: 0;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+/* Chapter Title */
+.open-book .chapter-title {
+    letter-spacing: 0.125em;
+    margin: 0 0 1em 0;
+    padding: 1em 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* Body Copy */
+.open-book article {
+    line-height: 1.5;
+}
+
+.open-book article *:not(.chapter-title):not(dl) {
+    margin: 0 auto;
+}
+
+.open-book dl {
+    border: solid 0 #ccc;
+    border-width: 0.0625em 0;
+    break-inside: avoid-column;
+    margin: 1em auto;
+    padding: 1em 0;
+}
+
+    .open-book:after { /*divisore pagine*/
+        background: linear-gradient(to right, transparent 0%,rgba(0,0,0,0.2) 46%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,transparent 100%);
+        bottom: 0em;
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: 0em;
+        transform: translate(-50%,0);
+        width: 4em;
+        z-index: 1;
+    }
+
+    /* Chapter Title */
+    .open-book .chapter-title {
+        font-size: 1em;
+    }
+
+    /* Body Copy */
+    .open-book article p {
+        text-align: left;
+        height: 300px;
+    }
 
 /******Prenota******/
 /******************/

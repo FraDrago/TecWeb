@@ -1,17 +1,5 @@
-<?php 
-require_once('DB_Access.php');
+<?php $pagina_attuale='galleria.php'; ?>
 
-
-session_start();
-$access = new DBAccess();
-$connection = $access->openDBConnection();
-if(!$connection) die("Errore nella connessione.");
-
-$images=$access->getImmaginiGalleria();
-$access->closeDBConnection();
-$pagina_attuale='galleria.php'; 
-
-?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -33,6 +21,18 @@ $pagina_attuale='galleria.php';
 
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
+
+<?php 
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+$images=$access->getImmaginiGalleria();
+$access->closeDBConnection();
+$pagina_attuale='galleria.php'; 
+
+?>
 
 <div id="page" class="container">
 <!--breadcrumb-->

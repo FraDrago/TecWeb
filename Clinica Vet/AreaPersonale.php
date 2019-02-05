@@ -40,6 +40,7 @@
 
 <div class="list-type4">
 <ol>
+<li><img src="img/libretto.jpg" ><a href="Animale.php">Libretto sanitario</a></li>
 <li><img src="img/prenota.jpg" ><a href="Prenota.php">Prenota una visita</a></li>
 <li><img src="img/profiloico.jpg" ><a href="ModificaProfilo.php">Modifica il profilo</a></li>
 <li><img src="img/logout.jpg" ><a href="AccediReg.php">Logout</a></li>

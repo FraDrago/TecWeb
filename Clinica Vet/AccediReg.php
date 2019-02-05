@@ -1,5 +1,8 @@
 <?php $pagina_attuale='AccediReg.php'; ?>
+
 <!DOCTYPE  html>
+
+		
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
     <head>
@@ -14,7 +17,11 @@
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
+		
+	
 <body>
+
+
 
 <?php include_once"header.php"?>
 
@@ -36,25 +43,82 @@
 
 <!-- contenuto -->
 
-<div class="login-form">
+<!--<div class="login-form">
 		<h1>Login</h1>
 		<form action="authenticate.php" method="post">
 			<input type="text" name="username" placeholder="Username">
 			<input type="password" name="password" placeholder="Password">
 			<input type="submit">
 		</form>
-</div>
+</div>-->
 
-<div class="register-form">
-		<h1>Register Form</h1>
-		<form action="register.php" method="post">
-			<input type="text" name="username" placeholder="Username" required>
-			<input type="password" name="password" placeholder="Password" required>
-			<input type="email" name="email" placeholder="Email" required>
-			<input type="submit">
-		</form>
-</div>
+
+<div class="section">
+                <h1><span xml:lang="en" lang="en">Login</span></h1>
+                <hr>
+            
+            <?php
+		      
+              $access = new DBAccess();
+              $connection = $access->openDBConnection();
+              
+              if(!$connection) die("Errore nella connessione.");
+              
+              else{
+              	
+                
+                if(isset($_POST['logout'])){
+                	if($access->logout())
+                    	header("Location: index2.php");
+					else
+                    	die("Errore nella connessione.");
+				}
+              	
+            	$messaggioErrore = "";
+		        if (isset($_REQUEST['username'])){
+                  	$result = $access->login($_REQUEST['username'], $_REQUEST['password']);
+                   	if($result['valid']){
+                		$_SESSION['username'] = $result['Username'];
+                		$_SESSION['ID'] = $result['ID'];
+                		header("Location: index2.php");
+					}
+                   	else
+                   		$messaggioErrore .= "<span xml:lang=\"en\">Username</span> o <span xml:lang=\"en\">password</span> errati.";
+              	}
+                
+                if(isset($_SESSION['username'])){	?>
+                                   
+					<div class="loginAndRegistrationForm">
+						<p>Accesso effettuato come: <?php echo $_SESSION['username']; ?></p>
+						<form action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" name="logout">
+							<p><button name="logout" type="submit">Esci</button></p>
+						</form>
+					</div>
+					<?php
+				}
+	          	
+	          	else {
+                
+	          	?>
+	          	
+	          	<h2 class="message"> <?php echo $messaggioErrore; ?> </h2>
+	          	
+	          	<div class="loginAndRegistrationForm">
+	            	<form name="login" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
+                    	<p><label for="username"><span xml:lang="en" lang="en">Username:</span> </label></p><fieldset><input id="username" type="text" placeholder="Username" name="username" required></fieldset>
+                        <p><label for="password"><span xml:lang="en" lang="en">Password:</span> </label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
+                        <p><button type="submit">Entra</button></p>
+	            	</form>
+	            	<p>Non sei registrato? <a href='registrati.php'>Registrati qui!</a></p>
+	          	</div>
+            
+	          <?php
+            	} 
+            }?>
+        </div>
+        </div>
+
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
