@@ -1,3 +1,7 @@
+<?php 
+require_once('DB_Access.php'); ?>
+
+
 <?php $pagina_attuale='index2.php'; ?>
 
 <!DOCTYPE  html>
@@ -38,13 +42,33 @@
 
     <div id="content">
     	<h2>Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
-    	<img id="imghome" src="img/dog-hug.jpg" alt="immagine di un uomo che abbraccia un cane" />
+    	<!-- <img id="imghome" src="img/dog-hug.jpg" alt="immagine di un uomo che abbraccia un cane" /> -->
     	<p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere animale (... bla bla)</p>
 
-    	<div id="Orari">
-    		<h2>Orari ambulatorio</h2>
-    	<!--funzione php che riempie tabella orari-->
+                <h1>Orari Ambulatorio</h1>
+                <hr>
+<div class="oraritabella">
+<?php
+    session_start();
+    $access = new DBAccess();
+    $connection = $access->openDBConnection();
+    if(!$connection) die("Errore nella connessione.");
+?>
+        <?php
 
+        $result=$access-> getOrari();
+            if(count($result)>0){?>
+              <?php foreach($result as $orari){?>
+            <div class="orari">
+                        <p><?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd'])); echo $orari['Giorno']." ".$ora_normale1." ".$ora_normale2; ?></p>
+                    </div>
+
+
+                <?php
+              }
+          }
+        ?>
+</div>
 
         <div id="box1">
             <h2>Prenota ora una visita</h2>
