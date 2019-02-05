@@ -389,9 +389,49 @@ ul.breadcrumb li a:hover {
 /******Home******/
 /***************/
 
+.BenvenutoHome h2{
+	font-size: 24px;
+}
+.leftHome{
+	margin-left: 0;
+	width: 60%;
+	float: left;
+	display: block;
+	margin margin-bottom: 1em;
+}
+.rightHome{
+	width: 40%;
+	float: right;
+	display: block;
+	margin-bottom: 1em;
+	background-color: #e0e4e9;
+	background-blend-mode: lighten;
+	padding-bottom: 3em;
+	padding-top: 2em;
+}
+
+table{
+	display: inline-block;
+	text-align: center;
+	width: auto;
+	border-style: solid;
+	
+}
+td{
+	border: 1px solid black;
+	padding: 6px;
+	text-align: center;
+	min-width:3em;
+}
+
+#giorno {
+	background-color: #cad0db;
+}
+#content .galleria h2{
+	margin-top: 26.95em;
+}
 .link-style {
 	display: inline-block;
-	margin-top: 20px;
 	padding: 7px 20px;
 	background: #0C73D4;
 	border-radius: 5px;
@@ -404,10 +444,23 @@ ul.breadcrumb li a:hover {
 	font-size: 20px;
 }
 #imghome{
-	max-width: 300px;
+	max-width: 500px;
 	height: auto;
-	border-radius: 30%; 
-	float: right;
+	}
+
+.oraritabella{
+	border-style: solid;
+	float: left;
+	padding: 1em 1em 1em 1em;
+}
+.box6{
+	width: 100px;
+	display: inline-block;
+}
+
+.image6{
+	width: 100px;
+	height: 100px;
 }
 
 /******Area_personale******/
@@ -501,6 +554,18 @@ ul.breadcrumb li a:hover {
 
 #contact-error-print {
   display: none;
+}
+
+.infoContattaci{
+	text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.orariCont{
+	display: inline-block;
+	margin-left:2em; 
+	margin-right:2em;
 }
 
 /******Link Utili******/
@@ -996,85 +1061,6 @@ border-color:transparent #6585a2 transparent transparent;
 			color: #ffffff;
 		}
 
-/******Libretto******/
-/*******************/
-
-.open-book {
-    background: #fff;
-    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
-    color: #000;
-    padding: 2em;
-    height: 300px;
-    position: relative;
-}
-.open-book > * {
-        column-count: 2;
-        column-gap: 6em;
-        position: relative;
-        z-index: 1;
-    }
-
-/* Header*/
-.open-book header {
-    padding-bottom: 1em;
-}
-
-.open-book header *{
-    letter-spacing: 0.125em;
-    margin: 0;
-    font-size: 0.75em;
-    text-transform: uppercase;
-}
-
-/* Chapter Title */
-.open-book .chapter-title {
-    letter-spacing: 0.125em;
-    margin: 0 0 1em 0;
-    padding: 1em 0;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-}
-/* Body Copy */
-.open-book article {
-    line-height: 1.5;
-}
-
-.open-book article *:not(.chapter-title):not(dl) {
-    margin: 0 auto;
-}
-
-.open-book dl {
-    border: solid 0 #ccc;
-    border-width: 0.0625em 0;
-    break-inside: avoid-column;
-    margin: 1em auto;
-    padding: 1em 0;
-}
-
-    .open-book:after { /*divisore pagine*/
-        background: linear-gradient(to right, transparent 0%,rgba(0,0,0,0.2) 46%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,0.2) 52%,transparent 100%);
-        bottom: 0em;
-        content: '';
-        left: 50%;
-        position: absolute;
-        top: 0em;
-        transform: translate(-50%,0);
-        width: 4em;
-        z-index: 1;
-    }
-
-    /* Chapter Title */
-    .open-book .chapter-title {
-        font-size: 1em;
-    }
-
-    /* Body Copy */
-    .open-book article p {
-        text-align: left;
-        height: 300px;
-    }
-
 /******Prenota******/
 /******************/
 
@@ -1108,6 +1094,12 @@ border-color:transparent #6585a2 transparent transparent;
 @media screen and (max-width: 1090px) {
 	.nav ul li a{ display: none; }
     #menuToggle { visibility: visible; }  
+}
+@media screen and (max-width: 1050px) {
+	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
+	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
+	#content .galleria h2{margin-top: 0em;} 
+	#imghome{max-width: 300px;}
 }
 
 @media screen and (max-width: 850px) {
@@ -1157,5 +1149,7 @@ border-color:transparent #6585a2 transparent transparent;
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
 	ol {padding-left: 0em;}
 	.box{margin-left: -1em; margin-top: 0.5em;}
+	#imghome{display: none;}
+	iframe{max-width: 150px;}
 
 

@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-  const HOST_DB = "localhost";
+  const HOST_DB = "localhost:3307";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -26,6 +26,22 @@ class DBAccess{
     }
 
   }
+
+public function getGalleriaRandom($n){
+
+  $querySelect = "SELECT * FROM galleria ORDER BY RAND() LIMIT ".$n;
+    $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Errore in getGalleriaRandom " . mysqli_error($this->connessione));
+    
+    if(mysqli_num_rows($queryResult) > 0){
+    $result = array();
+    while($row = mysqli_fetch_assoc($queryResult))
+    {
+        //$rows[] = $row;
+        array_push($result,$row);
+    }
+  }
+  return $result;
+}  
 
 
   public function getOrari(){
@@ -71,6 +87,6 @@ function getImmaginiGalleria(){
   return $result;
 }  
 
-
 }
+
 ?>
