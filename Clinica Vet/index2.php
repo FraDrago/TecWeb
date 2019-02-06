@@ -26,12 +26,22 @@
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
 
+
 <?php 
 
 
 $access = new DBAccess();
 $connection = $access->openDBConnection();
 if(!$connection) die("Errore nella connessione.");
+
+if(!isset($_SESSION['ID'])){
+	$admin=0;
+	}else{
+		$id=$_SESSION['ID'];
+		$admin=$access->isAdmin($id);
+	   	}/* FINE CONTROLLO ADMIN*/
+
+		
 
 $images=$access->getImmaginiGalleria();
 
@@ -46,6 +56,10 @@ $access->closeDBConnection();
     <li>Ti trovi in: </li>
     <li class="bc_here">Home</li>
 </ul>
+
+<?php if($admin){?>
+<a href="Modifica_Contattaci.php">ModiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfica la sezione contattaci</a>
+<?php } ?>
 
 <!--un po' di separazione-->
 <br/>

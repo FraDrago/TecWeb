@@ -113,6 +113,12 @@ CREATE TABLE `utente` (
   `Admin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+
+INSERT INTO `utente` (`ID`, `Name`, `Surname`, `Telefono`, `Email`, `Password`, `Admin`) VALUES
+(1, 'Nome', 'Cognome', 'Telefono', 'email@email.it', 'dc647eb65e6711e155375218212b3964', NULL),
+(2, 'admin', 'admin', 'admin', 'admin@admin.it', '21232f297a57a5a743894a0e4a801fc3', 1)
+
 -- --------------------------------------------------------
 
 --

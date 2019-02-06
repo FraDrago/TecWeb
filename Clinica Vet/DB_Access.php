@@ -19,6 +19,17 @@ class DBAccess{
     }
   }
   
+      public function isAdmin($id){
+    	$query="SELECT ID, Admin FROM Utente WHERE ID='$id' AND Admin IS NOT NULL";
+        $queryResult=mysqli_query($this->connessione, $query) or die ("Error in isAdmin query: " .
+                                                                    mysqli_error($this->connessione));
+      	if(mysqli_num_rows($queryResult) == 0){
+        return false;
+      	}else{
+        return true;
+        }
+    }
+  
    public function insertUser($email, $name, $surname, $telefono, $password){
   	$email = stripslashes($email);
     $email = mysqli_real_escape_string($this->connessione,$email);
