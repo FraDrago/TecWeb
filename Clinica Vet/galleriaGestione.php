@@ -1,4 +1,16 @@
-<?php $pagina_attuale='galleriaGestione.php'; ?>
+<?php 
+require_once('DB_Access.php');
+
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+$images=$access->getImmaginiGalleria();
+$access->closeDBConnection();
+$pagina_attuale='galleriaGestione.php';
+?>
+
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -36,6 +48,41 @@
 <div id="content">
   <div id="title"><h3>Gestione Galleria</h3></div>
 
+  <!-- form non buono
+  <form action="galleriaAdd.php">
+      <input type="submit" value="Aggiungi una foto" />
+  </form>
+  -->
+  
+
+ <a id="addlink" href="galleriaAdd.php">Aggiungi una foto</a>
+
+
+  <!-- tabella per immagini-->
+  <div id=tabgalleria>
+    <table id="tabellag">
+      <thead>
+        <tr>
+          <th>Antemprima immagine</th>
+          <th>Alt</th>
+          <th>Descrizione</th>
+          <th>Modifica</th>
+          <th>Elimina</th>
+        </tr>
+      </thead>
+     <tbody>
+        <?php  foreach($images as $key => $image){ ?>
+          <tr>
+            <td>anteprima</td>
+            <td><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1");?></td>
+            <td><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
+            <td><a href="galleriaMod.php">Modifica immagine</td>
+            <td><a href="galleriaDel.php">Elimna immagine</td>
+          </tr>
+         <?php } ?>
+      </tbody>
+    </table>
+  </div>
 
 
 

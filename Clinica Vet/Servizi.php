@@ -96,7 +96,7 @@
         <ul>
         <li><strong>E’ necessario vaccinare il mio cane o il mio gatto?</strong></li>
         </ul>
-        <em>Assolutamente sì.</em> Secondo le linee guida del <acronym lang="en" title="Vaccination Guidelines Group">VGG</acronym> (<span lang="en"> Vaccination Guidelines Group</span>), le vaccinazioni non solo ci permettono di proteggere il nostro amato compagno da gravi malattie infettive, ma permette anche di fornire l'immunità alla popolazione di una certa area. 
+        <em>Assolutamente sì.</em> Secondo le linee guida del <abbr lang="en" title="Vaccination Guidelines Group">VGG</abbr> (<span lang="en"> Vaccination Guidelines Group</span>), le vaccinazioni non solo ci permettono di proteggere il nostro amato compagno da gravi malattie infettive, ma permette anche di fornire l'immunità alla popolazione di una certa area. 
         L'Ambulatorio Archimedeo Torre offre servizi di somministrazione di <span class="highlight">vaccini <span lang="en"><em>core</em></span></span>(vaccini raccomandati per fornire all'animale protezione per tutta la vita) e <span class="highlight">vaccini opzionali</span>, da somministrare in base allo stile di vita o alla zona geografica dell'animale. Ricorda: <strong><span class="highlight">molti vaccini necessitano di richiami per mantenere l'immunità intatta</span></strong>.<br/>
         <a href='AccediReg.php'>Accedi</a> al tuo account per controllare la situazione del tuo animale. Se necessario, <a href='Contattaci.php'>prenota subito una visita</a> per vaccinarlo!
         </div>
@@ -108,13 +108,13 @@
         </div>
 	    <div class="descrizione3"> Oltre al servizio di pronto soccorso per le emergenze, il nostro Ambulatorio offre la possibilià di effettuare <span class="highlight">visite di base</span> (di <span lang="en">routine</span>) per il proprio animale, così come <span class="highlight">visite specialistiche</span>, nei settori della <span class="highlight">dermatologia, dell'oculistica e dell' ecografia /ecocardiografia veterinaria </span>, in modo da avere un quadro più completo dello stato di salute del paziente. L'Ambularorio inoltre risulta dotato di un servizio di <span class="highlight">radiologia digitale</span>, una moderna tecnica diagnostica che assicura un’alta qualità dell’immagine in tempi molto rapidi.
         <br/>
-        Per <a href='Contattaci.php'>prenotare una visita</a> o per richiedere maggiori informazioni in merito ai servizi disponibili, è possibile contattare la struttura al numero di telefono:<span class="phone"> 0434 56789 </span>.
-        </div>
+        Per <a href='Contattaci.php'>prenotare una visita</a> o per richiedere maggiori informazioni in merito ai servizi disponibili, è possibile contattare la struttura al numero di telefono:<a href="tel:+39043456789" class="phone"> 0434 56789 </a>.   
+    </div>
 </div>
 
 <div id="microchip" class="box2">
     <div class="name2">Applicazione <span lang="en">microchip</span></div>
-        <div class="boxImage2"><img id="image5" alt="immagine con un lettore di microchip" src="img/microchip.jpg">
+        <div class="boxImage2"><img id="image5" alt="immagine con un lettore di codice" src="img/microchip.jpg">
         </div>
 	    <div class="descrizione3">
         <ul>
