@@ -19,19 +19,19 @@ class DBAccess{
     }
   }
   
-    public function insertUser($username, $name, $surname, $email, $password){
-  	$username = stripslashes($username);
-    $username = mysqli_real_escape_string($this->connessione,$username);
+   public function insertUser($email, $name, $surname, $telefono, $password){
+  	$email = stripslashes($email);
+    $email = mysqli_real_escape_string($this->connessione,$email);
     $name = stripslashes($name);
     $name = mysqli_real_escape_string($this->connessione,$name);
     $surname = stripslashes($surname);
     $surname = mysqli_real_escape_string($this->connessione,$surname);
-    $email = stripslashes($email);
-    $email = mysqli_real_escape_string($this->connessione,$email);
+	$telefono = stripslashes($telefono);
+    $telefono = mysqli_real_escape_string($this->connessione,$telefono);
 	$password = stripslashes($password);
 	$password = mysqli_real_escape_string($this->connessione,$password);
     
-  	$query = "INSERT INTO Users (Name, Surname, Username, Email, Password) VALUES (\"$name\", \"$surname\", \"$username\", \"$email\", '".md5($password)."')";
+  	$query = "INSERT INTO Users (Name, Surname, Telefono, Email, Password) VALUES (\"$name\", \"$surname\", \"$telefono\", \"$email\", '".md5($password)."')";
     $result = mysqli_query($this->connessione, $query);
 	if(mysqli_affected_rows($this->connessione)>0){
 		return true;	
@@ -41,14 +41,14 @@ class DBAccess{
 	}
   }
   
-		public function login($username, $password){
-		$username = stripslashes($username);
+  public function login($email, $password){
+		$email = stripslashes($email);
 		//escapes special characters in a string
-		$username = mysqli_real_escape_string($this->connessione,$username);
+		$email = mysqli_real_escape_string($this->connessione,$email);
 		$password = stripslashes($password);
 		$password = mysqli_real_escape_string($this->connessione,$password);
 		//Checking is user existing in the database or not
-        $query = "SELECT * FROM `Users` WHERE Username='$username' and Password='".md5($password)."'";
+        $query = "SELECT * FROM `Users` WHERE Email='$email' and Password='".md5($password)."'";
 		$result = mysqli_query($this->connessione,$query);
         $out = $result->fetch_assoc();
 		$rows = mysqli_num_rows($result);

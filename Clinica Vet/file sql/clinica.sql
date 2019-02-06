@@ -75,14 +75,17 @@ CREATE TABLE `prestazione` (
 -- Struttura della tabella `utente`
 --
 
-CREATE TABLE `utente` (
-  `username` varchar(25) NOT NULL,
-  `password` varchar(25) DEFAULT NULL,
-  `Codicefiscale` varchar(16) DEFAULT NULL,
-  `Telefono` varchar(10) DEFAULT NULL,
-  `is_admin` tinyint(1) DEFAULT NULL,
-  `email` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `Users` (
+  `ID` int(3) NOT NULL AUTO_INCREMENT,
+  `Name` tinytext NOT NULL,
+  `Surname` tinytext NOT NULL,
+  `Telefono` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  `Admin` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
 
 -- --------------------------------------------------------
 

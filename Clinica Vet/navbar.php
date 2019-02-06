@@ -23,7 +23,7 @@
             		$connection = $access->openDBConnection();
 
                     if(!$connection) die("Errore nella connessione.");
-                    if(isset($_SESSION['username'])){	?>
+                    if(isset($_SESSION['email'])){	?>
 						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
 					<?php
                 	}
@@ -51,7 +51,7 @@
             		$connection = $access->openDBConnection();
 
                     if(!$connection) die("Errore nella connessione.");
-                    if(isset($_SESSION['username'])){	?>
+                    if(isset($_SESSION['email'])){	?>
 						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
 					<?php
                 	}
