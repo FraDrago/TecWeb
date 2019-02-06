@@ -70,32 +70,34 @@
                 if(isset($_POST['logout'])){
                 	if($access->logout())
                     	header("Location: index2.php");
-					else
+					        else
                     	die("Errore nella connessione.");
-				}
+				        }
               	
-            	$messaggioErrore = "";
-		        if (isset($_REQUEST['username'])){
-                  	$result = $access->login($_REQUEST['username'], $_REQUEST['password']);
-                   	if($result['valid']){
-                		$_SESSION['username'] = $result['Username'];
-                		$_SESSION['ID'] = $result['ID'];
-                		header("Location: index2.php");
-					}
-                   	else
+            	  $messaggioErrore = "";
+      		      if (isset($_REQUEST['username'])){
+                    $result = $access->login($_REQUEST['username'], $_REQUEST['password']);
+                    if($result['valid']){
+                          session_start();
+                      		$_SESSION['email'] = $result['Email'];
+                      		$_SESSION['ID'] = $result['ID'];
+                      		header("Location: index2.php");
+          					}
+                    else{
                    		$messaggioErrore .= "<span xml:lang=\"en\">Username</span> o <span xml:lang=\"en\">password</span> errati.";
+                    }
               	}
                 
-                if(isset($_SESSION['username'])){	?>
+                if(isset($_SESSION['email'])){	?>
                                    
-					<div class="loginAndRegistrationForm">
-						<p>Accesso effettuato come: <?php echo $_SESSION['username']; ?></p>
-						<form action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" name="logout">
-							<p><button name="logout" type="submit">Esci</button></p>
-						</form>
-					</div>
-					<?php
-				}
+        					<div class="loginAndRegistrationForm">
+        						<p>Accesso effettuato come: <?php echo $_SESSION['email']; ?></p>
+        						<form action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" name="logout">
+        							<p><button name="logout" type="submit">Esci</button></p>
+        						</form>
+        					</div>
+        					<?php
+				        }
 	          	
 	          	else {
                 

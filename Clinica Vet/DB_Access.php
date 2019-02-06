@@ -3,7 +3,7 @@
 class DBAccess{
   const HOST_DB = "localhost";
   const USERNAME = "root";
-  const PASSWORD = "";
+  const PASSWORD = "asdf";
   const DATABASE_NAME = "clinica";
   
   public $connessione;
@@ -26,44 +26,53 @@ class DBAccess{
     $name = mysqli_real_escape_string($this->connessione,$name);
     $surname = stripslashes($surname);
     $surname = mysqli_real_escape_string($this->connessione,$surname);
-	$telefono = stripslashes($telefono);
+	  $telefono = stripslashes($telefono);
     $telefono = mysqli_real_escape_string($this->connessione,$telefono);
-	$password = stripslashes($password);
-	$password = mysqli_real_escape_string($this->connessione,$password);
+	  $password = stripslashes($password);
+	  $password = mysqli_real_escape_string($this->connessione,$password);
     
-  	$query = "INSERT INTO Users (Name, Surname, Telefono, Email, Password) VALUES (\"$name\", \"$surname\", \"$telefono\", \"$email\", '".md5($password)."')";
+  	$query = "INSERT INTO utente (Name, Surname, Telefono, Email, Password) VALUES ('".$name."', '".$surname."', '".$telefono."', '".$email."', '".md5($password)."')";
+
+    //die(var_dump($query));
     $result = mysqli_query($this->connessione, $query);
-	if(mysqli_affected_rows($this->connessione)>0){
-		return true;	
-	}
+  	if(mysqli_affected_rows($this->connessione)>0){
+  		  return true;	
+  	}
     else{
-		return false;	
-	}
+		  return false;	
+	  }
   }
   
   public function login($email, $password){
-		$email = stripslashes($email);
+		
+    $email = stripslashes($email);
 		//escapes special characters in a string
 		$email = mysqli_real_escape_string($this->connessione,$email);
 		$password = stripslashes($password);
 		$password = mysqli_real_escape_string($this->connessione,$password);
 		//Checking is user existing in the database or not
-        $query = "SELECT * FROM `Users` WHERE Email='$email' and Password='".md5($password)."'";
+    $query = "SELECT * FROM `utente` WHERE Email='".$email."' and Password='".md5($password)."'";
+        
 		$result = mysqli_query($this->connessione,$query);
-        $out = $result->fetch_assoc();
+    $out = $result->fetch_assoc();
 		$rows = mysqli_num_rows($result);
-        if($rows==1)
+    if($rows==1){
 	    	$out['valid'] = true;
-		else
+    }    
+		else{
 			$out['valid']=false;
-        return $out;
+    }
+    //die(var_dump($query, $out));
+    return $out;
 	}
 	
 	public function logout(){
-		if(session_destroy())
+		if(session_destroy()){
+      unset($_SESSION);
 			return true;
-        else
-        	return false;
+    }
+    else
+      return false;
 	}
 
 
