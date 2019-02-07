@@ -11,28 +11,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/index2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/Contattaci.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/css/style2.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/TecWeb" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,17 +46,6 @@
           <expand>
             <path>
               <item name="Clinica Vet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clinica Vet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Clinica Vet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clinica Vet" type="462c0819:PsiDirectoryNode" />
-              <item name="TecWeb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Clinica Vet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Clinica Vet" type="462c0819:PsiDirectoryNode" />
-              <item name="TecWeb" type="462c0819:PsiDirectoryNode" />
               <item name="Clinica Vet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -127,16 +103,17 @@
       <updated>1547459025742</updated>
       <workItem from="1547459049068" duration="193000" />
       <workItem from="1548756480760" duration="551000" />
+      <workItem from="1549537745233" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="744000" />
+    <option name="totallyTimeSpent" value="746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="728" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534992" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25738725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -161,19 +138,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/Contattaci.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/index2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/Contattaci.php" />
+    <entry file="file://$PROJECT_DIR$/TecWeb/Clinica Vet/index2.php" />
+    <entry file="file://$PROJECT_DIR$/css/style2.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
