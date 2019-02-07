@@ -40,7 +40,7 @@ $access->closeDBConnection();
 
 ?>
 
-<div id="page">
+<div id="page" class="container">
 <!--breadcrumb-->
 
 <ul class="breadcrumb">
