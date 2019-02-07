@@ -1,5 +1,18 @@
 <?php require_once('DB_Access.php'); ?>
-<?php session_start(); ?>
+<?php session_start(); 
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+if(!isset($_SESSION['ID'])){
+	$admin=0;
+	}else{
+		$id=$_SESSION['ID'];
+		$admin=$access->isAdmin($id);
+	   	}/* FINE CONTROLLO ADMIN*/
+?>
+
+
 <nav role="navigation">
   <div id="menuToggle">
 
@@ -19,13 +32,15 @@
           <li><a></br></a></li>
 		  <?php
                 	
-                    $access = new DBAccess();
-            		$connection = $access->openDBConnection();
-
+					
                     if(!$connection) die("Errore nella connessione.");
-                    if(isset($_SESSION['email'])){	?>
+                    if(isset($_SESSION['email'])){
+						if($admin){ ?>
+						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
+						<?php } 
+						else {?>
 						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
-					<?php
+						<?php }
                 	}
                     else { ?>
                 		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
@@ -45,15 +60,17 @@
           <li <?php if($pagina_attuale=='galleria.php') echo "class='current'"; ?>><a href='galleria.php#'>Galleria</a></li>
           <li <?php if($pagina_attuale=='Link.php') echo "class='current'"; ?>><a href='Link.php#'>Link Utili</a></li>
           <li <?php if($pagina_attuale=='Contattaci.php') echo "class='current'"; ?>><a href='Contattaci.php#'>Contattaci</a></li>
-		  <?php
+ <?php
                 	
-                    $access = new DBAccess();
-            		$connection = $access->openDBConnection();
-
+					
                     if(!$connection) die("Errore nella connessione.");
-                    if(isset($_SESSION['email'])){	?>
+                    if(isset($_SESSION['email'])){
+						if($admin){ ?>
+						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
+						<?php } 
+						else {?>
 						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
-					<?php
+						<?php }
                 	}
                     else { ?>
                 		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
