@@ -27,13 +27,8 @@
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <?php if($admin){ ?>
-	<li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
-	<?php } 
-	else {?>
-	<li><a href="AreaPersonale.php">Area Personale</span></a></li>
-	<?php } ?>
-   <li class="bc_here">Modifica Profilo</li>
+  <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+  <li class="bc_here">Modifica Profilo</li>
 </ul>
   
 <br/>

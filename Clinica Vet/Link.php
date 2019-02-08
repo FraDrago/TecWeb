@@ -29,6 +29,10 @@
 	<li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
 	<li class="bc_here">Link Utili</li>
 </ul>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script type="text/javascript" src="script.js"></script>
 	
 <br/>
 <br/>

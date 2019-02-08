@@ -6,19 +6,17 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="description" content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione (cani e gatti). L'ambulatorio si trova aPadova, via delle Mele 420" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
   		<meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
   		<meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="print.css" media="print">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="../scripts/script.js" type="text/javascript" charset="utf-8"></script>
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
 <body>
-
-
 
 <?php include_once"header.php"?>
 
@@ -48,14 +46,15 @@ $access->closeDBConnection();
     <li class="bc_here">Home</li>
 </ul>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script type="text/javascript" src="script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
 <br/>
 
 <!-- contenuto -->
-<div id="anchor"></div>
-
 <div id="contentHome">
 
     <div class="leftHome">
@@ -126,12 +125,6 @@ $access->closeDBConnection();
                 ?>
                 <div class="altri"><a id="galleria_title" href="galleria.php">Visualizza tutte le foto</a></div>
     </div>
-
-<div id="go-to-menu">
-    <a href="#anchor" target="_self" img src="gotop.png" alt="Torna su">
-</a>   
-</div>
-
 
 </div>
 
