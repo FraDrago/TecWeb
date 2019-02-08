@@ -1,5 +1,3 @@
-
-
 <?php $pagina_attuale='index2.php'; ?>
 
 <!DOCTYPE  html>
@@ -14,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="print.css" media="print">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="../scripts/script.js" type="text/javascript" charset="utf-8"></script>
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
@@ -40,7 +39,8 @@ $access->closeDBConnection();
 
 ?>
 
-<div id="page">
+
+<div id="page" class="container">
 <!--breadcrumb-->
 
 <ul class="breadcrumb">
@@ -54,13 +54,14 @@ $access->closeDBConnection();
 <br/>
 
 <!-- contenuto -->
+<div id="anchor"></div>
 
-<div id="content">
+<div id="contentHome">
 
     <div class="leftHome">
     <h2 class="BenvenutoHome">Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
     <img id="imghome" src="img/ambu.jpg" alt="immagine dell'ambulatorio"/>
-    <p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere animale</p>
+    <p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere di <span class="highlight">Cani e Gatti</span></p>
     <p>Da noi troverai solo il meglio in:
         <h3><span class="highlight2">Servizi chirurgici, ambulatoriali e di analisi all'avanguardia </span></h3>
         <h3><span class="highlight2">Prenotazione online e massima efficienza</span></h3>
@@ -125,6 +126,11 @@ $access->closeDBConnection();
                 ?>
                 <div class="altri"><a id="galleria_title" href="galleria.php">Visualizza tutte le foto</a></div>
     </div>
+
+<div id="go-to-menu">
+    <a href="#anchor" target="_self" img src="gotop.png" alt="Torna su">
+</a>   
+</div>
 
 
 </div>

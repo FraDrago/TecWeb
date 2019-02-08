@@ -390,21 +390,31 @@ ul.breadcrumb li a:hover {
 
 /******Home******/
 /***************/
+#contentHome{
+	text-align: center;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding:2em 2em 9em 2em;
+	background-color: white;
+	margin-top: -1.5em;
+	margin-bottom: 1em;
+}
 
 .BenvenutoHome h2{
 	font-size: 24px;
 }
 .leftHome{
 	margin-left: 0;
-	width: 60%;
+	width: 57%;
 	float: left;
 	display: block;
-	margin margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 .rightHome{
 	width: 40%;
 	float: right;
 	display: block;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 	background-color: #e0e4e9;
 	background-blend-mode: lighten;
@@ -430,7 +440,7 @@ td{
 	background-color: #cad0db;
 }
 #content .galleria h2{
-	margin-top: 26.95em;
+	margin-top: 3em;
 }
 .link-style {
 	display: inline-block;
@@ -464,6 +474,32 @@ td{
 	width: 100px;
 	height: 100px;
 }
+#anchor {
+    position: relative;
+    top: -9.7em;}
+
+#go-to-menu {
+    overflow-y: auto;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #3c2109;
+    cursor: pointer;
+    padding: 0.8em;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+#go-to-menu a {
+    width: 10px;
+    height: 10px;
+}
+
+#go-to-menu a img {
+    width: 35px;
+    height: auto;}
 
 /******Area_personale******/
 /*************************/
@@ -1276,7 +1312,8 @@ border-color:transparent #6585a2 transparent transparent;
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
 	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
 	#content .galleria h2{margin-top: 0em;} 
-	#imghome{max-width: 300px;}
+	#imghome{max-width: 300px; text-align: center;}
+	iframe {max-width: 300px }
 }
 
 @media screen and (max-width: 850px) {
@@ -1306,12 +1343,17 @@ border-color:transparent #6585a2 transparent transparent;
 	
 }
 
+@media screen and (max-width: 465px) {
+	iframe{max-width: 240px;}
+	#imghome{max-width: 250px;}	}
+
 @media screen and (max-width: 441px) {
 	#logo {width: 4.5em; margin-top: 0.5em;}
 	#title h1{font-size: 25px;}
 	#page {background-color: white;}
 	#content{padding: 0em 0em 0em 0em}
 	.descrizione3 ul {padding-left: 0em;}
+	#contentHome{padding: 0;}
 }
 @media screen and (max-width: 376px) {  /*iphoneX*/
 	.nav{margin-top: -46px;}
@@ -1320,7 +1362,8 @@ border-color:transparent #6585a2 transparent transparent;
 	.header-meta .col-elem {font-size: 18px;}
 	.header-meta .phone {font-size: 20px;}
 	.box{margin-left: 0em; margin-top: 0.5em;}
-
+	#imghome{max-width: 200px;}
+	#contentHome{padding: 0;}
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
@@ -1328,5 +1371,6 @@ border-color:transparent #6585a2 transparent transparent;
 	.box{margin-left: -1em; margin-top: 0.5em;}
 	#imghome{display: none;}
 	iframe{max-width: 150px;}
+}
 
 
