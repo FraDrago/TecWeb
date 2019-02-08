@@ -1,3 +1,4 @@
+
 <?php $pagina_attuale='Prenota.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
@@ -28,74 +29,44 @@
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li><a href="AreaPersonale.php">Area Personale</span></a></li>
-  <li class="bc_here">Prenotazioni</li>
+  <li class="bc_here">Gestione prenotazioni</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
+  <div id="title"><h3>Prenota qui la tua visita:</h3></div>
+<form name="prenota" action="">
+  Data: <input type="date" id="data">
+  Ora: <input type="time" id="ora">
+</br></br>Tipo di visita:
+  <select id="prestazione">
+    <?php
+        $connection = mysqli_connect("localhost","root","","clinica");
+        if(!$connection) die("Errore nella connessione.");
+        $query="SELECT id, nome FROM prestazione";
+        $result=mysqli_query($connection, $query) or die("Impossibile ottenere la lista delle prestazioni");
 
-<div id="title"><h3>Prenota qui la tua visita:</h3></div>
-<div class="appointment-form">
-                     
-                     <div class="form">
-                        <form action="index.html">
-                           <div class="form-group">
-                                       <input type="text" id="name" placeholder="Your Name">
-                                    </div>
-                                   <div class="form-group">
-                                       <input type="email" placeholder="Email Address" id="email">
-                                    </div>
-                              
-                                    <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Giorno</option>
-                                          <option>Lunedì</option>
-                                          <option>Martedì</option>
-                                          <option>Mercoledì</option>
-                                          <option>Giovedì</option>
-                                          <option>Venerdì</option>
-                                          
-                                       </select>
-                                    </div>
-                                    <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Ora</option>
-                                          <option>AM</option>
-                                          <option>PM</option>
-                                       </select>
-                                    </div>
-                                 
-                              
-                                    <div class="form-group">
-                                       <select class="form-control">
-                                          <option>Dottore</option>
-                                          <option>Dr. Ballan</option>
-                                          <option>Dr. Ciman</option>
-                                       </select>
-                                    </div>
-                                
-                              
-                                    <div class="form-group">
-                                       <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
-                                    </div>
-                                 
-                                    <div class="form-group">
-                                       <div class="center"><button type="submit">Submit</button></div>
-                                    </div>
-                                    </form>
-                                    <p> Sarai ricontattato telefonicamente per una conferma della tua prenotazione </p>
-                                 </div>
-                               </div>
-                             </div>
+        while($row=mysqli_fetch_assoc($result)){
+          echo "<option value=".$row['id'].">".$row['nome']."</option>";
+        }
 
-                                 
-                              
+        $id=$_SESSION['username'];
+    ?>
+  </select></br></br></br>
+  Tipo di animale:</br>
+  <input type="radio" name="tipo" value=0>cane</br>
+  <input type="radio" name="tipo" value=1 checked="checked">gatto</br></br>
+  <textarea rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
+  <input type="submit" name="invia">
+</form>
 
+
+
+
+</div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
 
 </body>
 </html>
-
-
