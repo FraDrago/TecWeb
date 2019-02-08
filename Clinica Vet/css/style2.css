@@ -155,7 +155,7 @@ body {
 	padding: 12px;
 	padding-bottom: 1em;
 	color:white;
-	font-size: 18px;
+	font-size: 20px;
 	text-decoration: none;
 	cursor:pointer;
 }
@@ -169,47 +169,6 @@ body {
 	background-color: #ececec;
 	color: #6585a2;
 	border-radius: 1em 1em 0 0; 
-}
-
-/******Searchbar******/
-/********************/
-
-.search {
-	/*width:271px;
-	height:31px;*/
-	width: 27%;
-	margin-top: 12px;
-	float: right;
-}
-
-.searchTerm {
-  float: left;
-  width: 80%;
-  border: 3px solid white;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus{
-  color: black;
-}
-
-.searchButton {
-  /*position: absolute;*/  
-  /*right: -50px;
-  width: 40px;*/
-  height: 36px;
-  border: 1px solid white;
-  background: white;
-  text-align: center;
-  color: #1167cb;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
-  margin-left: -10%;
 }
 
 /******Menu_Mobile******/
@@ -560,6 +519,87 @@ td{
 	margin-left:2em; 
 	margin-right:2em;
 }
+
+/******Area Personale******/
+/*************************/
+
+.list-type4 li img{
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	float: left;
+	position: relative;
+	margin-bottom: 12px;
+
+}
+
+.list-type4{
+	margin-top: 1em;
+	margin:0;
+	width:auto;
+	display: inline-block;
+	text-align: center;
+
+}
+.list-type4 #piante-colore a{
+	background:black;
+}
+
+.list-type4 li, .list-type4 a{
+display: inline-block;
+line-height:35px;
+position:relative;
+transition: background-color 1.5s ease;
+margin-right: 1em;
+}
+
+.list-type4 a{ /*corpo freccia*/
+	font-size: 30px;
+	padding:1em;
+	margin-bottom: 1em;
+	height: auto;
+width: 300px;
+background:#6585a2;
+color:#fff;
+text-decoration:none;
+border-bottom-right-radius:4px;
+border-top-right-radius:4px;
+}
+
+.list-type4 a:before{ /*punta freccia*/
+content:"";
+float:left;
+position:absolute;
+top:0;
+left:-12px;
+width:0;
+height:0;
+border-color:transparent #6585a2 transparent transparent;
+border-style:solid;
+border-width: 18px 12px 18px 0;
+}
+
+.list-type4 a:after{ /*decorazione freccia*/
+content:"";
+position:absolute;
+top:15px;
+left:0;
+float:left;
+width:6px;
+height:6px;
+border-radius:2px;
+background:#fff;
+box-shadow:-1px -1px 2px #004977;
+}
+
+.list-type4 a:hover{
+background:#555;
+}
+
+.list-type4 a:hover:before{
+border-color:transparent #6585a2 transparent transparent;
+}
+
 
 /******Link Utili******/
 /*********************/
@@ -1101,16 +1141,15 @@ table#tabellag a{
 
 /*********Media break point***********/
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1140px) {
 	.nav ul li a{ display: none; }
     #menuToggle { visibility: visible; } 
-    #contentHome{padding: 2em; 
 }
 @media screen and (max-width: 1050px) {
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
 	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
 	#content .galleria h2{margin-top: 0em;} 
-	#imghome{max-width: 300px; text-align: center;}
+	#imghome{max-width: 400px; text-align: center;}
 	iframe {max-width: 300px }
 }
 
@@ -1119,7 +1158,6 @@ table#tabellag a{
 }
 
 @media screen and (max-width: 700px) {
-	.search {display: none;}
 	.box{margin:0.5em;}	
 	#title h1{margin-top: 1em;
     text-align: center;}
@@ -1130,6 +1168,7 @@ table#tabellag a{
 	#img {display: none;}
 	#logo {width: 5em;}
 	#title h1{font-size: 25px; margin-top: 0.5em;}
+	#imghome{max-width: 300px;}
 	.image3{float: none;}
 	.name2{text-align: center;}
 	.descrizione3 ul li{

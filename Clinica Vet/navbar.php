@@ -79,10 +79,7 @@ if(!isset($_SESSION['ID'])){
                 ?>
           
 </ul>
-       <div class='search'>
-            <input type='text' class='searchTerm' placeholder='Cerca...'>
-            <button type='submit' class='searchButton'>
-            <i class='fa fa-search'></i></button></div> </div>
+</div>
 
   <div id='img'>
         <img src='img/banner.jpg' width='100%'/></div>
