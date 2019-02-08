@@ -103,21 +103,16 @@ CREATE TABLE `prestazione` (
 -- Struttura della tabella `utente`
 --
 
-CREATE TABLE `utente` (
-  `ID` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `utente` (
+  `ID` int(0) NOT NULL AUTO_INCREMENT,
   `Name` tinytext NOT NULL,
   `Surname` tinytext NOT NULL,
   `Telefono` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
-  `Admin` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-
-INSERT INTO `utente` (`ID`, `Name`, `Surname`, `Telefono`, `Email`, `Password`, `Admin`) VALUES
-(1, 'Nome', 'Cognome', 'Telefono', 'email@email.it', 'dc647eb65e6711e155375218212b3964', NULL),
-(2, 'admin', 'admin', 'admin', 'admin@admin.it', '21232f297a57a5a743894a0e4a801fc3', 1)
+  `Admin` tinyint(1) DEFAULT NULL,
+   PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0;
 
 -- --------------------------------------------------------
 
