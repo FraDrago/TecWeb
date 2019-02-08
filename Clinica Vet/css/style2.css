@@ -2,7 +2,8 @@
 /******************/
 
 body {
-	font:18px Arial, Helvetica, sans-serif;
+	font-size:20px ;
+	font-family: 'Lato', sans-serif;
 	color:black;
 	margin: 0;
 	height:100%;
@@ -104,7 +105,7 @@ body {
 
 .header-meta {
 	text-align:right;
-	padding:31px 20px 20px;
+	padding:25px 20px 20px;
 }
 .header-meta * {
 	text-align:left;
@@ -132,7 +133,7 @@ body {
 
 .nav{
 	background-color: #6585a2;
-	margin-top: -45px;
+	margin-top: -46px;
 	height: 60px;
 	text-align: center;
 }
@@ -451,6 +452,12 @@ td{
 
 #myBtn:hover {
   background-color: #555;
+}
+.altri{
+	margin-top: 1em;
+}
+.altri a{
+	font-size: 22px;
 }
 
 /******Contattaci******/
@@ -1143,12 +1150,14 @@ table#tabellag a{
 
 @media screen and (max-width: 1140px) {
 	.nav ul li a{ display: none; }
-    #menuToggle { visibility: visible; } 
+    #menuToggle { visibility: visible; }
+
 }
 @media screen and (max-width: 1050px) {
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
 	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
 	#content .galleria h2{margin-top: 0em;} 
+	#contentHome{padding: 2em 2em 3em 2em; }
 	#imghome{max-width: 400px; text-align: center;}
 	iframe {max-width: 300px }
 }
@@ -1161,14 +1170,15 @@ table#tabellag a{
 	.box{margin:0.5em;}	
 	#title h1{margin-top: 1em;
     text-align: center;}
-    #logo{width: 6em;}
+    #logo{width: 5em; margin-top: 1.3em;}
 }
+@media screen and (max-width: 600px) {
+	#imghome{max-width: 300px;}}
 
 @media screen and (max-width: 550px) {
 	#img {display: none;}
-	#logo {width: 5em;}
 	#title h1{font-size: 25px; margin-top: 0.5em;}
-	#imghome{max-width: 300px;}
+	#logo{margin-top: 0.3em;}
 	.image3{float: none;}
 	.name2{text-align: center;}
 	.descrizione3 ul li{
@@ -1181,7 +1191,6 @@ table#tabellag a{
 	.list-type3 a{width: 250px;}
 	.descrizione3{text-align: left;}
 	.descrizione{text-align: left;}
-	
 }
 
 @media screen and (max-width: 465px) {
@@ -1203,7 +1212,6 @@ table#tabellag a{
 	.header-meta .phone {font-size: 20px;}
 	.box{margin-left: 0em; margin-top: 0.5em;}
 	#imghome{max-width: 200px;}
-	#contentHome{padding: 0;}
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
