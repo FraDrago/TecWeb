@@ -160,6 +160,51 @@ public function getemergenze(){
       }
    }
 
+public function getservizi(){
+      $querySelect = "SELECT * FROM servizi";
+      $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
+      if(mysqli_num_rows($queryResult) == 0){
+        return null;
+      }
+      else{
+        $result = array();
+        while($row = mysqli_fetch_assoc($queryResult)){
+        $arrayResult = array(
+          "id" => $row['id'],
+          "name" => $row['name'],
+          "Path" => $row['Path'],
+          "alt" => $row['alt'],
+          "Descrizione" => $row['Descrizione'],
+          );
+          array_push($result, $arrayResult);
+        }
+        return $result;
+      }
+   }
+
+public function getserviziIndice(){
+      $querySelect = "SELECT * FROM serviziIndice";
+      $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
+      if(mysqli_num_rows($queryResult) == 0){
+        return null;
+      }
+      else{
+        $result = array();
+        while($row = mysqli_fetch_assoc($queryResult)){
+        $arrayResult = array(
+          "id" => $row['id'],
+          "name" => $row['name'],
+          "Path" => $row['Path'],
+          "alt" => $row['alt'],
+          );
+          array_push($result, $arrayResult);
+        }
+        return $result;
+      }
+   }
+
+
+
 public function getemergenzeIndice(){
       $querySelect = "SELECT * FROM emergenzeIndice";
       $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
