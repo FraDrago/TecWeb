@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
     <head>
-    	header('Content-Type: text/plain;charset=utf-8');
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="description" content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione, quali cani e gatti" />
       <meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
