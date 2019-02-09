@@ -47,7 +47,7 @@
 <!--<div class="login-form">
 		<h1>Login</h1>
 		<form action="authenticate.php" method="post">
-			<input type="text" name="username" placeholder="Username">
+			<input type="text" name="email" placeholder="Email">
 			<input type="password" name="password" placeholder="Password">
 			<input type="submit">
 		</form>
@@ -76,8 +76,8 @@
 				        }
               	
             	  $messaggioErrore = "";
-      		      if (isset($_REQUEST['username'])){
-                    $result = $access->login($_REQUEST['username'], $_REQUEST['password']);
+                  if (isset($_REQUEST['email'])) {
+                      $result = $access->login($_REQUEST['email'], $_REQUEST['password']);
                     if($result['valid']){
                           session_start();
                       		$_SESSION['email'] = $result['Email'];
@@ -85,7 +85,7 @@
                       		header("Location: index2.php");
           					}
                     else{
-                   		$messaggioErrore .= "<span xml:lang=\"en\">Username</span> o <span xml:lang=\"en\">password</span> errati.";
+                        $messaggioErrore .= "<span xml:lang=\"en\">Email</span> o <span xml:lang=\"en\">password</span> errati.";
                     }
               	}
                 
@@ -108,7 +108,8 @@
 	          	
 	          	<div class="loginAndRegistrationForm">
 	            	<form name="login" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
-                    	<p><label for="username"><span xml:lang="en" lang="en">Username:</span> </label></p><fieldset><input id="username" type="text" placeholder="Username" name="username" required></fieldset>
+                        <p><label for="email"><span xml:lang="en" lang="en">Email:</span> </label></p>
+                        <fieldset><input id="email" type="text" placeholder="Email" name="email" required></fieldset>
                         <p><label for="password"><span xml:lang="en" lang="en">Password:</span> </label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
                         <p><button type="submit">Entra</button></p>
 	            	</form>
