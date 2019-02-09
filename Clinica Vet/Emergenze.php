@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
     <head>
+    	header('Content-Type: text/plain;charset=utf-8');
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="description" content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione, quali cani e gatti" />
       <meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
@@ -27,7 +28,6 @@
     if(!$connection) die("Errore nella connessione.");
         ?>
     
-
 <div id="page" class="container">
 <!--breadcrumb-->
 
@@ -50,34 +50,33 @@
 
 
 <div class="list-type3">
-<ol><?php
-		$result=$access-> getemergenze();
+<ol>
+	<?php
+		$result=$access-> getemergenzeIndice();
             if(count($result)>0){?>
-	<?php foreach($result as $emergenze){?>
-<li><img src="img/calore.jpg" ><a href="#<?php echo $emergenze['id'];?>"> Colpo di calore </a></li><?php }
+	<?php foreach($result as $emergenzeIndice){?>
+<li><img src="<?php echo $emergenzeIndice['Path']; ?>" alt="<?php echo htmlentities($emergenzeIndice['alt'], ENT_HTML5, "UTF-8");?>">
+	<a href="#<?php echo $emergenzeIndice['id'];?>"><?php echo $emergenzeIndice['name']; ?></a>
+</li>
+<?php }
 		}
 	?>
-<li><img src="img/vomito.jpg" ><a href="#vomito">Vomito e Diarrea </a></li>
-<li><img src="img/unghia.jpg" ><a href="#unghie">Unghia spezzata</a></li>
-<li><img src="img/morso.jpg" ><a href="#morso">Morso di cane o gatto</a></li>
-<li><img src="img/puntura.jpg" ><a href="#puntura">Puntura di insetto</a></li>
-<li><img src="img/forasacchi.jpg" ><a href="#spighe">Spighe nelle orecchie/zampe</a></li>
-<li><img src="img/tossiche.jpg" ><a href="#ingestione">Ingestione sostanze tossiche</a></li>
 <li><img src="img/piante.jpg" ><a class="piante-colore" href="#piante">Piante tossiche comuni</a></li>
 </ol>
 </div>
 
-	
-	<div class="box2">
+
 		<?php
 		$result=$access-> getemergenze();
             if(count($result)>0){?>
 	<?php foreach($result as $emergenze){?>
+	<div class="box2">
 	<div id="<?php echo $emergenze['id']; ?>"></div>
-	<div class="name2"><?php echo $emergenze['name']; ?></div>
-	<div class="boxImage2"><img id="image5" src="<?php echo $emergenze['Path']; ?>" alt="<?php echo htmlentities($emergenze['alt'], ENT_HTML5, "ISO8859-1");?>"></div>
-	<div class="descrizione"><?php echo $emergenze['Descrizione'];?></div>
-	</div><?php }
+	<div class="name2"> <?php echo $emergenze['name']; ?> </div>
+	<div class="boxImage2"> <img id="image5" src="<?php echo $emergenze['Path']; ?>" alt="<?php echo htmlentities($emergenze['alt'], ENT_HTML5, "UTF-8");?>"> </div>
+	<div class="descrizione"> <?php echo $emergenze['Descrizione'];?> </div>
+</div>
+	<?php }
 		}
 	?>
 
@@ -100,6 +99,7 @@
 }
 ?>
 
+</div>
 </div>
 
 <?php include_once"footer.php"?>

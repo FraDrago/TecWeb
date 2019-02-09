@@ -76,7 +76,6 @@ INSERT INTO `orari` (`ID`, `Giorno`, `OrariStart`, `OrariEnd`) VALUES
 (7, 'Domenica', '10:00:00', '12:00:00');
 
 -- --------------------------------------------------------
-
 --
 -- Struttura della tabella `prestazione`
 --
