@@ -1,4 +1,8 @@
-<?php $pagina_attuale='galleriaAdd.php'; unset($_POST); ?>
+<?php
+
+
+unset($_POST);
+$pagina_attuale = 'galleriaAdd.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 

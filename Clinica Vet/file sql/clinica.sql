@@ -32,7 +32,7 @@ CREATE TABLE `galleria` (
   `Path` varchar(200) NOT NULL,
   `descrizione` varchar(400) DEFAULT NULL,
   `alt` varchar(400) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dump dei dati per la tabella `galleria`

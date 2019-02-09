@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-  const HOST_DB = "localhost:3307";
+    const HOST_DB = "localhost";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -58,7 +58,7 @@ class DBAccess{
 		
     $email = stripslashes($email);
 		//escapes special characters in a string
-		$email = mysqli_real_escape_string($this->connessione,$email);
+      $email = mysqli_real_escape_string($this->connessione, $email);
 		$password = stripslashes($password);
 		$password = mysqli_real_escape_string($this->connessione,$password);
 		//Checking is user existing in the database or not
@@ -274,7 +274,24 @@ function insertImmaginiGalleria($path, $alt, $descrizione){
 
 }
 
- function isAdminLogged($user){ //funzione che ritorna true sse c'è un amministratore loggato
+
+    public function getImmagineSingola($id)
+    {
+
+        $result = null;
+        $queryResult = mysqli_query($this->connessione, "SELECT * FROM galleria WHERE id=" . $id . " LIMIT 1");
+        if ($queryResult && mysqli_num_rows($queryResult) > 0) {
+            $result = mysqli_fetch_assoc($queryResult);
+        }
+        //die(var_dump($result));
+        return $result;
+
+
+    }
+
+
+    function isAdminLogged($user)
+    { //funzione che ritorna true sse c'è un amministratore loggato
     $query="SELECT * FROM utente WHERE utente.Email=".$user." AND Admin!=0";
     $queryResult = mysqli_query($this->connessione, $query) or die("impossibile stabilire se l'utente sia admin o meno");
     if(mysqli_num_rows($queryResult) > 0)

@@ -1,5 +1,10 @@
-<?php require_once('DB_Access.php'); ?>
-<?php session_start(); 
+<?php require_once('DB_Access.php');
+
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+
 $access = new DBAccess();
 $connection = $access->openDBConnection();
 if(!$connection) die("Errore nella connessione.");

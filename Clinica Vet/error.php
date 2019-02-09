@@ -1,26 +1,73 @@
-
 <?php
 session_start();
-if(isset($_SESSION['error'])){
-	
+if (isset($_SESSION['error']) && isset($_SESSION['error_code'])) {
+
 	$error = $_SESSION['error'];
+    $error_code = $_SESSION['error_code'];
 	unset($_SESSION['error']);
-	
-	
-	
-	
-	
-	
-	
-	
-	echo $error;
+    unset($_SESSION['error_code']);
+
+
+
+
+
 }
 else{
 	header('Location: index2.php');
-}	
+}
 
-
+$pagina_attuale = 'error.php';
 
 ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description"
+          content=" Ambulatorio veterinario di Archimedeo Torre per la cura di animali d'affezione, quali cani e gatti"/>
+    <meta name="keywords"
+          content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet"/>
+    <meta name="language" content="italian it"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Ambulatorio Veterinario Archimedeo Torre</title>
+</head>
+
+<body>
+
+<?php include_once "header.php" ?>
+
+<!--menu di navigazione-->
+<?php include_once "navbar.php" ?>
+
+<div id="page" class="container">
+    <!--breadcrumb-->
+
+    <ul class="breadcrumb">
+        <li>Ti trovi in:</li>
+        <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+        <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+        <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
+        <li class="bc_here">Modifica</li>
+    </ul>
+
+    <br/>
+    <br/>
+    <div id="content">
+        <div id="title"><h3>Errore</h3></div>
+        <?php echo $error_code;
+        echo "<br>";
+        echo $error;
+        ?>
+
+    </div> <!--chiusura tag page-->
+
+    <?php include_once "footer.php" ?>
+
+</body>
+</html>
+
 
 
