@@ -84,7 +84,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
                 <label for="alt">Alt:</label>
                 <input type="text" name="alt" placeholder="Alt"
                        value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
-                <input id="Id" name="id" type="hidden" value="$image['id']">
+                <input id="Id" name="id" type="hidden" value="<?php echo $image['id']; ?>">
                 <label for="desc">Descrizione:</label>
                 <textarea name="descrizione" placeholder="Descrizione" cols="50" rows="5">
 				<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>
