@@ -138,6 +138,51 @@ function validateTime($time, $format = 'H:i'){
     return $d && $d->format($format) == $time;
 }
 
+public function getemergenze(){
+      $querySelect = "SELECT * FROM emergenze";
+      $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
+      if(mysqli_num_rows($queryResult) == 0){
+        return null;
+      }
+      else{
+        $result = array();
+        while($row = mysqli_fetch_assoc($queryResult)){
+        $arrayResult = array(
+          "id" => $row['id'],
+          "name" => $row['name'],
+          "Path" => $row['Path'],
+          "alt" => $row['alt'],
+          "Descrizione" => $row['Descrizione'],
+          );
+          array_push($result, $arrayResult);
+        }
+        return $result;
+      }
+   }
+
+
+public function getpiante(){
+      $querySelect = "SELECT * FROM piante";
+      $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
+      if(mysqli_num_rows($queryResult) == 0){
+        return null;
+      }
+      else{
+        $result = array();
+        while($row = mysqli_fetch_assoc($queryResult)){
+        $arrayResult = array(
+          "name" => $row['name'],
+          "Path" => $row['Path'],
+          "alt" => $row['alt'],
+          "PartiTossiche" => $row['PartiTossiche'],
+          "Sintomatologia" => $row['Sintomatologia'],
+          );
+          array_push($result, $arrayResult);
+        }
+        return $result;
+      }
+   }
+
 
 function getImmaginiGalleria(){
 

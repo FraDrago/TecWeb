@@ -114,6 +114,7 @@ $access->closeDBConnection();
                 foreach($images as $key => $image){ ?>
                 <div class="box6">
                 <div class="contimg">
+                    <a href="galleria.php">
                     <img class="image6"src="<?php echo $image['Path']; ?>" alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1");?>">
                     </a>  
                 </div>
