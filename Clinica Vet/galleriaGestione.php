@@ -55,7 +55,7 @@ $pagina_attuale='galleriaGestione.php';
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
         <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-        <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+        <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
         <li class="bc_here">Gestione Galleria</li>
     </ul>
 
@@ -63,12 +63,6 @@ $pagina_attuale='galleriaGestione.php';
     <br/>
     <div id="content">
         <div id="title"><h3>Gestione Galleria</h3></div>
-
-        <!-- form non buono
-        <form action="galleriaAdd.php">
-            <input type="submit" value="Aggiungi una foto" />
-        </form>
-        -->
 
 
         <a id="addlink" href="galleriaAdd.php">Aggiungi una foto</a>
@@ -93,7 +87,7 @@ $pagina_attuale='galleriaGestione.php';
                         <td><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>
                         <td><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
                         <td><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica immagine</td>
-                        <td><a href="galleriaDel.php">Elimina immagine</td>
+                        <td><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina immagine</td>
                     </tr>
                 <?php } ?>
                 </tbody>

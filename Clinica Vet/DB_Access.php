@@ -289,6 +289,25 @@ function insertImmaginiGalleria($path, $alt, $descrizione){
 
     }
 
+    public function updateImmagineGalleria($id, $alt, $descrizione)
+    {
+
+
+        $result = false;
+        if ($this->getImmagineSingola($id) != null) {
+
+            $queryResult = mysqli_query($this->connessione, "UPDATE galleria SET alt='" . $alt . "', descrizione='" . $descrizione . "' WHERE id=" . $id);
+            if ($queryResult) {
+
+                $result = true;
+            }
+        }
+
+        return $result;
+    }
+
+
+
 
     function isAdminLogged($user)
     { //funzione che ritorna true sse c'è un amministratore loggato

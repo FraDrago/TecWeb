@@ -1,4 +1,25 @@
-<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+require_once('DB_Access.php');
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if (!$connection) {
+    $_SESSION['error'] = "Si sono sono verificati dei problemi. Riprovare pi&ugrave; tardi.";
+    $_SESSION['error_code'] = "500";
+    header("Location: error.php");
+}
+if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SESSION['ID']))) {
+
+    $_SESSION['error'] = "Non hai i permessi per accedere a questa sezione";
+    $_SESSION['error_code'] = "403";
+    header("Location: error.php");
+}
+$access->closeDBConnection();
+$pagina_attuale = 'AreaPersonaleVet.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
