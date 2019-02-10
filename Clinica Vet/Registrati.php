@@ -55,8 +55,7 @@
                 		if($result){
                 			$email = stripslashes($_REQUEST['email']);
                 			$email = mysqli_real_escape_string($access->connessione,$email);
-                			$_SESSION['email'] = $email;
-                  			header("Location: index2.php");
+                  			header("Location: AccediReg.php");
                 		}	
 					}
               	}

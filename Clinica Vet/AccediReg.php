@@ -44,15 +44,6 @@
 
 <!-- contenuto -->
 
-<!--<div class="login-form">
-		<h1>Login</h1>
-		<form action="authenticate.php" method="post">
-			<input type="text" name="email" placeholder="Email">
-			<input type="password" name="password" placeholder="Password">
-			<input type="submit">
-		</form>
-</div>-->
-
 
 <div class="section">
                 <h1><span xml:lang="en" lang="en">Login</span></h1>

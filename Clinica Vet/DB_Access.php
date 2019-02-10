@@ -54,20 +54,6 @@ class DBAccess{
 	  }
   }
   
-  public function cambiotelefono($telefono){
-	$telefono = stripslashes($telefono);
-    $telefono = mysqli_real_escape_string($this->connessione,$telefono);    
-  	$query = "UPDATE utente SET telefono='".$telefono."' ";
-
-    //die(var_dump($query));
-    $result = mysqli_query($this->connessione, $query);
-  	if(mysqli_affected_rows($this->connessione)>0){
-  		  return true;	
-  	}
-    else{
-		  return false;	
-	  }
-  }
   
   public function login($email, $password){
 		
