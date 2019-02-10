@@ -1,4 +1,5 @@
-<?php $pagina_attuale='ModificaProfilo.php'; ?>
+<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
+<?php $pagina_attuale='AreaPersonale.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -65,7 +66,7 @@ else { ?>
  
  <?php
 		if(isset($_SESSION['ID'])){
-        $connection = mysqli_connect("localhost:3307","root","","clinica");
+        $connection = mysqli_connect("localhost","root","","clinica");
         if(!$connection) die("Errore nella connessione.");
 		//"' . $_SESSION['ID'] . '"
         $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";

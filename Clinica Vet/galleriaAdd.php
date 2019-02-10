@@ -1,3 +1,4 @@
+
 <?php
 
 if (!isset($_SESSION)) {
@@ -22,7 +23,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 
 $access->closeDBConnection();
 unset($_POST);
-$pagina_attuale = 'galleriaAdd.php'; ?>
+ $pagina_attuale='AreaPersonaleVet.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 

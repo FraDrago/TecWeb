@@ -1,5 +1,5 @@
 
-<?php $pagina_attuale='Prenota.php';
+<?php $pagina_attuale='AreaPersonale.php'; 
 if (!isset($_SESSION)) {
     session_start();
 }

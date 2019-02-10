@@ -1,3 +1,5 @@
+<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
+<!DOCTYPE  html>
 <?php
 if (!isset($_SESSION)) {
     session_start();
