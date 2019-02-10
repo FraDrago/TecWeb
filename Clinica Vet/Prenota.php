@@ -1,5 +1,20 @@
 
-<?php $pagina_attuale='Prenota.php'; ?>
+<?php $pagina_attuale='Prenota.php';
+if (!isset($_SESSION)) {
+    session_start();
+}
+require_once('DB_Access.php');
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+
+if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SESSION['ID']))) { //l'utente loggato non deve essere admin
+
+    $_SESSION['error'] = "Non hai i permessi per accedere a questa sezione";
+    $_SESSION['error_code'] = "403";
+    header("Location: error.php");
+}
+?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -36,11 +51,38 @@
 <br/>
 <div id="content">
   <div id="title"><h3>Prenota qui la tua visita:</h3></div>
-<form name="prenota" action="">
-  Data: <input type="date" id="data">
-  Ora: <input type="time" id="ora">
+<?php if(!empty($_POST))
+  {
+  $d=$_POST['data'];
+  $o=$_POST['ora'];
+  $p=$_POST['prestazione'];
+  $t=$_POST['tipo'];
+  $n=$_POST['note'];
+
+  $actual_date= date('Y').'-'.date('m').'-'.date('d');
+  if($d<$actual_date)
+    echo("Non &egrave stata inserita una data valida");
+  //echo $d."<br>".$o."<br>".$p."<br>".$t."<br>".$n;
+  else//aggiungiamo l'entry al database
+    {
+        $id=$_SESSION['ID'];
+        $query="INSERT INTO visita ( DataOra, Prestazione, Utente, approvazione, gatto_or_cane, Note) VALUES ('".$d." ".$o.":00"."', '".$p."', '".$id."', '0', '".$t."', '".$n."')";
+
+
+        $connection = mysqli_connect("localhost","root","","clinica");
+        if(!$connection) die("Errore nella connessione.");
+        if($result=mysqli_query($connection, $query))
+          echo"Richiesta mandata con successo";
+        else
+          echo"Non &egrave stato possibile inoltrare la richiesta";
+    }
+}
+?>
+<form name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  Data: <input type="date" id="data" name="data">
+  Ora: <input type="time" id="ora" name="ora">
 </br></br>Tipo di visita:
-  <select id="prestazione">
+  <select id="prestazione" name="prestazione">
     <?php
         $connection = mysqli_connect("localhost","root","","clinica");
         if(!$connection) die("Errore nella connessione.");
@@ -53,7 +95,7 @@
 
         $id=$_SESSION['username'];
     ?>
-  </select></br></br></br>
+  </select></br></br>
   Tipo di animale:</br>
   <input type="radio" name="tipo" value=0>cane</br>
   <input type="radio" name="tipo" value=1 checked="checked">gatto</br></br>
