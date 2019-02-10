@@ -51,7 +51,7 @@ $pagina_attuale = 'galleriaAdd.php'; ?>
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+  <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
   <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
   <li class="bc_here">Aggiungi</li>
 </ul>
