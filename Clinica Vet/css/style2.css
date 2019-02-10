@@ -405,13 +405,15 @@ td{
 .link-style {
 	display: inline-block;
 	padding: 7px 20px;
-	background: #0C73D4;
+	background: #003f79;
 	border-radius: 5px;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
-
+.link-style:hover{
+	background:#555; 
+}
 #content p {
 	font-size: 20px;
 }
@@ -443,7 +445,7 @@ td{
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #6585a2;
+  background-color:  #003f7a;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -462,71 +464,96 @@ td{
 
 /******Contattaci******/
 /*********************/
-.messaggio h1{
-	font-size: 1.8em;
+#contentCont{
+box-sizing: border-box;
+text-align: center;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding:2em 2em 20em 2em;
+	background-color: white;
+	margin-top: -1.5em;
+	margin-bottom: 1em;
+
 }
 
-.messaggio h2{
-	font-size: 1.4em;
+.Contattaci_form{
+	background-color: #cad0db;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 5px;
+  	padding: 20px;
 }
 
-#spazio-nome {
-  padding-bottom: 1em;
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
-.messaggio form {
-  padding-bottom: 2em;
-}
-
-.submit-form {
+input[type=submit] {
+  background-color: #003f7a;
+  color: white;
+  padding: 15px 80px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
   margin-top: 1em;
 }
 
-.messaggio {
-  text-align: center;
-  padding-top: 1em;
+input[type=submit]:hover {
+  background-color: #555;
 }
 
-.messaggio form ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.messaggio form li {
-  margin-bottom: 0.5em;
-}
-
-.messaggio form label {
+.col-25 {
   float: left;
-  width: 100%;
+  width: 20%;
+  margin-top: 6px;
 }
 
-#message-text {
-  width: 30em;
-  height: 10em;
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
 }
 
-#name,
-#email {
-  width: 20em;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#contact-error-print {
-  display: none;
+.rightCont{
+	width: 60%;
+	float: right;
+	display: block;
+	margin-top: -2em;
+	margin-bottom: 1em;
+	padding-bottom: 3em;
+	padding-top: 2em;
 }
 
-.infoContattaci{
-	text-align: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
+.leftCont{
+	margin-left: 0;
+	width: 40%;
+	float: left;
+	display: block;
+	margin-bottom: 1em;
 }
-
-.orariCont{
-	display: inline-block;
-	margin-left:2em; 
-	margin-right:2em;
+.rightCont iframe {
+  height: 230px;
+  width: 500px;
+  resize: both;
+  overflow: auto;
 }
-
 /******Area Personale******/
 /*************************/
 
@@ -565,7 +592,7 @@ margin-right: 1em;
 	padding:1em;
 	margin-bottom: 1em;
 	height: auto;
-width: 300px;
+width: 260px;
 background:#6585a2;
 color:#fff;
 text-decoration:none;
@@ -665,7 +692,7 @@ ol{
 	list-style-type: none;
 	margin: 0 auto;
 	display: inline-block;
-	padding-left:1em;
+	    margin-left: -1.5em;
 }
 
 .list-type3{
@@ -694,6 +721,7 @@ color:#fff;
 text-decoration:none;
 border-bottom-right-radius:4px;
 border-top-right-radius:4px;
+padding-left: 0.3em;
 }
 
 .list-type3 a:before{ /*punta freccia*/
@@ -768,7 +796,7 @@ border-color:transparent #6585a2 transparent transparent;
   	font-size: 1em;
 	margin: 1em;
     overflow: hidden;
-	width: 15em;
+	max-width: 15em;
 	height: 24em;
 }
 
@@ -1211,8 +1239,11 @@ border-color:transparent #6585a2 transparent transparent;
 @media screen and (max-width: 1050px) {
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
 	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
+	.rightCont{float: none;text-align: center; display: inline-block; width: 100%}
+	.leftCont{float: none;text-align: center; display: inline-block; width: 100%}
 	#content .galleria h2{margin-top: 0em;} 
 	#contentHome{padding: 2em 2em 3em 2em; }
+	#contentCont{padding: 2em 2em 3em 2em;}
 	#imghome{max-width: 400px; text-align: center;}
 	iframe {max-width: 300px }
 }
@@ -1222,13 +1253,36 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 @media screen and (max-width: 700px) {
-	.box{margin:0.5em;}	
+	.box{margin:-0.5em; margin-top: 1.5em; height: 20px;}	
 	#title h1{margin-top: 1em;
     text-align: center;}
     #logo{width: 5em; margin-top: 1.3em;}
+
 }
 @media screen and (max-width: 600px) {
-	#imghome{max-width: 300px;}}
+	#imghome{max-width: 300px;}
+	.list-type4 li img {width: 3em; height: 3em;}
+	.list-type4 a {font-size: 22px; padding: 0.3em;}
+	.list-type3 li img{display: none;}
+	.list-type3 li, .list-type3 a{margin-right: 0em;}
+	.list-type3 li {margin-bottom: 1em;}
+	ol{margin-left: 0em;}
+	input[type=text], select, textarea {
+    margin-left: -12px;
+    padding: 12px 1px 12px 1px;
+    text-align: center;}
+    #image4 {
+    max-width: auto;
+    max-height: auto;}
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0;
+    float: none;
+    margin-top: 0.5em;
+  }
+}
 
 @media screen and (max-width: 550px) {
 	#img {display: none;}
@@ -1241,11 +1295,12 @@ border-color:transparent #6585a2 transparent transparent;
 	#image5{float: none;}
 	.box3Image{padding-right: 0;}
 	.boxImage2{text-align: center;}
-	.list-type3 li img{display: none;}
-	.list-type3 li {margin-bottom: 1em;}
 	.list-type3 a{width: 250px;}
 	.descrizione3{text-align: left;}
 	.descrizione{text-align: left;}
+	.list-type4 li img {display: none;}
+	ol{padding-left: 0;}
+	
 }
 
 @media screen and (max-width: 465px) {
@@ -1259,18 +1314,24 @@ border-color:transparent #6585a2 transparent transparent;
 	#content{padding: 0em 0em 0em 0em}
 	.descrizione3 ul {padding-left: 0em;}
 	#contentHome{padding: 0;}
+	#contentCont{padding:0;}
+	.box2{margin-left: 0em;}
 }
 @media screen and (max-width: 376px) {  /*iphoneX*/
 	.nav{margin-top: -46px;}
 	#logo {width: 3em; margin-top: 0.5em;}
 	.header-meta .col-elem {font-size: 18px;}
 	.header-meta .phone {font-size: 20px;}
-	.box{margin-left: 0em; margin-top: 0.5em;}
+	.box{margin-right:1.5em;}
+	#image4 {width: 15em; height:12em;}
 	#imghome{max-width: 200px;}
+	input[type=submit] {padding: 15px 50px;}
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
 	ol {padding-left: 0em;}
+	.list-type3 a {
+    width: 201px;}
 	.box{margin-left: -1em; margin-top: 0.5em;}
 	#imghome{display: none;}
 	iframe{max-width: 150px;}
