@@ -65,7 +65,7 @@ else { ?>
  
  <?php
 		if(isset($_SESSION['ID'])){
-        $connection = mysqli_connect("localhost","root","","clinica");
+        $connection = mysqli_connect("localhost:3307","root","","clinica");
         if(!$connection) die("Errore nella connessione.");
 		//"' . $_SESSION['ID'] . '"
         $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";
