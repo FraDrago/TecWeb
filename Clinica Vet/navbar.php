@@ -41,14 +41,14 @@ if(!isset($_SESSION['ID'])){
                     if(!$connection) die("Errore nella connessione.");
                     if(isset($_SESSION['email'])){
 						if($admin){ ?>
-						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
+						<li class='active2' <?php if($pagina_attuale=='AreaPersonaleVet.php'); ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
 						<?php } 
 						else {?>
-						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
+						<li class="active2"> <?php if($pagina_attuale=='AreaPersonale.php'); ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
 						<?php }
                 	}
                     else { ?>
-                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+                		<li class="active2"> <?php if($pagina_attuale=='AccediReg.php'); ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
                 	<?php
                 	}
                 ?>
@@ -71,14 +71,14 @@ if(!isset($_SESSION['ID'])){
                     if(!$connection) die("Errore nella connessione.");
                     if(isset($_SESSION['email'])){
 						if($admin){ ?>
-						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
+						<li <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale Admin</a></li>
 						<?php } 
 						else {?>
-						<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
+						<li <?php if($pagina_attuale=='AreaPersonale.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
 						<?php }
                 	}
                     else { ?>
-                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='active2'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current(array)'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
                 	<?php
                 	}
                 ?>
