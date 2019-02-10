@@ -5,7 +5,8 @@ WHERE some_column=some_value  -->
 require_once('DB_Access.php');
 $message = "";
 $result = true;
-if( isset($_POST["submit"]) && isset($_POST["OrariStart"]) && !empty($_POST["OrariStart"]) && isset($_POST["OrariEnd"]) && !empty($_POST["OrariEnd"])){
+
+if (isset($_POST["submit"]) && isset($_POST["ID"]) && !empty($_POST["ID"]) && isset($_POST["start"]) && !empty($_POST["start"]) && isset($_POST["end"]) && !empty($_POST["end"])) {
 
     $access = new DBAccess();
     $connection = $access->openDBConnection();
@@ -14,13 +15,15 @@ if( isset($_POST["submit"]) && isset($_POST["OrariStart"]) && !empty($_POST["Ora
     }
 
     else{
-        if(!$access->updateorari($_POST["ID"], $_POST["Giorno"], $_POST["OrariStart"],$_POST["OrariEnd"])){
+
+        if (!$access->updateorari($_POST["ID"], $_POST["start"], $_POST["end"])) {
             $result = false;
             $message = "orario non modificato";
-            die($message);
+
         }
 		else{
-			header("Location: index2.php");	
+
+            header("Location: index2.php");
 		}	
     }
 
