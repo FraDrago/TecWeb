@@ -39,11 +39,33 @@ require_once('DB_Access.php'); ?>
 <!-- contenuto -->
 
 <div id="content">
-    <div id="anchor"></div>
+    <?php
+//if "email" variable is filled out, send email
+ini_set('SMTP','myserver');
+ini_set('smtp_port',25);
+
+  if (isset($_REQUEST['email']))  {
+  
+  //Email information
+  $admin_email = "francydrake97@gmail.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['first_name'];
+  $comment = $_REQUEST['message'];
+  
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+  
+  //if "email" variable is not filled out, display the form
+  else  {
+?>
 
     <div class="messaggio">
       <h1>Vuoi contattarci?</h1>
-      <form id="contattaci-form" action="" method="post">
+      <form id="contattaci-form"  method="post">
         <ul>
           <li>
             <label for="name">Nome:</label>
@@ -70,6 +92,10 @@ require_once('DB_Access.php'); ?>
       </p>
     </div>
 
+	<?php
+  }
+?>
+	
 <div class="infoContattaci">
 <h3 div id="orari_title">Orari Ambulatorio</h3>
 
