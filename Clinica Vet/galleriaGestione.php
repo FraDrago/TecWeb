@@ -25,7 +25,7 @@ $images=$access->getImmaginiGalleria();
 $access->closeDBConnection();
 $pagina_attuale='galleriaGestione.php';
 ?>
-<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
+
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -73,38 +73,38 @@ $pagina_attuale='galleriaGestione.php';
 
 
         <!-- tabella per immagini-->
-        <div id=tabgalleria>
-            <table id="tabellag">
-                <thead>
+
+        <table id="tabellag">
+            <caption>Immagini</caption>
+            <thead>
+            <tr>
+                <th scope="col">Antemprima</th>
+                <th scope="col">Alt</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Modifica</th>
+                <th scope="col">Elimina</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($images as $key => $image) { ?>
                 <tr>
-                    <th>Antemprima immagine</th>
-                    <th>Alt</th>
-                    <th>Descrizione</th>
-                    <th>Modifica</th>
-                    <th>Elimina</th>
+                    <td data-label="Anteprima:"><img class="anteprimag"
+                                                     alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
+                                                     src="<?php echo($image['Path']); ?>"></td>
+                    <td data-label="Alt:"><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>
+                    <td data-label="Descrizione:"><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
+                    <td>
+                        <div class="modificag"><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica
+                                campi</div>
+                    </td>
+                    <td>
+                        <div class="eliminag"><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina
+                                immagine</div>
+                    </td>
                 </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($images as $key => $image) { ?>
-                    <tr>
-                        <td><img class="anteprimag"
-                                 alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
-                                 src="<?php echo($image['Path']); ?>"></td>
-                        <td><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>
-                        <td><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
-                        <td>
-                            <div class="modificag"><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica
-                                    immagine</div>
-                        </td>
-                        <td>
-                            <div class="eliminag"><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina
-                                    immagine</div>
-                        </td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
-        </div>
+            <?php } ?>
+            </tbody>
+        </table>
 
 
     </div> <!--chiusura tag page-->

@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-    const HOST_DB = "localhost:3307";
+    const HOST_DB = "localhost";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -322,6 +322,28 @@ public function getImmagineSingola($id)
 
 
 }
+
+
+    public function deleteImmagineGalleria($id)
+    {
+
+
+        $result = false;
+        $immagine = $this->getImmagineSingola($id);
+        if ($immagine != null) {
+
+            $queryResult = mysqli_query($this->connessione, "DELETE FROM galleria WHERE id=" . $id);
+
+            if ($queryResult) {
+
+                unlink($immagine['Path']);
+                $result = true;
+            }
+        }
+
+        return $result;
+    }
+
     public function updateImmagineGalleria($id, $alt, $descrizione){
 
 		
