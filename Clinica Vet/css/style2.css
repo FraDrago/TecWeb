@@ -991,25 +991,56 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 .anteprimag {
-    max-width: 100px;
+    width: 100%;
+    max-width: 200px;
+    max-height: 180px;
+    min-height: 120px;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 1);
 }
-#tabgalleria{
-	align-content: center;
-}
+
 
 #tabellag {
+    /*border: 1px solid #ccc;*/
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    table-layout: fixed;
+    max-width: 90%;
     border: none;
+    box-sizing: border-box;
 }
 
+#tabellag caption {
+    display: none;
+}
+
+#tabellagcaption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+#tabellag tbody {
+    background-color: #f8f8f8;
+}
 #tabellag thead {
     background-color: #6585a2;
     color: white;
     font-size: 1em;
     padding: 1em;
+    text-transform: uppercase;
+}
+
+#tabellag tr {
+    /*background-color: #f8f8f8;*/
+    border: 1px solid #ddd;
+    padding: .35em;
+    max-width: 100%
 }
 
 #tabellag th td {
-    border-bottom: 1px solid;
+
+    padding: .625em;
+    text-align: center;
 }
 
 #tabellag a {
@@ -1020,18 +1051,68 @@ border-color:transparent #6585a2 transparent transparent;
 .modificag {
     background-color: #6585a2;
     font-size: 1em;
-    padding: 7px
+    padding: 7px;
+    border-radius: 4px;
 }
 
 .eliminag {
     background-color: #d70000;
     font-size: 1em;
-    padding: 7px
+    padding: 7px;
+    border-radius: 4px;
 }
 
+@media screen and (max-width: 795px) {
+    #tabellag thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
 
+    #tabellag tr {
+        display: block;
+        border: 2px solid black;
+
+    }
+
+    #tabellag td {
+        border-bottom: 1px solid black;
+        display: block;
+        text-align: right;
+        border-top: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    #tabellag td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #6585a2;
+        color: white;
+        padding: 3px;
+        border-radius: 4px;
+    }
+
+    #tabellag td:last-child {
+        border-bottom: 0;
+    }
+
+    .anteprimag {
+        margin: 3px;
+    }
+
+}
 /*******GalAdd******/
 /******&GalMod*****/
+
 #contaddform, #contmodform {
 	display: block;
 	width: 40%;
@@ -1042,6 +1123,7 @@ border-color:transparent #6585a2 transparent transparent;
 	min-width: 400px;
 	margin-left: auto;
 	margin-right: auto;
+    margin-bottom: 3em;
 }
 
 #addform, #modform {
@@ -1094,6 +1176,14 @@ border-color:transparent #6585a2 transparent transparent;
     background-color: #555;
 }
 
+@media screen and (max-width: 640px) {
+    #contaddform, #contmodform {
+        display: block;
+        width: 90%;
+        padding: 1em;
+        border-radius: 4px;
+        min-width: 200px;
+    }
 /******Servizi******/
 /******************/
 
@@ -1145,9 +1235,9 @@ border-color:transparent #6585a2 transparent transparent;
 			font-weight: bold;
 			color: #ffffff;
 		}
-		
+
 		/************************************/
-		
+
 		.message {
 	font-size: 2em;
     line-height: 1.2em;
@@ -1206,9 +1296,8 @@ border-color:transparent #6585a2 transparent transparent;
 
 /******Footer******/
 /*****************/
-
-#footer { 
-	background-color: #d8dddd; 
+    #footer {
+        background-color: #d8dddd;
 	position: static;
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -1238,10 +1327,19 @@ border-color:transparent #6585a2 transparent transparent;
 }
 @media screen and (max-width: 1050px) {
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
-	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
+
+    .leftHome {
+        float: none;
+        text-align: center;
+        display: inline-block;
+        width: 100%
+    }
 	.rightCont{float: none;text-align: center; display: inline-block; width: 100%}
 	.leftCont{float: none;text-align: center; display: inline-block; width: 100%}
-	#content .galleria h2{margin-top: 0em;} 
+
+    #content .galleria h2 {
+        margin-top: 0em;
+    }
 	#contentHome{padding: 2em 2em 3em 2em; }
 	#contentCont{padding: 2em 2em 3em 2em;}
 	#imghome{max-width: 400px; text-align: center;}
@@ -1253,7 +1351,11 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 @media screen and (max-width: 700px) {
-	.box{margin:-0.5em; margin-top: 1.5em; height: 20px;}	
+    .box {
+        margin: -0.5em;
+        margin-top: 1.5em;
+        height: 20px;
+    }
 	#title h1{margin-top: 1em;
     text-align: center;}
     #logo{width: 5em; margin-top: 1.3em;}
@@ -1300,7 +1402,7 @@ border-color:transparent #6585a2 transparent transparent;
 	.descrizione{text-align: left;}
 	.list-type4 li img {display: none;}
 	ol{padding-left: 0;}
-	
+
 }
 
 @media screen and (max-width: 465px) {
@@ -1336,5 +1438,6 @@ border-color:transparent #6585a2 transparent transparent;
 	#imghome{display: none;}
 	iframe{max-width: 150px;}
 }
+
 
 
