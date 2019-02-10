@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-    const HOST_DB = "localhost";
+  const HOST_DB = "localhost";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -43,6 +43,21 @@ class DBAccess{
 	  $password = mysqli_real_escape_string($this->connessione,$password);
     
   	$query = "INSERT INTO utente (Name, Surname, Telefono, Email, Password) VALUES ('".$name."', '".$surname."', '".$telefono."', '".$email."', '".md5($password)."')";
+
+    //die(var_dump($query));
+    $result = mysqli_query($this->connessione, $query);
+  	if(mysqli_affected_rows($this->connessione)>0){
+  		  return true;	
+  	}
+    else{
+		  return false;	
+	  }
+  }
+  
+  public function cambiotelefono($telefono){
+	$telefono = stripslashes($telefono);
+    $telefono = mysqli_real_escape_string($this->connessione,$telefono);    
+  	$query = "UPDATE utente SET telefono='".$telefono."' ";
 
     //die(var_dump($query));
     $result = mysqli_query($this->connessione, $query);

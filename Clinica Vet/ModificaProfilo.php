@@ -36,8 +36,93 @@
 <div id="content">
   <div id="title"><h3>Modifica profilo</h3></div>
   <!-- cambio nome, cambio telefono, cambio mail, etc,-->
+ 
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
+
+<?php
+
+$access = new DBAccess();
+$result = $access->openDBConnection();
+if(!$result)
+die("Errore nella connessione");
+                  
+         
+if(isset($_SESSION['ID'])){	?>
+<div id="login">
+<h3>Profilo personale:</h3>
+
+</div>
+<?php
+}
+else { ?>
+	<h3>Non sei connesso</h3>
+<?php
+}
+?>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
+
+ 
+ <?php
+		if(isset($_SESSION['ID'])){
+        $connection = mysqli_connect("localhost","root","","clinica");
+        if(!$connection) die("Errore nella connessione.");
+		//"' . $_SESSION['ID'] . '"
+        $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";
+        $result=mysqli_query($connection, $query) or die("non funziona ");
+
+        while($utente=mysqli_fetch_assoc($result)){
+		  echo '<p> ID: ' .$_SESSION['ID']. '</p>';
+          echo '<p> Nome: ' . $utente['name'] . '</p>';
+		  echo '<p> Cognome: ' . $utente['surname'] . '</p>';
+          echo '<p> Telefono: ' . $utente['telefono'] . '</p>';
+          echo '<p> Email: ' . $utente['email'] . '</p>';
+        }
+				
+
+		
+?>
+
+    <!-- <form id="insertNumber" action="clientManager.php" method="post" >
+      <label for="number <?php echo $utente['id'] ?>">Nuovo numero di telefono:</label>
+      <input name="number" type="text" id="number <?php echo $utente['id'] ?>" size="9" />
+      <?php echo '<input name="clientId" type="hidden" value="' . $utente['id'] . '"/>'; ?>
+      <input type="submit" class="admin-input" id="submit" name="submitNumber" value="Modifica numero" />
+    </form>
+
+    <form id="insertEmail" action="clientManager.php" method="post" enctype="multipart/form-data">
+      <label for="email<?php echo $utente['id'] ?>">Nuova email:</label>
+      <input name="email" type="text" id="email<?php echo $utente['id'] ?>" size="23" />
+      <?php echo '<input name="clientId" type="hidden" value="' . $utente['id'] . '"/>'; ?>
+      <input type="submit" class="admin-input" id="submit" name="submitEmail" value="Modifica email" />
+    </form>
+	
+	<div class="loginAndRegistrationForm">
+	<form name="cambiadati" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
+	<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
+	<p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
+	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
+	</form>
+	</div>-->
+
+	<form method="post" action="handler.php">
+	
+	<p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
+	<p><button type="submit" name="cambiaemail" id="cambiaemail" >Cambia Email</button></p>
+	</form>
+	<form method="post" action="handler.php">
+	<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+	<p><button type="submit" name="cambiatelefono" id="cambiatelefono" >Cambia numero</button></p>
 
 
+</form>
+		<?php }?>
+
+
+  
+	
+  
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
