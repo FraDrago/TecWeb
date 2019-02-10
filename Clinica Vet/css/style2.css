@@ -835,13 +835,9 @@ border-color:transparent #6585a2 transparent transparent;
 /*********************/
 	
 #gallery{
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	height: 100%;
 	margin:0 auto;
-	/*max-width: 1200px;*/
-	padding: 0 1em;
 	justify-content: center;
 }
   
@@ -879,7 +875,7 @@ border-color:transparent #6585a2 transparent transparent;
 	background-color:#498cc94d;
 }
 
-@media screen and (max-width: 649.9px) {
+@media screen and (max-width: 669.9px) {
 	.grid{
 		justify-content: center;
 		overflow: auto;
@@ -899,9 +895,9 @@ border-color:transparent #6585a2 transparent transparent;
 	display: none;
 	}
 }
-  
-  
-@media screen and (min-width: 650px){
+
+
+@media screen and (min-width: 670px) {
 	.grid{
 	  display: flex;
 	  flex-wrap: wrap;
@@ -926,15 +922,29 @@ border-color:transparent #6585a2 transparent transparent;
 
 	.contg{	
 	margin: 1%;
-	width: 400px;
 	max-height: 400px;
-	object-fit: cover;
 	min-height: 300px;
 	width:30%;
 	
 	}
 }
 
+@media screen and (min-width: 1200px) {
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contg {
+        margin: 1%;
+        max-height: 400px;
+        min-height: 300px;
+        width: 23%;
+
+    }
+}
 /****GalGestione****/
 /******************/
 
@@ -945,25 +955,56 @@ border-color:transparent #6585a2 transparent transparent;
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius:4px;
-	float: right;
+    display: inline-block;
+    margin: 1em auto;
 }
 #addlink:hover{
 	background-color: #555;
+}
+
+.anteprimag {
+    max-width: 100px;
 }
 #tabgalleria{
 	align-content: center;
 }
 
-table#tabellag th td {
-	border: 1px solid black;
+#tabellag {
+    border: none;
 }
 
-table#tabellag a{
-	text-decoration:none;
+#tabellag thead {
+    background-color: #6585a2;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
 }
+
+#tabellag th td {
+    border-bottom: 1px solid;
+}
+
+#tabellag a {
+	text-decoration:none;
+    color: white;
+}
+
+.modificag {
+    background-color: #6585a2;
+    font-size: 1em;
+    padding: 7px
+}
+
+.eliminag {
+    background-color: #d70000;
+    font-size: 1em;
+    padding: 7px
+}
+
+
 /*******GalAdd******/
-/******************/
-#contaddform{
+/******&GalMod*****/
+#contaddform, #contmodform {
 	display: block;
 	width: 40%;
 	padding: 1.5em;
@@ -974,29 +1015,32 @@ table#tabellag a{
 	margin-left: auto;
 	margin-right: auto;
 }
-#addform{
+
+#addform, #modform {
 	font-size: 2em;
 	text-align: left;
 }
-#addform input[type=text]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+
+#addform input[type=text], #modform input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.5em;
 }
 
 #addform input[type=file]{
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 
-#addform input[type=submit] {
+#addform input[type=submit], #modform input[type=submit] {
 	width: 100%;
 	background-color: #6585a2;
 	color: white;
@@ -1005,10 +1049,21 @@ table#tabellag a{
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+    transition: .4s;
+    font-size: 1em;
 }
 
-#addform input[type=submit]:hover{
-	background-color:#555;
+#addform input[type=submit]:hover, #modform input[type=submit]:hover {
+    background-color: #555;
+}
+
+
+#contmodform img {
+    max-width: 300px;
+}
+
+#modform input[type=submit]:hover {
+    background-color: #555;
 }
 
 /******Servizi******/

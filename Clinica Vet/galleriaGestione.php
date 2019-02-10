@@ -59,6 +59,9 @@ $pagina_attuale='galleriaGestione.php';
         <li class="bc_here">Gestione Galleria</li>
     </ul>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script type="text/javascript" src="script.js"></script>
+
     <br/>
     <br/>
     <div id="content">
@@ -83,11 +86,19 @@ $pagina_attuale='galleriaGestione.php';
                 <tbody>
                 <?php foreach ($images as $key => $image) { ?>
                     <tr>
-                        <td>anteprima</td>
+                        <td><img class="anteprimag"
+                                 alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
+                                 src="<?php echo($image['Path']); ?>"></td>
                         <td><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>
                         <td><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
-                        <td><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica immagine</td>
-                        <td><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina immagine</td>
+                        <td>
+                            <div class="modificag"><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica
+                                    immagine</div>
+                        </td>
+                        <td>
+                            <div class="eliminag"><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina
+                                    immagine</div>
+                        </td>
                     </tr>
                 <?php } ?>
                 </tbody>

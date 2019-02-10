@@ -79,16 +79,16 @@ $pagina_attuale = 'galleriaMod.php'; ?>
         <div id="title"><h3>Modifica</h3></div>
         <!--form per input con immagine-->
         <div id="contmodform">
-            <img alt="" src="<?php echo($image['Path']); ?>">
-            <form id="modform" action="mod.php" method="post" enctype="multipart/form-data">
+            <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
+                 src="<?php echo($image['Path']); ?>">
+            <form id="modform" action="mod.php" method="post">
                 <label for="alt">Alt:</label>
                 <input type="text" name="alt" placeholder="Alt"
                        value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
                 <input id="Id" name="id" type="hidden" value="<?php echo $image['id'];?>">
                 <label for="desc">Descrizione:</label>
-                <textarea name="descrizione" placeholder="Descrizione" cols="50" rows="5">
-				<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>
-			</textarea><br/>
+                <input type="text" name="descrizione" placeholder="Descrizione"
+                       value="<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
 
                 <input type="submit" name="submit" value="Modifica"/>
 
