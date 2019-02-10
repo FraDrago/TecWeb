@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-  const HOST_DB = "localhost";
+  const HOST_DB = "localhost:3307";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -152,6 +152,37 @@ function validateTime($time, $format = 'H:i'){
     $d = DateTime::createFromFormat($format, $time);
     return $d && $d->format($format) == $time;
 }
+
+
+public function getorariSingola($ID)
+{
+
+    $result = null;
+    $queryResult = mysqli_query($this->connessione, "SELECT * FROM orari WHERE ID=" . $ID . " LIMIT 1");
+    if ($queryResult && mysqli_num_rows($queryResult) > 0) {
+        $result = mysqli_fetch_assoc($queryResult);
+    }
+    //die(var_dump($result));
+    return $result;
+
+
+}
+    public function updateorari($ID, $Giorno, $OrariStart, $OrariEnd){
+
+    
+    $result = false;
+    if($this->getorariSingola($ID) != null){
+      
+      $queryResult = mysqli_query($this->connessione, "UPDATE orari SET OrariStart='".$OrariStart."', OrariEnd='".$OrariEnd."' WHERE ID=".$ID);
+      if($queryResult){
+
+        $result = true;
+      }
+    } 
+
+        return $result;
+    }
+
 
 public function getemergenze(){
       $querySelect = "SELECT * FROM emergenze";

@@ -21,13 +21,25 @@
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
 
+<?php 
+
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if(!$connection) die("Errore nella connessione.");
+
+$access->closeDBConnection(); 
+
+?>
+
+
 <div id="page" class="container">
 <!--breadcrumb-->
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+  <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
   <li class="bc_here">Gestione Orario</li>
 </ul>
   
@@ -36,7 +48,40 @@
 <div id="content">
   <div id="title"><h3>Gestione orario ambulatorio</h3></div>
 
+<!-- tabella orari-->
+  <div id=tabgalleria>
+    <table id="tabellag">
+     
+      <?php
+    $access = new DBAccess();
+    $connection = $access->openDBConnection();
+    if(!$connection) die("Errore nella connessione.");
+        ?>
+      
+      <thead>
+        <tr>
+          <th>Giorno</th>
+          <th>Orario</th>
+          <th>Modifica</th>
+        </tr>
+      </thead>
+     <tbody>
+        <?php
 
+        $result=$access-> getOrari();
+            if(count($result)>0){?>
+              <?php foreach($result as $orari) 
+              {?>
+          <tr>
+            <td id="giorno"> <?php echo $orari['Giorno']; ?> </td>
+            <td id="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
+            <td><a href="OrariMod.php?ID=<?php echo $orari['ID']; ?>">Modifica Orari</td>
+          </tr><?php }
+          }
+        ?>
+      </tbody>
+    </table>
+  </div>
 
 
 </div> <!--chiusura tag page-->
