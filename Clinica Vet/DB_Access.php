@@ -275,37 +275,34 @@ function insertImmaginiGalleria($path, $alt, $descrizione){
 }
 
 
-    public function getImmagineSingola($id)
-    {
+public function getImmagineSingola($id)
+{
 
-        $result = null;
-        $queryResult = mysqli_query($this->connessione, "SELECT * FROM galleria WHERE id=" . $id . " LIMIT 1");
-        if ($queryResult && mysqli_num_rows($queryResult) > 0) {
-            $result = mysqli_fetch_assoc($queryResult);
-        }
-        //die(var_dump($result));
-        return $result;
-
-
+    $result = null;
+    $queryResult = mysqli_query($this->connessione, "SELECT * FROM galleria WHERE id=" . $id . " LIMIT 1");
+    if ($queryResult && mysqli_num_rows($queryResult) > 0) {
+        $result = mysqli_fetch_assoc($queryResult);
     }
+    //die(var_dump($result));
+    return $result;
 
-    public function updateImmagineGalleria($id, $alt, $descrizione)
-    {
 
+}
+    public function updateImmagineGalleria($id, $alt, $descrizione){
 
-        $result = false;
-        if ($this->getImmagineSingola($id) != null) {
+		
+		$result = false;
+		if($this->getImmagineSingola($id) != null){
+			
+			$queryResult = mysqli_query($this->connessione, "UPDATE galleria SET alt='".$alt."', descrizione='".$descrizione."' WHERE id=".$id);
+			if($queryResult){
 
-            $queryResult = mysqli_query($this->connessione, "UPDATE galleria SET alt='" . $alt . "', descrizione='" . $descrizione . "' WHERE id=" . $id);
-            if ($queryResult) {
-
-                $result = true;
-            }
-        }
+				$result = true;
+			}
+		}	
 
         return $result;
     }
-
 
 
 
