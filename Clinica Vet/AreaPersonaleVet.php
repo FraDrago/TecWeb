@@ -63,8 +63,7 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 <ol>
 <li><img src="img/gallery.jpg" ><a href="galleriaGestione.php">Gestione galleria</a></li>
 <li><img src="img/clock.jpg" ><a href="orariGestione.php">Gestione orari</a></li>
-<li><img src="img/calendario.jpg" ><a href="prenotaGestione.php">Gestione prenotazioni</a></li>
-<li><img src="img/profiloico.jpg" ><a href="ModificaProfilo.php">Modifica il profilo</a></li>
+<li><img src="img/calendario.png" ><a href="prenotaGestione.php">Gestione prenotazioni</a></li>
 <li><img src="img/logout.jpg" ><a href="AccediReg.php">Logout</a></li>
 </li>
 </ol>
