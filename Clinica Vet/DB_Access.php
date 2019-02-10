@@ -1,7 +1,7 @@
 <?php
 //namespace DB;
 class DBAccess{
-  const HOST_DB = "localhost:3307";
+    const HOST_DB = "localhost";
   const USERNAME = "root";
   const PASSWORD = "";
   const DATABASE_NAME = "clinica";
@@ -167,7 +167,9 @@ public function getorariSingola($ID)
 
 
 }
-    public function updateorari($ID, $Giorno, $OrariStart, $OrariEnd){
+
+    public function updateorari($ID, $OrariStart, $OrariEnd)
+    {
 
     
     $result = false;
