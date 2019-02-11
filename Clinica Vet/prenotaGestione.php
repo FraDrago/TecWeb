@@ -1,4 +1,47 @@
-<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
+
+<?php $pagina_attuale='prenotaGestione.php';
+if (!isset($_SESSION)) {
+    session_start();
+}
+require_once('DB_Access.php');
+
+$access = new DBAccess();
+$connection = $access->openDBConnection();
+if (!$connection) {
+    $_SESSION['error'] = "Si sono sono verificati dei problemi. Riprovare pi&ugrave; tardi.";
+    $_SESSION['error_code'] = "500";
+    header("Location: error.php");
+}
+
+if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SESSION['ID']))) { //l'utente loggato DEVE essere admin
+
+    $_SESSION['error'] = "Non hai i permessi per accedere a questa sezione";
+    $_SESSION['error_code'] = "403";
+    header("Location: error.php");
+}
+
+if(!empty($_POST))
+  
+
+  if(isset($_POST['Accetta']))
+    {
+      $connection = mysqli_connect("localhost","root","","clinica");
+      if(!$connection) die("Errore nella connessione."); 
+      $query="UPDATE visita SET approvazione=1 WHERE ID=".(integer)$_POST['valore'];
+      echo $query;
+      $result=mysqli_query($connection,$query);
+      //echo "visita accettata ".$_POST['valore'];
+    }
+  else
+  {
+    $connection = mysqli_connect("localhost","root","","clinica");
+      if(!$connection) die("Errore nella connessione."); 
+      $query="UPDATE visita SET approvazione=2 WHERE ID=".(integer)$_POST['valore'];
+      echo $query;
+      $result=mysqli_query($connection,$query);
+      //echo "visita rifiutata ".$_POST['valore'];
+  }
+?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -36,7 +79,49 @@
 <div id="content">
   <div id="title"><h3>Gestione prenotazioni</h3></div>
 
+<?php
+$connection = mysqli_connect("localhost","root","","clinica");
+if(!$connection) die("Errore nella connessione.");
 
+$q="SELECT * FROM visita";
+$result=mysqli_query($connection, $q) or die("impossibile eseguire la query");
+echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th>";
+while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
+  echo "<tr>";
+  $id=$row['ID'];
+  $ora=$row['DataOra'];
+  $u=$row['Utente'];
+  $utente=mysqli_query($connection, "SELECT Email FROM utente WHERE ID=$u");
+  $utente=mysqli_fetch_assoc($utente);
+  $p=$row['Prestazione'];
+  $prest=mysqli_query($connection, "SELECT Nome FROM prestazione WHERE ID=$p");
+  $prest=mysqli_fetch_assoc($prest);
+  $g_c=$row['gatto_or_cane'];
+  if($g_c=='0')
+    $g_c='gatto';
+  else
+    $g_c='cane';
+  $a=$row['approvazione'];
+  $t='0';
+  if($a=='1')
+      $t='accettata';
+  if($a=='2')
+      $t='rifiutata';
+
+  if($a=='0')//in attesa
+  {
+    echo"<form name=form method=post action=prenotaGestione.php>";
+    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td><td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=".$id."</td>";
+    echo "</form>";
+  }
+  else
+    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$t;
+
+  
+  }
+echo "</table>";
+
+?>
 
 
 </div> <!--chiusura tag page-->
