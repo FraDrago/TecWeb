@@ -55,7 +55,7 @@
                 		if($result){
                 			$email = stripslashes($_REQUEST['email']);
                 			$email = mysqli_real_escape_string($access->connessione,$email);
-                  			header("Location: AccediReg.php");
+                  			header("Location: RegistrazioneEffettuata.php");
                 		}	
 					}
               	}
@@ -76,36 +76,40 @@
 
 <!-- contenuto -->
 
+<div id="content">
 
-<div id="registrazione" class="section">
+  <div class="LoginBox">
             	<h1>Registrazione</h1>
-                <hr>
-            
-            
-	          	
-	          	<h2 class="messaggio"> <?php echo $messaggioErrore; ?> </h2>
 
-	    
-	          	
+	          	<h2 class="messaggio"> <?php echo $messaggioErrore; ?> </h2>
+              
+              <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
 	            	<form name="registration" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
-                    	<p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
-                    	<p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
-          	    		<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
-          	    		<p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
-	           	    	<p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
-                    	<p><label for="controlPassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="controlPassword" type="password" name="controlPassword" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
+                    	
+                    <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
+          	    		
+                    <p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+          	    		
+                    <p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
+	           	    	
+                    <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    
+                    <p><label for="controlPassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="controlPassword" type="password" name="controlPassword" onkeyup="check();" placeholder="Password" required /></fieldset>
                     	<h2 class="message" id="pswMessage"></h2>
                     	
 		            	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
 	            	</form>
 	          	</div>
+            </div>
             
 	          <?php
             	} ?>
         	</div>
 
-<?php include_once"footer.php"?>
 </div>
+<?php include_once"footer.php"?>
+
 </body>
 </html>

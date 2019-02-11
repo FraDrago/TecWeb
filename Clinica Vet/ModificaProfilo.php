@@ -49,9 +49,11 @@ die("Errore nella connessione");
          
 if(isset($_SESSION['ID'])){	?>
 <div id="login">
-<h3>Profilo personale:</h3>
+<div class="LoginBox">
+  <div class="BoxLogin">
+  <div class="loginAndRegistrationForm">
+<h3>Dati Personali:</h3>
 
-</div>
 <?php
 }
 else { ?>
@@ -65,7 +67,7 @@ else { ?>
  
  <?php
 		if(isset($_SESSION['ID'])){
-        $connection = mysqli_connect("localhost","root","","clinica");
+        $connection = mysqli_connect("localhost:3307","root","","clinica");
         if(!$connection) die("Errore nella connessione.");
 		//"' . $_SESSION['ID'] . '"
         $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";
@@ -105,6 +107,8 @@ else { ?>
 	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
 	</form>
 	</div>-->
+<hr></hr>
+<h3>Modifica Dati</h3>
 
 	<form method="post" action="handler.php">
 	
@@ -114,13 +118,15 @@ else { ?>
 	<form method="post" action="handler.php">
 	<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono" >Cambia numero</button></p>
-
-
 </form>
+
+</div>
+</div>
 		<?php }?>
 
 
-  
+</div>
+</div>  
 	
   
 </div> <!--chiusura tag page-->

@@ -34,7 +34,7 @@ if (isset($_GET) && isset($_GET["id"]) && !empty($_GET["id"])) {
         //die(var_dump("DELETE FROM galleria WHERE id=".$id));
         if ($access->deleteImmagineGalleria($_GET['id'])) {
 
-            header("Location: galleria.php");
+            header("Location: galleriaGestione.php");
         } else {
             $_SESSION['error'] = "Qualcosa &egrave; anato storto";
             $_SESSION['error_code'] = "500";

@@ -506,6 +506,7 @@ text-align: center;
   cursor: pointer;
   float: right;
   margin-top: 1em;
+  font-size: 20px;
 }
 
 .Contattaci_form input[type=submit]:hover {
@@ -1094,6 +1095,64 @@ border-color:transparent #6585a2 transparent transparent;
     background-color: #555;
 }
 
+@media screen and (max-width: 795px) {
+    #tabellag thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    #tabellag tr {
+        display: block;
+        border: 2px solid black;
+
+    }
+
+    #tabellag td {
+        border-bottom: 1px solid black;
+        display: block;
+        text-align: right;
+        border-top: 1px solid black;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    #tabellag td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #6585a2;
+        color: white;
+        padding: 3px;
+        border-radius: 4px;
+    }
+
+    #tabellag td:last-child {
+        border-bottom: 0;
+    }
+
+    .anteprimag {
+        margin: 3px;
+    }
+
+}
+@media screen and (max-width: 640px) {
+    #contaddform, #contmodform {
+        display: block;
+        width: 90%;
+        padding: 1em;
+        border-radius: 4px;
+        min-width: 200px;
+    }
+}
+
 /******Gestione Orari******/
 /*************************/
 #tabellaor {
@@ -1174,10 +1233,15 @@ border-color:transparent #6585a2 transparent transparent;
 /******Accedi e Registrati******/
 /*******************/
 
+.LoginBox{
+	background-color: #cad0db;
+	border-radius: 4px;
+	padding: 1em;
+}
+
 .login-form {
 			width: 300px;
 			margin: 0 auto;
-			font-family: Tahoma, Geneva, sans-serif;
 		}
 		.login-form h1 {
 			text-align: center;
@@ -1207,15 +1271,24 @@ border-color:transparent #6585a2 transparent transparent;
 		/************************************/
 		
 		.message {
-	font-size: 2em;
+	font-size: 1.5em;
     line-height: 1.2em;
     color: red;
     text-align: center;
     margin-top: 1em;
 }
 
-.loginAndRegistrationForm {
-    margin-top: 6em;
+.BoxLogin{
+	display: inline-block;
+	text-align: center;
+	border-style: outset;
+	border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
 }
 
 .loginAndRegistrationForm fieldset {
@@ -1223,28 +1296,43 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 .loginAndRegistrationForm p {
-	font-size: 2.3em;
+	font-size: 2.5em;
     line-height: 1.2em;
     margin-top: 0.5em;
     text-align: center;
 }
 
 .loginAndRegistrationForm input {
-    border: 1px solid gray;
-    border-radius: 0.3em;
-    margin: 0.4em;
-    padding: 0.4em;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 1px solid #cad0db;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.loginAndRegistrationForm input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
 }
 
 .loginAndRegistrationForm button {
-	background-color: #4CAF50;
-    border: 2px solid #4CAF50;
-    border-radius: 0.3em;
-    color: white;
-    cursor: pointer;
-    padding: 0.4em 0.8em;
-    font-size: 1.1em;
+	background-color: #003f7a;
+  color: white;
+  padding: 15px 80px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
 }
+
+.loginAndRegistrationForm button:hover {
+  background-color: #555;
+}
+
 
 #registrazioneAvvenuta {
 	margin: 1em;
@@ -1327,7 +1415,7 @@ border-color:transparent #6585a2 transparent transparent;
 	#imghome{max-width: 300px;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     #image4 { max-width: auto; max-height: auto;}
-  .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-left: 0.5em; margin-right: 0.5em; margin-top: 0; float: none; margin-top: 0.5em;}
+  .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
   .list-type4 li img {display: none;}
 }
 

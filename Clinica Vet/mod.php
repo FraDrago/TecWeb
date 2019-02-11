@@ -20,7 +20,7 @@ if( isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
             die($message);
         }
 		else{
-			header("Location: galleria.php");	
+			header("Location: galleriaGestione.php");	
 		}	
     }
 

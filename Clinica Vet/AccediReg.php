@@ -42,9 +42,8 @@
 <!-- contenuto -->
 <div id="content">
 
-                <h1><span xml:lang="en" lang="en">Login</span></h1>
-                <hr>
-            
+                <h1>Pannello di Controllo</h1>
+            <div class="LoginBox">
             <?php
 		      
               $access = new DBAccess();
@@ -79,9 +78,10 @@
                 if(isset($_SESSION['email'])){	?>
                                    
         					<div class="loginAndRegistrationForm">
-        						<p>Accesso effettuato come: <?php echo $_SESSION['email']; ?></p>
+        						<p>Accesso effettuato con:<span class="highlight"> <?php echo $_SESSION['email']; ?></span></p>
         						<form action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" name="logout">
-        							<p><button name="logout" type="submit">Esci</button></p>
+        							<p>Vuoi fare il logout?</p>
+                      <button name="logout" type="submit">Esci</button>
         						</form>
         					</div>
         					<?php
@@ -94,18 +94,21 @@
 	          	<h2 class="message"> <?php echo $messaggioErrore; ?> </h2>
 	          	
 	          	<div class="loginAndRegistrationForm">
+                <div class="BoxLogin">
 	            	<form name="login" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
-                        <p><label for="email"><span xml:lang="en" lang="en">Email:</span> </label></p>
+                        <p><label for="email"><span xml:lang="en" lang="en">Inserisci Email:</span> </label></p>
                         <fieldset><input id="email" type="text" placeholder="Email" name="email" required></fieldset>
-                        <p><label for="password"><span xml:lang="en" lang="en">Password:</span> </label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
+                        <p><label for="password"><span xml:lang="en" lang="en"> Inserisci Password:</span> </label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
                         <p><button type="submit">Entra</button></p>
 	            	</form>
-	            	<p>Non sei registrato? <a href='registrati.php'>Registrati qui!</a></p>
+	            	<p class="Reg_Doubt">Non sei registrato? <a href='registrati.php'>Registrati qui!</a></p>
+              </div>
 	          	</div>
             
 	          <?php
             	} 
             }?>
+</div>
 </div>
 
 <?php include_once"footer.php"?>
