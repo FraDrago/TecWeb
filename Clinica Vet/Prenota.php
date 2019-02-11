@@ -98,7 +98,6 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
           echo "<option value=".$row['id'].">".$row['nome']."</option>";
         }
 
-        $id=$_SESSION['username'];
     ?>
   </select></div>
   <p><label for="ora"><span xml:lang="en" lang="en">Tipo di animale:</span> </label></p>
