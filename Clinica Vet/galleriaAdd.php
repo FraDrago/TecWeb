@@ -65,15 +65,15 @@ unset($_POST);
     <!-- tabella per immagini-->
     <div id="contaddform">
         <form id="addform" action="upload.php" method="post" enctype="multipart/form-data"
-              onsubmit="return checkSize(2097152)">
+              onsubmit="return validateInsertForm()">
             <label for="fileToUpload">Foto:</label>
             <input type="file" name="fileToUpload" id="fileToUpload" value=""/><br/>
             
             <label for="alt">Alt:</label>
-            <input type="text" name="alt" placeholder="Alt" value="" required/><br/>
+            <input type="text" id="alt" name="alt" placeholder="Alt" value=""/><br/>
             
             <label for="desc">Descrizione:</label>
-            <input type="text" name="descrizione" placeholder="Descrizione:" value="" required/><br/>
+            <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione:" value=""/><br/>
             
             <input type="submit" name="submit" value="Aggiungi" />
             
