@@ -50,7 +50,7 @@ $access->closeDBConnection();
 
 <!-- tabella orari-->
   <div id=tabgalleria>
-    <table id="tabellag">
+    <table id="tabellaor">
      
       <?php
     $access = new DBAccess();
@@ -75,7 +75,8 @@ $access->closeDBConnection();
           <tr>
             <td id="giorno"> <?php echo $orari['Giorno']; ?> </td>
             <td id="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
-            <td><a href="OrariMod.php?ID=<?php echo $orari['ID']; ?>">Modifica Orari</td>
+            <td>
+              <div class="modificaor"><a href="OrariMod.php?ID=<?php echo $orari['ID']; ?>">Modifica Orari</td></a></div>
           </tr><?php }
           }
         ?>

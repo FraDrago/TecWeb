@@ -17,12 +17,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
-
-		
-	
 <body>
 
-
+<div id="page" class="container">
 
 <?php include_once"header.php"?>
 
@@ -43,9 +40,8 @@
 <br/>
 
 <!-- contenuto -->
+<div id="content">
 
-
-<div class="section">
                 <h1><span xml:lang="en" lang="en">Login</span></h1>
                 <hr>
             
@@ -110,8 +106,7 @@
 	          <?php
             	} 
             }?>
-        </div>
-        </div>
+</div>
 
 <?php include_once"footer.php"?>
 </div>

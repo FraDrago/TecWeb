@@ -75,24 +75,56 @@ $access->closeDBConnection();?>
 <div id="content">
   <div id="title"><h3>Gestione orario ambulatorio</h3></div>
 
-  
-            <!--- <select class="form-control">
-              <option>08:00</option>
-              <option>08:30</option>
-            </select> -->
-
             <div id="contmodform">
-            <ul><?php echo($result['Giorno']); ?></ul>
+            <h3 class="GiornoOrariMod"><?php echo($result['Giorno']); ?></h3>
             
 
-            <form id="modform" action="mod2.php" method="post" >
+            <form id="modformorari" action="mod2.php" method="post" >
                 <label for="date">Orario di inizio:</label>
-                <input type="text" name="start" placeholder="date"
-                       value="<?php echo htmlentities($result['OrariStart']); ?>"/><input type="submit" name="submit" value="Modifica"/><br/>
+                <select type="text" name="start" placeholder="date">
+                       <option><?php echo ($result['OrariStart']); ?></option>
+                        <option>08:00</option>
+                        <option>08:30</option>
+                        <option>09:00</option>
+                        <option>09:30</option>
+                        <option>10:00</option>
+                        <option>10:30</option>
+                        <option>11:00</option>
+                        <option>11:30</option>
+                        <option>12:00</option>
+                        <option>12:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>14:00</option>
+                        <option>14:30</option>
+                        <option>15:00</option>
+                        <option>15:30</option>
+                        <option>16:00</option>
+                      </select><br/>
                 <label for="date">Orario di fine:</label>
-                <input type="text" name="end" placeholder="date"
-                       value="<?php echo htmlentities($result['OrariEnd']); ?>"/><input type="submit" name="submit" value="Modifica"/><br/>
-                <input id="ID" name="ID" type="hidden" value="<?php echo $result['ID'];?>">
+                <select type="text" name="end" placeholder="date">
+                       <option><?php echo ($result['OrariEnd']); ?></option>
+                        <option>11:00</option>
+                        <option>11:30</option>
+                        <option>12:00</option>
+                        <option>12:30</option>
+                        <option>13:00</option>
+                        <option>13:30</option>
+                        <option>14:00</option>
+                        <option>14:30</option>
+                        <option>15:00</option>
+                        <option>15:30</option>
+                        <option>16:00</option>
+                        <option>16:30</option>
+                        <option>17:00</option>
+                        <option>17:30</option>
+                        <option>18:00</option>
+                        <option>18:30</option>
+                        <option>19:00</option>
+                        <option>19:30</option>
+                        <option>20:00</option>
+                      </select><br/>
+                       <input type="submit" name="submit" value="Modifica"/><br/>                <input id="ID" name="ID" type="hidden" value="<?php echo $result['ID'];?>">
 
             </form>
         </div>

@@ -23,7 +23,7 @@ if (isset($_POST["submit"]) && isset($_POST["ID"]) && !empty($_POST["ID"]) && is
         }
 		else{
 
-            header("Location: index2.php");
+            header("Location: orariGestione.php");
 		}	
     }
 
