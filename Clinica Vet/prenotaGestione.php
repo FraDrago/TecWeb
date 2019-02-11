@@ -28,7 +28,6 @@ if(!empty($_POST))
       $connection = mysqli_connect("localhost","root","","clinica");
       if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=1 WHERE ID=".(integer)$_POST['valore'];
-      echo $query;
       $result=mysqli_query($connection,$query);
       //echo "visita accettata ".$_POST['valore'];
     }
@@ -37,7 +36,6 @@ if(!empty($_POST))
     $connection = mysqli_connect("localhost","root","","clinica");
       if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=2 WHERE ID=".(integer)$_POST['valore'];
-      echo $query;
       $result=mysqli_query($connection,$query);
       //echo "visita rifiutata ".$_POST['valore'];
   }
