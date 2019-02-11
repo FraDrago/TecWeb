@@ -51,6 +51,9 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 <br/>
 <div id="content">
   <div id="title"><h3>Prenota qui la tua visita:</h3></div>
+<div class="LoginBox">
+  <div class="BoxLogin">
+  <div class="loginAndRegistrationForm">
 <?php if(!empty($_POST))
   {
   $d=$_POST['data'];
@@ -79,9 +82,11 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 }
 ?>
 <form name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-  Data: <input type="date" id="data" name="data">
-  Ora: <input type="time" id="ora" name="ora">
-</br></br>Tipo di visita:
+  <p><label for="data"><span xml:lang="en" lang="en">Inserisci la data:</span> </label></p>
+  <input type="date" id="data" name="data">
+  <p><label for="ora"><span xml:lang="en" lang="en">Inserisci l'ora:</span> </label></p>
+  <input type="time" id="ora" name="ora">
+  <p><label for="tipo"><span xml:lang="en" lang="en">Tipo di visita:</span> </label></p>
   <select id="prestazione" name="prestazione">
     <?php
         $connection = mysqli_connect("localhost","root","","clinica");
@@ -95,17 +100,18 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 
         $id=$_SESSION['username'];
     ?>
-  </select></br></br>
-  Tipo di animale:</br>
-  <input type="radio" name="tipo" value=0>gatto</br>
-  <input type="radio" name="tipo" value=1 checked="checked">cane</br></br>
-  <textarea rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
-  <input type="submit" name="invia">
+  </select></div>
+  <p><label for="ora"><span xml:lang="en" lang="en">Tipo di animale:</span> </label></p>
+  <input type="radio" name="tipo" value=0 checked="checked"><span xml:lang="en" lang="en">gatto</span>
+  <input type="radio" name="tipo" value=1>cane</br></br>
+  <div class="loginAndRegistrationForm">
+  <textarea maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
+  <p><button type="submit" name="invia">INVIA</button></p>
 </form>
 
-
-
-
+</div>
+</div>
+</div>
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
