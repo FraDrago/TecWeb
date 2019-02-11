@@ -1,8 +1,5 @@
 /*****generale******/
 /******************/
-textarea { 
-   resize:vertical;
-}
 
 body {
 	font-size:20px ;
@@ -12,8 +9,6 @@ body {
 	height:100%;
 	width: 100%;
 }
-
-
 
 /******struttura******/
 /********************/
@@ -1260,7 +1255,7 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 /******Accedi e Registrati******/
-/*******************/
+/******************************/
 
 .LoginBox{
 	background-color: #cad0db;
@@ -1272,12 +1267,7 @@ border-color:transparent #6585a2 transparent transparent;
 			width: 300px;
 			margin: 0 auto;
 		}
-		.login-form h1 {
-			text-align: center;
-			color: #4d4d4d;
-			font-size: 24px;
-			padding: 20px 0 20px 0;
-		}
+		
 		.login-form input[type="password"],
 		.login-form input[type="text"] {
 			width: 100%;
@@ -1379,6 +1369,10 @@ border-color:transparent #6585a2 transparent transparent;
 /******Prenota******/
 /******************/
 
+#prenotazioni textarea { 
+   resize:vertical;
+}
+
 /******Footer******/
 /*****************/
 
@@ -1438,14 +1432,16 @@ border-color:transparent #6585a2 transparent transparent;
 	.list-type3 li, .list-type3 a{margin-right: 0em;}
 	.list-type3 li {margin-bottom: 1em;}
 	ol{margin-left: 0em;}
-
+	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
+    .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
 }
+
 @media screen and (max-width: 600px) {
 	#imghome{max-width: 300px;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     #image4 { max-width: auto; max-height: auto;}
-  .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
-  .list-type4 li img {display: none;}
+  	.col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
+  	.list-type4 li img {display: none;}
 }
 
 @media screen and (max-width: 550px) {
@@ -1463,12 +1459,19 @@ border-color:transparent #6585a2 transparent transparent;
 	.descrizione3{text-align: left;}
 	.descrizione{text-align: left;}
 	ol{padding-left: 0;}
-	
+	.loginAndRegistrationForm input{width: 60%; padding: 15px 20px;}
+	.loginAndRegistrationForm button {font-size: 18px; padding: 15px 20px;}
+	#tabellaor thead {border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute;width: 1px;}
+	#tabellaor tr {display: block; border: 2px solid black;}
+	#tabellaor td {border-bottom: 1px solid black; display: block; text-align: right; border-top: 1px solid black; border-left: none; border-right: none; border-top: none;}
+    #tabellaor td::before {content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; background-color: #6585a2; color: white; padding: 0.2em; border-radius: 4px;}
+    #tabellaor td:last-child {border-bottom: 0;}
 }
 
 @media screen and (max-width: 465px) {
 	iframe{max-width: 240px;}
-	#imghome{max-width: 250px;}	}
+	#imghome{max-width: 250px;}
+	.list-type4 a {width: 315px;}	}
 
 @media screen and (max-width: 441px) {
 	#logo {width: 4.5em; margin-top: 0.5em;}
@@ -1489,6 +1492,8 @@ border-color:transparent #6585a2 transparent transparent;
 	#image4 {width: 15em; height:12em;}
 	#imghome{max-width: 200px;}
 	.Contattaci_form input[type=submit] {padding: 15px 50px;}
+	#myBtn {display: none;}
+	#contmodform img {max-width: 10em;
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
@@ -1497,6 +1502,10 @@ border-color:transparent #6585a2 transparent transparent;
 	.box{margin-left: -1em; margin-top: 0.5em;}
 	#imghome{display: none;}
 	iframe{max-width: 150px;}
+	.list-type4 a {width: 215px;}
+	h1{font-size: 24px;}
+	#menu {width: 220px;}
+
 }
 
 

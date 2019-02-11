@@ -101,6 +101,7 @@ $access->closeDBConnection();?>
                         <option>15:30</option>
                         <option>16:00</option>
                       </select><br/>
+                <hr></hr>
                 <label for="date">Orario di fine:</label>
                 <select type="text" name="end" placeholder="date">
                        <option><?php echo ($result['OrariEnd']); ?></option>

@@ -49,7 +49,6 @@ $access->closeDBConnection();
   <div id="title"><h3>Gestione orario ambulatorio</h3></div>
 
 <!-- tabella orari-->
-  <div id=tabgalleria>
     <table id="tabellaor">
      
       <?php
@@ -82,7 +81,6 @@ $access->closeDBConnection();
         ?>
       </tbody>
     </table>
-  </div>
 
 
 </div> <!--chiusura tag page-->

@@ -41,7 +41,7 @@ if(!isset($_SESSION['ID'])){
                     if(!$connection) die("Errore nella connessione.");
                     if(isset($_SESSION['email'])){
 						if($admin){ ?>
-						<li  <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='active2'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale</a></li>
+						<li  <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='active2'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale Admin</a></li>
 						<?php } 
 						else {?>
 						<li <?php if($pagina_attuale=='AreaPersonale.php') echo "class='active2'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>

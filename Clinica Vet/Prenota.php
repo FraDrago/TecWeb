@@ -104,7 +104,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   <input type="radio" name="tipo" value=0 checked="checked"><span xml:lang="en" lang="en">gatto</span>
   <input type="radio" name="tipo" value=1>cane</br></br>
   <div class="loginAndRegistrationForm">
-  <textarea maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
+  <textarea id="prenotazioni" maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
   <p><button type="submit" name="invia">INVIA</button></p>
 </form>
 
