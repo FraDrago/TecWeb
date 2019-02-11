@@ -40,7 +40,6 @@ $pagina_attuale='galleriaGestione.php';
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
-    <script type="text/javascript" src="script.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
 
@@ -102,7 +101,7 @@ $pagina_attuale='galleriaGestione.php';
                         </a>
                     </td>
                     <td>
-                        <a onclick="deleteImage()" href="galleriaDel.php?id=<?php echo $image['id']; ?>">
+                        <a href="galleriaDel.php?id=<?php echo $image['id']; ?>">
                             <div class="eliminag">Elimina
                                 immagine
                             </div>

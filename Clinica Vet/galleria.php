@@ -58,8 +58,8 @@ $pagina_attuale='galleria.php';
     <div class="grid">
        
         <?php
-
-        foreach ($images as $key => $image) { ?>
+        //var_dump($images);
+        foreach($images as $key => $image){ /*var_dump($image); die();*/?>
             <div class="contg">
                 <div class="contimg">
                     <a href="<?php echo $image['Path']; ?>">
