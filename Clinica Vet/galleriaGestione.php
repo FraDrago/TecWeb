@@ -94,12 +94,18 @@ $pagina_attuale='galleriaGestione.php';
                     <td data-label="Alt:"><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>
                     <td data-label="Descrizione:"><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?></td>
                     <td>
-                        <div class="modificag"><a href="galleriaMod.php?id=<?php echo $image['id']; ?>">Modifica
-                                campi</div>
+                        <a href="galleriaMod.php?id=<?php echo $image['id']; ?>">
+                            <div class="modificag">Modifica
+                                campi
+                            </div>
+                        </a>
                     </td>
                     <td>
-                        <div class="eliminag"><a href="galleriaDel.php?id=<?php echo $image['id']; ?>">Elimina
-                                immagine</div>
+                        <a href="galleriaDel.php?id=<?php echo $image['id']; ?>">
+                            <div class="eliminag">Elimina
+                                immagine
+                            </div>
+                        </a>
                     </td>
                 </tr>
             <?php } ?>

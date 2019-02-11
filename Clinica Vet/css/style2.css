@@ -995,14 +995,29 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 .anteprimag {
-    max-width: 100px;
-}
-#tabgalleria{
-	align-content: center;
+    width: 100%;
+    max-width: 7em;
+    min-height: 5em;
+    max-height: 7em;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 1);
 }
 
 #tabellag {
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    table-layout: fixed;
+    max-width: 90%;
     border: none;
+    box-sizing: border-box;
+}
+
+#tabellag caption {
+    display: none;
+}
+
+#tabellag tbody {
+    background-color: #f8f8f8;
 }
 
 #tabellag thead {
@@ -1010,10 +1025,18 @@ border-color:transparent #6585a2 transparent transparent;
     color: white;
     font-size: 1em;
     padding: 1em;
+    text-transform: uppercase;
+}
+
+#tabellag tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+    max-width: 100%;
 }
 
 #tabellag th td {
-    border-bottom: 1px solid;
+    padding: .625em;
+    text-align: center;
 }
 
 #tabellag a {
@@ -1024,78 +1047,15 @@ border-color:transparent #6585a2 transparent transparent;
 .modificag {
     background-color: #6585a2;
     font-size: 1em;
-    padding: 7px
+    padding: .650em;
+    border-radius: 4px;
 }
 
 .eliminag {
     background-color: #d70000;
     font-size: 1em;
-    padding: 7px
-}
-
-
-/*******GalAdd******/
-/******&GalMod*****/
-#contaddform, #contmodform {
-	display: block;
-	width: 40%;
-	padding: 1.5em;
-	border-color: black;
-	box-shadow: 3px 2px 20px 0px #6d7788;
-	border-radius: 4px;
-	min-width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#addform, #modform {
-	font-size: 2em;
-	text-align: left;
-}
-
-#addform input[type=text], #modform input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #555;
+    padding: .650em;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 0.5em;
-}
-
-#addform input[type=file]{
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    box-sizing: border-box;
-}
-
-
-#addform input[type=submit], #modform input[type=submit] {
-	width: 100%;
-	background-color: #6585a2;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-    transition: .4s;
-    font-size: 1em;
-}
-
-#addform input[type=submit]:hover, #modform input[type=submit]:hover {
-    background-color: #555;
-}
-
-
-#contmodform img {
-    max-width: 300px;
-}
-
-#modform input[type=submit]:hover {
-    background-color: #555;
 }
 
 @media screen and (max-width: 795px) {
@@ -1133,7 +1093,7 @@ border-color:transparent #6585a2 transparent transparent;
         text-transform: uppercase;
         background-color: #6585a2;
         color: white;
-        padding: 3px;
+        padding: 0.2em;
         border-radius: 4px;
     }
 
@@ -1142,17 +1102,83 @@ border-color:transparent #6585a2 transparent transparent;
     }
 
     .anteprimag {
-        margin: 3px;
+        margin: 0.3em;
     }
 
 }
+/*******GalAdd******/
+/******&GalMod*****/
+#contaddform, #contmodform {
+	display: block;
+	width: 40%;
+	padding: 1.5em;
+	border-color: black;
+	box-shadow: 3px 2px 20px 0px #6d7788;
+	border-radius: 4px;
+    min-width: 20em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#addform, #modform {
+    font-size: 1.8em;
+	text-align: left;
+}
+
+#addform input[type=text], #modform input[type=text] {
+    width: 100%;
+    padding: 0.55em .650em;
+    margin: .4em 0;
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.5em;
+}
+
+#addform input[type=file]{
+    padding: 0.55em .650em;
+    margin: .4em 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+#addform input[type=submit], #modform input[type=submit] {
+	width: 100%;
+	background-color: #6585a2;
+	color: white;
+    padding: 0.55em .650em;
+    margin: .4em 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    transition: .4s;
+    font-size: 1em;
+}
+
+#addform input[type=submit]:hover, #modform input[type=submit]:hover {
+    background-color: #555;
+}
+
+
+#contmodform img {
+    max-width: 13em;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 1);
+}
+
+#modform input[type=submit]:hover {
+    background-color: #555;
+}
+
+
 @media screen and (max-width: 640px) {
     #contaddform, #contmodform {
         display: block;
         width: 90%;
         padding: 1em;
         border-radius: 4px;
-        min-width: 200px;
+        min-width: 8em;
     }
 }
 
