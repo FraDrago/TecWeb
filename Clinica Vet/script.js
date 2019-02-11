@@ -13,3 +13,8 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+function check_telefono(t){
+	var x=t.telefono.value;
+	if(isNaN(x) || (x.length>10 || x.length<9))
+		t.telefono.value="";
+}

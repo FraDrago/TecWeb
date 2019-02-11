@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="print.css" media="print">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
+		<script type="text/javascript" src="script.js"></script>
     </head>
 
 <body>
@@ -75,11 +76,7 @@ else { ?>
 
  
  <?php
-		/*if(isset($_GET["code"]) && !empty($_GET["code"])){
-			if($_GET["code"]=="success") echo "tua sorella fa i salti di gioia";
-		}
 		
-		*/
 		
 		
 		if(isset($_SESSION['ID'])){
@@ -108,9 +105,10 @@ else { ?>
 	
 	<p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
 	<p><button type="submit" name="cambiaemail" id="cambiaemail" >Cambia Email</button></p>
+	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
 	</form>
-	<form method="post" action="handler.php">
-	<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+	<form name=telf method="post" action="handler.php">
+	<p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="tel" name="telefono" placeholder="Telefono" required onblur="check_telefono(telf)  pattern="[0-9]{9,10}" /></fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono" >Cambia numero</button></p>
 </form>
 
