@@ -9,17 +9,16 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 $result = true;
 $message = "";
 
-if( isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && isset($_POST["descrizione"]) && !empty($_POST["descrizione"]) && isset($_FILES["fileToUpload"])){
+if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && isset($_POST["descrizione"]) && !empty($_POST["descrizione"]) && isset($_FILES["fileToUpload"]) && isset($_FILES["fileToUpload"]["tmp_name"]) && !empty($_FILES["fileToUpload"]["tmp_name"])) {
 
-	// Check if image file is a actual image or fake image
+	
 	
 	if(isset($_POST["submit"])) {
-		
-		//die(var_dump(getimagesize($_FILES["fileToUpload"]["tmp_name"]), $_FILES));
-		//die('pp');
+
+
 		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 		if($check !== false) {
-			//echo "File is an image - " . $check["mime"] . ".";
+
 			$result = true;
 		} else {
 			$message = "File is not an image.";
@@ -32,14 +31,14 @@ if( isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
 	if ($_FILES["fileToUpload"]["size"] > 50000000) {
 		$message = "Sorry, your file is too large.";
 		$result = false;
-	} 
+	}
 
-	// Check if $uploadOk is set to 0 by an error
+
 	if ($result == true) {
 		
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-			//$message = "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-			
+
+
 			$access = new DBAccess();
 			$connection = $access->openDBConnection();
 			if(!$connection){
@@ -79,8 +78,15 @@ if($result){
 else{
 	unset($_POST);
 	unset($_FILE);
-	session_start();
+
+
+	if (!isset($_SESSION)) {
+		session_start();
+	}
+	
 	$_SESSION['error'] = $message;
+	$_SESSION['error_code'] = 500;
+	$_SESSION['error_link'] = 'galleriaAdd.php';
 	header('Location: error.php');
 }	
 ?>

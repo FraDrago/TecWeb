@@ -84,11 +84,12 @@ $pagina_attuale = 'galleriaMod.php'; ?>
             <form id="modform" action="mod.php" method="post">
                 <label for="alt">Alt:</label>
                 <input type="text" name="alt" placeholder="Alt"
-                       value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
+                       value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>" required/><br/>
                 <input id="Id" name="id" type="hidden" value="<?php echo $image['id'];?>">
                 <label for="desc">Descrizione:</label>
                 <input type="text" name="descrizione" placeholder="Descrizione"
-                       value="<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
+                       value="<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>"
+                       required/><br/>
 
                 <input type="submit" name="submit" value="Modifica"/>
 

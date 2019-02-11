@@ -36,6 +36,7 @@ unset($_POST);
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <script type="text/javascript" src="js/script2.js"></script>
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
@@ -63,15 +64,16 @@ unset($_POST);
   <div id="title"><h3>Aggiungi Foto</h3></div>
     <!-- tabella per immagini-->
     <div id="contaddform">
-    <form id="addform" action="upload.php" method="post" enctype="multipart/form-data">
+        <form id="addform" action="upload.php" method="post" enctype="multipart/form-data"
+              onsubmit="return checkSize(2097152)">
             <label for="fileToUpload">Foto:</label>
             <input type="file" name="fileToUpload" id="fileToUpload" value=""/><br/>
             
             <label for="alt">Alt:</label>
-            <input type="text" name="alt" placeholder="Alt" value=""/><br/>
+            <input type="text" name="alt" placeholder="Alt" value="" required/><br/>
             
             <label for="desc">Descrizione:</label>
-            <input type="text" name="descrizione" placeholder="Descrizione:" value=""/><br/>
+            <input type="text" name="descrizione" placeholder="Descrizione:" value="" required/><br/>
             
             <input type="submit" name="submit" value="Aggiungi" />
             

@@ -982,7 +982,7 @@ border-color:transparent #6585a2 transparent transparent;
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius:4px;
-    display: inline-block;
+    display: table;
     margin: 1em auto;
 }
 #addlink:hover{
