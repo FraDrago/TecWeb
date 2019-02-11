@@ -11,7 +11,8 @@ session_start();
   if(isset($_POST['cambiaemail'])){
 	$select = mysqli_query($access->connessione, "SELECT `email` FROM `utente` WHERE `email` = '".$_POST['email']."'") or exit(mysqli_error($connectionID));
 	if(mysqli_num_rows($select)) {
-    exit('Email già in uso');
+    header("Location: ModificaProfilo.php?code=success");
+	exit();
 	}
 	$email = $_POST['email'];
 	$query= "UPDATE utente SET email='" .$email."' WHERE id='".$_SESSION['ID']."'";
