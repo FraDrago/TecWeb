@@ -103,8 +103,8 @@ else { ?>
 
 	<form method="post" action="handler.php">
 	
-	<p><label for="email">Indirizzo <span lang='en'>e-mail</span>: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder= "Email" required /></fieldset>
-	<p><button type="submit" name="cambiaemail" id="cambiaemail" >Cambia <span lang='en'>Email</span></button></p>
+	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder= "Email" required /></fieldset>
+	<p><button type="submit" name="cambiaemail" id="cambiaemail" >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
 	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
 	</form>
 	<form name=telf method="post" action="handler.php">

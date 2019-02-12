@@ -60,9 +60,9 @@
 
 <p><a href="https://www.scivac.it/it" target="_blank">SCIVAC</a>Società Culturale Italiana Veterinari per Animali da Compagnia è la più grande Società Scientifica Veterinaria d’Italia avente come finalità l’educazione scientifico-professionale dei propri iscritti, la salvaguardia degli interessi dei Medici Veterinari e la tutela della loro dignità e considerazione pubblica.</p>
 
-<a href="https://www.wsava.org/" target="_blank"><img class="logolink" src="img/wsava.png" alt="Logo con link che rimanda a <span lang='en'>WSAVA</span>"></a>
+<a href="https://www.wsava.org/" target="_blank"><img class="logolink" src="img/wsava.png" alt="Logo con link che rimanda a WSAVA"></a>
 
-<p><a href="https://www.wsava.org/" target="_blank"><span lang='en'>WSAVA</span></a><span lang='en'>The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200'000 veterinari da tutto il mondo.</span></p>
+<p><a href="https://www.wsava.org/" target="_blank"><span xml:lang="en" lang="en">WSAVA</span></a><span xml:lang="en" lang="en">The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200'000 veterinari da tutto il mondo.</span></p>
 
 </div>
 

@@ -43,7 +43,7 @@
 <ol>
 <li><img src="img/prenota.jpg" alt="icona calendario"><a href="Prenota.php">Prenota una visita</a></li>
 <li><img src="img/profiloico.jpg" alt="icona profilo personale" ><a href="ModificaProfilo.php">Modifica il profilo</a></li>
-<li><img src="img/logout.jpg" alt="icona di logout" ><a href="AccediReg.php"><span lang="en">Logout</span></a></li>
+<li><img src="img/logout.jpg" alt="icona di logout" ><a href="AccediReg.php"><span xml:lang="en" lang="en">Logout</span></a></li>
 </li>
 </ol>
 </div>

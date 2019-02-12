@@ -95,9 +95,9 @@
                     	
                     <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
           	    		
-                    <p><span xml:lang="en" lang="en"><label for="telefono">Telefono: </label></span> </p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+                    <p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
           	    		
-                    <p><span xml:lang="en" lang="en"><label for="email">Indirizzo e-mail: </label></span> </p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
+                    <p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail:</span></label></p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
 	           	    	
                     <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
                     

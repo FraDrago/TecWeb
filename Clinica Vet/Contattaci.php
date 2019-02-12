@@ -41,45 +41,20 @@ require_once('DB_Access.php'); ?>
 <br/>
 
 <!-- contenuto -->
-
 <div id="contentCont">
-    <?php
-//if "email" variable is filled out, send email
-ini_set('SMTP','myserver');
-ini_set('smtp_port',25);
-
-  if (isset($_REQUEST['email']))  {
-  
-  //Email information
-  $admin_email = "francydrake97@gmail.com";
-  $email = $_REQUEST['email'];
-  $subject = $_REQUEST['first_name'];
-  $comment = $_REQUEST['message'];
-  
-  //send email
-  mail($admin_email, "$subject", $comment, "From:" . $email);
-  
-  //Email response
-  echo "Il tuo messaggio è stato inviato alla nostra casella di posta";
-  }
-  
-  //if "email" variable is not filled out, display the form
-  else  {
-?>
-
-  <form class="Contattaci_form" method="POST">
+  <form class="Contattaci_form" method="POST" action="HandlerEmail.php">
 <h2 class="Contattaci">Contattaci</h2>
  <div class="row">
     <div class="col-25"> 
 <label for="name">Nome:</label>
 </div>
     <div class="col-75">
-    <input name="first" type="text" placeholder="Inserisci qui Nome e Cognome">
+    <input name="name" type="text" placeholder="Inserisci qui Nome e Cognome">
      </div>
   </div>
   <div class="row">
     <div class="col-25">
-<label for="email" xml:lang="en">E-mail:</label>
+<label for="email"><span xml:lang="en" lang="en">E-mail</span>:</label>
 </div>
     <div class="col-75">
       <input name="email" type="text" placeholder="Inserisci qui la tua mail">
@@ -87,10 +62,10 @@ ini_set('smtp_port',25);
   </div>
   <div class="row">
     <div class="col-25">
-<label for="message-text">Messaggio:</label>  
+<label for="message">Messaggio:</label>  
 </div>
     <div class="col-75">    
-      <textarea name="message" type="text" placeholder="Cosa vuoi chiederci?"></textarea>
+      <textarea name="message" placeholder="Cosa vuoi chiederci?"></textarea>
 </div>
   </div>
   <div class="row">
@@ -99,14 +74,10 @@ ini_set('smtp_port',25);
   </form>
 <p></p>
         Non riesci a contattarci? Puoi utilizzare il tuo 
-        <a href="mailto:clinicatorre@gmail.com?subject=mettere soggetto, forse prenotazione?">client di posta</a>
+        <a href="mailto:clinicatorre@gmail.com?subject=mettere soggetto, forse prenotazione?"><span xml:lang="en" lang="en">client</span> di posta</a>
       <p>
         Se preferisci, puoi contattarci al seguente numero di telefono: <a href="tel:+39043456789">0434 56789</a>.
       </p>
-
-	<?php
-  }
-?>
 
 
 <div class="leftCont">
@@ -139,7 +110,7 @@ ini_set('smtp_port',25);
 
 <div class="rightCont">
 <h3>Dove trovarci </h3>
-<p> L'ambulatorio si trova in Via delle Mele 123 (PD), puoi vederci nella mappa sottostante!</p>
+<p> L'ambulatorio si trova in Via delle Mele 123 (PD), la nostra posizione è segnata nella mappa sottostante!</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8986918354435!2d11.88528391511255!3d45.41138244498799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda58b44676df%3A0xfacae5884fca17f5!2sTorre+Archimede%2C+Via+Trieste%2C+63%2C+35121+Padova+PD!5e0!3m2!1sit!2sit!4v1549377910810"></iframe>
 <!-- if(!isempty($POST["first_name"])) se non e' vuoto riceve messaggi -->
 

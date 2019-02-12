@@ -71,7 +71,7 @@
                       		header("Location: index2.php");
           					}
                     else{
-                        $messaggioErrore .= "<span xml:lang=\"en\">Email</span> o <span xml:lang=\"en\">password</span> errati.";
+                        $messaggioErrore .= "Email o password errati.";
                     }
               	}
                 
@@ -80,7 +80,7 @@
         					<div class="loginAndRegistrationForm">
         						<p>Accesso effettuato con:<span class="highlight"> <?php echo $_SESSION['email']; ?></span></p>
         						<form action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" name="logout">
-        							<p>Vuoi fare il logout?</p>
+        							<p>Vuoi fare il <span xml:lang="en" lang="en">logout?</span></p>
                       <button name="logout" type="submit">Esci</button>
         						</form>
         					</div>
@@ -96,9 +96,9 @@
 	          	<div class="loginAndRegistrationForm">
                 <div class="BoxLogin">
 	            	<form name="login" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
-                        <p><label for="email"><span xml:lang="en" lang="en">Inserisci Email:</span> </label></p>
+                        <p><label for="email">Inserisci <span xml:lang="en" lang="en">Email</span>:</label></p>
                         <fieldset><input id="email" type="text" placeholder="Email" name="email" required></fieldset>
-                        <p><label for="password"><span xml:lang="en" lang="en"> Inserisci Password:</span> </label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
+                        <p><label for="password">Inserisci <span xml:lang="en" lang="en">Password</span>:</label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
                         <p><button type="submit">Entra</button></p>
 	            	</form>
 	            	<p class="Reg_Doubt">Non sei registrato? <a href='registrati.php'>Registrati qui!</a></p>
