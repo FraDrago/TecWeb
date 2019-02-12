@@ -25,18 +25,18 @@ if(!empty($_POST))
 
   if(isset($_POST['Accetta']))
     {
-      $connection = mysqli_connect("localhost","root","","clinica");
-      if(!$connection) die("Errore nella connessione."); 
+      //$connection = mysqli_connect("localhost","root","","clinica");
+      //if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=1 WHERE ID=".(integer)$_POST['valore'];
-      $result=mysqli_query($connection,$query);
+      $result=mysqli_query($access->connessione,$query);
       //echo "visita accettata ".$_POST['valore'];
     }
   else
   {
-    $connection = mysqli_connect("localhost","root","","clinica");
-      if(!$connection) die("Errore nella connessione."); 
+      //$connection = mysqli_connect("localhost","root","","clinica");
+      //if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=2 WHERE ID=".(integer)$_POST['valore'];
-      $result=mysqli_query($connection,$query);
+      $result=mysqli_query($access->connessione,$query);
       //echo "visita rifiutata ".$_POST['valore'];
   }
 ?>
@@ -78,21 +78,21 @@ if(!empty($_POST))
   <div id="title"><h3>Gestione prenotazioni</h3></div>
 
 <?php
-$connection = mysqli_connect("localhost","root","","clinica");
-if(!$connection) die("Errore nella connessione.");
+//$connection = mysqli_connect("localhost","root","","clinica");
+//if(!$connection) die("Errore nella connessione.");
 
 $q="SELECT * FROM visita";
-$result=mysqli_query($connection, $q) or die("impossibile eseguire la query");
+$result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
 echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th>";
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   echo "<tr>";
   $id=$row['ID'];
   $ora=$row['DataOra'];
   $u=$row['Utente'];
-  $utente=mysqli_query($connection, "SELECT Email FROM utente WHERE ID=$u");
+  $utente=mysqli_query($access->connessione, "SELECT Email FROM utente WHERE ID=$u");
   $utente=mysqli_fetch_assoc($utente);
   $p=$row['Prestazione'];
-  $prest=mysqli_query($connection, "SELECT Nome FROM prestazione WHERE ID=$p");
+  $prest=mysqli_query($access->connessione, "SELECT Nome FROM prestazione WHERE ID=$p");
   $prest=mysqli_fetch_assoc($prest);
   $g_c=$row['gatto_or_cane'];
   if($g_c=='0')
