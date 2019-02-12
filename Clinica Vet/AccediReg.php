@@ -56,7 +56,7 @@
                 
                 if(isset($_POST['logout'])){
                 	if($access->logout())
-                    	header("Location: index2.php");
+                    	header("Location: index.php");
 					        else
                     	die("Errore nella connessione.");
 				        }
@@ -68,7 +68,7 @@
                           session_start();
                       		$_SESSION['email'] = $result['Email'];
                       		$_SESSION['ID'] = $result['ID'];
-                      		header("Location: index2.php");
+                      		header("Location: index.php");
           					}
                     else{
                         $messaggioErrore .= "Email o password errati.";
