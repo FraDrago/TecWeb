@@ -4,7 +4,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-CREATE TABLE `prestazione` (
+CREATE TABLE IF NOT EXISTS `prestazione` (
   `ID` int(11) NOT NULL,
   `Nome` varchar(50) DEFAULT NULL,
   `Descrizione` varchar(400) DEFAULT NULL
@@ -23,7 +23,7 @@ INSERT INTO `prestazione` (`ID`, `Nome`, `Descrizione`) VALUES
 
 
 
-CREATE TABLE `visita` (
+CREATE TABLE IF NOT EXISTS `visita` (
   `ID` int(11) NOT NULL,
   `DataOra` datetime NOT NULL,
   `Prestazione` int(11) NOT NULL,

@@ -55,13 +55,24 @@ if(isset($_SESSION['ID'])){	?>
 <div class="LoginBox">
   <div class="BoxLogin">
   <div class="loginAndRegistrationForm">
+  <h3>Dati Personali:</h3>
  <?php
  if(isset($_GET["code"]) && !empty($_GET["code"])){
 			if($_GET["code"]=="success") echo  "<h3>L' email esiste già</h3>" ;
 		}
+		//"' . $_SESSION['ID'] . '"
+        $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";
+        $funziona=mysqli_query($access->connessione, $query) or die("non funziona ");
+
+        while($utente=mysqli_fetch_assoc($funziona)){
+          echo '<p> Nome: ' . $utente['name'] . '</p>';
+		  echo '<p> Cognome: ' . $utente['surname'] . '</p>';
+          echo '<p> Telefono: ' . $utente['telefono'] . '</p>';
+          echo '<p> Email: ' . $utente['email'] . '</p>';
+        }
  ?> 
  
-<h3>Dati Personali:</h3>
+
 
 <?php
 }
@@ -73,28 +84,6 @@ else { ?>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
 
- 
- <?php
-		
-		
-		
-		if(isset($_SESSION['ID'])){
-        $connection = mysqli_connect("localhost:3307","root","","clinica");
-        if(!$connection) die("Errore nella connessione.");
-		//"' . $_SESSION['ID'] . '"
-        $query="SELECT id, name, surname, telefono, email FROM utente WHERE id='".$_SESSION['ID']."'";
-        $result=mysqli_query($connection, $query) or die("non funziona ");
-
-        while($utente=mysqli_fetch_assoc($result)){
-          echo '<p> Nome: ' . $utente['name'] . '</p>';
-		  echo '<p> Cognome: ' . $utente['surname'] . '</p>';
-          echo '<p> Telefono: ' . $utente['telefono'] . '</p>';
-          echo '<p> Email: ' . $utente['email'] . '</p>';
-        }
-				
-
-		
-?>
 
 
 <hr></hr>
@@ -114,7 +103,7 @@ else { ?>
 
 </div>
 </div>
-		<?php }?>
+
 
 
 </div>
