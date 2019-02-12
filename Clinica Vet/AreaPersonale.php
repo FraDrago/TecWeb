@@ -27,14 +27,14 @@
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li class="bc_here">Area Personale</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h3>Benvenuto nell'area personale!</h3></div>
+  <div id="title"><h2>Benvenuto nell'area personale!</h2></div>
 
   <p>Qui potrai controllare la situazione sanitaria del tuo animale o prenotare una visita presso il nostro ambulatorio</p>
 

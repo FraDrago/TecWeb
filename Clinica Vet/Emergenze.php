@@ -32,7 +32,7 @@
 
 <ul class="breadcrumb">
 	<li>Ti trovi in: </li>
-	<li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+	<li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
 	<li class="bc_here">Emergenze</li>
 </ul>
 
@@ -43,7 +43,7 @@
 <br/>
 <br/>
 <div id="content">
-	<div id="title"><h3>Guida alle emergenze più comuni </h3></div>
+	<div id="title"><h2>Guida alle emergenze più comuni </h2></div>
 
 	<p>In questa sezione è possibile trovare le informazioni principali in caso di emergenze comuni per un efficace primo soccorso del nostro amico a quattro zampe. Inoltre viene fornita una lista delle principali <a class="piante" href="#piante">piante tossiche.</a> </p>
 
@@ -60,7 +60,7 @@
 <?php }
 		}
 	?>
-<li><img src="img/piante.jpg" ><a class="piante-colore" href="#piante">Piante tossiche comuni</a></li>
+<li><img src="img/piante.jpg" alt="icona di una pianta"><a class="piante-colore" href="#piante">Piante tossiche comuni</a></li>
 </ol>
 </div>
 
@@ -79,7 +79,7 @@
 		}
 	?>
 
-<div id="title"><h4>Piante tossiche comuni:</h4></div>
+<div id="title"><h3>Piante tossiche comuni:</h3></div>
 
 <div id="piante"></div>
 <?php

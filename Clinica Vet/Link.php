@@ -26,7 +26,7 @@
 
 <ul class="breadcrumb">
 	<li>Ti trovi in: </li>
-	<li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+	<li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
 	<li class="bc_here">Link Utili</li>
 </ul>
 
@@ -38,7 +38,7 @@
 <br/>
 <div id="content">
 
-<div id="title"><h3>Link Utili </h3></div>
+<div id="title"><h2>Link Utili </h2></div>
 <p>In questa sezione è possibile trovare alcuni link utili per i nostri amici animali</p>
 
 <div id="link1">

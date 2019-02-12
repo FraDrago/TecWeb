@@ -39,7 +39,7 @@ $pagina_attuale='galleria.php';
 
 <ul class="breadcrumb">
     <li>Ti trovi in: </li>
-    <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+    <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
     <li class="bc_here">Galleria</li>
 </ul>
     
@@ -51,7 +51,7 @@ $pagina_attuale='galleria.php';
 <br/>
 <div id="content">
 
-<div id="title"><h3>Galleria</h3></div>
+<div id="title"><h2>Galleria</h2></div>
     <p>Qui troviamo le foto pi&ugrave; belle dei nostri pazienti a quattro zampe! </p>
 
 <div id="gallery">

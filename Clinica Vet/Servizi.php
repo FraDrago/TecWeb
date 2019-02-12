@@ -32,7 +32,7 @@
 
 <ul class="breadcrumb">
 	<li>Ti trovi in: </li>
-	<li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+	<li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
 	<li class="bc_here">Servizi</li>
 </ul>
 
@@ -45,7 +45,7 @@
 <br/>
 <div id="content">
 
-<div id="title"><h3>Servizi offerti dall'ambulatorio</h3></div>
+<div id="title"><h2>Servizi offerti dall'ambulatorio</h2></div>
     <p>In questa sezione si possono trovare i principali servizi e prestazioni offerti dall'Ambulatorio: </p>
 
 <div class="list-type3">

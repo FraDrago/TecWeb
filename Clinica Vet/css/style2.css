@@ -131,7 +131,7 @@ body {
 /*****************/
 
 .nav{
-	background-color: #6585a2;
+	background-color: #3B5787;
 	margin-top: -46px;
 	height: 60px;
 	text-align: center;
@@ -161,13 +161,12 @@ body {
 }
 
 .nav a:hover {
-	color: #2f233a;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .current a{
 	background-color: #ececec;
-	color: #6585a2;
+	color: #3B5787;
 	border-radius: 1em 1em 0 0; 
 }
 
@@ -183,19 +182,18 @@ body {
 }
 
 #menu a:hover{
-
-	color:#162e55;
+	text-decoration: underline;
+	color:white;
 }
-
 li.active2{
-	background-color: #6585a2;
+	background-color: #283650;
 }
 
 #menuToggle
 {
   display: block;
   position: relative;
-  top: 0px;
+  top: -0.1em;
   left: 50px;
   width: 50px;
   z-index: 1;
@@ -280,9 +278,9 @@ li.active2{
   margin: -45px 0 0 -65px;
   padding: 50px;
   padding-top: 60px;
-  border: 1px solid #555;
+  border: 1px solid white;
   border-radius: 5%;
-  background: #74a0c3;
+  background: #56709c;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -297,7 +295,7 @@ li.active2{
 {
   padding: 10px 0;
   font-size: 22px;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid white;
 }
 
 #menuToggle input:checked ~ ul
@@ -313,7 +311,7 @@ ul.breadcrumb {
   padding: 10px 10px;
   list-style: none;
   text-align: center;
-  background-color: #6585a2;
+  background-color: #3B5787;
   color:white;
   margin:0;
 }
@@ -444,7 +442,7 @@ td{
   font-size: 18px;
   border: none;
   outline: none;
-  background-color:  #003f7a;
+  background-color: #003f7a;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -593,7 +591,7 @@ margin-right: 1em;
 	margin-bottom: 1em;
 	height: auto;
 width: 260px;
-background:#6585a2;
+background:#3B5787;
 color:#fff;
 text-decoration:none;
 border-bottom-right-radius:4px;
@@ -608,7 +606,7 @@ top:0;
 left:-12px;
 width:0;
 height:0;
-border-color:transparent #6585a2 transparent transparent;
+border-color:transparent #3B5787 transparent transparent;
 border-style:solid;
 border-width: 18px 12px 18px 0;
 }
@@ -631,7 +629,7 @@ background:#555;
 }
 
 .list-type4 a:hover:before{
-border-color:transparent #6585a2 transparent transparent;
+border-color:transparent #3B5787 transparent transparent;
 }
 
 
@@ -716,7 +714,7 @@ margin-right: 1em;
 
 .list-type3 a{ /*corpo freccia*/
 width: 300px;
-background:#6585a2;
+background:#3B5787;
 color:#fff;
 text-decoration:none;
 border-bottom-right-radius:4px;
@@ -732,7 +730,7 @@ top:0;
 left:-12px;
 width:0;
 height:0;
-border-color:transparent #6585a2 transparent transparent;
+border-color:transparent #3B5787 transparent transparent;
 border-style:solid;
 border-width: 18px 12px 18px 0;
 }
@@ -755,7 +753,7 @@ background:#555;
 }
 
 .list-type3 a:hover:before{
-border-color:transparent #6585a2 transparent transparent;
+border-color:transparent #3B5787 transparent transparent;
 }
 
 .piante a{
@@ -900,7 +898,7 @@ border-color:transparent #6585a2 transparent transparent;
 	max-height: 400px;
 	box-shadow: 4px 4px 10px 7px rgba(0,0,0,0.3);
 	overflow: hidden;
-	background-color:#498cc94d;
+	background-color:#dee1e278;
 }
 
 @media screen and (max-width: 669.9px) {
@@ -977,7 +975,7 @@ border-color:transparent #6585a2 transparent transparent;
 /******************/
 
 #addlink{
-	background-color:#6585a2;
+	background-color:#3B5787;
 	color: white;
 	padding: 1em 1.5em;
 	text-decoration: none;
@@ -1017,7 +1015,7 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 #tabellag thead {
-    background-color: #6585a2;
+    background-color: #3B5787;
     color: white;
     font-size: 1em;
     padding: 1em;
@@ -1041,7 +1039,7 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 .modificag {
-    background-color: #6585a2;
+    background-color: #3B5787;
     font-size: 1em;
     padding: .650em;
     border-radius: 4px;
@@ -1142,7 +1140,7 @@ border-color:transparent #6585a2 transparent transparent;
 
 #addform input[type=submit], #modform input[type=submit] {
 	width: 100%;
-	background-color: #6585a2;
+	background-color: #3B5787;
 	color: white;
     padding: 0.55em .650em;
     margin: .4em 0;
@@ -1185,7 +1183,7 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 #tabellaor thead {
-    background-color: #6585a2;
+    background-color: #3B5787;
     color: white;
     font-size: 1em;
     padding: 1em;
@@ -1201,7 +1199,7 @@ border-color:transparent #6585a2 transparent transparent;
 }
 
 .modificaor {
-    background-color: #6585a2;
+    background-color: #3B5787;
     font-size: 1em;
     padding: 7px
 }
@@ -1222,7 +1220,7 @@ border-color:transparent #6585a2 transparent transparent;
 
 #modformorari input[type=submit] {
 	width: 100%;
-	background-color: #6585a2;
+	background-color: #3B5787;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -1489,8 +1487,8 @@ border-color:transparent #6585a2 transparent transparent;
 	#logo {width: 3em; margin-top: 0.5em;}
 	.header-meta .col-elem {font-size: 18px;}
 	.header-meta .phone {font-size: 20px;}
-	.box{margin-right:1.5em;}
-	#image4 {width: 15em; height:12em;}
+	.box{margin-right:-1em;}
+	#image4 {width: 15em; height:10em;}
 	#imghome{max-width: 200px;}
 	.Contattaci_form input[type=submit] {padding: 15px 50px;}
 	#myBtn {display: none;}
@@ -1506,6 +1504,7 @@ border-color:transparent #6585a2 transparent transparent;
 	.list-type4 a {width: 215px;}
 	h1{font-size: 24px;}
 	#menu {width: 220px;}
+	#image4 {width: 14em; height:11em;}
 
 }
 

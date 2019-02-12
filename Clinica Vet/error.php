@@ -17,7 +17,7 @@ if (isset($_SESSION['error']) && isset($_SESSION['error_code'])) {
 
 }
 else{
-	header('Location: index2.php');
+	header('Location: index.php');
 }
 
 $pagina_attuale = 'error.php';
@@ -51,7 +51,7 @@ $pagina_attuale = 'error.php';
 
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
-        <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+        <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
         <li><a href="AreaPersonale.php">Area Personale</span></a></li>
         <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
         <li class="bc_here">Modifica</li>

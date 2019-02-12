@@ -66,7 +66,7 @@
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li><a href="AccediReg.php">Accedi/Registrati</a></li>
   <li class="bc_here">Registrati</li>
 </ul>
@@ -84,7 +84,7 @@
 <div id="content">
 
   <div class="LoginBox">
-            	<h1>Registrazione</h1>
+            	<h2>Registrazione</h2>
 
 	          	<h2 class="messaggio"> <?php echo $messaggioErrore; ?> </h2>
               

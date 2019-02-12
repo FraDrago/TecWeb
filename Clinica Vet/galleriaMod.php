@@ -68,7 +68,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
 
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
-        <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+        <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
         <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
         <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
         <li class="bc_here">Modifica</li>
@@ -77,7 +77,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
     <br/>
     <br/>
     <div id="content">
-        <div id="title"><h3>Modifica</h3></div>
+        <div id="title"><h2>Modifica</h2></div>
         <!--form per input con immagine-->
         <div id="contmodform">
             <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"

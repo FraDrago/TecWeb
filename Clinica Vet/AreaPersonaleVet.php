@@ -49,14 +49,14 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li class="bc_here">Area Personale Admin</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h3>Benvenuto nell'area personale riservata!</h3></div>
+  <div id="title"><h2>Benvenuto nell'area personale riservata!</h2></div>
 
 
 <div class="list-type4">

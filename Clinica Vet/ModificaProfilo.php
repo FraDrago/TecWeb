@@ -26,7 +26,7 @@
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
     <li><a href="AreaPersonale.php">Area Personale</span></a></li>
   <li class="bc_here">Modifica Profilo</li>
 </ul>
@@ -34,7 +34,7 @@
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h3>Modifica profilo</h3></div>
+  <div id="title"><h2>Modifica profilo</h2></div>
   <!-- cambio nome, cambio telefono, cambio mail, etc,-->
  
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////-->

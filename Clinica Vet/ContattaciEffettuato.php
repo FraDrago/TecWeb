@@ -28,7 +28,7 @@ require_once('DB_Access.php'); ?>
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li class="bc_here">Contattaci</li>
 </ul>
 

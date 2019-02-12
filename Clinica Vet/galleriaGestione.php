@@ -56,7 +56,7 @@ $pagina_attuale='AreaPersonaleVet.php';
 
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
-        <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+        <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
         <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
         <li class="bc_here">Gestione Galleria</li>
     </ul>
@@ -67,7 +67,7 @@ $pagina_attuale='AreaPersonaleVet.php';
     <br/>
     <br/>
     <div id="content">
-        <div id="title"><h3>Gestione Galleria</h3></div>
+        <div id="title"><h2>Gestione Galleria</h2></div>
 
 
         <a id="addlink" href="galleriaAdd.php">Aggiungi una foto</a>

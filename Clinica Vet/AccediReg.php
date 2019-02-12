@@ -31,7 +31,7 @@
 
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
-  <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
+  <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li class="bc_here">Accedi/Registrati</li>
 </ul>
 
@@ -42,7 +42,7 @@
 <!-- contenuto -->
 <div id="content">
 
-                <h1>Pannello di Controllo</h1>
+                <h2>Pannello di Controllo</h2>
             <div class="LoginBox">
             <?php
 		      

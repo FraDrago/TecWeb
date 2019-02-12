@@ -28,7 +28,7 @@ if(!isset($_SESSION['ID'])){
     <span></span>
     
     <ul id="menu">
-      <li xml:lang="en" <?php if($pagina_attuale=='index2.php') echo "class='active2'"; ?> ><a accesskey="H" href='index2.php#'>Home</a></li>
+      <li xml:lang="en" <?php if($pagina_attuale=='index.php') echo "class='active2'"; ?> ><a accesskey="H" href='index.php#'>Home</a></li>
           <li <?php if($pagina_attuale=='Servizi.php') echo "class='active2'"; ?>><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
           <li <?php if($pagina_attuale=='Emergenze.php') echo "class='active2'"; ?>><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
           <li <?php if($pagina_attuale=='galleria.php') echo "class='active2'"; ?>><a accesskey="G" href='galleria.php#'>Galleria</a></li>
@@ -59,7 +59,7 @@ if(!isset($_SESSION['ID'])){
 
 <div class='nav'>
  <ul>
-          <li <?php if($pagina_attuale=='index2.php') echo "class='current'"; ?> ><a accesskey="H" href='index2.php#'><span xml:lang="en" lang="en">Home</span></a></li>
+          <li <?php if($pagina_attuale=='index.php') echo "class='current'"; ?> ><a accesskey="H" href='index.php#'><span xml:lang="en" lang="en">Home</span></a></li>
           <li <?php if($pagina_attuale=='Servizi.php') echo "class='current'"; ?>><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
           <li <?php if($pagina_attuale=='Emergenze.php') echo "class='current'"; ?>><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
           <li <?php if($pagina_attuale=='galleria.php') echo "class='current'"; ?>><a accesskey="G" href='galleria.php#'>Galleria</a></li>
