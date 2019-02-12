@@ -8,6 +8,7 @@ require_once('DB_Access.php');
 $access = new DBAccess();
 $connection = $access->openDBConnection();
 
+
 if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SESSION['ID']))) { //l'utente loggato non deve essere admin
 
     $_SESSION['error'] = "Non hai i permessi per accedere a questa sezione";
@@ -72,8 +73,6 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
         $query="INSERT INTO visita ( DataOra, Prestazione, Utente, approvazione, gatto_or_cane, Note) VALUES ('".$d." ".$o.":00"."', '".$p."', '".$id."', '0', '".$t."', '".$n."')";
 
 
-        $access= new DBAccess();
-        $result = $access->openDBConnection();
         if($result=mysqli_query($access->connessione, $query))
           echo"Richiesta mandata con successo";
         else
@@ -89,10 +88,10 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   <p><label for="tipo"><span xml:lang="en" lang="en">Tipo di visita:</span> </label></p>
   <select id="prestazione" name="prestazione">
     <?php
-        $connection = mysqli_connect("localhost","root","","clinica");
-        if(!$connection) die("Errore nella connessione.");
+        //$connection = mysqli_connect("localhost","root","","clinica");
+        //if(!$connection) die("Errore nella connessione.");
         $query="SELECT id, nome FROM prestazione";
-        $result=mysqli_query($connection, $query) or die("Impossibile ottenere la lista delle prestazioni");
+        $result=mysqli_query($access->connessione, $query) or die("Impossibile ottenere la lista delle prestazioni");
 
         while($row=mysqli_fetch_assoc($result)){
           echo "<option value=".$row['id'].">".$row['nome']."</option>";
@@ -113,11 +112,11 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 </div>
 
 <?php
-$connection = mysqli_connect("localhost","root","","clinica");
-if(!$connection) die("Errore nella connessione.");
+//$connection = mysqli_connect("localhost","root","","clinica");
+//if(!$connection) die("Errore nella connessione.");
 $u=(string)$_SESSION['ID'];
 $q="SELECT * FROM visita WHERE Utente=".$u;
-$result=mysqli_query($connection, $q) or die("Non ci sono visite da mostrare");
+$result=mysqli_query($access->connessione, $q) or die("Non ci sono visite da mostrare");
 if(mysqli_num_rows($result)>0)
   {echo "<table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr>";
     while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
@@ -125,7 +124,7 @@ if(mysqli_num_rows($result)>0)
       $id=$row['ID'];
       $ora=$row['DataOra'];
       $p=$row['Prestazione'];
-      $prest=mysqli_query($connection, "SELECT Nome FROM prestazione WHERE ID=$p");
+      $prest=mysqli_query($access->connessione, "SELECT Nome FROM prestazione WHERE ID=$p");
       $prest=mysqli_fetch_assoc($prest);
       $g_c=$row['gatto_or_cane'];
       if($g_c=='0')
