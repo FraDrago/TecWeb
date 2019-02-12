@@ -66,6 +66,7 @@ unset($_POST);
     <div id="contaddform">
         <form id="addform" action="upload.php" method="post" enctype="multipart/form-data"
               onsubmit="return validateInsertForm()">
+            <div id="errorAdd"></div>
             <label for="fileToUpload">Foto:</label>
             <input type="file" name="fileToUpload" id="fileToUpload" value=""/><br/>
             

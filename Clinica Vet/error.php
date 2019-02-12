@@ -60,14 +60,13 @@ $pagina_attuale = 'error.php';
     <br/>
     <br/>
     <div id="content">
-        <div id="title"><h3>Errore</h3></div>
-        <?php echo $error_code;
-        echo "<br>";
-        echo $error;
-        ?>
-        <?php if (isset($error_link)) { ?> <p> <a href="<?php echo $error_link; ?>">clicca</a> qui per tornare indietro
-            </p><?php } ?>
+        <div id="title"><h2>Errore</h2></div>
 
+        <h3 id="errorcode"><?php echo $error_code; ?></h3>
+        <p id="errormsg"><?php echo $error; ?></p>
+        <?php if (isset($error_link)) { ?> <p id="errorlink"> <a href="<?php echo $error_link; ?>">clicca qui</a> per
+            tornare indietro</p><?php } ?>
+        <a id="tornahome" href="index.php">Torna alla <span xml:lang="en" lang="en">Home</span></a>
     </div> <!--chiusura tag page-->
 
     <?php include_once "footer.php" ?>

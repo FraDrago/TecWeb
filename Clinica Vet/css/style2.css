@@ -889,7 +889,7 @@ border-color:transparent #3B5787 transparent transparent;
 
 .contg .desc{
 	text-align: center;
-	padding: 9px;
+    padding: 0.3em;
     bottom: 0;
 }
 
@@ -913,8 +913,8 @@ border-color:transparent #3B5787 transparent transparent;
 	  margin-right: 5%;
 	  margin-left: 5%;
 	  min-width: 260px;
-	  margin-top: 7px;
-	  margin-bottom: 7px;	
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
 	}
 	
 	.contg .desc{
@@ -1114,6 +1114,12 @@ border-color:transparent #3B5787 transparent transparent;
 	margin-right: auto;
 }
 
+#errorAdd, #errorMod {
+    display: none;
+    font-size: 0.5em;
+    color: red;
+}
+
 #addform, #modform {
     font-size: 1.8em;
 	text-align: left;
@@ -1174,6 +1180,43 @@ border-color:transparent #3B5787 transparent transparent;
         border-radius: 4px;
         min-width: 8em;
     }
+}
+
+/*******Error*******/
+/******************/
+#errorcode {
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#errormsg {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+#errorlink {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tornahome {
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3B5787;
+    color: white;
+    padding: 0.55em .650em;
+    margin: .4em 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
 }
 
 /******Gestione Orari******/

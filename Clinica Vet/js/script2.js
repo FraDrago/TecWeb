@@ -34,12 +34,12 @@ function validateForm() {
 
 
     if (alt == "" || alt == undefined || alt == null) {
-        message += "Il campo Alt è obbligatorio.\n";
+        message += "Il campo Alt è obbligatorio.<br/>";
         document.getElementById("alt").focus();
 
     }
     if (descrizione == "" || descrizione == undefined || descrizione == null || descrizione.length > 45) {
-        message += "Il campo descrizione non deve essere vuoto o più lungo di 45 caratteri.\n";
+        message += "Il campo descrizione non deve essere vuoto o più lungo di 45 caratteri.<br/>";
         document.getElementById("descrizione").focus();
 
     }
@@ -52,7 +52,7 @@ function validateFoto() {
     message = ""
     var file = document.getElementById("fileToUpload").value;
     if (file == "" || file == undefined || file == null) {
-        message += "Deve essere caricata una foto.\n";
+        message += "Deve essere caricata una foto.<br/>";
         document.getElementById("fileToUpload").focus();
         result = false;
     }
@@ -71,21 +71,34 @@ function validateInsertForm() {
     mess = ""
     if (mess1 != "") {
 
-        mess += mess1 + "\n"
+        mess += mess1 + "<br/>"
     }
     if (mess2 != "") {
 
-        mess += mess2 + "\n"
+        mess += mess2 + "<br/>"
     }
     if (mess3 != "") {
 
-        mess += mess3 + "\n"
+        mess += mess3 + "<br/>"
     }
 
 
+    var element = document.getElementById("errorAdd");
     if (mess != "") {
         result = false;
-        alert(mess)
+
+        if (element) {
+            document.getElementById('errorAdd').style.fontSize = '0.5em';
+            element.innerHTML = mess;
+            document.getElementById('errorAdd').style.display = 'block';
+        }
+
+    } else {
+
+        if (element) {
+            document.getElementById('errorAdd').style.display = 'none';
+            element.innerHTML = "";
+        }
     }
 
     return result;
@@ -113,16 +126,28 @@ function validateMod() {
     }
     if (mess1 != "") {
 
-        mess += mess1 + "\n"
+        mess += mess1 + "<br/>"
     }
     if (mess2 != "") {
 
-        mess += mess2 + "\n"
+        mess += mess2 + "<br/>"
     }
 
+    var element = document.getElementById("errorMod");
     if (mess != "") {
         result = false;
-        alert(mess)
+
+        if (element) {
+            element.innerHTML = mess;
+            document.getElementById('errorMod').style.display = 'block';
+        }
+
+    } else {
+
+        if (element) {
+            document.getElementById('errorMod').style.display = 'none';
+            element.innerHTML = "";
+        }
     }
 
     return result;

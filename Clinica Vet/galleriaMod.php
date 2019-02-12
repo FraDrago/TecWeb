@@ -83,6 +83,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
             <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
                  src="<?php echo($image['Path']); ?>">
             <form id="modform" action="mod.php" method="post" onsubmit="return validateMod()">
+                <div id="errorMod"></div>
                 <label for="alt">Alt:</label>
                 <input type="text" id="alt" name="alt" placeholder="Alt"
                        value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
