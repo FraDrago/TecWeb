@@ -143,6 +143,7 @@ if(mysqli_num_rows($result)>0)
 {
   echo "Non ci sono visite da mostrare";
 }
+$access->closeDBConnection();
 ?>
   
 

@@ -21,23 +21,15 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 }
 
 if(!empty($_POST))
-  
+  $val=$_POST['valore'];
 
   if(isset($_POST['Accetta']))
     {
-      //$connection = mysqli_connect("localhost","root","","clinica");
-      //if(!$connection) die("Errore nella connessione."); 
-      $query="UPDATE visita SET approvazione=1 WHERE ID=".(integer)$_POST['valore'];
-      $result=mysqli_query($access->connessione,$query);
-      //echo "visita accettata ".$_POST['valore'];
+      $access->updateApprovazione(1,$val);
     }
   else
   {
-      //$connection = mysqli_connect("localhost","root","","clinica");
-      //if(!$connection) die("Errore nella connessione."); 
-      $query="UPDATE visita SET approvazione=2 WHERE ID=".(integer)$_POST['valore'];
-      $result=mysqli_query($access->connessione,$query);
-      //echo "visita rifiutata ".$_POST['valore'];
+      $access->updateApprovazione(2,$val);
   }
 ?>
 <!DOCTYPE  html>

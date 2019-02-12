@@ -395,6 +395,12 @@ public function getImmagineSingola($id)
       else
         return false;
     }
+
+    public function updateApprovazione($stato, $visita)
+    {
+      $query="UPDATE visita SET approvazione='$stato' WHERE ID=".(integer)$visita;
+      return mysqli_query($this->connessione, $query);
+    }
 }
 
 ?>
