@@ -83,6 +83,7 @@ if(!empty($_POST))
 
 $q="SELECT * FROM visita";
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
+if(mysqli_num_rows($result)>0){
 echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th>";
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   echo "<tr>";
@@ -118,7 +119,11 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   
   }
 echo "</table>";
-
+}
+else//se non ci sono visite
+{
+  echo "Non ci sono visite da mostrare";
+}
 ?>
 
 

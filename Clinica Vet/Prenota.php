@@ -143,6 +143,10 @@ if(mysqli_num_rows($result)>0)
     }
     echo"</table>";
   }
+  else//se non ci sono visite
+{
+  echo "Non ci sono visite da mostrare";
+}
 ?>
   
 
