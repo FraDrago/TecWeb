@@ -72,9 +72,9 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
         $query="INSERT INTO visita ( DataOra, Prestazione, Utente, approvazione, gatto_or_cane, Note) VALUES ('".$d." ".$o.":00"."', '".$p."', '".$id."', '0', '".$t."', '".$n."')";
 
 
-        $connection = mysqli_connect("localhost","root","","clinica");
-        if(!$connection) die("Errore nella connessione.");
-        if($result=mysqli_query($connection, $query))
+        $access= new DBAccess();
+        $result = $access->openDBConnection();
+        if($result=mysqli_query($access->connessione, $query))
           echo"Richiesta mandata con successo";
         else
           echo"Non &egrave stato possibile inoltrare la richiesta";
@@ -118,30 +118,32 @@ if(!$connection) die("Errore nella connessione.");
 $u=(string)$_SESSION['ID'];
 $q="SELECT * FROM visita WHERE Utente=".$u;
 $result=mysqli_query($connection, $q) or die("Non ci sono visite da mostrare");
-echo "<table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr>";
-while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
-  echo "<tr>";
-  $id=$row['ID'];
-  $ora=$row['DataOra'];
-  $p=$row['Prestazione'];
-  $prest=mysqli_query($connection, "SELECT Nome FROM prestazione WHERE ID=$p");
-  $prest=mysqli_fetch_assoc($prest);
-  $g_c=$row['gatto_or_cane'];
-  if($g_c=='0')
-    $g_c='gatto';
-  else
-    $g_c='cane';
-  $a=$row['approvazione'];
-  $t='0';
-  if($a=='0')
-      $t='in attesa';
-  if($a=='1')
-      $t='accettata';
-  if($a=='2')
-      $t='rifiutata';
-  echo "<td>".$ora."</td> "." <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$t;
-}
-echo"</table>";
+if(mysqli_num_rows($result)>0)
+  {echo "<table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr>";
+    while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
+      echo "<tr>";
+      $id=$row['ID'];
+      $ora=$row['DataOra'];
+      $p=$row['Prestazione'];
+      $prest=mysqli_query($connection, "SELECT Nome FROM prestazione WHERE ID=$p");
+      $prest=mysqli_fetch_assoc($prest);
+      $g_c=$row['gatto_or_cane'];
+      if($g_c=='0')
+        $g_c='gatto';
+      else
+        $g_c='cane';
+      $a=$row['approvazione'];
+      $t='0';
+      if($a=='0')
+          $t='in attesa';
+      if($a=='1')
+          $t='accettata';
+      if($a=='2')
+          $t='rifiutata';
+      echo "<td>".$ora."</td> "." <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$t;
+    }
+    echo"</table>";
+  }
 ?>
   
 
