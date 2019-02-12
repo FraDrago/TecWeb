@@ -21,15 +21,14 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
 
 			$result = true;
 		} else {
-			$message = "File is not an image.";
+            $message = "Il file non e&grave; una immagine.";
 			$result = false;
 		}
 	}
-	
-	
 
-	if ($_FILES["fileToUpload"]["size"] > 50000000) {
-		$message = "Sorry, your file is too large.";
+
+    if ($_FILES["fileToUpload"]["size"] > 2097152) {
+        $message = "Ci scusiamo ma la tua immagine e&grave; troppo grande.";
 		$result = false;
 	}
 
@@ -54,12 +53,12 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
 
 			
 		} else {
-			$message = "Sorry, there was an error uploading your file.";
+            $message = "Ci scusiamo, la foto non e&grave; stata caricata.";
 			$result = false;
 		}
 	}
 	else{
-		$message = "Sorry, your file was not uploaded.";
+        $message = "Ci scusiamo, la foto non e&grave; stata caricata.";
 		$result = false;
 	}	
 }

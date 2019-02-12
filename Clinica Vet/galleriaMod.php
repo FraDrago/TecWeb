@@ -37,7 +37,7 @@ if ($image == null) {
 $access->closeDBConnection();
 
 
-$pagina_attuale = 'AreaPersonaleVet.php'; ?>
+$pagina_attuale = 'galleriaMod.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -52,6 +52,7 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script type="text/javascript" src="js/script2.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
 
@@ -81,15 +82,15 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
         <div id="contmodform">
             <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
                  src="<?php echo($image['Path']); ?>">
-            <form id="modform" action="mod.php" method="post">
+            <form id="modform" action="mod.php" method="post" onsubmit="return validateMod()">
                 <label for="alt">Alt:</label>
-                <input type="text" name="alt" placeholder="Alt"
-                       value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>" required/><br/>
+                <input type="text" id="alt" name="alt" placeholder="Alt"
+                       value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
                 <input id="Id" name="id" type="hidden" value="<?php echo $image['id'];?>">
                 <label for="desc">Descrizione:</label>
-                <input type="text" name="descrizione" placeholder="Descrizione"
+                <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione"
                        value="<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>"
-                       required/><br/>
+                       maxlength="45"/><br/>
 
                 <input type="submit" name="submit" value="Modifica"/>
 

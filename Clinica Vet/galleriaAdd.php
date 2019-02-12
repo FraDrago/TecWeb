@@ -73,7 +73,8 @@ unset($_POST);
             <input type="text" id="alt" name="alt" placeholder="Alt" value=""/><br/>
             
             <label for="desc">Descrizione:</label>
-            <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione:" value=""/><br/>
+            <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione:" value=""
+                   maxlength="45"/><br/>
             
             <input type="submit" name="submit" value="Aggiungi" />
             

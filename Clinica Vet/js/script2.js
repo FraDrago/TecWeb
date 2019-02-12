@@ -38,8 +38,8 @@ function validateForm() {
         document.getElementById("alt").focus();
 
     }
-    if (descrizione == "" || descrizione == undefined || descrizione == null || descrizione.length > 40) {
-        message += "Il campo descrizione non deve essere vuoto.\n";
+    if (descrizione == "" || descrizione == undefined || descrizione == null || descrizione.length > 45) {
+        message += "Il campo descrizione non deve essere vuoto o più lungo di 45 caratteri.\n";
         document.getElementById("descrizione").focus();
 
     }
@@ -91,3 +91,39 @@ function validateInsertForm() {
     return result;
 }
 
+function validateMod() {
+    result = true;
+    mess1 = ""
+    mess2 = ""
+    var alt = document.getElementById("alt").value;
+    var descrizione = document.getElementById("descrizione").value;
+
+    mess = ""
+
+
+    if (alt == "" || alt == undefined || alt == null) {
+        mess1 += "Il campo Alt è obbligatorio.\n";
+        document.getElementById("alt").focus();
+
+    }
+    if (descrizione == "" || descrizione == undefined || descrizione == null || descrizione.length > 45) {
+        mess2 += "Il campo descrizione non deve essere vuoto o più lungo di 45 caratteri.\n";
+        document.getElementById("descrizione").focus();
+
+    }
+    if (mess1 != "") {
+
+        mess += mess1 + "\n"
+    }
+    if (mess2 != "") {
+
+        mess += mess2 + "\n"
+    }
+
+    if (mess != "") {
+        result = false;
+        alert(mess)
+    }
+
+    return result;
+}

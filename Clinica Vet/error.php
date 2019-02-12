@@ -4,6 +4,10 @@ if (isset($_SESSION['error']) && isset($_SESSION['error_code'])) {
 
 	$error = $_SESSION['error'];
     $error_code = $_SESSION['error_code'];
+    if (isset($_SESSION['error_link'])) {
+        $error_link = $_SESSION['error_link'];
+        unset($_SESSION['error_link']);
+    }
 	unset($_SESSION['error']);
     unset($_SESSION['error_code']);
 
@@ -61,6 +65,8 @@ $pagina_attuale = 'error.php';
         echo "<br>";
         echo $error;
         ?>
+        <?php if (isset($error_link)) { ?> <p> <a href="<?php echo $error_link; ?>">clicca</a> qui per tornare indietro
+            </p><?php } ?>
 
     </div> <!--chiusura tag page-->
 
