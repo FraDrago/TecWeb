@@ -57,6 +57,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   <div class="loginAndRegistrationForm">
 <?php if(!empty($_POST))
   {
+  $id=$_SESSION['ID'];
   $d=$_POST['data'];
   $o=$_POST['ora'];
   $p=$_POST['prestazione'];
@@ -66,14 +67,9 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   $actual_date= date('Y').'-'.date('m').'-'.date('d');
   if($d<$actual_date)
     echo("Non &egrave stata inserita una data valida");
-  //echo $d."<br>".$o."<br>".$p."<br>".$t."<br>".$n;
   else//aggiungiamo l'entry al database
     {
-        $id=$_SESSION['ID'];
-        $query="INSERT INTO visita ( DataOra, Prestazione, Utente, approvazione, gatto_or_cane, Note) VALUES ('".$d." ".$o.":00"."', '".$p."', '".$id."', '0', '".$t."', '".$n."')";
-
-
-        if($result=mysqli_query($access->connessione, $query))
+        if($access->insertVisita($id, $d, $o, $p, $t, $n))
           echo"Richiesta mandata con successo";
         else
           echo"Non &egrave stato possibile inoltrare la richiesta";

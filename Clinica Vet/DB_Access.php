@@ -369,7 +369,32 @@ public function getImmagineSingola($id)
     if(mysqli_num_rows($queryResult) > 0)
       return true;
     return false;
-}
+    }
+
+
+    public function insertVisita($id, $data, $ora, $prestazione, $tipo, $note)
+    {
+      $id = stripslashes($id);
+      $id = mysqli_real_escape_string($this->connessione,$id);
+      $data = stripslashes($data);
+      $data = mysqli_real_escape_string($this->connessione,$data);
+      $ora = stripslashes($ora);
+      $ora = mysqli_real_escape_string($this->connessione,$ora);
+      $prestazione = stripslashes($prestazione);
+      $prestazione = mysqli_real_escape_string($this->connessione,$prestazione);
+      $tipo = stripslashes($tipo);
+      $tipo = mysqli_real_escape_string($this->connessione,$tipo);
+      $note = stripslashes($note);
+      $note = mysqli_real_escape_string($this->connessione,$note);
+
+      $query="INSERT INTO visita ( DataOra, Prestazione, Utente, approvazione, gatto_or_cane, Note) VALUES ('".$data." ".$ora.":00"."', '".$prestazione."', '".$id."', '0', '".$tipo."', '".$note."')";
+
+      $result = mysqli_query($this->connessione, $query);
+      if(mysqli_affected_rows($this->connessione)>0)
+        return true;
+      else
+        return false;
+    }
 }
 
 ?>
