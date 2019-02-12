@@ -21,7 +21,7 @@ if(!isset($_SESSION['ID'])){
 <nav role="navigation">
   <div id="menuToggle">
 
-    <input type="checkbox" />
+    <input type="checkbox" aria-hidden="true"/>
 
     <span></span>
     <span></span>
