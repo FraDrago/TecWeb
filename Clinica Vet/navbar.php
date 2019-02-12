@@ -28,11 +28,11 @@ if(!isset($_SESSION['ID'])){
     <span></span>
     
     <ul id="menu">
-      <li <?php if($pagina_attuale=='index2.php') echo "class='active2'"; ?> ><a href='index2.php#'><span xml:lang="en" lang="en">Home</span></a></li>
+      <li xml:lang="en" <?php if($pagina_attuale=='index2.php') echo "class='active2'"; ?> ><a href='index2.php#'>Home</a></li>
           <li <?php if($pagina_attuale=='Servizi.php') echo "class='active2'"; ?>><a href='Servizi.php#'>Servizi</a></li>
           <li <?php if($pagina_attuale=='Emergenze.php') echo "class='active2'"; ?>><a href='Emergenze.php#'>Emergenze</a> </li>
           <li <?php if($pagina_attuale=='galleria.php') echo "class='active2'"; ?>><a href='galleria.php#'>Galleria</a></li>
-          <li <?php if($pagina_attuale=='Link.php') echo "class='active2'"; ?>><a href='Link.php#'><span xml:lang="en" lang="en">Link</span> Utili</a></li>
+          <li <?php if($pagina_attuale=='Link.php') echo "class='active2'"; ?>><a href='Link.php#'>Link Utili</a></li>
           <li <?php if($pagina_attuale=='Contattaci.php') echo "class='active2'"; ?>><a href='Contattaci.php#'>Contattaci</a></li>
           <li><a></br></a></li>
 		  <?php
@@ -41,7 +41,7 @@ if(!isset($_SESSION['ID'])){
                     if(!$connection) die("Errore nella connessione.");
                     if(isset($_SESSION['email'])){
 						if($admin){ ?>
-						<li  <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='active2'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale <span xml:lang="en" lang="en">Admin</span></a></li>
+						<li  <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='active2'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale Admin</a></li>
 						<?php } 
 						else {?>
 						<li <?php if($pagina_attuale=='AreaPersonale.php') echo "class='active2'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
@@ -59,26 +59,26 @@ if(!isset($_SESSION['ID'])){
 
 <div class='nav'>
  <ul>
-          <li <?php if($pagina_attuale=='index2.php') echo "class='current'"; ?> ><a href='index2.php#'><span xml:lang="en" lang="en">Home</span></a></li>
-          <li <?php if($pagina_attuale=='Servizi.php') echo "class='current'"; ?>><a href='Servizi.php#'>Servizi</a></li>
-          <li <?php if($pagina_attuale=='Emergenze.php') echo "class='current'"; ?>><a href='Emergenze.php#'>Emergenze</a> </li>
-          <li <?php if($pagina_attuale=='galleria.php') echo "class='current'"; ?>><a href='galleria.php#'>Galleria</a></li>
-          <li <?php if($pagina_attuale=='Link.php') echo "class='current'"; ?>><a href='Link.php#'><span xml:lang="en" lang="en">Link</span> Utili</a></li>
-          <li <?php if($pagina_attuale=='Contattaci.php') echo "class='current'"; ?>><a href='Contattaci.php#'>Contattaci</a></li>
+          <li <?php if($pagina_attuale=='index2.php') echo "class='current'"; ?> ><a accesskey="H" href='index2.php#'><span xml:lang="en" lang="en">Home</span></a></li>
+          <li <?php if($pagina_attuale=='Servizi.php') echo "class='current'"; ?>><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
+          <li <?php if($pagina_attuale=='Emergenze.php') echo "class='current'"; ?>><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
+          <li <?php if($pagina_attuale=='galleria.php') echo "class='current'"; ?>><a accesskey="G" href='galleria.php#'>Galleria</a></li>
+          <li <?php if($pagina_attuale=='Link.php') echo "class='current'"; ?>><a accesskey="L" href='Link.php#'><span xml:lang="en" lang="en">Link</span> Utili</a></li>
+          <li <?php if($pagina_attuale=='Contattaci.php') echo "class='current'"; ?>><a accesskey="C" href='Contattaci.php#'>Contattaci</a></li>
  <?php
                 	
 					
                     if(!$connection) die("Errore nella connessione.");
                     if(isset($_SESSION['email'])){
 						if($admin){ ?>
-						<li <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='current'"; ?>><a href='AreaPersonaleVet.php#'>Area Personale <span xml:lang="en" lang="en">Admin</span></a></li>
+						<li <?php if($pagina_attuale=='AreaPersonaleVet.php') echo "class='current'"; ?>><a accesskey="A" href='AreaPersonaleVet.php#'>Area Personale <span xml:lang="en" lang="en">Admin</span></a></li>
 						<?php } 
 						else {?>
-						<li <?php if($pagina_attuale=='AreaPersonale.php') echo "class='current'"; ?>><a href='AreaPersonale.php#'>Area Personale</a></li>
+						<li <?php if($pagina_attuale=='AreaPersonale.php') echo "class='current'"; ?>><a accesskey="A" href='AreaPersonale.php#'>Area Personale</a></li>
 						<?php }
                 	}
                     else { ?>
-                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a href='AccediReg.php#'>Accedi/Registrati</a></li>
+                		<li <?php if($pagina_attuale=='AccediReg.php') echo "class='current'"; ?>><a accesskey="A" href='AccediReg.php#'>Accedi/Registrati</a></li>
                 	<?php
                 	}
                 ?>
