@@ -1,4 +1,4 @@
-<?php $pagina_attuale='Registrati.php'; ?>
+<?php $pagina_attuale='AccediReg.php'; ?>
 <!DOCTYPE  html>			
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -67,8 +67,13 @@
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li class="bc_here">Accedi/Registrati</li>
+  <li><a href="AccediReg.php">Accedi/Registrati</a></li>
+  <li class="bc_here">Registrati</li>
 </ul>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script type="text/javascript" src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>

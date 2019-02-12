@@ -37,7 +37,7 @@ if ($result == null) {
 $access->closeDBConnection();?>
 
 
-<?php $pagina_attuale='orariGestione.php'; ?>
+<?php $pagina_attuale='AreaPersonaleVet.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -67,7 +67,8 @@ $access->closeDBConnection();?>
   <li>Ti trovi in: </li>
   <li><a href="index2.php"><span xml:lang="en" lang="en">Home</span></a></li>
   <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
-  <li class="bc_here">Gestione Orario</li>
+  <li><a href="orariGestione.php">Gestione Orario</span></a></li>
+  <li class="bc_here">Modifica</li>
 </ul>
   
 <br/>

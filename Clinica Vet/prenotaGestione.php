@@ -1,5 +1,5 @@
 
-<?php $pagina_attuale='prenotaGestione.php';
+<?php $pagina_attuale='AreaPersonaleVet.php';
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -25,7 +25,7 @@ if(!empty($_POST))
 
   if(isset($_POST['Accetta']))
     {
-      $connection = mysqli_connect("localhost","root","","clinica");
+      $connection = mysqli_connect("localhost:3307","root","","clinica");
       if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=1 WHERE ID=".(integer)$_POST['valore'];
       $result=mysqli_query($connection,$query);
@@ -33,7 +33,7 @@ if(!empty($_POST))
     }
   else
   {
-    $connection = mysqli_connect("localhost","root","","clinica");
+    $connection = mysqli_connect("localhost:3307","root","","clinica");
       if(!$connection) die("Errore nella connessione."); 
       $query="UPDATE visita SET approvazione=2 WHERE ID=".(integer)$_POST['valore'];
       $result=mysqli_query($connection,$query);
@@ -78,7 +78,7 @@ if(!empty($_POST))
   <div id="title"><h3>Gestione prenotazioni</h3></div>
 
 <?php
-$connection = mysqli_connect("localhost","root","","clinica");
+$connection = mysqli_connect("localhost:3307","root","","clinica");
 if(!$connection) die("Errore nella connessione.");
 
 $q="SELECT * FROM visita";

@@ -23,7 +23,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 
 $images=$access->getImmaginiGalleria();
 $access->closeDBConnection();
-$pagina_attuale='galleriaGestione.php';
+$pagina_attuale='AreaPersonaleVet.php';
 ?>
 
 <!DOCTYPE  html>

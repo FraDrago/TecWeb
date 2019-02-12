@@ -32,7 +32,7 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 	
 <br/>
 <br/>
@@ -44,25 +44,25 @@
 <div id="link1">
 
 
-<a href="http://www.enpa.it/" target="_blank"><img class="logolink" src="img/ENPA.png"></a>
+<a href="http://www.enpa.it/" target="_blank"><img class="logolink" src="img/ENPA.png" alt="Logo con link che rimanda alla pagina ENPA"></a>
 
 <p><a href="http://www.enpa.it/" target="_blank">ENPA</a>L’Ente Nazionale Protezione Animali (E.N.P.A.) è la più antica e importante associazione protezionistica d’Italia. Fondata da Giuseppe Garibaldi nel 1871, l’E.N.P.A. svolge oggi la sua attività in tutti i settori per la tutela, il benessere e la protezione degli animali.</p>
 
-<a href="http://www.enci.it/" target="_blank"><img class="logolink" src="img/enci.gif"></a>
+<a href="http://www.enci.it/" target="_blank"><img class="logolink" src="img/enci.gif" alt="Logo con link che rimanda alla pagina ENCI"></a>
 
 <p><a href="http://www.enci.it/" target="_blank">ENCI</a>Ente Nazionale Cinofilia Italiana.L'ENCI è un'associazione di allevatori a carattere tecnico-economico, ha lo scopo di tutelare le razze canine riconosciute pure, migliorandone ed incrementandone l'allevamento, nonché disciplinandone e favorendone l'impiego e la valorizzazione ai fini zootecnici, oltre che sportivi.</p>
 
-<a href="https://www.sivae.it/" target="_blank"><img class="logolink" src="img/SIVAE.jpg"></a>
+<a href="https://www.sivae.it/" target="_blank"><img class="logolink" src="img/SIVAE.jpg" alt="Logo con link che rimanda alla pagina SIVAE"></a>
 
 <p><a href="https://www.sivae.it/" target="_blank">SIVAE</a>Società Italiana per Veterinari Animali Esotici. La SIVAE è la più grande associazione professionale italiana dedita al progresso della medicina e chirurgia degli animali esotici e dei pet non convenzionali </p>
 
-<a href="https://www.scivac.it/it" target="_blank"><img class="logolink" src="img/Scivac.png"></a>
+<a href="https://www.scivac.it/it" target="_blank"><img class="logolink" src="img/Scivac.png" alt="Logo con link che rimanda a SCIVAC"></a>
 
 <p><a href="https://www.scivac.it/it" target="_blank">SCIVAC</a>Società Culturale Italiana Veterinari per Animali da Compagnia è la più grande Società Scientifica Veterinaria d’Italia avente come finalità l’educazione scientifico-professionale dei propri iscritti, la salvaguardia degli interessi dei Medici Veterinari e la tutela della loro dignità e considerazione pubblica.</p>
 
-<a href="https://www.wsava.org/" target="_blank"><img class="logolink" src="img/wsava.png"></a>
+<a href="https://www.wsava.org/" target="_blank"><img class="logolink" src="img/wsava.png" alt="Logo con link che rimanda a <span lang='en'>WSAVA</span>"></a>
 
-<p><a href="https://www.wsava.org/" target="_blank">WSAVA</a>The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200'000 veterinari da tutto il mondo.</p>
+<p><a href="https://www.wsava.org/" target="_blank"><span lang='en'>WSAVA</span></a><span lang='en'>The World Small Animal Veterinary Association è un'associazione globale che raggruppa oltre 200'000 veterinari da tutto il mondo.</span></p>
 
 </div>
 

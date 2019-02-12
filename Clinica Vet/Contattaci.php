@@ -32,6 +32,10 @@ require_once('DB_Access.php'); ?>
   <li class="bc_here">Contattaci</li>
 </ul>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script type="text/javascript" src="js/script.js"></script>
+
 <!--un po' di separazione-->
 <br/>
 <br/>
@@ -135,7 +139,7 @@ ini_set('smtp_port',25);
 
 <div class="rightCont">
 <h3>Dove trovarci </h3>
-<p> L'ambulatorio si trova in Via delle Mele 123 (PD)</p>
+<p> L'ambulatorio si trova in Via delle Mele 123 (PD), puoi vederci nella mappa sottostante!</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8986918354435!2d11.88528391511255!3d45.41138244498799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda58b44676df%3A0xfacae5884fca17f5!2sTorre+Archimede%2C+Via+Trieste%2C+63%2C+35121+Padova+PD!5e0!3m2!1sit!2sit!4v1549377910810"></iframe>
 <!-- if(!isempty($POST["first_name"])) se non e' vuoto riceve messaggi -->
 

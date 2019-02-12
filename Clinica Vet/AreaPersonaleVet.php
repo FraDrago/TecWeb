@@ -61,10 +61,10 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 
 <div class="list-type4">
 <ol>
-<li><img src="img/gallery.jpg" ><a href="galleriaGestione.php">Gestione galleria</a></li>
-<li><img src="img/clock.jpg" ><a href="orariGestione.php">Gestione orari</a></li>
-<li><img src="img/calendario.png" ><a href="prenotaGestione.php">Gestione prenotazioni</a></li>
-<li><img src="img/logout.jpg" ><a href="AccediReg.php">Logout</a></li>
+<li><img src="img/gallery.jpg" alt="icona galleria" ><a href="galleriaGestione.php">Gestione galleria</a></li>
+<li><img src="img/clock.jpg" alt="icona con orologio di orari" ><a href="orariGestione.php">Gestione orari</a></li>
+<li><img src="img/calendario.png" alt="icona di Gestione Prenotazioni " ><a href="prenotaGestione.php">Gestione prenotazioni</a></li>
+<li><img src="img/logout.jpg" alt="icona di logout" ><a href="AccediReg.php"><span lang="en">Logout</span></a></li>
 </li>
 </ol>
 </div>

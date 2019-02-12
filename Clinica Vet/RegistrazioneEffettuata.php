@@ -46,7 +46,7 @@
             <div class="LoginBox">
               <div class="loginAndRegistrationForm">
                     <h2>Registrazione Avvenuta!</h2>
-                    <h3><a href='AccediReg.php'>Effettua il Login</a></h3>
+                    <h3><a href='AccediReg.php'>Effettua il <span lang="en">Login</span></a></h3>
 
               </div>
             </div>
