@@ -10,18 +10,18 @@
   		<meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/style2.css" media="handheld, screen">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
 <body>
 
 <?php include_once"header.php"?>
-
+<div class="noprint">
 <!--menu di navigazione-->
 <?php include_once"navbar.php"?>
-
+</div>
 
 <?php 
 
@@ -39,12 +39,12 @@ $access->closeDBConnection();
 
 <div id="page" class="container">
 <!--breadcrumb-->
-
+<div class="noprint">
 <ul class="breadcrumb">
     <li>Ti trovi in: </li>
     <li class="bc_here">Home</li>
 </ul>
-
+</div>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <script type="text/javascript" src="js/script.js"></script>
@@ -97,16 +97,17 @@ $access->closeDBConnection();
         ?>
     </tbody>
     </table>
-    
+    <div class="noprint">
     <div id="box1">
             <h3>Prenota ora una visita accedendo al tuo <a href="AccediReg.php"> account </a></h3>
             <p> Hai dei dubbi? C'è qualcosa che vorresti chiederci?</p><a href="Contattaci.php" class="link-style">Contattaci</a>
         </div>
         <p>Il nostro ambulatorio si trova in via delle mele 123 a Padova, puoi vedere la nostra posizione nella mappa sottostante: </p>
-    <iframe title="Mappa google maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8986918354435!2d11.88528391511255!3d45.41138244498799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda58b44676df%3A0xfacae5884fca17f5!2sTorre+Archimede%2C+Via+Trieste%2C+63%2C+35121+Padova+PD!5e0!3m2!1sit!2sit!4v1549390595230"></iframe>
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8986918354435!2d11.88528391511255!3d45.41138244498799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda58b44676df%3A0xfacae5884fca17f5!2sTorre+Archimede%2C+Via+Trieste%2C+63%2C+35121+Padova+PD!5e0!3m2!1sit!2sit!4v1549390595230"></iframe>
+	</div>
+	<div id="print"> <p>Il nostro ambulatorio si trova in via delle mele 123 a Padova </p> </div>
     </div>
-
+	
     <div class="galleria">
         <h2>Guarda la galleria dei nostri ospiti!</h2>
         <?php
@@ -127,8 +128,9 @@ $access->closeDBConnection();
     </div>
 
 </div>
-
+<div class="noprint">
 <?php include_once"footer.php"?>
-
+</div>
+</div>
 </body>
 </html>

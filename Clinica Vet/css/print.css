@@ -1,0 +1,62 @@
+/*****generale******/
+/******************/
+
+html,
+body {
+  margin-top: 0px !important;
+  padding-top: 0px;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+/*display: none;*/
+
+.noprint{
+  display: none;
+}
+
+.galleria{
+  display: none;
+}
+
+#imghome, #myBtn {
+	display: none;
+}
+
+/*.leftHome{
+  width: 100%;
+  text-align: center;
+}
+
+.rightHome{
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}*/
+
+#logo{
+	width: 3em;
+	filter:grayscale(1);
+}
+
+.leftHome,
+.rightHome,
+.BenvenutoHome,
+.contentHome,
+.container{
+	text-align: left;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-left: 0em;
+  position: unset;
+  float: none;
+  width: 100%;
+}
+
+.phone {
+	color:none;
+}
+
+
+
+
