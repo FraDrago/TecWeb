@@ -21,7 +21,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 }
 
 if(!empty($_POST))
-  $val=$_POST['valore'];
+  {$val=$_POST['valore'];
 
   if(isset($_POST['Accetta']))
     {
@@ -30,7 +30,7 @@ if(!empty($_POST))
   else
   {
       $access->updateApprovazione(2,$val);
-  }
+  }}
 ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
@@ -76,7 +76,7 @@ if(!empty($_POST))
 $q="SELECT * FROM visita";
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
 if(mysqli_num_rows($result)>0){
-echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th>";
+echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>";
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   echo "<tr>";
   $id=$row['ID'];
@@ -87,6 +87,7 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   $p=$row['Prestazione'];
   $prest=mysqli_query($access->connessione, "SELECT Nome FROM prestazione WHERE ID=$p");
   $prest=mysqli_fetch_assoc($prest);
+  $n=$row['Note'];
   $g_c=$row['gatto_or_cane'];
   if($g_c=='0')
     $g_c='gatto';
@@ -102,11 +103,11 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   if($a=='0')//in attesa
   {
     echo"<form name=form method=post action=prenotaGestione.php>";
-    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td><td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=".$id."</td>";
+    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td> ".$n."</td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=".$id."</td>";
     echo "</form>";
   }
   else
-    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$t;
+    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$n."</td> <td>".$t."</td>";
 
   
   }
