@@ -1,4 +1,3 @@
-<?php $pagina_attuale='AreaPersonale.php'; ?>
 <!DOCTYPE  html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
@@ -17,10 +16,65 @@
 
 <body>
 
-<?php include_once"header.php"?>
+<div id="header">
+        
+        <a href="index.php#">
+        <img id="logo" src="img/vet2.png"  alt="logo"/>  
+    </a>  
+        <div id="title">
+        <h1>Ambulatorio Veterinario <br/>Archimedeo Torre </h1>
+        </div>
+        
+<div class="fright"> <!--elemento di utility sulla destra-->
+      <div class="header-meta">
+        <div class="col-elem"> Hai un'emergenza?<br/>
+            Chiama ora: <span class="phone"><a href="tel:043456789"> 0434 56789</a> </span></div>
+      </div>    
+</div>
 
+</div>
 <!--menu di navigazione-->
-<?php include_once"navbar.php"?>
+
+
+<nav role="navigation">
+  <div id="menuToggle">
+
+    <input type="checkbox" aria-hidden="true"/>
+
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+        <li xml:lang="en" lang="en"  ><a
+                    accesskey="H" href='index.php#'>Home</a></li>
+          <li ><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
+          <li ><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
+          <li ><a accesskey="G" href='galleria.php#'>Galleria</a></li>
+          <li ><a accesskey="L" href='Link.php#'>Link Utili</a></li>
+          <li ><a accesskey="C" href='Contattaci.php#'>Contattaci</a></li>
+        <li><a><br/></a></li>
+                  <li class='active2'><a accesskey="A" href='AreaPersonale.php#'>Area Personale</a></li>
+                      
+    </ul>
+  </div>
+</nav>
+
+<div class='nav'>
+ <ul>
+          <li  ><a accesskey="H" href='index.php#'><span xml:lang="en" lang="en">Home</span></a></li>
+          <li ><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
+          <li ><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
+          <li ><a accesskey="G" href='galleria.php#'>Galleria</a></li>
+          <li ><a accesskey="L" href='Link.php#'><span xml:lang="en" lang="en">Link</span> Utili</a></li>
+          <li ><a accesskey="C" href='Contattaci.php#'>Contattaci</a></li>
+            <li class='current'><a accesskey="A" href='AreaPersonale.php#'>Area Personale</a></li>
+                      
+</ul>
+</div>
+
+  <div >
+        <img id="img" src='img/banner.jpg' alt="Immagine banner del sito che rappresenta un cane ed un gatto" /></div>
 
 <div id="page" class="container">
 <!--breadcrumb-->
@@ -47,10 +101,12 @@
 </ol>
 </div>
 
-</div>
 </div> <!--chiusura tag page-->
 
-<?php include_once"footer.php"?>
-
+<div id="footer">
+  <img id="footer_logo" alt="logo Ambulatorio Veterinario Archimedeo Torre" src="img/vet2.png">
+  <p>Sito creato da: Beni Valentina, Beschin Michele, Campese Martina, Francesco Drago</p>
+  <p>Ambulatorio veterinario Archimedeo Torre srl, Via dalle Mele 123</p>
+</div></div>
 </body>
 </html>
