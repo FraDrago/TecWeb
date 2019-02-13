@@ -38,14 +38,14 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 	
 
 <br/>
 <br/>
 <div id="content">
 
-<div id="title"><h2>Servizi offerti dall'ambulatorio</h2></div>
+    <div id="title1"><h2>Servizi offerti dall'ambulatorio</h2></div>
     <p>In questa sezione si possono trovare i principali servizi e prestazioni offerti dall'Ambulatorio: </p>
 
 <div class="list-type3">
@@ -69,7 +69,9 @@
     <?php foreach($result as $servizi){?>    
 <div id="<?php echo $servizi['id']; ?>" class="box2">
     <div class="name2"><?php echo $servizi['name']; ?></div>
-        <div class="boxImage2"><img id="image5" src="<?php echo $servizi['Path']; ?>" alt="<?php echo htmlentities($servizi['alt'], ENT_HTML5, "UTF-8");?>"></div>
+                    <div class="boxImage2"><img class="image5" src="<?php echo $servizi['Path']; ?>"
+                                                alt="<?php echo htmlentities($servizi['alt'], ENT_HTML5, "UTF-8"); ?>">
+                    </div>
         <div class="descrizione3"> <?php echo $servizi['Descrizione'];?> </div>   
 </div><?php }
         }
@@ -81,6 +83,6 @@
 </div>
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>

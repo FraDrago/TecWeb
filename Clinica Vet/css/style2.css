@@ -822,12 +822,12 @@ border-color:transparent #3B5787 transparent transparent;
 	margin-left: 0.5em;
 }
 
-#image4 {
+.image4 {
     width: 16em; 
     height: 12em;
 }
 
-#image5 {
+.image5 {
     width: 9em; 
     height: 9em;
     border-radius: 10%;
@@ -1499,7 +1499,11 @@ border-color:transparent #3B5787 transparent transparent;
 	#imghome{max-width: 300px;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     .loginAndRegistrationForm textarea{margin-left: 3px; padding: 12px 1px 12px 1px; text-align: center;}
-    #image4 { max-width: auto; max-height: auto;}
+
+    .image4 {
+        max-width: auto;
+        max-height: auto;
+    }
   	.col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
   	.list-type4 li img {display: none;}
 }
@@ -1512,7 +1516,10 @@ border-color:transparent #3B5787 transparent transparent;
 	.name2{text-align: center;}
 	.descrizione3 ul li{
 	text-align:left; list-style-type: none; padding-left: 0;}
-	#image5{float: none;}
+
+    .image5 {
+        float: none;
+    }
 	.box3Image{padding-right: 0;}
 	.boxImage2{text-align: center;}
 	.list-type3 a{width: 250px;}
@@ -1552,7 +1559,11 @@ border-color:transparent #3B5787 transparent transparent;
 	.header-meta .col-elem {font-size: 1em;}
 	.header-meta .phone {font-size: 1.1em;}
 	.box{margin-right:-1em;}
-	#image4 {width: 15em; height:10em;}
+
+    .image4 {
+        width: 15em;
+        height: 10em;
+    }
 	#imghome{max-width: 200px;}
 	.Contattaci_form input[type=submit] {padding: 15px 50px;}
 	#myBtn {display: none;}
@@ -1570,7 +1581,11 @@ border-color:transparent #3B5787 transparent transparent;
 	iframe{max-width: 150px;}
 	h1{font-size: 24px;}
 	#menu {width: 220px;}
-	#image4 {width: 14em; height:11em;}
+
+    .image4 {
+        width: 14em;
+        height: 11em;
+    }
 	#tabellaorpre table{margin-left: -1.2em}
 
 }
