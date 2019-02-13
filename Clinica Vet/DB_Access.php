@@ -20,7 +20,7 @@ class DBAccess{
   }
   
       public function isAdmin($id){
-    	$query="SELECT ID, Admin FROM Utente WHERE ID='$id' AND Admin IS NOT NULL";
+    	$query="SELECT ID, Admin FROM utente WHERE ID='$id' AND Admin IS NOT NULL";
         $queryResult=mysqli_query($this->connessione, $query) or die ("Error in isAdmin query: " .
                                                                     mysqli_error($this->connessione));
       	if(mysqli_num_rows($queryResult) == 0){
@@ -217,7 +217,7 @@ public function getservizi(){
    }
 
 public function getserviziIndice(){
-      $querySelect = "SELECT * FROM serviziIndice";
+      $querySelect = "SELECT * FROM serviziindice";
       $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
       if(mysqli_num_rows($queryResult) == 0){
         return null;
@@ -240,7 +240,7 @@ public function getserviziIndice(){
 
 
 public function getemergenzeIndice(){
-      $querySelect = "SELECT * FROM emergenzeIndice";
+      $querySelect = "SELECT * FROM emergenzeindice";
       $queryResult=mysqli_query($this->connessione, $querySelect) or die ("Error in getOrari query: " .mysqli_error($this->connessione));
       if(mysqli_num_rows($queryResult) == 0){
         return null;
