@@ -16,7 +16,7 @@
 
 		<script>
         	function check() {
-    			if (document.getElementById('password').value == document.getElementById('controlPassword').value){
+    			if (document.getElementById('password').value == document.getElementById('cpassword').value){
 					document.getElementById('pswMessage').innerHTML = '';
 					document.getElementById('submit').disabled = false;
 				}
@@ -43,11 +43,16 @@
               if(!$connection) die("Errore nella connessione");
               
               else{
-              	
+              
               	
             	$messaggioErrore = "";
 		        if (isset($_REQUEST['email'])){
-                  	if($_REQUEST['password'] != $_REQUEST['controlPassword']){
+					$select = mysqli_query($access->connessione, "SELECT `email` FROM `utente` WHERE `email` = '".$_REQUEST['email']."'") or exit(mysqli_error($connectionID));
+					if(mysqli_num_rows($select)) {
+					header("Location: Registrati.php?code=success");
+					exit();
+					}
+                  	if($_REQUEST['password'] != $_REQUEST['cpassword']){
                     	$messaggioErrore .= "ATTENZIONE! Le due password devono coincidere.";
                     }
 		            else{
@@ -91,7 +96,7 @@
               <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
 	            	<form name="registration" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" onsubmit="return validateInsertRegistrati()">
-					<div id="errorAdd"></div>
+					
                     <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
                     	
                     <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
@@ -102,10 +107,13 @@
 	           	    	
                     <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
                     
-                    <p><label for="controlPassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="controlPassword" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    <p><label for="cpassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="cpassword" onkeyup="check();" placeholder="Password" required /></fieldset>
                     	<h2 class="message" id="pswMessage"></h2>
-                    	
-		            	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
+					<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
+					if($_GET["code"]=="success") echo  "<h3>L' email esiste già</h3>" ;
+					} ?>
+                    	<div id="errorAdd"></div>
+		            	<p><button type="submit" name="submit" id="submit" >Registrati</button></p>
 	            	</form>
 	          	</div>
             </div>
