@@ -97,9 +97,23 @@ $access->closeDBConnection();
         ?>
     </tbody>
     </table>
+	 
+
     <div class="noprint">
     <div id="box1">
-            <h3>Prenota ora una visita accedendo al tuo <a href="AccediReg.php"> account </a></h3>
+            <h3>Prenota ora una visita accedendo al tuo <a <?php if(isset($_SESSION['email'])){
+						if($admin){ ?>
+						  href='AreaPersonaleVet.php#' 
+						<?php } 
+						else { ?>
+						href='AreaPersonale.php#'
+						<?php }
+                	}
+                    else { ?>
+                		 href='AccediReg.php#'
+                	<?php
+                	}
+                ?> > account </a></h3>
             <p> Hai dei dubbi? C'è qualcosa che vorresti chiederci?</p><a href="Contattaci.php" class="link-style">Contattaci</a>
         </div>
         <p>Il nostro ambulatorio si trova in Via delle Mele 123 a Padova, puoi vedere la nostra posizione nella mappa sottostante: </p>
