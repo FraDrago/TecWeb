@@ -1385,6 +1385,11 @@ border-color:transparent #3B5787 transparent transparent;
 	font-size: 1em;
 }
 
+.prenotazione #tipo{
+	margin-bottom: 1em;
+    font-size: 1em;
+}
+
 .loginAndRegistrationForm textarea{
 	width: 70%;
   	padding: 12px;

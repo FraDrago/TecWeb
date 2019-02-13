@@ -73,6 +73,6 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>

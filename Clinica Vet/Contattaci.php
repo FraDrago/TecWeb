@@ -120,6 +120,6 @@ require_once('DB_Access.php'); ?>
 </div>
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
