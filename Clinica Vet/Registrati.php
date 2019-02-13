@@ -90,7 +90,8 @@
               
               <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
-	            	<form name="registration" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
+	            	<form name="registration" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" onsubmit="return validateInsertRegistrati()">
+					<div id="errorAdd"></div>
                     <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
                     	
                     <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
@@ -101,7 +102,7 @@
 	           	    	
                     <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
                     
-                    <p><label for="controlPassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="controlPassword" type="password" name="controlPassword" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    <p><label for="controlPassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="controlPassword" onkeyup="check();" placeholder="Password" required /></fieldset>
                     	<h2 class="message" id="pswMessage"></h2>
                     	
 		            	<p><button type="submit" name="submit" id="submit" disabled>Registrati</button></p>
