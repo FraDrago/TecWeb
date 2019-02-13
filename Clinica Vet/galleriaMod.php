@@ -52,7 +52,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <script type="text/javascript" src="js/script2.js"></script>
+    <script src="js/script2.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
 
@@ -69,15 +69,15 @@ $pagina_attuale = 'galleriaMod.php'; ?>
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
         <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-        <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
-        <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
+        <li><a href="AreaPersonaleVet.php">Area Personale Admin</a></li>
+        <li><a href="galleriaGestione.php">Gestione Galleria</a></li>
         <li class="bc_here">Modifica</li>
     </ul>
 
     <br/>
     <br/>
     <div id="content">
-        <div id="title"><h2>Modifica</h2></div>
+        <div id="title1"><h2>Modifica</h2></div>
         <!--form per input con immagine-->
         <div id="contmodform">
             <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
@@ -88,7 +88,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
                 <input type="text" id="alt" name="alt" placeholder="Testo alternativo"
                        value="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"/><br/>
                 <input id="Id" name="id" type="hidden" value="<?php echo $image['id'];?>">
-                <label for="desc">Descrizione:*</label>
+                <label for="descrizione">Descrizione:*</label>
                 <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione"
                        value="<?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>"
                        maxlength="45"/><br/>
@@ -101,6 +101,6 @@ $pagina_attuale = 'galleriaMod.php'; ?>
     </div> <!--chiusura tag page-->
 
     <?php include_once "footer.php" ?>
-
+</div>
 </body>
 </html>

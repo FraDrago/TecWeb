@@ -40,7 +40,7 @@ $pagina_attuale='AreaPersonaleVet.php';
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
-    <script type="text/javascript" src="js/script2.js"></script>
+    <script src="js/script2.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
 
@@ -57,17 +57,17 @@ $pagina_attuale='AreaPersonaleVet.php';
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
         <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-        <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
+        <li><a href="AreaPersonaleVet.php">Area Personale Admin</a></li>
         <li class="bc_here">Gestione Galleria</li>
     </ul>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="js/script.js"></script>
 
     <br/>
     <br/>
     <div id="content">
-        <div id="title"><h2>Gestione Galleria</h2></div>
+        <div id="title1"><h2>Gestione Galleria</h2></div>
 
 
         <a id="addlink" href="galleriaAdd.php">Aggiungi una foto</a>
@@ -117,6 +117,6 @@ $pagina_attuale='AreaPersonaleVet.php';
     </div> <!--chiusura tag page-->
 
     <?php include_once "footer.php" ?>
-
+</div>
 </body>
 </html>

@@ -39,14 +39,14 @@ $access->closeDBConnection();
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
+    <li><a href="AreaPersonaleVet.php">Area Personale Admin</a></li>
   <li class="bc_here">Gestione Orario</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Gestione orario ambulatorio</h2></div>
+    <div id="title1"><h2>Gestione orario ambulatorio</h2></div>
 
 <!-- tabella orari-->
     <table id="tabellaor">
@@ -72,10 +72,13 @@ $access->closeDBConnection();
               <?php foreach($result as $orari) 
               {?>
           <tr>
-            <td id="giorno"> <?php echo $orari['Giorno']; ?> </td>
-            <td id="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
+                  <td class="giorno"> <?php echo $orari['Giorno']; ?> </td>
+                  <td class="start"> dalle <?php $ora_normale1 = date("H-i", strtotime($orari['OrariStart']));
+                      $ora_normale2 = date("H-i", strtotime($orari['OrariEnd']));
+                      echo $ora_normale1 . " alle " . $ora_normale2; ?></td>
             <td>
-              <div class="modificaor"><a href="OrariMod.php?ID=<?php echo $orari['ID']; ?>">Modifica Orari</td></a></div>
+                <div class="modificaor"><a href="OrariMod.php?ID=<?php echo $orari['ID']; ?>">Modifica Orari</a></div>
+            </td>
           </tr><?php }
           }
         ?>
@@ -86,6 +89,6 @@ $access->closeDBConnection();
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
