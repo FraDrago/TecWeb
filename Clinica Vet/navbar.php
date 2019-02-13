@@ -28,13 +28,14 @@ if(!isset($_SESSION['ID'])){
     <span></span>
     
     <ul id="menu">
-      <li xml:lang="en" <?php if($pagina_attuale=='index.php') echo "class='active2'"; ?> ><a accesskey="H" href='index.php#'>Home</a></li>
+        <li xml:lang="en" lang="en" <?php if ($pagina_attuale == 'index.php') echo "class='active2'"; ?> ><a
+                    accesskey="H" href='index.php#'>Home</a></li>
           <li <?php if($pagina_attuale=='Servizi.php') echo "class='active2'"; ?>><a accesskey="S" href='Servizi.php#'>Servizi</a></li>
           <li <?php if($pagina_attuale=='Emergenze.php') echo "class='active2'"; ?>><a accesskey="E" href='Emergenze.php#'>Emergenze</a> </li>
           <li <?php if($pagina_attuale=='galleria.php') echo "class='active2'"; ?>><a accesskey="G" href='galleria.php#'>Galleria</a></li>
           <li <?php if($pagina_attuale=='Link.php') echo "class='active2'"; ?>><a accesskey="L" href='Link.php#'>Link Utili</a></li>
           <li <?php if($pagina_attuale=='Contattaci.php') echo "class='active2'"; ?>><a accesskey="C" href='Contattaci.php#'>Contattaci</a></li>
-          <li><a></br></a></li>
+        <li><a><br/></a></li>
 		  <?php
                 	
 					
