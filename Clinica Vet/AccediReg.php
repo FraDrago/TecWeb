@@ -77,7 +77,7 @@
                                    
         					<div class="loginAndRegistrationForm">
         						<p>Accesso effettuato con:<span class="highlight"> <?php echo $_SESSION['email']; ?></span></p>
-        						<form action="<?php echo $_SERVER ['PHP_SELF'];?>"method="post" name="logout">
+                                <form action="AccediReg.php" method="post" name="logout">
         							<p>Vuoi fare il <span xml:lang="en" lang="en">logout?</span></p>
                       <button name="logout" type="submit">Esci</button>
         						</form>
