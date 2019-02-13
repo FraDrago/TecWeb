@@ -32,13 +32,13 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+<script src="text/javascript" src="js/script.js"></script>
 	
 <br/>
 <br/>
 <div id="content">
 
-<div id="title"><h2>Link Utili </h2></div>
+<div id="title1"><h2>Link Utili </h2></div>
 <p>In questa sezione è possibile trovare alcuni link utili per i nostri amici animali</p>
 
 <div id="link1">

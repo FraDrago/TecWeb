@@ -382,7 +382,7 @@ td{
 	min-width:3em;
 }
 
-#giorno {
+.giorno {
 	background-color: #cad0db;
 }
 #content .galleria h2{
@@ -1499,12 +1499,7 @@ border-color:transparent #3B5787 transparent transparent;
 	#imghome{max-width: 300px;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     .loginAndRegistrationForm textarea{margin-left: 3px; padding: 12px 1px 12px 1px; text-align: center;}
-
-    .image4 {
-        max-width: auto;
-        max-height: auto;
-    }
-  	.col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
+	.col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
   	.list-type4 li img {display: none;}
 }
 
