@@ -2,7 +2,7 @@
 /******************/
 
 body {
-	font-size:20px ;
+	font-size:1.25em ;
 	font-family: 'Lato', sans-serif;
 	color:black;
 	margin: 0;
@@ -30,6 +30,9 @@ body {
 	margin-bottom: 1em;
 }
 
+#content p {
+	font-size: 1.15em;
+}
 /***Section***/
 
 .section {
@@ -91,7 +94,7 @@ body {
 	color: black;
 	float:left;
 	position: relative;
-	top: 0em;
+	top: 0;
 	left: 0.42em;
 	font-size: 1.5em;
 }
@@ -104,7 +107,7 @@ body {
 
 .header-meta {
 	text-align:right;
-	padding:25px 20px 20px;
+	padding:1.55em 1em 1em;
 }
 .header-meta * {
 	text-align:left;
@@ -112,33 +115,36 @@ body {
 .header-meta .col-elem {
 	display:inline-block;
 	text-align:right;
-	font-size:20px;
-	line-height:26px;
+	font-size:1em;
+	line-height:1.3em;
 	color: black;
 	font-weight: bold;
 	text-transform:uppercase;
 }
 .header-meta .phone {
 	display:inline-block;
-	font-size:22px;
-	line-height:22px;
-	color:black;
+	font-size:1.2em;
 	font-weight: bold;
-	margin:-3px 0 0 5px;
+	margin:-0.5em 0 0 0.5em;
+}
+
+/******Print******/
+/****************/
+.print{
+	display: none;
 }
 
 /******Navbar******/
 /*****************/
-
 .nav{
 	background-color: #3B5787;
-	margin-top: -46px;
-	height: 60px;
+	margin-top: -2.3em;
+	height: 3em;
 	text-align: center;
 }
 
 .nav ul{
-	width: 70%;
+	max-width: 100%;
 	padding-left: 0;
 	margin: 10px;
 	list-style: none;
@@ -155,7 +161,7 @@ body {
 	padding: 12px;
 	padding-bottom: 1em;
 	color:white;
-	font-size: 20px;
+	font-size: 1em;
 	text-decoration: none;
 	cursor:pointer;
 }
@@ -169,10 +175,8 @@ body {
 	color: #3B5787;
 	border-radius: 1em 1em 0 0; 
 }
-
 /******Menu_Mobile******/
 /**********************/
-
 #menu a
 {
   text-decoration: none;
@@ -194,27 +198,21 @@ li.active2{
   display: block;
   position: relative;
   top: -0.1em;
-  left: 50px;
-  width: 50px;
+  left: 2em;
+  width: 2em;
   z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-
   visibility: hidden;
 }
 
 #menuToggle input
 {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 3em;
+  height: 2.3em;
   position: absolute;
-  top: -7px;
-  left: -5px;
-  
+  top: -0.5em;
+  left: -0.5em;
   cursor: pointer;
-  
   opacity: 0; /* per nascondere il quadrato */
   z-index: 2; 
 
@@ -226,18 +224,14 @@ li.active2{
 #menuToggle span
 {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+  width: 1.66em;
+  height: 0.2em;
+  margin-bottom: 0.25em;
   position: relative;
-  
   background: #ececec;
   border-radius: 3px;
-  
   z-index: 1;
-  
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
@@ -274,27 +268,25 @@ li.active2{
 #menu
 {
   position: absolute;
-  width: 300px;
-  margin: -45px 0 0 -65px;
-  padding: 50px;
-  padding-top: 60px;
+  width: 15em;
+  margin: -2.35em -3em;;
+  padding: 3em;
+  padding-top: 3.5em;
   border: 1px solid white;
   border-radius: 5%;
   background: #56709c;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
 {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 0.5em 0;
+  font-size: 1.1em;
   border-bottom: 1px solid white;
 }
 
@@ -308,7 +300,7 @@ li.active2{
 /*********************/
 
 ul.breadcrumb {
-  padding: 10px 10px;
+  padding: 0.5em 0.5em;
   list-style: none;
   text-align: center;
   background-color: #3B5787;
@@ -318,7 +310,7 @@ ul.breadcrumb {
 
 ul.breadcrumb li {
   display: inline;
-  font-size: 15px;
+  font-size: 0.8em;
 }
 
 .bc_here {
@@ -329,7 +321,7 @@ ul.breadcrumb li {
 
 /*simbolo slash*/
 ul.breadcrumb li+li:before {
-  padding: 8px;
+  padding: 0.4em;
   color: white;
   content: "/\00a0";
 }
@@ -357,9 +349,6 @@ ul.breadcrumb li a:hover {
 	margin-bottom: 1em;
 }
 
-.BenvenutoHome h2{
-	font-size: 24px;
-}
 .leftHome{
 	margin-left: 0;
 	width: 57%;
@@ -388,7 +377,7 @@ table{
 }
 td{
 	border: 1px solid black;
-	padding: 6px;
+	padding: 0.3em;
 	text-align: center;
 	min-width:3em;
 }
@@ -401,7 +390,7 @@ td{
 }
 .link-style {
 	display: inline-block;
-	padding: 7px 20px;
+	padding: 0.4em 1em;
 	background: #003f79;
 	border-radius: 5px;
 	text-decoration: none;
@@ -411,9 +400,7 @@ td{
 .link-style:hover{
 	background:#555; 
 }
-#content p {
-	font-size: 20px;
-}
+
 #imghome{
 	max-width: 500px;
 	height: auto;
@@ -422,30 +409,30 @@ td{
 .oraritabella{
 	border-style: solid;
 	float: left;
-	padding: 1em 1em 1em 1em;
+	padding: 1em;
 }
 .box6{
-	width: 100px;
+	width: auto;
 	display: inline-block;
 }
 
 .image6{
-	width: 100px;
-	height: 100px;
+	width: 5em;
+	height: 5em;
 }
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 2em;
+  right: 3em;
   z-index: 99;
-  font-size: 18px;
+  font-size: 1em;
   border: none;
   outline: none;
   background-color: #003f7a;
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 0.8em;
   border-radius: 4px;
 }
 
@@ -456,14 +443,14 @@ td{
 	margin-top: 1em;
 }
 .altri a{
-	font-size: 22px;
+	font-size: 1.1em;
 }
 
 /******Contattaci******/
 /*********************/
 #contentCont{
-box-sizing: border-box;
-text-align: center;
+	box-sizing: border-box;
+	text-align: center;
 	margin-left: 2em;
 	margin-right: 2em;
 	padding:2em 2em 20em 2em;
@@ -481,52 +468,51 @@ text-align: center;
 }
 
 .Contattaci_form input[type=text], .Contattaci_form select,.Contattaci_form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  	width: 100%;
+  	padding: 12px;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	resize: vertical;
+  	font-family: 'Lato', sans-serif;
+  	font-size: 0.8em;
 }
 .Contattaci_form label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+  	padding: 0.6em;
+  	display: inline-block;
 }
 
 .Contattaci_form input[type=submit] {
-  background-color: #003f7a;
-  color: white;
-  padding: 15px 80px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  margin-top: 1em;
-  font-size: 20px;
+  	background-color: #003f7a;
+  	color: white;
+  	padding: 0.6em 3.5em;
+  	border: none;
+  	border-radius: 4px;
+  	cursor: pointer;
+  	float: right;
+  	margin-top: 1em;
+  	font-size: 1.2em;
 }
 
 .Contattaci_form input[type=submit]:hover {
-  background-color: #555;
+  	background-color: #555;
 }
 
 .col-25 {
-  float: left;
-  width: 20%;
-  margin-top: 6px;
+  	float: left;
+  	width: 20%;
+  	margin-top: 6px;
 }
 
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+  	float: left;
+  	width: 75%;
+  	margin-top: 6px;
 }
 
-/* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+  	content: "";
+  	display: table;
+  	clear: both;
 }
 
 .rightCont{
@@ -547,10 +533,10 @@ text-align: center;
 	margin-bottom: 1em;
 }
 .rightCont iframe {
-  height: 230px;
-  width: 500px;
-  resize: both;
-  overflow: auto;
+ 	height: 10.5em;
+  	width: 25em;
+  	resize: both;
+  	overflow: auto;
 }
 /******Area Personale******/
 /*************************/
@@ -561,7 +547,7 @@ text-align: center;
 	border-radius: 50%;
 	float: left;
 	position: relative;
-	margin-bottom: 12px;
+	margin-bottom: 0.7em;
 
 }
 
@@ -578,58 +564,58 @@ text-align: center;
 }
 
 .list-type4 li, .list-type4 a{
-display: inline-block;
-line-height:35px;
-position:relative;
-transition: background-color 1.5s ease;
-margin-right: 1em;
+	display: inline-block;
+	line-height:1.5em;
+	position:relative;
+	transition: background-color 1.5s ease;
+	margin-right: 1em;
 }
 
 .list-type4 a{ /*corpo freccia*/
-	font-size: 24px;
+	font-size: 1.2em;
 	padding:1em;
 	margin-bottom: 1em;
 	height: auto;
-width: 260px;
-background:#3B5787;
-color:#fff;
-text-decoration:none;
-border-bottom-right-radius:4px;
-border-top-right-radius:4px;
+	width: 10em;
+	background:#3B5787;
+	color:#fff;
+	text-decoration:none;
+	border-bottom-right-radius:4px;
+	border-top-right-radius:4px;
 }
 
 .list-type4 a:before{ /*punta freccia*/
-content:"";
-float:left;
-position:absolute;
-top:0;
-left:-12px;
-width:0;
-height:0;
-border-color:transparent #3B5787 transparent transparent;
-border-style:solid;
-border-width: 18px 12px 18px 0;
+	content:"";
+	float:left;
+	position:absolute;
+	top:0;
+	left:-0.5em;
+	width:0;
+	height:0;
+	border-color:transparent #3B5787 transparent transparent;
+	border-style:solid;
+	border-width: 18px 12px 18px 0;
 }
 
 .list-type4 a:after{ /*decorazione freccia*/
-content:"";
-position:absolute;
-top:15px;
-left:0;
-float:left;
-width:6px;
-height:6px;
-border-radius:2px;
-background:#fff;
-box-shadow:-1px -1px 2px #004977;
+	content:"";
+	position:absolute;
+	top:0.7em;
+	left:0;
+	float:left;
+	width:0.2em;
+	height:0.2em;
+	border-radius:2px;
+	background:#fff;
+	box-shadow:-1px -1px 2px #004977;
 }
 
 .list-type4 a:hover{
-background:#555;
+	background:#555;
 }
 
 .list-type4 a:hover:before{
-border-color:transparent #3B5787 transparent transparent;
+	border-color:transparent #3B5787 transparent transparent;
 }
 
 
@@ -638,14 +624,14 @@ border-color:transparent #3B5787 transparent transparent;
 
 #link1 p{
 	text-align: justify;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 }
 
 #link1 a{
 	text-decoration: underline;
-	font-size: 25px;
+	font-size: 1.2em;
 	color: #1c3a6b;
-	margin: 0.5em 0.5em 0.5em 0.5em;
+	margin: 0.5em;
 }
 
 #link1 a:visited{
@@ -683,7 +669,7 @@ border-color:transparent #3B5787 transparent transparent;
 	border-radius: 50%;
 	float: left;
 	position: relative;
-	margin-bottom: 12px;
+	margin-bottom: 1em;
 
 }
 ol{
@@ -727,9 +713,7 @@ content:"";
 float:left;
 position:absolute;
 top:0;
-left:-12px;
-width:0;
-height:0;
+left:-0.6em;
 border-color:transparent #3B5787 transparent transparent;
 border-style:solid;
 border-width: 18px 12px 18px 0;
@@ -738,11 +722,11 @@ border-width: 18px 12px 18px 0;
 .list-type3 a:after{ /*decorazione freccia*/
 content:"";
 position:absolute;
-top:15px;
+top:0.7em;
 left:0;
 float:left;
-width:6px;
-height:6px;
+width:0.26em;
+height:0.26em;
 border-radius:2px;
 background:#fff;
 box-shadow:-1px -1px 2px #004977;
@@ -783,7 +767,7 @@ border-color:transparent #3B5787 transparent transparent;
 	color: black;
 	text-align: center;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 1.2em;
 	margin-top: 0.5em;
 }
 
@@ -1244,11 +1228,11 @@ border-color:transparent #3B5787 transparent transparent;
 .modificaor {
     background-color: #3B5787;
     font-size: 1em;
-    padding: 7px
+    padding: 0.6em;
 }
 
 #contmodform .GiornoOrariMod{
-	font-size: 30px;
+	font-size: 1.6em;
 }
 
 #modformorari label{
@@ -1258,15 +1242,15 @@ border-color:transparent #3B5787 transparent transparent;
 }
 
 #modformorari select{
-	font-size: 20px;
+	font-size: 1.2em;
 }
 
 #modformorari input[type=submit] {
 	width: 100%;
 	background-color: #3B5787;
 	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
+	padding: 0.7em 2em;
+	margin: 0.4em 0;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
@@ -1291,7 +1275,7 @@ border-color:transparent #3B5787 transparent transparent;
 }
 
 .descrizione3 ul{
-	margin-top: 0em;
+	margin-top: 0;
 	text-align: left;
 	list-style-type: none;
 }
@@ -1304,34 +1288,8 @@ border-color:transparent #3B5787 transparent transparent;
 	border-radius: 4px;
 	padding: 1em;
 }
-
-.login-form {
-			width: 300px;
-			margin: 0 auto;
-		}
 		
-		.login-form input[type="password"],
-		.login-form input[type="text"] {
-			width: 100%;
-			padding: 15px;
-			border: 1px solid #dddddd;
-			margin-bottom: 15px;
-			box-sizing:border-box;
-		}
-		.login-form input[type="submit"] {
-			width: 100%;
-			padding: 15px;
-			background-color: #535b63;
-			border: 0;
-			box-sizing: border-box;
-			cursor: pointer;
-			font-weight: bold;
-			color: #ffffff;
-		}
-		
-		/************************************/
-		
-		.message {
+.message {
 	font-size: 1.5em;
     line-height: 1.2em;
     color: red;
@@ -1344,12 +1302,11 @@ border-color:transparent #3B5787 transparent transparent;
 	text-align: center;
 	border-style: outset;
 	border-radius: 10px 10px 10px 10px;
-  background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  padding: 0px;
+  	background: #fff;
+  	width: 90%;
+  	max-width: 450px;
+  	position: relative;
+  	padding: 0;
 }
 
 .loginAndRegistrationForm fieldset {
@@ -1364,34 +1321,34 @@ border-color:transparent #3B5787 transparent transparent;
 }
 
 .loginAndRegistrationForm input {
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 1px solid #cad0db;
-  border-radius: 5px 5px 5px 5px;
+  	padding: 1em 1.5em;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 0.8em;
+  	margin: 0.2em;
+  	width: 85%;
+  	border: 1px solid #cad0db;
+  	border-radius: 5px;
 }
 
 .loginAndRegistrationForm input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  	background-color: #fff;
+  	border-bottom: 2px solid #5fbae9;
 }
 
 .loginAndRegistrationForm button {
 	background-color: #003f7a;
-  color: white;
-  padding: 15px 80px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 20px;
+  	color: white;
+  	padding: 0.6em 3.5em;
+  	border: none;
+  	border-radius: 4px;
+  	cursor: pointer;
+  	font-size: 0.9em;
 }
 
 .loginAndRegistrationForm button:hover {
-  background-color: #555;
+  	background-color: #555;
 }
 
 
@@ -1442,38 +1399,37 @@ border-color:transparent #3B5787 transparent transparent;
 
 /*********Media break point***********/
 
-@media screen and (max-width: 1140px) {
-	.nav ul li a{ display: none; }
-    #menuToggle { visibility: visible; }
-
-}
 @media screen and (max-width: 1050px) {
 	.rightHome{float: none; text-align: center; display: inline-block; width: 100%}
 	.leftHome{float: none;text-align: center; display: inline-block; width: 100%} 
 	.rightCont{float: none;text-align: center; display: inline-block; width: 100%}
 	.leftCont{float: none;text-align: center; display: inline-block; width: 100%}
-	#content .galleria h2{margin-top: 0em;} 
+	#content .galleria h2{margin-top: 0;} 
 	#contentHome{padding: 2em 2em 3em 2em; }
 	#contentCont{padding: 2em 2em 3em 2em;}
 	#imghome{max-width: 400px; text-align: center;}
 	iframe {max-width: 300px }
 }
 
+@media screen and (max-width: 880px) {
+	.nav ul li a{ display: none; }
+    #menuToggle { visibility: visible;}
+}
+
 @media screen and (max-width: 850px) {
-	.list-type3 li {margin-right: 0em;}
+	.list-type3 li {margin-right: 0;}
 }
 
 @media screen and (max-width: 700px) {
-	.box{margin:-0.5em; margin-top: 1.5em; height: 20px;}	
-	#title h1{margin-top: 1em;
-    text-align: center;}
-    #logo{width: 5em; margin-top: 1.3em;}
+	.box{margin:-0.5em; margin-top: 1.5em; height: 1em;}	
+	#title h1{margin-top: 0.3em;}
+    #logo{width: 5em;}
     .list-type4 li img {width: 3em; height: 3em;}
-	.list-type4 a {font-size: 22px; padding: 0.3em;}
+	.list-type4 a {font-size: 1.1em; padding: 0.3em;}
 	.list-type3 li img{display: none;}
-	.list-type3 li, .list-type3 a{margin-right: 0em;}
+	.list-type3 li, .list-type3 a{margin-right: 0;}
 	.list-type3 li {margin-bottom: 1em;}
-	ol{margin-left: 0em;}
+	ol{margin-left: 0;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
 }
@@ -1488,7 +1444,7 @@ border-color:transparent #3B5787 transparent transparent;
 
 @media screen and (max-width: 550px) {
 	#img {display: none;}
-	#title h1{font-size: 25px; margin-top: 0.5em;}
+	#title h1{font-size: 1.2em; margin-top: 0.5em;}
 	#logo{margin-top: 0.3em;}
 	.image3{float: none;}
 	.name2{text-align: center;}
@@ -1513,33 +1469,34 @@ border-color:transparent #3B5787 transparent transparent;
 @media screen and (max-width: 465px) {
 	iframe{max-width: 240px;}
 	#imghome{max-width: 250px;}
-	.list-type4 a {width: 315px;}	}
+	.list-type4 a {width: 12em;}	}
 
 @media screen and (max-width: 441px) {
 	#logo {width: 4.5em; margin-top: 0.5em;}
-	#title h1{font-size: 20px;}
 	#page {background-color: white;}
-	#content{padding: 0em 0em 0em 0em}
-	.descrizione3 ul {padding-left: 0em;}
+	#content{padding: 0 0 0 0}
+	.descrizione3 ul {padding-left: 0;}
 	#contentHome{padding: 0;}
 	#contentCont{padding:0;}
-	.box2{margin-left: 0em;}
+	.box2{margin-left: 0;}
 }
 @media screen and (max-width: 376px) {  /*iphoneX*/
-	.nav{margin-top: -46px;}
 	#logo {width: 3em; margin-top: 0.5em;}
-	.header-meta .col-elem {font-size: 18px;}
-	.header-meta .phone {font-size: 20px;}
+	.header-meta .col-elem {font-size: 1em;}
+	.header-meta .phone {font-size: 1.1em;}
 	.box{margin-right:-1em;}
 	#image4 {width: 15em; height:10em;}
 	#imghome{max-width: 200px;}
 	.Contattaci_form input[type=submit] {padding: 15px 50px;}
 	#myBtn {display: none;}
-	#contmodform img {max-width: 10em;
+	#contmodform img {max-width: 10em;}
+	#title h1{font-size: 1.1em;}
+	.list-type4 a {width: 10em;}
+	#menu{width: 11em;}
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
-	ol {padding-left: 0em;}
+	ol {padding-left: 0;}
 	.list-type3 a {width: 201px;}
 	.box{margin-left: -1em; margin-top: 0.5em;}
 	#imghome{display: none;}

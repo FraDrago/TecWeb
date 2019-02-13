@@ -57,7 +57,7 @@ $access->closeDBConnection();
 <div id="contentHome">
 
     <div class="leftHome">
-    <h2 class="BenvenutoHome">Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
+    <h2>Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
     <img id="imghome" src="img/ambu.jpg" alt="immagine dell'ambulatorio con un cane"/>
     <p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere di <span class="highlight">Cani e Gatti</span></p>
     <p>Da noi troverai solo il meglio in:
@@ -102,10 +102,10 @@ $access->closeDBConnection();
             <h3>Prenota ora una visita accedendo al tuo <a href="AccediReg.php"> account </a></h3>
             <p> Hai dei dubbi? C'è qualcosa che vorresti chiederci?</p><a href="Contattaci.php" class="link-style">Contattaci</a>
         </div>
-        <p>Il nostro ambulatorio si trova in via delle mele 123 a Padova, puoi vedere la nostra posizione nella mappa sottostante: </p>
+        <p>Il nostro ambulatorio si trova in Via delle Mele 123 a Padova, puoi vedere la nostra posizione nella mappa sottostante: </p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.8986918354435!2d11.88528391511255!3d45.41138244498799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda58b44676df%3A0xfacae5884fca17f5!2sTorre+Archimede%2C+Via+Trieste%2C+63%2C+35121+Padova+PD!5e0!3m2!1sit!2sit!4v1549390595230"></iframe>
 	</div>
-	<div id="print"> <p>Il nostro ambulatorio si trova in via delle mele 123 a Padova </p> </div>
+	<div class="print"> <p>Il nostro ambulatorio si trova in via delle mele 123 a Padova </p> </div>
     </div>
 	
     <div class="galleria">
