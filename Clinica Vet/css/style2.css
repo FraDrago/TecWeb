@@ -1368,6 +1368,10 @@ border-color:transparent #3B5787 transparent transparent;
 /******Prenota******/
 /******************/
 
+#tabellapre{
+	display: block;
+}
+
 #prenotazioni textarea { 
    resize:vertical;
 }

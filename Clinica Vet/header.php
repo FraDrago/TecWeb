@@ -10,7 +10,7 @@
 <div class="fright"> <!--elemento di utility sulla destra-->
       <div class="header-meta">
         <div class="col-elem"> Hai un'emergenza?<br/>
-          Chiama ora: <span class="phone"><a href="tel:0434 56789"> 0434 56789</a> </span> </div>
+            Chiama ora: <span class="phone"><a href="tel:043456789"> 0434 56789</a> </span></div>
       </div>    
 </div>
 

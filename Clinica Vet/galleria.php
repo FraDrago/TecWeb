@@ -63,7 +63,8 @@ $pagina_attuale='galleria.php';
             <div class="contg">
                 <div class="contimg">
                     <a href="<?php echo $image['Path']; ?>">
-                    <img class="imageg"src="<?php echo $image['Path']; ?>" alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1");?>">
+                        <img class="imageg" src="<?php echo $image['Path']; ?>"
+                             alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>">
                     </a>  
                 </div>
                 <div class="desc"><?php echo htmlentities($image['descrizione'], ENT_HTML5, "ISO8859-1"); ?>
