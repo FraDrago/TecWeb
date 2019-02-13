@@ -119,8 +119,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 
 </div>
 </div>
-
-<div id="tabellapre">
+</div>
 
 <?php
 //$connection = mysqli_connect("localhost","root","","clinica");
@@ -129,7 +128,7 @@ $u=(string)$_SESSION['ID'];
 $q="SELECT * FROM visita WHERE Utente=".$u;
 $result=mysqli_query($access->connessione, $q) or die("Non ci sono visite da mostrare");
 if(mysqli_num_rows($result)>0)
-  {?> <table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr><?php
+  {echo "<table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr>";
     while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
       echo "<tr>";
       $id=$row['ID'];
@@ -150,18 +149,18 @@ if(mysqli_num_rows($result)>0)
           $t='accettata';
       if($a=='2')
           $t='rifiutata';
-      ?><td><?php echo $ora;?></td> <td><?php echo $prest['Nome'];?></td> <td><?php echo $g_c; ?></td> <td><?php echo $t;?><?php
+      echo "<td>".$ora."</td> "." <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$t;
     }
-    ?></table><?php
+    echo"</table>";
   }
   else//se non ci sono visite
 {
   echo "Non ci sono visite da mostrare";
 }
 $access->closeDBConnection();
-?></div>
+?>
   
-</div>
+
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
