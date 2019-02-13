@@ -44,17 +44,17 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+  <li><a href="AreaPersonale.php">Area Personale</a></li>
   <li class="bc_here">Gestione prenotazioni</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Prenota qui la tua visita:</h2></div>
+  <div id="title1"><h2>Prenota qui la tua visita:</h2></div>
 <div class="LoginBox">
   <div class="BoxLogin">
-  <div class="loginAndRegistrationForm">
+  
 <?php if(!empty($_POST))
   {
   $id=$_SESSION['ID'];
@@ -92,12 +92,12 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 ?>
 <hr/>
 
-<form class="prenotazione" name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-  <p><label for="data">Inserisci la data:</label></p>
+<form  class="prenotazione" name="prenota" method="post" action="Prenota.php">
+  <div class="loginAndRegistrationForm"><p><label for="data">Inserisci la data:</label></p>
   <input type="date" id="data" name="data">
   <p><label for="ora">Inserisci l'ora:</label></p>
   <input type="time" id="ora" name="ora">
-  <p><label for="tipo">Tipo di visita:</label></p>
+  <p><label for="prestazione">Tipo di visita:</label></p>
   <select id="prestazione" name="prestazione">
     <?php
         //$connection = mysqli_connect("localhost","root","","clinica");
@@ -112,18 +112,19 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
     ?>
   </select></div>
   
-  <p><label for="animale">Tipo di animale:</label></p>
-  <input type="radio" name="tipo" value=0 checked="checked">Gatto<input type="radio" name="tipo" value=1>Cane</br></br>
+  <p><label for="tipo">Tipo di animale:</label></p>
+  <input type="radio" id="tipo" name="tipo" value=0 checked="checked">Gatto<input type="radio" id="tipo1" name="tipo" value=1>Cane
   <div class="loginAndRegistrationForm">
-  <textarea id="prenotazioni" maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
+  <textarea id="prenotazioni" maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea>
   <p><button type="submit" name="invia">INVIA</button></p>
+</div>
 </form>
+
 
 </div>
 </div>
-</div>
 <div id="tabellaorpre">
-<hr></hr>
+<hr>
 <h3>Storico Prenotazioni:</h3>
 <?php
 //$connection = mysqli_connect("localhost","root","","clinica");
@@ -168,6 +169,6 @@ $access->closeDBConnection();
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
