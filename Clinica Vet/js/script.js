@@ -95,6 +95,7 @@ function check_telefono(t){
 		t.telefono.value="";
 }
 
+// /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/
 function validateModificaTelefono() {
 
     var telefono = document.getElementById("telefono").value;

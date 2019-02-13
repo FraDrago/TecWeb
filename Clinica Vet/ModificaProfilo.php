@@ -106,7 +106,9 @@ else { ?>
 	</form>
 	
 	<form name=telf method="post" action="handler.php" onsubmit="return validateInsertMT()">
-	<p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+	<p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required 
+	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
+		if($_GET["code"]=="telefonoErr") echo  ("<p> Telefono non valido </p>"); } ?> /></fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  >Cambia numero</button></p>
 </form>
 

@@ -34,8 +34,12 @@ session_start();
 
 }
 else if(isset($_POST['cambiatelefono'])){
-	
 	$telefono = $_POST['telefono'];
+	$filter="/^\d{9,10}+$/";
+	if(!preg_match($filter, $telefono)) {
+	header("Location: ModificaProfilo.php?code=telefonoErr");
+	exit();
+	}
 	$query = "UPDATE utente SET telefono='" .$telefono."' WHERE id='".$_SESSION['ID']."'";
     $update = mysqli_query($access->connessione , $query);
 
