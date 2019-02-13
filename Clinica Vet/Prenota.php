@@ -81,7 +81,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
     else//aggiungiamo l'entry al database
       {
           if($access->insertVisita($id, $d, $o, $p, $t, $n))
-            echo"Richiesta mandata con successo";
+            echo"Richiesta mandata con successo"; 
          else
             echo"Non &egrave stato possibile inoltrare la richiesta";
       }
@@ -90,12 +90,14 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
     echo "L'ora inserita non &egrave valida";
 }
 ?>
-<form name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-  <p><label for="data"><span xml:lang="en" lang="en">Inserisci la data:</span> </label></p>
+<hr/>
+
+<form class="prenotazione" name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  <p><label for="data">Inserisci la data:</label></p>
   <input type="date" id="data" name="data">
-  <p><label for="ora"><span xml:lang="en" lang="en">Inserisci l'ora:</span> </label></p>
+  <p><label for="ora">Inserisci l'ora:</label></p>
   <input type="time" id="ora" name="ora">
-  <p><label for="tipo"><span xml:lang="en" lang="en">Tipo di visita:</span> </label></p>
+  <p><label for="tipo">Tipo di visita:</label></p>
   <select id="prestazione" name="prestazione">
     <?php
         //$connection = mysqli_connect("localhost","root","","clinica");
@@ -109,9 +111,9 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 
     ?>
   </select></div>
-  <p><label for="ora"><span xml:lang="en" lang="en">Tipo di animale:</span> </label></p>
-  <input type="radio" name="tipo" value=0 checked="checked"><span xml:lang="en" lang="en">gatto</span>
-  <input type="radio" name="tipo" value=1>cane</br></br>
+  
+  <p><label for="animale">Tipo di animale:</label></p>
+  <input type="radio" name="tipo" value=0 checked="checked">Gatto<input type="radio" name="tipo" value=1>Cane</br></br>
   <div class="loginAndRegistrationForm">
   <textarea id="prenotazioni" maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea></br>
   <p><button type="submit" name="invia">INVIA</button></p>
@@ -119,9 +121,10 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 
 </div>
 </div>
-
-<div id="tabellapre">
-
+</div>
+<div id="tabellaorpre">
+<hr></hr>
+<h3>Storico Prenotazioni:</h3>
 <?php
 //$connection = mysqli_connect("localhost","root","","clinica");
 //if(!$connection) die("Errore nella connessione.");
@@ -159,7 +162,7 @@ if(mysqli_num_rows($result)>0)
   echo "Non ci sono visite da mostrare";
 }
 $access->closeDBConnection();
-?></div>
+?>
   
 </div>
 </div> <!--chiusura tag page-->

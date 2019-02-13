@@ -1169,7 +1169,7 @@ border-color:transparent #3B5787 transparent transparent;
 /*******Error*******/
 /******************/
 #errorcode {
-    font-size: 3em;
+    font-size: 1.5em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1178,8 +1178,8 @@ border-color:transparent #3B5787 transparent transparent;
     font-size: 1em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4em;
-    margin-bottom: 4em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 #errorlink {
@@ -1201,6 +1201,9 @@ border-color:transparent #3B5787 transparent transparent;
     cursor: pointer;
     transition: .4s;
     text-decoration: none;
+}
+#tornahome:hover{
+	 background:#555;
 }
 
 /******Gestione Orari******/
@@ -1372,9 +1375,57 @@ border-color:transparent #3B5787 transparent transparent;
 	display: block;
 }
 
-#prenotazioni textarea { 
-   resize:vertical;
+.prenotazione input{
+	font-size: 1em;
+	text-align: center;
+	width: 40%;
 }
+
+.prenotazione #prestazione{
+	font-size: 1em;
+}
+
+.loginAndRegistrationForm textarea{
+	width: 70%;
+  	padding: 12px;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	resize: vertical;
+  	font-family: 'Lato', sans-serif;
+  	font-size: 0.8em;
+  	text-align: center;
+}
+
+#tabellaorpre {
+    border: none;
+}
+
+#tabellaorpre thead {
+    background-color: #3B5787;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+}
+
+#tabellaorpre th td {
+    border-bottom: 1px solid;
+}
+
+#tabellaorpre2 {
+    border: none;
+}
+
+#tabellaorpre2 thead {
+    background-color: #3B5787;
+    color: white;
+    font-size: 1em;
+    padding: 1em;
+}
+
+#tabellaorpre2 th td {
+    border-bottom: 1px solid;
+}
+
 
 /******Footer******/
 /*****************/
@@ -1422,6 +1473,11 @@ border-color:transparent #3B5787 transparent transparent;
 
 @media screen and (max-width: 850px) {
 	.list-type3 li {margin-right: 0;}
+	#tabellaorpre2 thead {border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute;width: 1px;}
+	#tabellaorpre2 tr {display: block; border: 2px solid black;}
+	#tabellaorpre2 td {border-bottom: 1px solid black; display: block; text-align: right; border-top: 1px solid black; border-left: none; border-right: none; border-top: none;}
+    #tabellaorpre2 td::before {content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; background-color: #6585a2; color: white; padding: 0.2em; border-radius: 4px;}
+    #tabellaorpre2 td:last-child {border-bottom: 0;}
 }
 
 @media screen and (max-width: 700px) {
@@ -1436,11 +1492,13 @@ border-color:transparent #3B5787 transparent transparent;
 	ol{margin-left: 0;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
     .col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
+    .loginAndRegistrationForm textarea{margin-left: -12px; padding: 12px 1px 12px 1px;}
 }
 
 @media screen and (max-width: 600px) {
 	#imghome{max-width: 300px;}
 	.Contattaci_form input[type=text], select, textarea { margin-left: -12px; padding: 12px 1px 12px 1px; text-align: center;}
+    .loginAndRegistrationForm textarea{margin-left: 3px; padding: 12px 1px 12px 1px; text-align: center;}
     #image4 { max-width: auto; max-height: auto;}
   	.col-25, .col-75,.Contattaci_form input[type=submit] { width: 100%; margin-top: 0; float: none; margin-top: 0.5em;}
   	.list-type4 li img {display: none;}
@@ -1468,12 +1526,17 @@ border-color:transparent #3B5787 transparent transparent;
 	#tabellaor td {border-bottom: 1px solid black; display: block; text-align: right; border-top: 1px solid black; border-left: none; border-right: none; border-top: none;}
     #tabellaor td::before {content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; background-color: #6585a2; color: white; padding: 0.2em; border-radius: 4px;}
     #tabellaor td:last-child {border-bottom: 0;}
+    #tabellaorpre thead {border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute;width: 1px;}
+	#tabellaorpre tr {display: block; border: 2px solid black;}
+	#tabellaorpre td {border-bottom: 1px solid black; display: block; text-align: right; border-top: 1px solid black; border-left: none; border-right: none; border-top: none;}
+    #tabellaorpre td::before {content: attr(data-label); float: left; font-weight: bold; text-transform: uppercase; background-color: #6585a2; color: white; padding: 0.2em; border-radius: 4px;}
+    #tabellaorpre td:last-child {border-bottom: 0;}
 }
 
 @media screen and (max-width: 465px) {
 	iframe{max-width: 240px;}
 	#imghome{max-width: 250px;}
-	.list-type4 a {width: 12em;}	}
+	.list-type4 a {width: 15em;}	}
 
 @media screen and (max-width: 441px) {
 	#logo {width: 4.5em; margin-top: 0.5em;}
@@ -1494,9 +1557,9 @@ border-color:transparent #3B5787 transparent transparent;
 	.Contattaci_form input[type=submit] {padding: 15px 50px;}
 	#myBtn {display: none;}
 	#contmodform img {max-width: 10em;}
-	#title h1{font-size: 1.1em;}
 	.list-type4 a {width: 10em;}
 	#menu{width: 11em;}
+	#title h1{font-size: 1em;}
 }
 
 @media screen and (max-width: 320px) {  /*iphone5/SE*/
@@ -1505,10 +1568,10 @@ border-color:transparent #3B5787 transparent transparent;
 	.box{margin-left: -1em; margin-top: 0.5em;}
 	#imghome{display: none;}
 	iframe{max-width: 150px;}
-	.list-type4 a {width: 215px;}
 	h1{font-size: 24px;}
 	#menu {width: 220px;}
 	#image4 {width: 14em; height:11em;}
+	#tabellaorpre table{margin-left: -1.2em}
 
 }
 
