@@ -45,13 +45,13 @@ $pagina_attuale='galleria.php';
     
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 <br/>
 <br/>
 <div id="content">
 
-<div id="title"><h2>Galleria</h2></div>
+    <div id="title1"><h2>Galleria</h2></div>
     <p>Qui troviamo le foto pi&ugrave; belle dei nostri pazienti a quattro zampe! </p>
 
 <div id="gallery">
@@ -84,6 +84,6 @@ $pagina_attuale='galleria.php';
 </div>
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
