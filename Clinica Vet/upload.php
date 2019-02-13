@@ -65,7 +65,7 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
 else{
 	
 	$result = false;
-	$message = "Completa il form in modo corretto! Alcuni campi sono vuoti";
+    $message = "Controlla che nessun campo sia vuoto e che la foto caricata non sia &ugrave; grande di 2MB";
 }	
 
 
