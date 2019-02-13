@@ -69,15 +69,20 @@ if(!empty($_POST))
 <div id="content">
   <div id="title"><h2>Gestione prenotazioni</h2></div>
 
+
+
 <?php
 //$connection = mysqli_connect("localhost","root","","clinica");
 //if(!$connection) die("Errore nella connessione.");
 
 $q="SELECT * FROM visita WHERE DataOra>NOW()";
+
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
 if(mysqli_num_rows($result)>0){ ?>
-<table id="tableGestione">
+<table id="tabellaorpre2">
+  <thead>
   <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>
+</thead>
 <?php
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   echo "<tr>";
@@ -109,7 +114,7 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
     </form><?php
   }
   else{
-    ?><td><?php echo $ora;?></td> <td><?php echo $utente['Email'];?></td> <td><?php echo $prest['Nome'];?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n;?></td> <td><?php echo $t;?><?php
+    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$n."</td> <td>".$t."</td>";
   }
 
   
