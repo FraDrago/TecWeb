@@ -60,14 +60,14 @@ if(!empty($_POST))
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
+  <li><a href="AreaPersonaleVet.php">Area Personale Admin</a></li>
   <li class="bc_here">Gestione prenotazioni</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Gestione prenotazioni</h2></div>
+  <div id="title1"><h2>Gestione prenotazioni</h2></div>
 
 
 
