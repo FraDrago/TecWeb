@@ -87,5 +87,5 @@ if(!isset($_SESSION['ID'])){
 </ul>
 </div>
 
-  <div>
+  <div >
         <img id="img" src='img/banner.jpg' alt="Immagine banner del sito che rappresenta un cane ed un gatto" /></div>

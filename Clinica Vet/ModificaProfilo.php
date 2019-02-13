@@ -8,14 +8,14 @@
       <meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
       <meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/style2.css" media="handheld, screen">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
 <body>
-
+<!-- <div class="noprint"> -->
 <?php include_once"header.php"?>
 
 <!--menu di navigazione-->
@@ -83,23 +83,23 @@ else { ?>
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
 
 
-<h3>Modifica Dati</h3>
+<h3 class="noprint" >Modifica Dati</h3>
   <script src="js/script.js"></script>
 	
-	<form method="post" action="handler.php" onsubmit="return validateInsertME()">
+	<form class="noprint" method="post" action="handler.php" onsubmit="return validateInsertME()">
 	<div id="errorAdd"></div>
 	
-	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required
+	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required>
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
-		if($_GET["code"]=="emailErr") echo  ("<p> Email non valida </p>"); } ?>  /> </fieldset>
+		if($_GET["code"]=="emailErr") echo  ("<p> Email non valida </p>"); } ?>   </input> </fieldset>
 	<p><button type="submit" name="cambiaemail" id="cambiaemail" onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
 	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
 	</form>
 	
-	<form name=telf method="post" action="handler.php" onsubmit="return validateInsertMT()">
-	<p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required 
+	<form class="noprint" name=telf method="post" action="handler.php" onsubmit="return validateInsertMT()">
+	<p><label for="telefono">Telefono: </label></p> <fieldset> <input id="telefono" type="text" name="telefono" placeholder="Telefono" required >
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
-		if($_GET["code"]=="telefonoErr") echo  ("<p> Telefono non valido </p>"); } ?> /></fieldset>
+		if($_GET["code"]=="telefonoErr") echo  ("<p> Telefono non valido </p>"); } ?> </input> </fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  >Cambia numero</button></p>
 </form>
 

@@ -7,10 +7,11 @@ body {
   padding-top: 0px;
   margin-bottom: 0em;
   padding-bottom: 0em;
+  text-align: left;
 }
 /*display: none;*/
 
-.noprint{
+.noprint, .canc{
   display: none;
 }
 
@@ -43,7 +44,7 @@ body {
 .BenvenutoHome,
 .contentHome,
 .container{
-	text-align: left;
+  text-align: left;
   margin-top: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
@@ -53,8 +54,38 @@ body {
   width: 100%;
 }
 
-.phone {
-	color:none;
+
+
+
+.phone, col-elem {
+	color:black;
+}
+.nav, .breadcrumb{
+	display:none;
+}
+
+#menuToggle, #img, #footer{
+	display: none;
+}
+
+.LoginBox{
+	background-color: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+#title1{
+	text-align: left;
+}
+.BoxLogin{
+	display: justify;
+	text-align: left;
+	border-style: none;
+	border-radius: 0;
+  	background: none;
+  	width: 100%;
+  	position: unset;
+  	padding: 0;
 }
 
 
