@@ -34,7 +34,7 @@
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Benvenuto nell'area personale!</h2></div>
+  <div id="title1"><h2>Benvenuto nell'area personale!</h2></div>
 
   <p>Qui potrai controllare la situazione sanitaria del tuo animale o prenotare una visita presso il nostro ambulatorio</p>
 
@@ -44,11 +44,10 @@
 <li><img src="img/prenota.jpg" alt="icona calendario"><a href="Prenota.php">Prenota una visita</a></li>
 <li><img src="img/profiloico.jpg" alt="icona profilo personale" ><a href="ModificaProfilo.php">Modifica il profilo</a></li>
 <li><img src="img/logout.jpg" alt="icona di logout" ><a href="AccediReg.php"><span xml:lang="en" lang="en">Logout</span></a></li>
-</li>
 </ol>
 </div>
 
-
+</div>
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
