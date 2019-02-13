@@ -26,7 +26,83 @@ function checkEmail() {
     }
 
 	
+function validateInsertRegistrati() {
+
+    result = true;
+    mess1 = validateRegistrati()
+
+    mess = ""
+
+    if (mess1 != "") {
+
+        mess += mess1 + "<br/>"
+    }
+
+
+
+    var element = errorAdd(mess)
+
+    return result;
+}	
+
+function validateRegistrati() {
+	var name = document.getElementById("name").value;
+	var espressione = /^[a-z]+$/i;
+	var surname = document.getElementById("surname").value;
+	var telefono = document.getElementById("telefono").value;
+	var filtro=/^\d+$/;
+	var email = document.getElementById("email").value;
+	var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var password = document.getElementById("password").value;
+	var cpassword = document.getElementById("cpassword").value;
 	
+    message = "" ;
+
+	if ( password == "" || password == undefined || password == null){
+		message += "Il campo password è obbligatorio.<br/>";
+        document.getElementById("password").focus();
+	}
+	if (cpassword == "" || cpassword == undefined || cpassword == null) {
+        message += "Il campo di controllo è obbligatorio. <br/>";
+        document.getElementById("cpassword").focus();
+	}
+	if (name && !espressione.test(name)) {
+        message += "Immettere una nome valida.<br/>";
+        document.getElementById("name").focus();
+    }
+    if (name == "" || name == undefined || name == null) {
+        message += "Il campo nome è obbligatorio.<br/>";
+        document.getElementById("name").focus();
+	}
+	if (surname && !espressione.test(surname)) {
+        message += "Immettere una cognome valida.<br/>";
+        document.getElementById("surname").focus();
+    }
+    if (surname == "" || surname == undefined || surname == null) {
+        message += "Il campo cogmone è obbligatorio.<br/>";
+        document.getElementById("surname").focus();
+	}
+	
+    if (email && !filter.test(email)) {
+        message += "Immettere una email valida.<br/>";
+        document.getElementById("email").focus();
+    }
+    if (email == "" || email == undefined || email == null) {
+        message += "Il campo Email è obbligatorio.<br/>";
+        document.getElementById("email").focus();
+	}
+	if(telefono && (!filtro.test(telefono) || (telefono.length>10 || telefono.length<9))) {
+        message += "Immettere un numero di telefono valido.<br/>";
+        document.getElementById("telefono").focus();
+    }
+	if (telefono == "" || telefono == undefined || telefono == null) {
+        message += "Il campo telefono è obbligatorio.<br/>";
+        document.getElementById("telefono").focus();
+
+    }
+
+    return message;
+}
 	
 function validateInsertME() {
 
@@ -88,12 +164,6 @@ function validateInsertMT() {
     return result;
 }
 
-function check_telefono(t){
-	var x=t.telefono.value;
-	var filter=/^\d+$/;
-	if(!filter.test(x) || (x.length>10 || x.length<9))
-		t.telefono.value="";
-}
 
 // /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/
 function validateModificaTelefono() {
