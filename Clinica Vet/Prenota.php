@@ -115,7 +115,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   <p><label for="tipo">Tipo di animale:</label></p>
 
 
-  <select name="tipo"><option id="tipo" value="0">Gatto</option><option id="tipo1" value="1">Cane</option></select>
+  <select id="tipo" name="tipo"><option value="0">Gatto</option><option value="1">Cane</option></select>
   <div class="loginAndRegistrationForm">
   <textarea id="prenotazioni" maxlength="400" rows="5" cols="50" name="note" placeholder="Inserisci qui eventuali note aggiuntive"></textarea>
   <p><button type="submit" name="invia">INVIA</button></p>
