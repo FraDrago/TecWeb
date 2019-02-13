@@ -27,14 +27,14 @@
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-    <li><a href="AreaPersonale.php">Area Personale</span></a></li>
+    <li><a href="AreaPersonale.php">Area Personale </a></li>
   <li class="bc_here">Modifica Profilo</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Modifica profilo</h2></div>
+  <div id="title1"><h2>Modifica profilo</h2></div>
   <!-- cambio nome, cambio telefono, cambio mail, etc,-->
  
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
@@ -79,15 +79,12 @@ if(isset($_SESSION['ID'])){	?>
 }
 else { ?>
 	<h3>Non sei connesso</h3>
-
+<?php  }?>
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////-->
 
 
-
-
-<hr></hr>
 <h3>Modifica Dati</h3>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script src="js/script.js"></script>
 	
 	<form method="post" action="handler.php" onsubmit="return validateInsertME()">
 	<div id="errorAdd"></div>
@@ -95,7 +92,7 @@ else { ?>
 	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
 		if($_GET["code"]=="emailErr") echo  ("<p> Email non valida </p>"); } ?>  /> </fieldset>
-	<p><button type="submit" name="cambiaemail" id="cambiaemail" required onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
+	<p><button type="submit" name="cambiaemail" id="cambiaemail" onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
 	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
 	</form>
 	
@@ -118,6 +115,6 @@ else { ?>
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
