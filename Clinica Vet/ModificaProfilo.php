@@ -8,7 +8,7 @@
       <meta name="keywords" content="ambulatorio, veterinario, Archimedeo, Torre, animali, cani, gatti, pets, dogs, cats, vet" />
       <meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style2.css" media="handheld, screen">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
@@ -102,12 +102,8 @@ else { ?>
 		if($_GET["code"]=="telefonoErr") echo  ("<p> Telefono non valido </p>"); } ?> </input> </fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  >Cambia numero</button></p>
 </form>
-
 </div>
 </div>
-
-
-
 </div>
 </div>  
 	
