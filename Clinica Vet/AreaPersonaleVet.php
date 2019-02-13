@@ -56,7 +56,7 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Benvenuto nell'area personale riservata!</h2></div>
+  <div id="title1"><h2>Benvenuto nell'area personale riservata!</h2></div>
 
 
 <div class="list-type4">
