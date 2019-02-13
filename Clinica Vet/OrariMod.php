@@ -66,23 +66,23 @@ $access->closeDBConnection();?>
 <ul class="breadcrumb">
   <li>Ti trovi in: </li>
   <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-  <li><a href="AreaPersonaleVet.php">Area Personale Admin</span></a></li>
-  <li><a href="orariGestione.php">Gestione Orario</span></a></li>
+    <li><a href="AreaPersonaleVet.php">Area Personale Admin</a></li>
+    <li><a href="orariGestione.php">Gestione Orario</a></li>
   <li class="bc_here">Modifica</li>
 </ul>
   
 <br/>
 <br/>
 <div id="content">
-  <div id="title"><h2>Gestione orario ambulatorio</h2></div>
+    <div id="title1"><h2>Gestione orario ambulatorio</h2></div>
 
             <div id="contmodform">
             <h3 class="GiornoOrariMod"><?php echo($result['Giorno']); ?></h3>
             
 
             <form id="modformorari" action="mod2.php" method="post" >
-                <label for="date">Orario di inizio:</label>
-                <select type="text" name="start" placeholder="date">
+                <label for="dates">Orario di inizio:</label>
+                <select id="dates" name="start">
                        <option><?php echo ($result['OrariStart']); ?></option>
                         <option>08:00</option>
                         <option>08:30</option>
@@ -102,9 +102,9 @@ $access->closeDBConnection();?>
                         <option>15:30</option>
                         <option>16:00</option>
                       </select><br/>
-                <hr></hr>
-                <label for="date">Orario di fine:</label>
-                <select type="text" name="end" placeholder="date">
+                <hr/>
+                <label for="datee">Orario di fine:</label>
+                <select id="datee" name="end">
                        <option><?php echo ($result['OrariEnd']); ?></option>
                         <option>11:00</option>
                         <option>11:30</option>
@@ -137,6 +137,6 @@ $access->closeDBConnection();?>
 </div> <!--chiusura tag page-->
 
 <?php include_once"footer.php"?>
-
+</div>
 </body>
 </html>
