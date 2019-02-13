@@ -95,18 +95,19 @@ else { ?>
 <h3>Modifica Dati</h3>
   <script type="text/javascript" src="js/script.js"></script>
 	
-	<form method="post" action="handler.php">
+	<form method="post" action="handler.php" onsubmit="return validateInsertME()">
+	<div id="errorAdd"></div>
 	
-	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='Email' type="text" name="email" placeholder= "Email"  required
+	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
 		if($_GET["code"]=="emailErr") echo  ("<p> Email non valida </p>"); } ?>  /> </fieldset>
 	<p><button type="submit" name="cambiaemail" id="cambiaemail" required onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
 	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
 	</form>
 	
-	<form name=telf method="post" action="handler.php">
+	<form name=telf method="post" action="handler.php" onsubmit="return validateInsertMT()">
 	<p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
-	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  required onclick='check_telefono(telf);' >Cambia numero</button></p>
+	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  >Cambia numero</button></p>
 </form>
 
 </div>
