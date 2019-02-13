@@ -34,7 +34,7 @@ require_once('DB_Access.php'); ?>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+<script src="text/javascript" src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
@@ -49,7 +49,7 @@ require_once('DB_Access.php'); ?>
 <label for="name">Nome:</label>
 </div>
     <div class="col-75">
-    <input name="name" type="text" placeholder="Inserisci qui Nome e Cognome">
+    <input id="name" name="name" type="text" placeholder="Inserisci qui Nome e Cognome">
      </div>
   </div>
   <div class="row">
@@ -57,7 +57,7 @@ require_once('DB_Access.php'); ?>
 <label for="email"><span xml:lang="en" lang="en">E-mail</span>:</label>
 </div>
     <div class="col-75">
-      <input name="email" type="text" placeholder="Inserisci qui la tua mail">
+      <input id="email" name="email" type="text" placeholder="Inserisci qui la tua mail">
       </div>
   </div>
   <div class="row">
@@ -65,7 +65,7 @@ require_once('DB_Access.php'); ?>
 <label for="message">Messaggio:</label>  
 </div>
     <div class="col-75">    
-      <textarea name="message" placeholder="Cosa vuoi chiederci?"></textarea>
+      <textarea id="message" name="message" placeholder="Cosa vuoi chiederci?"></textarea>
 </div>
   </div>
   <div class="row">
@@ -74,14 +74,15 @@ require_once('DB_Access.php'); ?>
   </form>
 <p></p>
         Non riesci a contattarci? Puoi utilizzare il tuo 
-        <a href="mailto:clinicatorre@gmail.com?subject=mettere soggetto, forse prenotazione?"><span xml:lang="en" lang="en">client</span> di posta</a>
+        <a href="mailto:clinicatorre@gmail.com"><span xml:lang="en" lang="en">client</span> di posta</a>
       <p>
         Se preferisci, puoi contattarci al seguente numero di telefono: <a href="tel:+39043456789">0434 56789</a>.
       </p>
 
 
 <div class="leftCont">
-<h3 div id="orari_title">Orari Ambulatorio</h3>
+<div id="orari_title">
+<h3>Orari Ambulatorio</h3></div>
 <table>
     <?php
     $access = new DBAccess();
@@ -98,8 +99,8 @@ require_once('DB_Access.php'); ?>
               <?php foreach($result as $orari) 
               {?>
         <tr> 
-            <td id="giorno"> <?php echo $orari['Giorno']; ?> </td>
-            <td id="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
+            <td class="giorno"> <?php echo $orari['Giorno']; ?> </td>
+            <td class="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
         </tr> <?php }
           }
         ?>
