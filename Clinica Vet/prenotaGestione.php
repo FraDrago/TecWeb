@@ -109,7 +109,7 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
     </form><?php
   }
   else{
-    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$n."</td> <td>".$t."</td>";
+    ?><td><?php echo $ora;?></td> <td><?php echo $utente['Email'];?></td> <td><?php echo $prest['Nome'];?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n;?></td> <td><?php echo $t;?><?php
   }
 
   
