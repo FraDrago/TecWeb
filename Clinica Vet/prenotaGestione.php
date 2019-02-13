@@ -73,7 +73,7 @@ if(!empty($_POST))
 //$connection = mysqli_connect("localhost","root","","clinica");
 //if(!$connection) die("Errore nella connessione.");
 
-$q="SELECT * FROM visita";
+$q="SELECT * FROM visita WHERE DataOra>NOW()";
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
 if(mysqli_num_rows($result)>0){ ?>
 <table id="tableGestione">

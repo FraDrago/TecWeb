@@ -126,7 +126,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 //$connection = mysqli_connect("localhost","root","","clinica");
 //if(!$connection) die("Errore nella connessione.");
 $u=(string)$_SESSION['ID'];
-$q="SELECT * FROM visita WHERE Utente=".$u;
+$q="SELECT * FROM visita WHERE DataOra>NOW() AND Utente=".$u;
 $result=mysqli_query($access->connessione, $q) or die("Non ci sono visite da mostrare");
 if(mysqli_num_rows($result)>0)
   {?> <table> <tr> <th>Data e Ora</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Stato</th> </tr><?php
