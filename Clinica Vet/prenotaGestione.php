@@ -75,8 +75,10 @@ if(!empty($_POST))
 
 $q="SELECT * FROM visita";
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
-if(mysqli_num_rows($result)>0){
-echo "<table> <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>";
+if(mysqli_num_rows($result)>0){ ?>
+<table id="tableGestione">
+  <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>
+<?php
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   echo "<tr>";
   $id=$row['ID'];
@@ -102,16 +104,17 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
 
   if($a=='0')//in attesa
   {
-    echo"<form name=form method=post action=prenotaGestione.php>";
-    echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td> ".$n."</td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=".$id."</td>";
-    echo "</form>";
+    ?><form name=form method=post action=prenotaGestione.php>
+    <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=".$id."</td>
+    </form><?php
   }
-  else
+  else{
     echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$n."</td> <td>".$t."</td>";
+  }
 
   
-  }
-echo "</table>";
+  }?>
+</table><?php
 }
 else//se non ci sono visite
 {
