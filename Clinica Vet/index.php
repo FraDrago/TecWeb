@@ -10,7 +10,7 @@
   		<meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style2.css" media="handheld, screen">
+        <link rel="stylesheet" type="text/css" href="css/style2.css">
         <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
@@ -47,7 +47,7 @@ $access->closeDBConnection();
 </div>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+<script src="text/javascript" src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
@@ -66,12 +66,13 @@ $access->closeDBConnection();
         <h3><span class="highlight">Un pronto soccorso aperto 24 ore su 24 </span></h3>
     </p>
     <p> Hai un'emergenza e vuoi chiamarci subito?</p>
-    <p> Chiama il numero <span class="phone"><a href="tel:0434 56789"> 0434 56789</a></span></p>
+    <p> Chiama il numero <span class="phone"><a href="tel:043456789">0434 56789</a></span></p>
     </div>
 
     <div class="rightHome">
 
-      <h3 div id="orari_title">Orari Ambulatorio</h3>
+      <div id="orari_title">
+        <h3>Orari Ambulatorio</h3></div>
       <p>Il nostro ambulatorio è aperto tutti i giorni nei seguenti orari: </p>
     
     <table>
@@ -90,8 +91,8 @@ $access->closeDBConnection();
               <?php foreach($result as $orari) 
               {?>
         <tr> 
-            <td id="giorno"> <?php echo $orari['Giorno']; ?> </td>
-            <td id="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
+            <td class="giorno"> <?php echo $orari['Giorno']; ?> </td>
+            <td class="start"> dalle <?php $ora_normale1=date("H-i", strtotime($orari['OrariStart']));$ora_normale2=date("H-i", strtotime($orari['OrariEnd']));echo $ora_normale1." alle ".$ora_normale2; ?></td>
         </tr> <?php }
           }
         ?>
