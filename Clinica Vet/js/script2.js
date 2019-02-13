@@ -88,7 +88,6 @@ function validateInsertForm() {
         result = false;
 
         if (element) {
-            document.getElementById('errorAdd').style.fontSize = '0.5em';
             element.innerHTML = mess;
             document.getElementById('errorAdd').style.display = 'block';
         }

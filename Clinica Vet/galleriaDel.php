@@ -36,7 +36,7 @@ if (isset($_GET) && isset($_GET["id"]) && !empty($_GET["id"])) {
 
             header("Location: galleriaGestione.php");
         } else {
-            $_SESSION['error'] = "Qualcosa &egrave; anato storto";
+            $_SESSION['error'] = "Qualcosa &egrave; andato storto";
             $_SESSION['error_code'] = "500";
             header("Location: error.php");
         }
@@ -45,7 +45,7 @@ if (isset($_GET) && isset($_GET["id"]) && !empty($_GET["id"])) {
 
 } else {
 
-    $_SESSION['error'] = "Qualcosa &egrave; anato storto";
+    $_SESSION['error'] = "Qualcosa &egrave; andato storto";
     $_SESSION['error_code'] = "500";
     header("Location: error.php");
 }

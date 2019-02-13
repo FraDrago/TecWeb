@@ -67,14 +67,14 @@ unset($_POST);
         <form id="addform" action="upload.php" method="post" enctype="multipart/form-data"
               onsubmit="return validateInsertForm()">
             <div id="errorAdd"></div>
-            <label for="fileToUpload">Foto:</label>
+            <label for="fileToUpload">Foto:*</label>
             <input type="file" name="fileToUpload" id="fileToUpload" value=""/><br/>
-            
-            <label for="alt">Alt:</label>
-            <input type="text" id="alt" name="alt" placeholder="Alt" value=""/><br/>
-            
-            <label for="desc">Descrizione:</label>
-            <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione:" value=""
+
+            <label for="alt"><abbr>Alt</abbr>.:*</label>
+            <input type="text" id="alt" name="alt" placeholder="Testo alternativo" value=""/><br/>
+
+            <label for="desc">Descrizione:*</label>
+            <input type="text" id="descrizione" name="descrizione" placeholder="Descrizione" value=""
                    maxlength="45"/><br/>
             
             <input type="submit" name="submit" value="Aggiungi" />
