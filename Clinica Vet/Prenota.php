@@ -64,16 +64,30 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
   $t=$_POST['tipo'];
   $n=$_POST['note'];
 
-  $actual_date= date('Y').'-'.date('m').'-'.date('d');
-  if($d<$actual_date)
-    echo("Non &egrave stata inserita una data valida");
-  else//aggiungiamo l'entry al database
-    {
-        if($access->insertVisita($id, $d, $o, $p, $t, $n))
-          echo"Richiesta mandata con successo";
-        else
-          echo"Non &egrave stato possibile inoltrare la richiesta";
-    }
+  //*****controllo data inserita*****
+  $a=(integer)substr($d,0,4);
+  $m=(integer)substr($d,5,2);
+  $g=(integer)substr($d,8);
+
+  $ora=(integer)substr($o,0,2);
+  $minuti=(integer)substr($o,3,2);
+
+  
+  if(($ora>=0 && $ora<24) && ($minuti>=0 && $minuti<60))
+  {
+    $actual_date= date('Y').'-'.date('m').'-'.date('d');
+    if(!(checkdate($m, $g, $a)) || $d<$actual_date )
+      echo("Non &egrave stata inserita una data valida");
+    else//aggiungiamo l'entry al database
+      {
+          if($access->insertVisita($id, $d, $o, $p, $t, $n))
+            echo"Richiesta mandata con successo";
+         else
+            echo"Non &egrave stato possibile inoltrare la richiesta";
+      }
+  }
+  else
+    echo "L'ora inserita non &egrave valida";
 }
 ?>
 <form name="prenota" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
