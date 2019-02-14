@@ -94,9 +94,9 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 
 <form  class="prenotazione" name="prenota" method="post" action="Prenota.php">
   <div class="loginAndRegistrationForm"><p><label for="data">Inserisci la data:</label></p>
-  <input type="date" id="data" name="data">
+      <input id="data" name="data">
   <p><label for="ora">Inserisci l'ora:</label></p>
-  <input type="time" id="ora" name="ora">
+      <input id="ora" name="ora">
   <p><label for="prestazione">Tipo di visita:</label></p>
   <select id="prestazione" name="prestazione">
     <?php

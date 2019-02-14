@@ -52,15 +52,15 @@ $pagina_attuale = 'error.php';
     <ul class="breadcrumb">
         <li>Ti trovi in:</li>
         <li><a href="index.php"><span xml:lang="en" lang="en">Home</span></a></li>
-        <li><a href="AreaPersonale.php">Area Personale</span></a></li>
-        <li><a href="galleriaGestione.php">Gestione Galleria</span></a></li>
+        <li><a href="AreaPersonale.php">Area Personale</a></li>
+        <li><a href="galleriaGestione.php">Gestione Galleria</a></li>
         <li class="bc_here">Modifica</li>
     </ul>
 
     <br/>
     <br/>
     <div class="noprint" id="content">
-        <div id="title"><h2>Errore</h2></div>
+        <div id="title1"><h2>Errore</h2></div>
 
         <h3 id="errorcode"><?php echo $error_code; ?></h3>
         <p id="errormsg"><?php echo $error; ?></p>
