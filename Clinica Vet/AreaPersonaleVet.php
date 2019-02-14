@@ -22,7 +22,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 }
 $access->closeDBConnection();
 $pagina_attuale = 'AreaPersonaleVet.php'; ?>
-<!DOCTYPE  html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 
     <head>
@@ -65,7 +65,7 @@ $pagina_attuale = 'AreaPersonaleVet.php'; ?>
 <li><img class="noprint" src="img/clock.jpg" alt="icona con orologio di orari" ><a href="orariGestione.php">Gestione orari</a></li>
 <li><img class="noprint" src="img/calendario.png" alt="icona di Gestione Prenotazioni " ><a href="prenotaGestione.php">Gestione prenotazioni</a></li>
 <li><img class="noprint" src="img/logout.jpg" alt="icona di logout" ><a href="AccediReg.php"><span xml:lang="en" lang="en">Logout</span></a></li>
-</li>
+
 </ol>
 </div>
 

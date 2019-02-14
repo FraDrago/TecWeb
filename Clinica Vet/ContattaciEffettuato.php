@@ -34,7 +34,7 @@ require_once('DB_Access.php'); ?>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script src="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
@@ -43,7 +43,7 @@ require_once('DB_Access.php'); ?>
 <!-- contenuto -->
 <div id="contentCont">
   <h2>La <span xml:lang="en" lang="en">mail</span> è stata spedita correttamente!</h2>
-  <hr></hr>
+    <hr/>
   <form class="Contattaci_form" method="POST" action="HandlerEmail.php">
 <h2 class="Contattaci">Contattaci</h2>
  <div class="row">

@@ -31,9 +31,9 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
         $message = "Ci scusiamo ma la tua immagine e&grave; troppo grande.";
 		$result = false;
 	}
-//die(var_dump("ll",  $message));
 
-	if ($result == true) {
+
+    if ($result == true) {
 		
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 
