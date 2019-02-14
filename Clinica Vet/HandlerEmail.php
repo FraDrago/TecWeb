@@ -67,7 +67,7 @@ require_once('DB_Access.php'); ?>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script src="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
