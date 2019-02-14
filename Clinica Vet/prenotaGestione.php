@@ -81,7 +81,7 @@ $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la q
 if(mysqli_num_rows($result)>0){ ?>
 <table id="tabellaorpre2">
   <thead>
-  <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>
+  <tr><th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th></tr>
 </thead>
 <?php
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
