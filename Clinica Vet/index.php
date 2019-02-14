@@ -47,7 +47,7 @@ $access->closeDBConnection();
 </div>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script src="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
@@ -58,13 +58,13 @@ $access->closeDBConnection();
 
     <div class="leftHome">
     <h2>Benvenuto nel sito dell'ambulatorio veterinario Archimedeo Torre!</h2>
-    <img id="imghome" src="img/ambu.jpg" alt="immagine dell'ambulatorio con un cane"/>
+        <img id="imghome" src="img/ambu.jpg" alt="immagine dell'ambulatorio con un cane">
     <p> L'ambulatorio Archimedeo Torre si propone da sempre come punto di riferimento per la cura e il benessere di <span class="highlight">Cani e Gatti</span></p>
-    <p>Da noi troverai solo il meglio in:
+        <p>Da noi troverai solo il meglio in:</p>
         <h3><span class="highlight">Servizi chirurgici, ambulatoriali e di analisi all'avanguardia </span></h3>
         <h3><span class="highlight">Prenotazioni online e massima efficienza</span></h3>
         <h3><span class="highlight">Un pronto soccorso aperto 24 ore su 24 </span></h3>
-    </p>
+
     <p> Hai un'emergenza e vuoi chiamarci subito?</p>
     <p> Chiama il numero <span class="phone"><a href="tel:043456789">0434 56789</a></span></p>
     </div>
@@ -131,7 +131,8 @@ $access->closeDBConnection();
                 <div class="box6">
                 <div class="contimg">
                     <a href="galleria.php">
-                    <img class="image6"src="<?php echo $image['Path']; ?>" alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1");?>">
+                        <img class="image6" src="<?php echo $image['Path']; ?>"
+                             alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>">
                     </a>  
                 </div>
                 </div>
