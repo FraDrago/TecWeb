@@ -11,13 +11,16 @@ body {
 }
 /*display: none;*/
 
-.noprint, .canc, .logolink, .fservizi, .image5, .image4, .row, .rightCont{
+
+
+.noprint, .canc, .logolink, .fservizi, .image5, .image4, .row, .rightCont, .anteprimag {
   display: none;
 }
 
 .galleria{
   display: none;
 }
+
 
 .list-type3 li img{
 	float: left;
@@ -40,7 +43,7 @@ body {
   	font-size: 1.3em;
 }
 
-#imghome, #myBtn {
+#imghome, #myBtn, #nostampa{
 	display: none;
 }
 
@@ -75,7 +78,7 @@ body {
 	display:none;
 }
 
-#menuToggle, #img, #footer{
+#menuToggle, #img, #footer, #contaddform, #addlink{
 	display: none;
 }
 

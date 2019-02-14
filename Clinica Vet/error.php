@@ -34,7 +34,7 @@ $pagina_attuale = 'error.php';
     <meta name="language" content="italian it"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
@@ -59,7 +59,7 @@ $pagina_attuale = 'error.php';
 
     <br/>
     <br/>
-    <div id="content">
+    <div class="noprint" id="content">
         <div id="title"><h2>Errore</h2></div>
 
         <h3 id="errorcode"><?php echo $error_code; ?></h3>

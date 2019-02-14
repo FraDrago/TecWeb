@@ -26,7 +26,7 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
       <meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
@@ -51,8 +51,8 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && $access->isAdmin($_SES
 <br/>
 <br/>
 <div id="content">
-  <div id="title1"><h2>Prenota qui la tua visita:</h2></div>
-<div class="LoginBox">
+  <div class="noprint" id="title1"><h2>Prenota qui la tua visita:</h2></div>
+<div class="LoginBox" id="nostampa">
   <div class="BoxLogin">
   
 <?php if(!empty($_POST))

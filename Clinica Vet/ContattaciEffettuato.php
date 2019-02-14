@@ -12,7 +12,7 @@ require_once('DB_Access.php'); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
@@ -75,12 +75,13 @@ require_once('DB_Access.php'); ?>
 </div>
   </form>
 <p></p>
+<div class="noprint">
         Non riesci a contattarci? Puoi utilizzare il tuo 
         <a href="mailto:clinicatorre@gmail.com"><span xml:lang="en" lang="en">client</span> di posta</a>
       <p>
         Se preferisci, puoi contattarci al seguente numero di telefono: <a href="tel:+39043456789">0434 56789</a>.
       </p>
-
+</div>
 
 <div class="leftCont">
 <div id="orari_title">

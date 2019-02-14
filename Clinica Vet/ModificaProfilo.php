@@ -84,7 +84,7 @@ else { ?>
 	<form class="noprint" method="post" action="handler.php" onsubmit="return validateInsertME()">
 	<div id="errorAdd"></div>
 	
-	<p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required>
+	<p><label for="email" >Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label> </p> <fieldset> <input id='email' type="text" name="email" placeholder= "Email"  required>
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
 		if($_GET["code"]=="emailErr") echo  ("<p> Email non valida </p>"); } ?>   </input> </fieldset>
 	<p><button type="submit" name="cambiaemail" id="cambiaemail" onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>

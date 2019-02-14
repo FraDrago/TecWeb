@@ -39,7 +39,7 @@ $pagina_attuale='AreaPersonaleVet.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <script src="js/script2.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
 </head>
@@ -76,10 +76,10 @@ $pagina_attuale='AreaPersonaleVet.php';
         <!-- tabella per immagini-->
 
         <table id="tabellag">
-            <caption>Immagini</caption>
+            <caption class="noprint" >Immagini</caption>
             <thead>
             <tr>
-                <th scope="col">Antemprima</th>
+                <th class="noprint" scope="col">Antemprima</th>
                 <th scope="col">Alt</th>
                 <th scope="col">Descrizione</th>
                 <th scope="col">Modifica</th>
@@ -89,7 +89,7 @@ $pagina_attuale='AreaPersonaleVet.php';
             <tbody>
             <?php foreach ($images as $key => $image) { ?>
                 <tr>
-                    <td data-label="Anteprima:"><img class="anteprimag"
+                    <td  class="noprint" data-label="Anteprima:"><img class="anteprimag"
                                                      alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
                                                      src="<?php echo($image['Path']); ?>"></td>
                     <td data-label="Alt:"><?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?></td>

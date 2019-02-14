@@ -50,7 +50,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
     <meta name="language" content="italian it"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="js/script2.js"></script>
     <title>Ambulatorio Veterinario Archimedeo Torre</title>
