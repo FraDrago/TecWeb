@@ -78,7 +78,7 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script type="text/javascript" src="js/script.js"></script>
+<script src="js/script.js"></script>
 
 <!--un po' di separazione-->
 <br/>
@@ -95,7 +95,7 @@
               
               <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
-	            	<form name="registration" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post" onsubmit="return validateInsertRegistrati()">
+	            	<form name="registration" action="<?php echo$_SERVER['PHP_SELF'];?>"method="post" onsubmit="return validateInsertRegistrati()">
 					
                     <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
                     	
