@@ -80,7 +80,7 @@ $pagina_attuale = 'galleriaMod.php'; ?>
         <div id="title1"><h2>Modifica</h2></div>
         <!--form per input con immagine-->
         <div id="contmodform">
-            <img alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
+            <img class="noprint" alt="<?php echo htmlentities($image['alt'], ENT_HTML5, "ISO8859-1"); ?>"
                  src="<?php echo($image['Path']); ?>">
             <form id="modform" action="mod.php" method="post" onsubmit="return validateMod()">
                 <div id="errorMod"></div>
