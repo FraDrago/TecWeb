@@ -21,9 +21,15 @@ if (!isset($_SESSION['ID']) || (isset($_SESSION['ID']) && !$access->isAdmin($_SE
 }
 
 if(!empty($_POST))
-  {$val=$_POST['valore'];
+  { $acc=-1;
+    $val=0;
+    foreach($_POST as $name => $content) {
+   $val=$name;
+   $acc=$content;
+ }
 
-  if(isset($_POST['Accetta']))
+
+  if($acc=='Accetta')
     {
       $access->updateApprovazione(1,$val);
     }
@@ -110,7 +116,7 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   if($a=='0')//in attesa
   {
     ?>
-    <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value='<?php echo $id ?>'></td>
+    <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='<?php echo $id ?>' value='Accetta'><input type='submit' name='<?php echo $id ?>' value='Rifiuta'></td>
     <?php
   }
   else{
