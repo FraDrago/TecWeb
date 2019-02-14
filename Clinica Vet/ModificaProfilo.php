@@ -87,7 +87,7 @@ else { ?>
         <p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail</span>: </label></p>
         <fieldset><input id='email' type="text" name="email" placeholder="Email" required/>
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
-        if ($_GET["code"] == "emailErr") echo("<p> Email non valida </p>");
+        if ($_GET["code"] == "emailErr") echo("<p class='messaggio'> Email non valida </p>");
     } ?>    </fieldset>
 	<p><button type="submit" name="cambiaemail" id="cambiaemail" onclick='checkEmail();' >Cambia <span xml:lang="en" lang="en">Email</span></button></p>
 	<?php /*preg_match("/^[0-9]{9,10}$/",$string);*/ ?>
@@ -97,7 +97,7 @@ else { ?>
         <p><label for="telefono">Telefono: </label></p>
         <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required/>
 	<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
-        if ($_GET["code"] == "telefonoErr") echo("<p> Telefono non valido </p>");
+        if ($_GET["code"] == "telefonoErr") echo("<p class='messaggio'> Telefono non valido </p>");
     } ?>  </fieldset>
 	<p><button type="submit" name="cambiatelefono" id="cambiatelefono"  >Cambia numero</button></p>
 </form>

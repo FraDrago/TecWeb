@@ -1297,6 +1297,13 @@ border-color:transparent #3B5787 transparent transparent;
 	border-radius: 4px;
 	padding: 1em;
 }
+
+.messaggio {
+	font-size: 1em;
+    line-height: 1.2em;
+    color: red;
+    text-align: center;
+}
 		
 .message {
 	font-size: 1.5em;
