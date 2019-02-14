@@ -79,7 +79,7 @@ $q="SELECT * FROM visita WHERE DataOra>NOW()";
 
 $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la query");
 if(mysqli_num_rows($result)>0){ ?>
-<table id="tabellaorpre2">
+<form name=form method=post action=prenotaGestione.php> <table id="tabellaorpre2">
   <thead>
   <tr><th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th></tr>
 </thead>
@@ -109,9 +109,9 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
 
   if($a=='0')//in attesa
   {
-    ?><form name=form method=post action=prenotaGestione.php>
+    ?>
     <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value='<?php echo $id ?>'></td>
-    </form><?php
+    <?php
   }
   else{
     echo "<td>".$ora."</td> <td>".$utente['Email']."</td> <td>".$prest['Nome']."</td> <td>".$g_c."</td> <td>".$n."</td> <td>".$t."</td>";
@@ -119,7 +119,9 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
 
   
   }?>
-</table><?php
+</table>
+</form><?php
+
 }
 else//se non ci sono visite
 {
