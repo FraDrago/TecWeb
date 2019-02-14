@@ -95,7 +95,8 @@
               
               <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
-	            	<form name="registration" action="<?php echo$_SERVER['PHP_SELF'];?>"method="post" onsubmit="return validateInsertRegistrati()">
+                    <form name="registration" action="Registrati.php" method="post"
+                          onsubmit="return validateInsertRegistrati()">
 					
                     <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
                     	

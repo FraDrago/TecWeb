@@ -93,7 +93,7 @@
 	          	
 	          	<div class="loginAndRegistrationForm">
                 <div class="BoxLogin">
-	            	<form name="login" action="<?php echo $_SERVER [ 'PHP_SELF']; ?>" method="post">
+                    <form name="login" action="AccediReg.php" method="post">
                         <p><label for="email">Inserisci <span xml:lang="en" lang="en">Email</span>:</label></p>
                         <fieldset><input id="email" type="text" placeholder="Email" name="email" required></fieldset>
                         <p><label for="password">Inserisci <span xml:lang="en" lang="en">Password</span>:</label></p><fieldset><input id="password" type="password" placeholder="Password" name="password" required></fieldset>
