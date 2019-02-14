@@ -89,7 +89,7 @@
                 
 	          	?>
 	          	
-	          	<h2 class="message"> <?php echo $messaggioErrore; ?> </h2>
+	          	<div class="message"> <?php echo $messaggioErrore; ?> </div>
 	          	
 	          	<div class="loginAndRegistrationForm">
                 <div class="BoxLogin">

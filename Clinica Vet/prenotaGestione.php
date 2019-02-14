@@ -81,7 +81,7 @@ $result=mysqli_query($access->connessione, $q) or die("impossibile eseguire la q
 if(mysqli_num_rows($result)>0){ ?>
 <table id="tabellaorpre2">
   <thead>
-  <th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th>
+  <tr><th>Data e Ora</th> <th>Utente</th> <th>Prestazione</th> <th>Tipo di animale</th> <th>Note</th> <th>Stato</th></tr>
 </thead>
 <?php
 while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
@@ -110,7 +110,7 @@ while($row=mysqli_fetch_assoc($result)){ //finché ci sono visite
   if($a=='0')//in attesa
   {
     ?><form name=form method=post action=prenotaGestione.php>
-    <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value=<?php echo $id ?></td>
+    <td><?php echo $ora; ?></td> <td><?php echo $utente['Email']; ?></td> <td><?php echo $prest['Nome']; ?></td> <td><?php echo $g_c; ?></td> <td><?php echo $n; ?></td> <td><input type='submit' name='Accetta' value='Accetta'><input type='submit' name='Rifiuta' value='Rifiuta'><input type='hidden' name='valore' value='<?php echo $id ?>'></td>
     </form><?php
   }
   else{
