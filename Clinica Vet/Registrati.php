@@ -114,7 +114,7 @@ if ( !preg_match( "/^\d{9,10}+$/", $_POST["telefono"]) )
   <div class="LoginBox">
             	<h2>Registrazione</h2>
 
-	          	<h2 class="messaggio"> <?php echo $messaggioErrore; ?> </h2>
+      <div class="messaggio"> <?php echo $messaggioErrore; ?> </div>
               
               <div class="BoxLogin">
 	          	<div class="loginAndRegistrationForm">
@@ -122,21 +122,21 @@ if ( !preg_match( "/^\d{9,10}+$/", $_POST["telefono"]) )
                           onsubmit="return validateInsertRegistrati()">
 					
                     <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome"  /></fieldset>
-					<h2 class="messaggio"> <?php echo $name; ?> </h2>
+                        <div class="messaggio"> <?php echo $name; ?> </div>
                     	
                     <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome"  /></fieldset>
-					<h2 class="messaggio"> <?php echo $surname; ?> </h2>
+                        <div class="messaggio"> <?php echo $surname; ?> </div>
           	    		
                     <p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono"  /></fieldset>
-					<h2 class="messaggio"> <?php echo $telefono; ?> </h2>
+                        <div class="messaggio"> <?php echo $telefono; ?> </div>
           	    		
                     <p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail:</span></label></p> <fieldset><input id="email" type="email" name="email" placeholder="Email"  /></fieldset>
-					<h2 class="messaggio"> <?php echo $email; ?> </h2>
+                        <div class="messaggio"> <?php echo $email; ?> </div>
 	           	    	
                     <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password"  /></fieldset>
                     
                     <p><label for="cpassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="cpassword" onkeyup="check();" placeholder="Password"  /></fieldset>
-                    	<h2 class="message" id="pswMessage"></h2>
+                        <div class="message" id="pswMessage"></div>
 					<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
 					if($_GET["code"]=="success") echo  "<h3>L' email esiste già</h3>" ;
 					} ?>
