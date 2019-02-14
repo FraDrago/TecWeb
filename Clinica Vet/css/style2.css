@@ -13,6 +13,10 @@ body {
 /******struttura******/
 /********************/
 
+.error{
+	background-color: white;
+	color: #4caf50;
+}
 /***Page***/
 #page{
 	background-color: #cad0db;

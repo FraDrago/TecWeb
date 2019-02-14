@@ -43,10 +43,29 @@
               if(!$connection) die("Errore nella connessione");
               
               else{
-              
-              	
-            	$messaggioErrore = "";
-		        if (isset($_REQUEST['email'])){
+              $messaggioErrore = "";
+			  $email = $telefono = $name = $surname = "";
+			  
+			
+			
+if (isset($_POST["submit"]) && isset($_POST["email"]) && !empty($_POST["email"]) && isset($_POST["name"]) && !empty($_POST["name"]) && 
+	isset($_POST["surname"]) && !empty($_POST["surname"]) && isset($_POST["telefono"]) && !empty($_POST["telefono"]) && 
+	isset($_POST["password"]) && !empty($_POST["password"]) && isset($_POST["cpassword"]) && !empty($_POST["cpassword"])) {
+
+if ( !filter_var( $_POST["email"], FILTER_VALIDATE_EMAIL) || !preg_match( "/^[a-z]+$/i", $_POST["name"]) || !preg_match( "/^[a-z]+$/i", $_POST["surname"]) || !preg_match( "/^\d{9,10}+$/", $_POST["telefono"]) ) {
+if ( !filter_var( $_POST["email"], FILTER_VALIDATE_EMAIL) )
+{
+$email = "Immettere una email valida";
+}
+if ( !preg_match( "/^[a-z]+$/i", $_POST["name"]) )
+	$name = "Immettere un nome valido";
+
+if ( !preg_match( "/^[a-z]+$/i", $_POST["surname"]) )
+	$surname = "Immettere un cognome valido";
+
+if ( !preg_match( "/^\d{9,10}+$/", $_POST["telefono"]) )
+	$telefono = "Immettere un numero di telefono valido";
+}else {					
 					$select = mysqli_query($access->connessione, "SELECT `email` FROM `utente` WHERE `email` = '".$_REQUEST['email']."'") or exit(mysqli_error($connectionID));
 					if(mysqli_num_rows($select)) {
 					header("Location: Registrati.php?code=success");
@@ -63,7 +82,12 @@
                   			header("Location: RegistrazioneEffettuata.php");
                 		}	
 					}
-              	}
+		}
+    }
+				else if(isset($_POST["submit"])){
+					$messaggioErrore = "Completa tutti i campi";
+				}			
+				
 	          	?>
 
 <div id="page" class="container">
@@ -98,17 +122,21 @@
                     <form name="registration" action="Registrati.php" method="post"
                           onsubmit="return validateInsertRegistrati()">
 					
-                    <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome" required /></fieldset>
+                    <p><label for="name">Nome: </label> </p> <fieldset><input id="name" type="text" name="name" placeholder="Nome"  /></fieldset>
+					<h2 class="messaggio"> <?php echo $name; ?> </h2>
                     	
-                    <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome" required /></fieldset>
+                    <p><label for="surname">Cognome: </label> </p> <fieldset><input id="surname" type="text" name="surname" placeholder="Cognome"  /></fieldset>
+					<h2 class="messaggio"> <?php echo $surname; ?> </h2>
           	    		
-                    <p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono" required /></fieldset>
+                    <p><label for="telefono">Telefono: </label></p> <fieldset><input id="telefono" type="text" name="telefono" placeholder="Telefono"  /></fieldset>
+					<h2 class="messaggio"> <?php echo $telefono; ?> </h2>
           	    		
-                    <p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail:</span></label></p> <fieldset><input id="email" type="email" name="email" placeholder="Email" required /></fieldset>
+                    <p><label for="email">Indirizzo <span xml:lang="en" lang="en">e-mail:</span></label></p> <fieldset><input id="email" type="email" name="email" placeholder="Email"  /></fieldset>
+					<h2 class="messaggio"> <?php echo $email; ?> </h2>
 	           	    	
-                    <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    <p><span xml:lang="en" lang="en"><label for="password">Password: </label></span> </p> <fieldset><input type="password" name="password" id="password" onkeyup="check();" placeholder="Password"  /></fieldset>
                     
-                    <p><label for="cpassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="cpassword" onkeyup="check();" placeholder="Password" required /></fieldset>
+                    <p><label for="cpassword">Reinserisci la <span xml:lang="en" lang="en">password: </span></label> </p> <fieldset><input id="cpassword" type="password" name="cpassword" onkeyup="check();" placeholder="Password"  /></fieldset>
                     	<h2 class="message" id="pswMessage"></h2>
 					<?php if(isset($_GET["code"]) && !empty($_GET["code"])){
 					if($_GET["code"]=="success") echo  "<h3>L' email esiste già</h3>" ;

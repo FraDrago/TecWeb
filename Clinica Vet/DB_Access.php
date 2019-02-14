@@ -29,6 +29,7 @@ class DBAccess{
         return true;
         }
     }
+	
   
    public function insertUser($email, $name, $surname, $telefono, $password){
   	$email = stripslashes($email);

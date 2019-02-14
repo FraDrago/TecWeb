@@ -71,11 +71,6 @@ if(isset($_SESSION['ID'])){	?>
           echo '<p> Email: ' . $utente['email'] . '</p>';
         }
 
- ?> 
- 
-
-
-<?php
 }
 else { ?>
 	<h3>Non sei connesso</h3>

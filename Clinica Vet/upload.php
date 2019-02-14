@@ -28,8 +28,9 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
 
 
     if ($_FILES["fileToUpload"]["size"] > 2097152) {
-        $message = "Ci scusiamo ma la tua immagine e&grave; troppo grande.";
 		$result = false;
+        $message = "Ci scusiamo ma la tua immagine e&grave; troppo grande.";
+		
 	}
 //die(var_dump("ll",  $message));
 
@@ -63,7 +64,7 @@ if (isset($_POST["submit"]) && isset($_POST["alt"]) && !empty($_POST["alt"]) && 
     }*/
 }
 else{
-	
+	if ($result){
 	$result = false;
     $message = "Controlla che nessun campo sia vuoto e che la foto caricata non sia &ugrave; grande di 2MB";
 }	
