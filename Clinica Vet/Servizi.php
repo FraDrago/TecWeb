@@ -9,7 +9,7 @@
       <meta name="language" content="italian it"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
@@ -54,7 +54,7 @@
         $result=$access-> getserviziIndice();
             if(count($result)>0){?>
     <?php foreach($result as $serviziIndice){?>
-<li><img src="<?php echo $serviziIndice['Path']; ?>" alt="<?php echo htmlentities($serviziIndice['alt'], ENT_HTML5, "UTF-8");?>">
+<li><img class="fservizi" src="<?php echo $serviziIndice['Path']; ?>" alt="<?php echo htmlentities($serviziIndice['alt'], ENT_HTML5, "UTF-8");?>">
     <a href="#<?php echo $serviziIndice['id'];?>"><?php echo $serviziIndice['name']; ?></a>
 </li>
 <?php }

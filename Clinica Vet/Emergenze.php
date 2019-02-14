@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style2.css">
-        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
         <title>Ambulatorio Veterinario Archimedeo Torre</title>
     </head>
 
@@ -54,13 +54,13 @@
 		$result=$access-> getemergenzeIndice();
             if(count($result)>0){?>
 	<?php foreach($result as $emergenzeIndice){?>
-<li><img src="<?php echo $emergenzeIndice['Path']; ?>" alt="<?php echo htmlentities($emergenzeIndice['alt'], ENT_HTML5, "UTF-8");?>">
+<li><img class="noprint" src="<?php echo $emergenzeIndice['Path']; ?>" alt="<?php echo htmlentities($emergenzeIndice['alt'], ENT_HTML5, "UTF-8");?>">
 	<a href="#<?php echo $emergenzeIndice['id'];?>"><?php echo $emergenzeIndice['name']; ?></a>
 </li>
 <?php }
 		}
 	?>
-<li><img src="img/piante.jpg" alt="icona di una pianta"><a class="piante-colore" href="#piante">Piante tossiche comuni</a></li>
+<li><img class="noprint" src="img/piante.jpg" alt="icona di una pianta"><a class="piante-colore" href="#piante">Piante tossiche comuni</a></li>
 </ol>
 </div>
 

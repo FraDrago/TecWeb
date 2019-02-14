@@ -11,7 +11,7 @@ body {
 }
 /*display: none;*/
 
-.noprint, .canc{
+.noprint, .canc, .logolink, .fservizi, .image5, .image4, .row, .rightCont{
   display: none;
 }
 
@@ -19,20 +19,31 @@ body {
   display: none;
 }
 
+.list-type3 li img{
+	float: left;
+	position: justify;
+
+}
+
+.boxImage2{
+	padding:1em 0em 1em 0em;
+}
+
+#title{
+	margin-top: 1.5em;
+	padding-top:2em;
+}
+
+
+.name2 {
+	margin-top: 1.5em;
+  	font-size: 1.3em;
+}
+
 #imghome, #myBtn {
 	display: none;
 }
 
-/*.leftHome{
-  width: 100%;
-  text-align: center;
-}
-
-.rightHome{
-	justify-content: center;
-	text-align: center;
-	width: 100%;
-}*/
 
 #logo{
 	width: 3em;
@@ -57,7 +68,7 @@ body {
 
 
 
-.phone, col-elem {
+.phone, .col-elem, .piante {
 	color:black;
 }
 .nav, .breadcrumb{

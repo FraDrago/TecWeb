@@ -1,5 +1,11 @@
 /*****generale******/
 /******************/
+@media screen {
+
+
+/*@media print {
+body {font-family: serif;}
+}*/
 
 body {
 	font-size:1.25em ;
@@ -13,10 +19,6 @@ body {
 /******struttura******/
 /********************/
 
-.error{
-	background-color: white;
-	color: #4caf50;
-}
 /***Page***/
 #page{
 	background-color: #cad0db;
@@ -1593,5 +1595,5 @@ border-color:transparent #3B5787 transparent transparent;
 	#tabellaorpre table{margin-left: -1.2em}
 
 }
-
+}
 

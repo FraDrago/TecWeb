@@ -154,4 +154,16 @@ if ( !preg_match( "/^\d{9,10}+$/", $_POST["telefono"]) )
 <?php include_once"footer.php"?>
 </div>
 </body>
+<script>
+        	function check() {
+    			if (document.getElementById('password').value == document.getElementById('cpassword').value){
+					document.getElementById('pswMessage').innerHTML = '';
+					document.getElementById('submit').disabled = false;
+				}
+    			else {
+    				document.getElementById('pswMessage').innerHTML = 'Attenzione! Le password devono coincidere';
+        			document.getElementById('submit').disabled = true;
+    			}
+			}
+        </script>
 </html>
